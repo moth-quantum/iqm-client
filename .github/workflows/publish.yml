@@ -40,6 +40,9 @@ jobs:
             cd "$(tar -tzf *.tar.gz | head -1 | cut -f1 -d"/")"
             echo "building docs..."
             python -m sphinx docs ../../public/$package
+            # add .nojekyll in order to stop Github from treating the directory as a Jekyll blog generator, 
+            # which ignores directories starting with underscore
+            touch ../../public/$package/.nojekyll
             echo "cleaning up..."
             cd ..
             rm -rf *
@@ -48,6 +51,7 @@ jobs:
           cd ..
           rm -rf temp
           rm -rf public/jupyter_execute
+          touch public/.nojekyll
 
       - name: Install rsync
         run: |
