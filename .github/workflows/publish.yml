@@ -1,0 +1,59 @@
+name: Build and Deploy Docs
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 0 * * *"
+
+env:
+  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    container: python:3.11
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Build documentation
+        run: |
+          mkdir -p public
+          cp index.html public
+          mkdir -p temp
+          cd temp
+
+          for package in $PACKAGES; do
+            echo "Processing $package..."
+            # download source distribution
+            python -m pip download --no-deps --no-binary :all: $package
+            echo "installing package (required for namespace resolution when building docs with Sphinx)..."
+            python -m pip install $package
+            echo "unarchiving source distribution and cd-ing into the resulting directory..."
+            tar -xvzf *.tar.gz
+            cd "$(tar -tzf *.tar.gz | head -1 | cut -f1 -d"/")"
+            echo "building docs..."
+            python -m sphinx docs ../../public/$package
+            echo "cleaning up..."
+            cd ..
+            rm -rf *
+          done
+
+          cd ..
+          rm -rf temp
+          rm -rf public/jupyter_execute
+
+      - name: Install rsync
+        run: |
+          apt-get update && apt-get install -y rsync
+
+      - name: Publish to gh-pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public
