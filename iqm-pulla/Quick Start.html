@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -54,7 +54,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="5.7" />
-    <meta name="docbuild:last-update" content="2025-01-05"/>
+    <meta name="docbuild:last-update" content="2025-01-06"/>
   </head>
   
   
@@ -422,13 +422,13 @@
 <p>This notebook contains a small meaningful example for a “quick start”. Refer to other chapters for more details on various aspects of Pulla.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">visualization</span>
-<span class="kn">from</span> <span class="nn">qiskit.compiler</span> <span class="kn">import</span> <span class="n">transpile</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm</span> <span class="kn">import</span> <span class="n">IQMProvider</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm.iqm_transpilation</span> <span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.pulla</span> <span class="kn">import</span> <span class="n">Pulla</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.utils_qiskit</span> <span class="kn">import</span> <span class="n">qiskit_to_pulla</span><span class="p">,</span> <span class="n">station_control_result_to_qiskit</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">visualization</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm</span><span class="w"> </span><span class="kn">import</span> <span class="n">IQMProvider</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm.iqm_transpilation</span><span class="w"> </span><span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.pulla</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pulla</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">qiskit_to_pulla</span><span class="p">,</span> <span class="n">station_control_result_to_qiskit</span>
 </pre></div>
 </div>
 </div>
@@ -546,8 +546,8 @@ Qiskit result counts from CoCoS:
 <p>Working example below:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.iqm_client</span> <span class="kn">import</span> <span class="n">QuantumArchitectureSpecification</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.utils_qiskit</span> <span class="kn">import</span> <span class="n">IQMPullaBackend</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.iqm_client</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumArchitectureSpecification</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">IQMPullaBackend</span>
 
 <span class="n">architecture</span> <span class="o">=</span> <span class="n">QuantumArchitectureSpecification</span><span class="p">(</span>
         <span class="n">name</span><span class="o">=</span><span class="s2">&quot;Adonis&quot;</span><span class="p">,</span>
@@ -601,8 +601,8 @@ Qiskit result counts from CoCoS:
 </div>
 </li>
 <li><p>Set the environment variable <code class="docutils literal notranslate"><span class="pre">IQM_TOKENS_FILE</span></code> accordingly in your Jupyter notebook and pass <code class="docutils literal notranslate"><span class="pre">get_token_callback</span></code> to the Pulla initialization call like so:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">iqm.iqm_client.authentication</span> <span class="kn">import</span> <span class="n">TokenManager</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.iqm_client.authentication</span><span class="w"> </span><span class="kn">import</span> <span class="n">TokenManager</span>
 
 <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s2">&quot;IQM_TOKENS_FILE&quot;</span><span class="p">]</span><span class="o">=</span><span class="s2">&quot;/home/user/.cache/iqm-cortex-cli/tokens.json&quot;</span>
 
@@ -622,8 +622,8 @@ Qiskit result counts from CoCoS:
 The <code class="docutils literal notranslate"><span class="pre">playlist</span></code> variable below is the one which we derived from the original Qiskit circuit using the Pulla compiler, and it only has one schedule.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.pulse.playlist.visualisation.base</span> <span class="kn">import</span> <span class="n">inspect_playlist</span>
-<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulse.playlist.visualisation.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">inspect_playlist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="n">HTML</span><span class="p">(</span><span class="n">inspect_playlist</span><span class="p">(</span><span class="n">playlist</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
 </pre></div>
@@ -1077,7 +1077,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-05.
+  Last updated on 2025-01-06.
   <br/>
 </p>
   </div>

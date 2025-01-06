@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -54,7 +54,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="5.7" />
-    <meta name="docbuild:last-update" content="2025-01-05"/>
+    <meta name="docbuild:last-update" content="2025-01-06"/>
   </head>
   
   
@@ -427,14 +427,14 @@
 <p>Let’s go over the generic use case, starting from creating a Qiskit circuit to work on:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
-<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">visualization</span>
-<span class="kn">from</span> <span class="nn">qiskit.compiler</span> <span class="kn">import</span> <span class="n">transpile</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm</span> <span class="kn">import</span> <span class="n">IQMProvider</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm.iqm_transpilation</span> <span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.pulla</span> <span class="kn">import</span> <span class="n">Pulla</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.utils_qiskit</span> <span class="kn">import</span> <span class="n">station_control_result_to_qiskit</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">visualization</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm</span><span class="w"> </span><span class="kn">import</span> <span class="n">IQMProvider</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm.iqm_transpilation</span><span class="w"> </span><span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.pulla</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pulla</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">station_control_result_to_qiskit</span>
 </pre></div>
 </div>
 </div>
@@ -470,7 +470,7 @@
 <p>The Qiskit conversion utility also gives us a standard compiler with the same calibration set as the one used by <code class="docutils literal notranslate"><span class="pre">backend</span></code>, in this case the current default one.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.pulla.utils_qiskit</span> <span class="kn">import</span> <span class="n">qiskit_to_pulla</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">qiskit_to_pulla</span>
 
 <span class="n">p</span> <span class="o">=</span> <span class="n">Pulla</span><span class="p">(</span><span class="n">station_control_url</span><span class="p">)</span>
 <span class="n">circuits</span><span class="p">,</span> <span class="n">compiler</span> <span class="o">=</span> <span class="n">qiskit_to_pulla</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">qc_optimized</span><span class="p">)</span>
@@ -547,7 +547,7 @@
 <p>Let’s write a simple compilation stage to illustrate the concept:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.cpc.compiler.compiler</span> <span class="kn">import</span> <span class="n">CompilationStage</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.cpc.compiler.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">CompilationStage</span>
 
 <span class="n">my_stage</span> <span class="o">=</span> <span class="n">CompilationStage</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;my_stage&quot;</span><span class="p">)</span>
 </pre></div>
@@ -558,10 +558,10 @@
 <code class="docutils literal notranslate"><span class="pre">add_leading_barrier</span></code> below determines the locations of qubits used in the circuit and adds a barrier on those qubits as the first instruction.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.cpc.interface.compiler</span> <span class="kn">import</span> <span class="n">CircuitOperation</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.cpc.interface.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">CircuitOperation</span>
 
 
-<span class="k">def</span> <span class="nf">add_leading_barrier</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">add_leading_barrier</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Add leading barrier on all used qubits.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">circuit</span> <span class="ow">in</span> <span class="n">circuits</span><span class="p">:</span>
         <span class="n">loci</span> <span class="o">=</span> <span class="p">[</span><span class="n">inst</span><span class="o">.</span><span class="n">locus</span> <span class="k">for</span> <span class="n">inst</span> <span class="ow">in</span> <span class="n">circuit</span><span class="o">.</span><span class="n">instructions</span><span class="p">]</span>
@@ -579,7 +579,7 @@
 not make practical sense, but bear with us for the purposes of illustration:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">increase_phase</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">increase_phase</span><span class="p">(</span><span class="n">circuits</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Add 0.25 to phase_t of each prx gate.&quot;&quot;&quot;</span>
     <span class="k">for</span> <span class="n">circuit</span> <span class="ow">in</span> <span class="n">circuits</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">instruction</span> <span class="ow">in</span> <span class="n">circuit</span><span class="o">.</span><span class="n">instructions</span><span class="p">:</span>
@@ -656,7 +656,7 @@ not make practical sense, but bear with us for the purposes of illustration:</p>
 <p>Let’s replace our current single stage with standard stages, and view them:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.cpc.compiler.standard_stages</span> <span class="kn">import</span> <span class="n">get_standard_stages</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.cpc.compiler.standard_stages</span><span class="w"> </span><span class="kn">import</span> <span class="n">get_standard_stages</span>
 
 <span class="n">compiler</span><span class="o">.</span><span class="n">stages</span> <span class="o">=</span> <span class="n">get_standard_stages</span><span class="p">()</span>
 <span class="n">compiler</span><span class="o">.</span><span class="n">show_stages</span><span class="p">()</span>
@@ -1310,7 +1310,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-05.
+  Last updated on 2025-01-06.
   <br/>
 </p>
   </div>

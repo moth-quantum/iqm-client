@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -54,7 +54,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="5.7" />
-    <meta name="docbuild:last-update" content="2025-01-05"/>
+    <meta name="docbuild:last-update" content="2025-01-06"/>
   </head>
   
   
@@ -409,13 +409,13 @@
 <h2>Basics<a class="headerlink" href="#basics" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
-<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
-<span class="kn">from</span> <span class="nn">qiskit.compiler</span> <span class="kn">import</span> <span class="n">transpile</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm</span> <span class="kn">import</span> <span class="n">IQMProvider</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm.iqm_transpilation</span> <span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.utils_qiskit</span> <span class="kn">import</span> <span class="n">qiskit_to_pulla</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pprint</span><span class="w"> </span><span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm</span><span class="w"> </span><span class="kn">import</span> <span class="n">IQMProvider</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm.iqm_transpilation</span><span class="w"> </span><span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">qiskit_to_pulla</span>
 </pre></div>
 </div>
 </div>
@@ -442,7 +442,7 @@
 <p>To create an instance of Pulla, you need to provide the URL of Station Control. Upon successful initialization, some configuration data is printed (the verbosity of such messages will be controlled by a debug level value).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.pulla.pulla</span> <span class="kn">import</span> <span class="n">Pulla</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.pulla</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pulla</span>
 
 <span class="n">station_control_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_STATION_CONTROL_URL&#39;</span><span class="p">]</span> <span class="c1"># or set the URL directly here</span>
 
@@ -666,7 +666,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-05.
+  Last updated on 2025-01-06.
   <br/>
 </p>
   </div>

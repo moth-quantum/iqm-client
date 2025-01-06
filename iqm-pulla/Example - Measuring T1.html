@@ -30,7 +30,7 @@
   <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 <link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=8f2a1f02" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
     <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=eafc0fe6" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -54,7 +54,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="5.7" />
-    <meta name="docbuild:last-update" content="2025-01-05"/>
+    <meta name="docbuild:last-update" content="2025-01-06"/>
   </head>
   
   
@@ -414,13 +414,13 @@ The waiting time is swept to reveal the exponential decay of the excited state p
 <h2>Preparing the circuit<a class="headerlink" href="#preparing-the-circuit" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
-<span class="kn">from</span> <span class="nn">qiskit</span> <span class="kn">import</span> <span class="n">QuantumCircuit</span>
-<span class="kn">from</span> <span class="nn">qiskit.compiler</span> <span class="kn">import</span> <span class="n">transpile</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm</span> <span class="kn">import</span> <span class="n">IQMProvider</span>
-<span class="kn">from</span> <span class="nn">iqm.qiskit_iqm.iqm_transpilation</span> <span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.pulla</span> <span class="kn">import</span> <span class="n">Pulla</span>
-<span class="kn">from</span> <span class="nn">iqm.pulla.utils_qiskit</span> <span class="kn">import</span> <span class="n">qiskit_to_pulla</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm</span><span class="w"> </span><span class="kn">import</span> <span class="n">IQMProvider</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm.iqm_transpilation</span><span class="w"> </span><span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.pulla</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pulla</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">qiskit_to_pulla</span>
 </pre></div>
 </div>
 </div>
@@ -447,7 +447,7 @@ The waiting time is swept to reveal the exponential decay of the excited state p
 <p>Prepare the circuit with X gates for each of the qubits you want to test</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
 <span class="c1"># Preparing the circuit</span>
 <span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
@@ -468,12 +468,12 @@ The waiting time is swept to reveal the exponential decay of the excited state p
 We define a function that copies the circuit we defined above and adds Wait instructions to the end of the circuit.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.cpc.compiler.compiler</span> <span class="kn">import</span> <span class="n">CompilationStage</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.cpc.compiler.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">CompilationStage</span>
 
 <span class="n">sweep_times</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">100e-6</span><span class="p">,</span> <span class="mi">41</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">generate_t1</span><span class="p">(</span><span class="n">timeboxes</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">generate_t1</span><span class="p">(</span><span class="n">timeboxes</span><span class="p">,</span> <span class="n">context</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;Generate multiple versions of the input circuit, where a Wait of increasing duration is inserted before measurement.&quot;&quot;&quot;</span>
 
     <span class="n">circuit_timebox</span> <span class="o">=</span> <span class="n">timeboxes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>  <span class="c1"># assumes only one input circuit</span>
@@ -494,7 +494,7 @@ We define a function that copies the circuit we defined above and adds Wait inst
 <p>In addition, we change the measurement mode to <code class="docutils literal notranslate"><span class="pre">circuit</span></code>, so that only the selected qubits are measured. The measurement mode is part of the <code class="docutils literal notranslate"><span class="pre">CircuitExecutionOptions</span></code>, the the standard compiler constructed by Pulla comes with default options. To make changes, we replace the whole object with a new instance of <code class="docutils literal notranslate"><span class="pre">CircuitExecutionOptions</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.cpc.interface.compiler</span> <span class="kn">import</span> <span class="p">(</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.cpc.interface.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">CircuitBoundaryMode</span><span class="p">,</span>
     <span class="n">CircuitExecutionOptions</span><span class="p">,</span>
     <span class="n">DDMode</span><span class="p">,</span>
@@ -703,7 +703,7 @@ summary:nth-child(even) {background: DarkSlateGray;}
 <p>After the circuit has executed succesfully we can visualise our results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">channels</span> <span class="o">=</span> <span class="n">res</span><span class="o">.</span><span class="n">result</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">keys</span><span class="p">()</span>
 
@@ -726,8 +726,8 @@ summary:nth-child(even) {background: DarkSlateGray;}
 <p><code class="docutils literal notranslate"><span class="pre">TIP</span></code>: If the X gates are hard to distinguish from the visualiser you can set a value for the <code class="docutils literal notranslate"><span class="pre">Instruction</span> <span class="pre">duration</span> <span class="pre">threshold</span></code>. By setting it to e.g. <code class="docutils literal notranslate"><span class="pre">1000</span></code> you squeeze/truncate all instructions that have a length over 1000 ns to a constant length within the visualiser. By clicking on the waits you can still inspect the absolute duration of the <code class="docutils literal notranslate"><span class="pre">Wait</span></code> instructions.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">iqm.pulse.playlist.visualisation.base</span> <span class="kn">import</span> <span class="n">inspect_playlist</span>
-<span class="kn">from</span> <span class="nn">IPython.core.display</span> <span class="kn">import</span> <span class="n">HTML</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulse.playlist.visualisation.base</span><span class="w"> </span><span class="kn">import</span> <span class="n">inspect_playlist</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.core.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">HTML</span>
 
 <span class="n">HTML</span><span class="p">(</span><span class="n">inspect_playlist</span><span class="p">(</span><span class="n">playlist</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)))</span>
 </pre></div>
@@ -1282,7 +1282,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-05.
+  Last updated on 2025-01-06.
   <br/>
 </p>
   </div>
