@@ -3,7 +3,6 @@ IQM Pulla
 
 :Release: |release|
 :Date: |today|
-:Source Code: `<https://github.com/iqm-finland/iqm-pulla>`_
 
 Client-side library for Pulse-level access to `IQM <https://meetiqm.com/>`_ quantum computers.
 
