@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.cpc.compiler.standard_stages &#8212; IQM Pulla 5.10 documentation</title>
+    <title>iqm.cpc.compiler.standard_stages &#8212; IQM Pulla 5.11 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=8121b313"></script>
+    <script src="../_static/documentation_options.js?v=3add310e"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="iqm.cpc.compiler.errors.UnknownLogicalQubitError" href="iqm.cpc.compiler.errors.UnknownLogicalQubitError.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="5.10" />
-    <meta name="docbuild:last-update" content="2025-01-15"/>
+  <meta name="docsearch:version" content="5.11" />
+    <meta name="docbuild:last-update" content="2025-01-16"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.10 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.10 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.11 documentation - Home"/>
   
   
 </a></div>
@@ -422,12 +422,13 @@
 <section id="circuit-to-circuit">
 <h2>1. Circuit-to-circuit<a class="headerlink" href="#circuit-to-circuit" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>Validate <code class="docutils literal notranslate"><span class="pre">options.move_gate_validation</span></code> has the correct value if <code class="xref py py-class docutils literal notranslate"><span class="pre">MoveGateFrameTrackingMode</span></code> is set to
-<code class="docutils literal notranslate"><span class="pre">FULL</span></code> in circuit execution options. The value must be one of <code class="xref py py-class docutils literal notranslate"><span class="pre">MoveGateValidationMode</span></code>.</p></li>
+<li><p>Validate the circuit execution options.</p></li>
 <li><p>Map backwards-compatible aliases for quantum operation names into the current name. This is needed until old
-operation names such as <code class="docutils literal notranslate"><span class="pre">phased_rx</span></code> and <code class="docutils literal notranslate"><span class="pre">measurement</span></code> are fully deprecated.</p></li>
-<li><p>Map the logical components to physical components and choose gate implementations to use. Provided mapping is used,
-if provided. Otherwise, identity mapping is used.</p></li>
+operation names such as <code class="docutils literal notranslate"><span class="pre">phased_rx</span></code> and <code class="docutils literal notranslate"><span class="pre">measurement</span></code> are no longer supported.</p></li>
+<li><p>Validate the contents of the circuits.</p></li>
+<li><p>Map the logical QPU components to physical QPU components. Provided mapping is used, if any.
+Otherwise, identity mapping is used.</p></li>
+<li><p>Choose implementations for circuit operations based on the calibration set.</p></li>
 <li><p>Derive mapping between station acquisition labels and user’s measurement keys. Populates <code class="docutils literal notranslate"><span class="pre">readout_mappings</span></code> and
 <code class="docutils literal notranslate"><span class="pre">heralded_components</span></code> of context.</p></li>
 </ol>
@@ -456,6 +457,7 @@ requires it.</p></li>
 <section id="schedule-to-schedule">
 <h2>5. Schedule-to-schedule<a class="headerlink" href="#schedule-to-schedule" title="Link to this heading">#</a></h2>
 <ol class="arabic simple">
+<li><p>Apply dynamical decoupling sequences to the schedule if requested.</p></li>
 <li><p>Apply resonator-related phase corrections if MOVE gates are used.</p></li>
 <li><p>Remove non-functional instructions from schedules using <code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder._finish_schedule()</span></code>.</p></li>
 </ol>
@@ -478,41 +480,47 @@ requires it.</p></li>
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.build_playlist.html#iqm.cpc.compiler.standard_stages.build_playlist" title="iqm.cpc.compiler.standard_stages.build_playlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_playlist</span></code></a>(schedules, builder)</p></td>
 <td><p>Build the playlist from the schedules.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.clean_schedule.html#iqm.cpc.compiler.standard_stages.clean_schedule" title="iqm.cpc.compiler.standard_stages.clean_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_schedule</span></code></a>(schedules, builder)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.choose_op_implementations.html#iqm.cpc.compiler.standard_stages.choose_op_implementations" title="iqm.cpc.compiler.standard_stages.choose_op_implementations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">choose_op_implementations</span></code></a>(circuits, builder, ...)</p></td>
+<td><p>Analyze the instructions in the circuits and pick an implementation for each (operation, locus).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.clean_schedule.html#iqm.cpc.compiler.standard_stages.clean_schedule" title="iqm.cpc.compiler.standard_stages.clean_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clean_schedule</span></code></a>(schedules, builder)</p></td>
 <td><p>Remove non-functional instructions from <cite>schedules</cite>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.derive_readout_mappings.html#iqm.cpc.compiler.standard_stages.derive_readout_mappings" title="iqm.cpc.compiler.standard_stages.derive_readout_mappings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derive_readout_mappings</span></code></a>(circuits, builder, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.derive_readout_mappings.html#iqm.cpc.compiler.standard_stages.derive_readout_mappings" title="iqm.cpc.compiler.standard_stages.derive_readout_mappings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">derive_readout_mappings</span></code></a>(circuits, builder, ...)</p></td>
 <td><p>Derive mapping between station acquisition labels and user's measurement keys.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.get_standard_stages.html#iqm.cpc.compiler.standard_stages.get_standard_stages" title="iqm.cpc.compiler.standard_stages.get_standard_stages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_standard_stages</span></code></a>([idempotent])</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.get_standard_stages.html#iqm.cpc.compiler.standard_stages.get_standard_stages" title="iqm.cpc.compiler.standard_stages.get_standard_stages"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_standard_stages</span></code></a>([idempotent])</p></td>
 <td><p>Get a copy of the standard compilation stages.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.map_implementations_for_loci.html#iqm.cpc.compiler.standard_stages.map_implementations_for_loci" title="iqm.cpc.compiler.standard_stages.map_implementations_for_loci"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_implementations_for_loci</span></code></a>(circuits, ...)</p></td>
-<td><p>Map the logical components to physical components and choose gate implementations to use.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.map_components.html#iqm.cpc.compiler.standard_stages.map_components" title="iqm.cpc.compiler.standard_stages.map_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_components</span></code></a>(circuits, builder, ...)</p></td>
+<td><p>Map the logical QPU components to physical QPU components using <code class="docutils literal notranslate"><span class="pre">component_mapping</span></code>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.map_old_operations.html#iqm.cpc.compiler.standard_stages.map_old_operations" title="iqm.cpc.compiler.standard_stages.map_old_operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_old_operations</span></code></a>(circuits, builder)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.map_old_operations.html#iqm.cpc.compiler.standard_stages.map_old_operations" title="iqm.cpc.compiler.standard_stages.map_old_operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_old_operations</span></code></a>(circuits)</p></td>
 <td><p>Map backwards-compatible aliases for quantum operation names into the current name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.merge_multiplexed_timeboxes.html#iqm.cpc.compiler.standard_stages.merge_multiplexed_timeboxes" title="iqm.cpc.compiler.standard_stages.merge_multiplexed_timeboxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_multiplexed_timeboxes</span></code></a>(circuit_box)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.merge_multiplexed_timeboxes.html#iqm.cpc.compiler.standard_stages.merge_multiplexed_timeboxes" title="iqm.cpc.compiler.standard_stages.merge_multiplexed_timeboxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge_multiplexed_timeboxes</span></code></a>(circuit_box)</p></td>
 <td><p>Merge any MultiplexedProbeTimeBoxes inside a TimeBox representing a circuit.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.multiplex_readout.html#iqm.cpc.compiler.standard_stages.multiplex_readout" title="iqm.cpc.compiler.standard_stages.multiplex_readout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplex_readout</span></code></a>(timeboxes)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.multiplex_readout.html#iqm.cpc.compiler.standard_stages.multiplex_readout" title="iqm.cpc.compiler.standard_stages.multiplex_readout"><code class="xref py py-obj docutils literal notranslate"><span class="pre">multiplex_readout</span></code></a>(timeboxes)</p></td>
 <td><p>Merge any MultiplexedProbeTimeBoxes inside a TimeBox representing a circuit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.prepend_heralding.html#iqm.cpc.compiler.standard_stages.prepend_heralding" title="iqm.cpc.compiler.standard_stages.prepend_heralding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepend_heralding</span></code></a>(timeboxes, builder, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.prepend_heralding.html#iqm.cpc.compiler.standard_stages.prepend_heralding" title="iqm.cpc.compiler.standard_stages.prepend_heralding"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepend_heralding</span></code></a>(timeboxes, builder, ...)</p></td>
 <td><p>Add the heralding measurement timebox to all circuits.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.prepend_reset.html#iqm.cpc.compiler.standard_stages.prepend_reset" title="iqm.cpc.compiler.standard_stages.prepend_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepend_reset</span></code></a>(timeboxes, builder, options, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.prepend_reset.html#iqm.cpc.compiler.standard_stages.prepend_reset" title="iqm.cpc.compiler.standard_stages.prepend_reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prepend_reset</span></code></a>(timeboxes, builder, options, ...)</p></td>
 <td><p>Add a reset timebox to all circuits.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.resolve_circuits.html#iqm.cpc.compiler.standard_stages.resolve_circuits" title="iqm.cpc.compiler.standard_stages.resolve_circuits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_circuits</span></code></a>(circuits, builder)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.resolve_circuits.html#iqm.cpc.compiler.standard_stages.resolve_circuits" title="iqm.cpc.compiler.standard_stages.resolve_circuits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_circuits</span></code></a>(circuits, builder)</p></td>
 <td><p>Resolve the circuits to timeboxes.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.resolve_timeboxes.html#iqm.cpc.compiler.standard_stages.resolve_timeboxes" title="iqm.cpc.compiler.standard_stages.resolve_timeboxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_timeboxes</span></code></a>(timeboxes, builder)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.resolve_timeboxes.html#iqm.cpc.compiler.standard_stages.resolve_timeboxes" title="iqm.cpc.compiler.standard_stages.resolve_timeboxes"><code class="xref py py-obj docutils literal notranslate"><span class="pre">resolve_timeboxes</span></code></a>(timeboxes, builder)</p></td>
 <td><p>Resolve the timeboxes to schedules.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.validate_circuits_move_gate.html#iqm.cpc.compiler.standard_stages.validate_circuits_move_gate" title="iqm.cpc.compiler.standard_stages.validate_circuits_move_gate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_circuits_move_gate</span></code></a>(circuits, options)</p></td>
-<td><p>Validate <code class="docutils literal notranslate"><span class="pre">options.move_gate_validation</span></code> has the correct value if <code class="docutils literal notranslate"><span class="pre">MoveGateFrameTrackingMode.FULL</span></code> is enabled.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.validate_circuits.html#iqm.cpc.compiler.standard_stages.validate_circuits" title="iqm.cpc.compiler.standard_stages.validate_circuits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_circuits</span></code></a>(circuits, builder)</p></td>
+<td><p>Validate the contents of the quantum circuits.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.cpc.compiler.standard_stages.validate_execution_options.html#iqm.cpc.compiler.standard_stages.validate_execution_options" title="iqm.cpc.compiler.standard_stages.validate_execution_options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_execution_options</span></code></a>(circuits, options)</p></td>
+<td><p>Validate the circuit execution options (only some combinations make sense).</p></td>
 </tr>
 </tbody>
 </table>
@@ -604,7 +612,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-15.
+  Last updated on 2025-01-16.
   <br/>
 </p>
   </div>
