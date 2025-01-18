@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; iqm.pulse 7.9 documentation</title>
+    <title>Index &#8212; iqm.pulse 7.10 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=62647a24"></script>
+    <script src="_static/documentation_options.js?v=1fceb512"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,8 +50,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.9" />
-    <meta name="docbuild:last-update" content="2025-01-17"/>
+  <meta name="docsearch:version" content="7.10" />
+    <meta name="docbuild:last-update" content="2025-01-18"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.9 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.9 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.10 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.10 documentation - Home"/>
   
   
 </a></div>
@@ -147,6 +147,10 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts and Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_builder.html">Using ScheduleBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_gates.html">Custom gate implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="API.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.pulse.html">pulse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -196,6 +200,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.instructions.html">instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.playlist.html">playlist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.schedule.html">schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.visualisation.html">visualisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.waveforms.html">waveforms</a></li>
 </ul>
 </details></li>
@@ -942,6 +947,8 @@
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.inject_calibration">inject_calibration() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
+      <li><a href="api/iqm.pulse.playlist.visualisation.base.inspect_playlist.html#iqm.pulse.playlist.visualisation.base.inspect_playlist">inspect_playlist() (in module iqm.pulse.playlist.visualisation.base)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.instructions.Instruction.html#iqm.pulse.playlist.instructions.Instruction">Instruction (class in iqm.pulse.playlist.instructions)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.channel.ChannelProperties.html#iqm.pulse.playlist.channel.ChannelProperties.instruction_duration_granularity">instruction_duration_granularity (iqm.pulse.playlist.channel.ChannelProperties attribute)</a>
@@ -1035,8 +1042,6 @@
         <li><a href="api/iqm.pulse.gates.prx.html#module-iqm.pulse.gates.prx">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.pulse.gates.reset
 
@@ -1044,6 +1049,8 @@
         <li><a href="api/iqm.pulse.gates.reset.html#module-iqm.pulse.gates.reset">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.pulse.gates.rz
 
@@ -1098,6 +1105,20 @@
 
       <ul>
         <li><a href="api/iqm.pulse.playlist.schedule.html#module-iqm.pulse.playlist.schedule">module</a>
+</li>
+      </ul></li>
+      <li>
+    iqm.pulse.playlist.visualisation
+
+      <ul>
+        <li><a href="api/iqm.pulse.playlist.visualisation.html#module-iqm.pulse.playlist.visualisation">module</a>
+</li>
+      </ul></li>
+      <li>
+    iqm.pulse.playlist.visualisation.base
+
+      <ul>
+        <li><a href="api/iqm.pulse.playlist.visualisation.base.html#module-iqm.pulse.playlist.visualisation.base">module</a>
 </li>
       </ul></li>
       <li>
@@ -1237,6 +1258,10 @@
         <li><a href="api/iqm.pulse.playlist.playlist.html#module-iqm.pulse.playlist.playlist">iqm.pulse.playlist.playlist</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.schedule.html#module-iqm.pulse.playlist.schedule">iqm.pulse.playlist.schedule</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.visualisation.html#module-iqm.pulse.playlist.visualisation">iqm.pulse.playlist.visualisation</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.visualisation.base.html#module-iqm.pulse.playlist.visualisation.base">iqm.pulse.playlist.visualisation.base</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.waveforms.html#module-iqm.pulse.playlist.waveforms">iqm.pulse.playlist.waveforms</a>
 </li>
@@ -1830,7 +1855,7 @@
 
   <p class="copyright">
     
-      © Copyright 2019-2024, IQM Finland Oy.
+      © Copyright 2019-2025, IQM Finland Oy.
       <br/>
     
   </p>
@@ -1839,7 +1864,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-17.
+  Last updated on 2025-01-18.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>API documentation: iqm-pulse &#8212; iqm.pulse 7.9 documentation</title>
+    <title>IQM Pulse &#8212; iqm.pulse 7.10 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=62647a24"></script>
+    <script src="_static/documentation_options.js?v=1fceb512"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -49,11 +49,11 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="API Reference" href="API.html" />
+    <link rel="next" title="Concepts and Classes" href="concepts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.9" />
-    <meta name="docbuild:last-update" content="2025-01-17"/>
+  <meta name="docsearch:version" content="7.10" />
+    <meta name="docbuild:last-update" content="2025-01-18"/>
   </head>
   
   
@@ -134,8 +134,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.9 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.9 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.10 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.10 documentation - Home"/>
   
   
 </a></div>
@@ -149,6 +149,10 @@
         <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts and Classes</a></li>
+<li class="toctree-l1"><a class="reference internal" href="using_builder.html">Using ScheduleBuilder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_gates.html">Custom gate implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="API.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.pulse.html">pulse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -198,6 +202,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.instructions.html">instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.playlist.html">playlist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.schedule.html">schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.visualisation.html">visualisation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.waveforms.html">waveforms</a></li>
 </ul>
 </details></li>
@@ -340,7 +345,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>API documentation: iqm-pulse</h1>
+    <h1>IQM Pulse</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -365,21 +370,59 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="api-documentation-iqm-pulse">
-<h1>API documentation: iqm-pulse<a class="headerlink" href="#api-documentation-iqm-pulse" title="Link to this heading">#</a></h1>
+  <section id="iqm-pulse">
+<h1>IQM Pulse<a class="headerlink" href="#iqm-pulse" title="Link to this heading">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Version<span class="colon">:</span></dt>
-<dd class="field-odd"><p>7.9</p>
+<dd class="field-odd"><p>7.10</p>
 </dd>
 <dt class="field-even">Date<span class="colon">:</span></dt>
-<dd class="field-even"><p>2025-01-17</p>
+<dd class="field-even"><p>2025-01-18</p>
 </dd>
 </dl>
-<p>This is the documentation of the IQM pulse library.</p>
+<p>IQM Pulse provides an abstraction that transforms high-level quantum circuit operations
+to a unified set of lower-level instructions for <a class="reference external" href="https://meetiqm.com/">IQM</a> quantum computers.</p>
+<p>A quantum circuit is an abstract mathematical construct which conveniently hides all implementation
+details such as the timing of microwave pulses, waveform shapes, sampling rates, signal capture, and so on.
+But in order to execute a circuit you need to convert it into a schedule of hardware instructions which involve
+all of the above.</p>
+<p>IQM Pulse provides</p>
+<ul class="simple">
+<li><p>a framework for defining abstract quantum gates/operations, as well as their concrete implementations in terms of hardware instructions</p></li>
+<li><p>machinery to easily construct circuit-level gate sequences, and compile them into instruction schedules.</p></li>
+<li><p>a set of ready-made gates with implementations.</p></li>
+</ul>
+<p>IQM Pulse is not a standalone tool, but is used in IQM’s client libraries, IQM Pulla and Exa.
+To use them effectively, you are encouraged to familiarize yourself with IQM Pulse, especially the most common
+concepts.</p>
 <section id="contents">
 <h2>Contents<a class="headerlink" href="#contents" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="concepts.html">Concepts and Classes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#quick-reference">Quick reference</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#instructions">Instructions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#schedules">Schedules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#timeboxes">TimeBoxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#quantumops">QuantumOps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#gateimplementations">GateImplementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="concepts.html#playlists">Playlists</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="using_builder.html">Using ScheduleBuilder</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="using_builder.html#creating-timeboxes">Creating TimeBoxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_builder.html#composing-timeboxes">Composing TimeBoxes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_builder.html#resolving-timeboxes-into-a-schedule">Resolving TimeBoxes into a Schedule</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_builder.html#miscellaneous-features">Miscellaneous features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="using_builder.html#common-pitfalls">Common pitfalls</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="custom_gates.html">Custom gate implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="pulse_timing.html#measure-and-readouttrigger">Measure and ReadoutTrigger</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pulse_timing.html#fast-feedback-timing">Fast feedback timing</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="API.html">API Reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/iqm.pulse.html">pulse</a></li>
 </ul>
@@ -416,11 +459,11 @@
                   
 <div class="prev-next-area">
     <a class="right-next"
-       href="API.html"
+       href="concepts.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">API Reference</p>
+        <p class="prev-next-title">Concepts and Classes</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -465,7 +508,7 @@
 
   <p class="copyright">
     
-      © Copyright 2019-2024, IQM Finland Oy.
+      © Copyright 2019-2025, IQM Finland Oy.
       <br/>
     
   </p>
@@ -474,7 +517,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-17.
+  Last updated on 2025-01-18.
   <br/>
 </p>
   </div>
