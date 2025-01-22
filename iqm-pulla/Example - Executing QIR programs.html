@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Executing QIR programs &#8212; IQM Pulla 5.11 documentation</title>
+    <title>Executing QIR programs &#8212; IQM Pulla 5.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=3add310e"></script>
+    <script src="_static/documentation_options.js?v=2da9b168"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -51,8 +51,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="5.11" />
-    <meta name="docbuild:last-update" content="2025-01-21"/>
+  <meta name="docsearch:version" content="5.12" />
+    <meta name="docbuild:last-update" content="2025-01-22"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.11 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.11 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.12 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.12 documentation - Home"/>
   
   
 </a></div>
@@ -366,7 +366,9 @@
 <button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
 </button>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -382,6 +384,14 @@
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-qir">Executing QIR</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -402,7 +412,7 @@
 <span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">station_control_result_to_qiskit</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qir</span><span class="w"> </span><span class="kn">import</span> <span class="n">qir_to_pulla</span>
 
-<span class="n">station_control_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_STATION_CONTROL_URL&#39;</span><span class="p">]</span> <span class="c1"># or set the URL directly here\</span>
+<span class="n">station_control_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_STATION_CONTROL_URL&#39;</span><span class="p">]</span> <span class="c1"># or set the URL directly here</span>
 </pre></div>
 </div>
 </div>
@@ -410,22 +420,13 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An example of a QIR program in a form of LLVM IR, it could also be bitcode bytes</span>
-<span class="n">qir_ir</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">target datalayout = &quot;e-m:e-i8:8:32-i16:16:32-i64:64-i128:128-n32:64-S128&quot;</span>
-<span class="s2">target triple = &quot;aarch64-unknown-linux-gnu&quot;</span>
-
+<span class="n">ir</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">%Qubit = type opaque</span>
 <span class="s2">%Result = type opaque</span>
 
 <span class="s2">@cstr.72303030303000 = private constant [7 x i8] c&quot;r00000</span><span class="se">\00</span><span class="s2">&quot;</span>
-<span class="s2">@cstr.72303030303100 = private constant [7 x i8] c&quot;r00001</span><span class="se">\00</span><span class="s2">&quot;</span>
-<span class="s2">@cstr.72303030303200 = private constant [7 x i8] c&quot;r00002</span><span class="se">\00</span><span class="s2">&quot;</span>
-<span class="s2">@cstr.72303030303300 = private constant [7 x i8] c&quot;r00003</span><span class="se">\00</span><span class="s2">&quot;</span>
-<span class="s2">@cstr.72303030303400 = private constant [7 x i8] c&quot;r00004</span><span class="se">\00</span><span class="s2">&quot;</span>
 
 <span class="s2">declare void @__quantum__qis__phased_rx__body(double, double, %Qubit*) local_unnamed_addr</span>
-
-<span class="s2">declare void @__quantum__qis__cz__body(%Qubit*, %Qubit*) local_unnamed_addr</span>
 
 <span class="s2">declare void @__quantum__rt__result_record_output(%Result*, i8*) local_unnamed_addr</span>
 
@@ -433,43 +434,15 @@
 
 <span class="s2">define void @__nvqpp__mlirgen__adonis_ghz() local_unnamed_addr #1 {</span>
 <span class="s2">&quot;0&quot;:</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 2 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 2 to %Qubit*))</span>
 <span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* null)</span>
 <span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* null)</span>
-<span class="s2">  tail call void @__quantum__qis__cz__body(%Qubit* nonnull inttoptr (i64 2 to %Qubit*), %Qubit* null)</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* null)</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* null)</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 1 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 1 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__cz__body(%Qubit* nonnull inttoptr (i64 2 to %Qubit*), %Qubit* nonnull inttoptr (i64 1 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 1 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 1 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 3 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 3 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__cz__body(%Qubit* nonnull inttoptr (i64 2 to %Qubit*), %Qubit* nonnull inttoptr (i64 3 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 3 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 3 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 4 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 4 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__cz__body(%Qubit* nonnull inttoptr (i64 2 to %Qubit*), %Qubit* nonnull inttoptr (i64 4 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* nonnull inttoptr (i64 4 to %Qubit*))</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* nonnull inttoptr (i64 4 to %Qubit*))</span>
 <span class="s2">  tail call void @__quantum__qis__mz__body(%Qubit* null, %Result* writeonly null)</span>
-<span class="s2">  tail call void @__quantum__qis__mz__body(%Qubit* nonnull inttoptr (i64 1 to %Qubit*), %Result* nonnull writeonly inttoptr (i64 1 to %Result*))</span>
-<span class="s2">  tail call void @__quantum__qis__mz__body(%Qubit* nonnull inttoptr (i64 2 to %Qubit*), %Result* nonnull writeonly inttoptr (i64 2 to %Result*))</span>
-<span class="s2">  tail call void @__quantum__qis__mz__body(%Qubit* nonnull inttoptr (i64 3 to %Qubit*), %Result* nonnull writeonly inttoptr (i64 3 to %Result*))</span>
-<span class="s2">  tail call void @__quantum__qis__mz__body(%Qubit* nonnull inttoptr (i64 4 to %Qubit*), %Result* nonnull writeonly inttoptr (i64 4 to %Result*))</span>
 <span class="s2">  tail call void @__quantum__rt__result_record_output(%Result* null, i8* nonnull getelementptr inbounds ([7 x i8], [7 x i8]* @cstr.72303030303000, i64 0, i64 0))</span>
-<span class="s2">  tail call void @__quantum__rt__result_record_output(%Result* nonnull inttoptr (i64 1 to %Result*), i8* nonnull getelementptr inbounds ([7 x i8], [7 x i8]* @cstr.72303030303100, i64 0, i64 0))</span>
-<span class="s2">  tail call void @__quantum__rt__result_record_output(%Result* nonnull inttoptr (i64 2 to %Result*), i8* nonnull getelementptr inbounds ([7 x i8], [7 x i8]* @cstr.72303030303200, i64 0, i64 0))</span>
-<span class="s2">  tail call void @__quantum__rt__result_record_output(%Result* nonnull inttoptr (i64 3 to %Result*), i8* nonnull getelementptr inbounds ([7 x i8], [7 x i8]* @cstr.72303030303300, i64 0, i64 0))</span>
-<span class="s2">  tail call void @__quantum__rt__result_record_output(%Result* nonnull inttoptr (i64 4 to %Result*), i8* nonnull getelementptr inbounds ([7 x i8], [7 x i8]* @cstr.72303030303400, i64 0, i64 0))</span>
 <span class="s2">  ret void</span>
 <span class="s2">}</span>
 
 <span class="s2">attributes #0 = { &quot;irreversible&quot; }</span>
-<span class="s2">attributes #1 = { &quot;entry_point&quot; &quot;output_labeling_schema&quot;=&quot;schema_id&quot; &quot;output_names&quot;=&quot;[[[0,[0,</span><span class="se">\22</span><span class="s2">r00000</span><span class="se">\22</span><span class="s2">]],[1,[1,</span><span class="se">\22</span><span class="s2">r00001</span><span class="se">\22</span><span class="s2">]],[2,[2,</span><span class="se">\22</span><span class="s2">r00002</span><span class="se">\22</span><span class="s2">]],[3,[3,</span><span class="se">\22</span><span class="s2">r00003</span><span class="se">\22</span><span class="s2">]],[4,[4,</span><span class="se">\22</span><span class="s2">r00004</span><span class="se">\22</span><span class="s2">]]]]&quot; &quot;qir_profiles&quot;=&quot;base_profile&quot; &quot;requiredQubits&quot;=&quot;5&quot; &quot;requiredResults&quot;=&quot;5&quot; }</span>
+<span class="s2">attributes #1 = { &quot;entry_point&quot; &quot;output_labeling_schema&quot;=&quot;schema_id&quot; &quot;output_names&quot;=&quot;[[[0,[0,</span><span class="se">\22</span><span class="s2">r00000</span><span class="se">\22</span><span class="s2">]]]]&quot; &quot;qir_profiles&quot;=&quot;base_profile&quot; &quot;requiredQubits&quot;=&quot;1&quot; &quot;requiredResults&quot;=&quot;1&quot; }</span>
 
 <span class="s2">!llvm.module.flags = !{!0, !1, !2, !3, !4}</span>
 
@@ -483,10 +456,12 @@
 </div>
 </div>
 </div>
+<section id="executing-qir">
+<h2>Executing QIR<a class="headerlink" href="#executing-qir" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pulla</span><span class="p">(</span><span class="n">station_control_url</span><span class="p">)</span>
-<span class="n">circuits</span><span class="p">,</span> <span class="n">compiler</span> <span class="o">=</span> <span class="n">qir_to_pulla</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">qir_ir</span><span class="p">)</span>
+<span class="n">circuits</span><span class="p">,</span> <span class="n">compiler</span> <span class="o">=</span> <span class="n">qir_to_pulla</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">ir</span><span class="p">)</span>
 
 <span class="n">playlist</span><span class="p">,</span> <span class="n">context</span> <span class="o">=</span> <span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">circuits</span><span class="p">)</span>
 
@@ -502,22 +477,28 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[11-18 15:13:26;I] Required number of qubits: 5
-[11-18 15:13:26;I] Required number of results: 5
-[11-18 15:13:26;I] QIR version: 1.0
-[11-18 15:13:28;I] Submitted sweep with ID: 96fa928c-90ce-4252-a618-4993aab4824b
-[11-18 15:13:28;I] Created task in queue with ID: d38aeb32-d36b-42c6-bc41-fcd6e4f98936
-[11-18 15:13:28;I] Sweep link: http://xld11-s2.xld11.iqm.fi/station/sweeps/96fa928c-90ce-4252-a618-4993aab4824b
-[11-18 15:13:28;I] Task link: http://xld11-s2.xld11.iqm.fi/station/tasks/d38aeb32-d36b-42c6-bc41-fcd6e4f98936
-[11-18 15:13:28;I] Waiting for the sweep to finish...
-[11-18 15:13:29;I] Sweep status: SweepStatus.SUCCESS
-StationControlResult(status=&lt;TaskStatus.READY: &#39;READY&#39;&gt;, start_time=&#39;2024-11-18T13:13:27.997405+00:00&#39;, end_time=&#39;2024-11-18T13:13:28.905815+00:00&#39;, result=[{&#39;m_1_4_0&#39;: [[0.0], [0.0], [1.0], [0.0], [1.0], [1.0], [0.0], [1.0], [1.0], [1.0], [0.0], [0.0], [0.0], [1.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]], &#39;m_1_3_0&#39;: [[0.0], [0.0], [1.0], [0.0], [1.0], [1.0], [0.0], [1.0], [1.0], [1.0], [0.0], [0.0], [1.0], [1.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]], &#39;m_1_2_0&#39;: [[1.0], [0.0], [1.0], [0.0], [1.0], [1.0], [0.0], [1.0], [1.0], [1.0], [0.0], [0.0], [1.0], [1.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]], &#39;m_1_1_0&#39;: [[0.0], [0.0], [1.0], [1.0], [1.0], [0.0], [0.0], [1.0], [0.0], [1.0], [0.0], [0.0], [1.0], [1.0], [0.0], [0.0], [0.0], [0.0], [0.0], [0.0]], &#39;m_1_0_0&#39;: [[0.0], [0.0], [1.0], [0.0], [1.0], [1.0], [0.0], [1.0], [1.0], [0.0], [0.0], [0.0], [1.0], [1.0], [0.0], [1.0], [0.0], [0.0], [0.0], [0.0]]}], message=None)
-Qiskit result counts: {&#39;0 0 1 0 0&#39;: 1, &#39;0 0 0 0 0&#39;: 9, &#39;1 1 1 1 1&#39;: 4, &#39;0 0 0 1 0&#39;: 1, &#39;1 1 1 0 1&#39;: 2, &#39;1 1 1 1 0&#39;: 1, &#39;0 1 1 1 1&#39;: 1, &#39;0 0 0 0 1&#39;: 1}
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[01-17 16:50:24;W] station-control-client version &#39;2.11&#39; is newer minor version than &#39;2.9&#39; used by the station control server, some new client features might not be supported.
 </pre></div>
 </div>
-<img alt="_images/8c0dd118ffa0f3d5b0222b0fc534cc1df6564106d73c55e05269e5b4ad051eed.png" src="_images/8c0dd118ffa0f3d5b0222b0fc534cc1df6564106d73c55e05269e5b4ad051eed.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[01-17 16:50:24;I] Required number of qubits: 1
+[01-17 16:50:24;I] Required number of results: 1
+[01-17 16:50:24;I] QIR version: 1.0
+[01-17 16:50:26;I] Submitted sweep with ID: db089d02-2656-4d2d-bcf6-283b609d67dd
+[01-17 16:50:26;I] Created task in queue with ID: 05486e2b-528f-40e2-a5e0-657567b76242
+[01-17 16:50:26;I] Sweep link: http://xld11-s2.xld11.iqm.fi/station/sweeps/db089d02-2656-4d2d-bcf6-283b609d67dd
+[01-17 16:50:26;I] Task link: http://xld11-s2.xld11.iqm.fi/station/tasks/05486e2b-528f-40e2-a5e0-657567b76242
+[01-17 16:50:26;I] Waiting for the sweep to finish...
+SweepStatus.PROGRESS
+SweepStatus.SUCCESS
+[01-17 16:50:27;I] Sweep status: SweepStatus.SUCCESS
+StationControlResult(sweep_id=UUID(&#39;db089d02-2656-4d2d-bcf6-283b609d67dd&#39;), task_id=UUID(&#39;05486e2b-528f-40e2-a5e0-657567b76242&#39;), status=&lt;TaskStatus.READY: &#39;READY&#39;&gt;, start_time=&#39;2025-01-17T14:50:25.976741+00:00&#39;, end_time=&#39;2025-01-17T14:50:26.843285+00:00&#39;, result=[{&#39;m_1_0_0&#39;: [[0.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0], [0.0], [1.0], [0.0], [1.0], [1.0], [1.0], [0.0], [1.0], [1.0], [1.0], [1.0], [1.0], [1.0]]}], message=None)
+Qiskit result counts: {&#39;0&#39;: 4, &#39;1&#39;: 16}
+</pre></div>
+</div>
+<img alt="_images/66eef2f8bff83547f426958018d41bffbbb88c7f8a04a6605d884cd0679ccc07.png" src="_images/66eef2f8bff83547f426958018d41bffbbb88c7f8a04a6605d884cd0679ccc07.png" />
 </div>
 </div>
+</section>
 </section>
 
 
@@ -537,6 +518,22 @@ Qiskit result counts: {&#39;0 0 1 0 0&#39;: 1, &#39;0 0 0 0 0&#39;: 9, &#39;1 1 
             </div>
             
             
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#executing-qir">Executing QIR</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
@@ -566,7 +563,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-21.
+  Last updated on 2025-01-22.
   <br/>
 </p>
   </div>
