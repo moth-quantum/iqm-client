@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>serializers &#8212; station-control-client 2.11 documentation</title>
+    <title>serializers &#8212; station-control-client 2.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=247abbf7"></script>
+    <script src="../_static/documentation_options.js?v=80bc0b1a"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -49,12 +49,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="datetime_serializers" href="iqm.station_control.client.serializers.datetime_serializers.html" />
+    <link rel="next" title="channel_property_serializer" href="iqm.station_control.client.serializers.channel_property_serializer.html" />
     <link rel="prev" title="SequenceMetadataDataList" href="iqm.station_control.client.list_models.SequenceMetadataDataList.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.11" />
-    <meta name="docbuild:last-update" content="2025-01-24"/>
+  <meta name="docsearch:version" content="2.12" />
+    <meta name="docbuild:last-update" content="2025-01-25"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 2.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 2.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 2.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 2.12 documentation - Home"/>
   
   
 </a></div>
@@ -165,6 +165,7 @@
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">serializers</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.serializers.channel_property_serializer.html">channel_property_serializer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.serializers.datetime_serializers.html">datetime_serializers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.serializers.playlist_serializers.html">playlist_serializers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.serializers.run_serializers.html">run_serializers</a></li>
@@ -314,25 +315,28 @@
 <p class="rubric">Subpackages and modules</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.datetime_serializers.html#module-iqm.station_control.client.serializers.datetime_serializers" title="iqm.station_control.client.serializers.datetime_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime_serializers</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.channel_property_serializer.html#module-iqm.station_control.client.serializers.channel_property_serializer" title="iqm.station_control.client.serializers.channel_property_serializer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">channel_property_serializer</span></code></a></p></td>
+<td><p>Serializers and deserializers for <code class="xref py py-class docutils literal notranslate"><span class="pre">ChannelProperties</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.datetime_serializers.html#module-iqm.station_control.client.serializers.datetime_serializers" title="iqm.station_control.client.serializers.datetime_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">datetime_serializers</span></code></a></p></td>
 <td><p>Serializers and deserializers for datetime related models.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.playlist_serializers.html#module-iqm.station_control.client.serializers.playlist_serializers" title="iqm.station_control.client.serializers.playlist_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist_serializers</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.playlist_serializers.html#module-iqm.station_control.client.serializers.playlist_serializers" title="iqm.station_control.client.serializers.playlist_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist_serializers</span></code></a></p></td>
 <td><p>Serializers and deserializers for <code class="xref py py-class docutils literal notranslate"><span class="pre">Playlist</span></code></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.run_serializers.html#module-iqm.station_control.client.serializers.run_serializers" title="iqm.station_control.client.serializers.run_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_serializers</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.run_serializers.html#module-iqm.station_control.client.serializers.run_serializers" title="iqm.station_control.client.serializers.run_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run_serializers</span></code></a></p></td>
 <td><p>Serializers and deserializers for run related models.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.setting_node_serializer.html#module-iqm.station_control.client.serializers.setting_node_serializer" title="iqm.station_control.client.serializers.setting_node_serializer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setting_node_serializer</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.setting_node_serializer.html#module-iqm.station_control.client.serializers.setting_node_serializer" title="iqm.station_control.client.serializers.setting_node_serializer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setting_node_serializer</span></code></a></p></td>
 <td><p>Serializers and deserializers for setting node related models.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.struct_serializer.html#module-iqm.station_control.client.serializers.struct_serializer" title="iqm.station_control.client.serializers.struct_serializer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">struct_serializer</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.struct_serializer.html#module-iqm.station_control.client.serializers.struct_serializer" title="iqm.station_control.client.serializers.struct_serializer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">struct_serializer</span></code></a></p></td>
 <td><p>Serializers and deserializers for struct related models.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.sweep_serializers.html#module-iqm.station_control.client.serializers.sweep_serializers" title="iqm.station_control.client.serializers.sweep_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweep_serializers</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.sweep_serializers.html#module-iqm.station_control.client.serializers.sweep_serializers" title="iqm.station_control.client.serializers.sweep_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweep_serializers</span></code></a></p></td>
 <td><p>Serializers and deserializers for sweep related models.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.task_serializers.html#module-iqm.station_control.client.serializers.task_serializers" title="iqm.station_control.client.serializers.task_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_serializers</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.station_control.client.serializers.task_serializers.html#module-iqm.station_control.client.serializers.task_serializers" title="iqm.station_control.client.serializers.task_serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">task_serializers</span></code></a></p></td>
 <td><p>Serializers and deserializers for task related models.</p></td>
 </tr>
 </tbody>
@@ -361,11 +365,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="iqm.station_control.client.serializers.datetime_serializers.html"
+       href="iqm.station_control.client.serializers.channel_property_serializer.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">datetime_serializers</p>
+        <p class="prev-next-title">channel_property_serializer</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -400,7 +404,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-24.
+  Last updated on 2025-01-25.
   <br/>
 </p>
   </div>

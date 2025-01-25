@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; station-control-client 2.11 documentation</title>
+    <title>Index &#8212; station-control-client 2.12 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=247abbf7"></script>
+    <script src="_static/documentation_options.js?v=80bc0b1a"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,8 +50,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.11" />
-    <meta name="docbuild:last-update" content="2025-01-24"/>
+  <meta name="docsearch:version" content="2.12" />
+    <meta name="docbuild:last-update" content="2025-01-25"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="station-control-client 2.11 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 2.11 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="station-control-client 2.12 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 2.12 documentation - Home"/>
   
   
 </a></div>
@@ -164,6 +164,7 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.station_control.client.serializers.html">serializers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.station_control.client.serializers.channel_property_serializer.html">channel_property_serializer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.station_control.client.serializers.datetime_serializers.html">datetime_serializers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.station_control.client.serializers.playlist_serializers.html">playlist_serializers</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.station_control.client.serializers.run_serializers.html">run_serializers</a></li>
@@ -392,7 +393,11 @@
 </li>
       <li><a href="api/iqm.station_control.interface.models.observation_set.ObservationSetBase.html#iqm.station_control.interface.models.observation_set.ObservationSetBase.describes_id">describes_id (ObservationSetBase attribute)</a>
 </li>
+      <li><a href="api/iqm.station_control.client.serializers.channel_property_serializer.deserialize_channel_properties.html#iqm.station_control.client.serializers.channel_property_serializer.deserialize_channel_properties">deserialize_channel_properties() (in module iqm.station_control.client.serializers.channel_property_serializer)</a>
+</li>
       <li><a href="api/iqm.station_control.client.serializers.datetime_serializers.deserialize_datetime.html#iqm.station_control.client.serializers.datetime_serializers.deserialize_datetime">deserialize_datetime() (in module iqm.station_control.client.serializers.datetime_serializers)</a>
+</li>
+      <li><a href="api/iqm.station_control.client.serializers.channel_property_serializer.deserialize_instructions.html#iqm.station_control.client.serializers.channel_property_serializer.deserialize_instructions">deserialize_instructions() (in module iqm.station_control.client.serializers.channel_property_serializer)</a>
 </li>
       <li><a href="api/iqm.station_control.client.serializers.run_serializers.deserialize_run_data.html#iqm.station_control.client.serializers.run_serializers.deserialize_run_data">deserialize_run_data() (in module iqm.station_control.client.serializers.run_serializers)</a>
 </li>
@@ -402,10 +407,10 @@
 </li>
       <li><a href="api/iqm.station_control.client.serializers.struct_serializer.deserialize_struct.html#iqm.station_control.client.serializers.struct_serializer.deserialize_struct">deserialize_struct() (in module iqm.station_control.client.serializers.struct_serializer)</a>
 </li>
-      <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_data.html#iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_data">deserialize_sweep_data() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_data.html#iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_data">deserialize_sweep_data() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
+</li>
       <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_definition.html#iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_definition">deserialize_sweep_definition() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
 </li>
       <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_results.html#iqm.station_control.client.serializers.sweep_serializers.deserialize_sweep_results">deserialize_sweep_results() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
@@ -473,6 +478,8 @@
       <li><a href="api/iqm.station_control.client.station_control.StationControlClient.html#iqm.station_control.client.station_control.StationControlClient.get_about">get_about() (StationControlClient method)</a>
 </li>
       <li><a href="api/iqm.station_control.client.station_control.StationControlClient.html#iqm.station_control.client.station_control.StationControlClient.get_chad">get_chad() (StationControlClient method)</a>
+</li>
+      <li><a href="api/iqm.station_control.client.station_control.StationControlClient.html#iqm.station_control.client.station_control.StationControlClient.get_channel_properties">get_channel_properties() (StationControlClient method)</a>
 </li>
       <li><a href="api/iqm.station_control.client.station_control.StationControlClient.html#iqm.station_control.client.station_control.StationControlClient.get_chip_design_record">get_chip_design_record() (StationControlClient method)</a>
 </li>
@@ -554,6 +561,13 @@
 </li>
       </ul></li>
       <li>
+    iqm.station_control.client.serializers.channel_property_serializer
+
+      <ul>
+        <li><a href="api/iqm.station_control.client.serializers.channel_property_serializer.html#module-iqm.station_control.client.serializers.channel_property_serializer">module</a>
+</li>
+      </ul></li>
+      <li>
     iqm.station_control.client.serializers.datetime_serializers
 
       <ul>
@@ -595,6 +609,8 @@
         <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.html#module-iqm.station_control.client.serializers.sweep_serializers">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.station_control.client.serializers.task_serializers
 
@@ -602,8 +618,6 @@
         <li><a href="api/iqm.station_control.client.serializers.task_serializers.html#module-iqm.station_control.client.serializers.task_serializers">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.station_control.client.station_control
 
@@ -773,6 +787,8 @@
         <li><a href="api/iqm.station_control.client.list_models.html#module-iqm.station_control.client.list_models">iqm.station_control.client.list_models</a>
 </li>
         <li><a href="api/iqm.station_control.client.serializers.html#module-iqm.station_control.client.serializers">iqm.station_control.client.serializers</a>
+</li>
+        <li><a href="api/iqm.station_control.client.serializers.channel_property_serializer.html#module-iqm.station_control.client.serializers.channel_property_serializer">iqm.station_control.client.serializers.channel_property_serializer</a>
 </li>
         <li><a href="api/iqm.station_control.client.serializers.datetime_serializers.html#module-iqm.station_control.client.serializers.datetime_serializers">iqm.station_control.client.serializers.datetime_serializers</a>
 </li>
@@ -977,6 +993,8 @@
 </li>
       <li><a href="api/iqm.station_control.interface.models.sequence.SequenceResultDefinition.html#iqm.station_control.interface.models.sequence.SequenceResultDefinition">SequenceResultDefinition (class in iqm.station_control.interface.models.sequence)</a>
 </li>
+      <li><a href="api/iqm.station_control.client.serializers.channel_property_serializer.serialize_channel_properties.html#iqm.station_control.client.serializers.channel_property_serializer.serialize_channel_properties">serialize_channel_properties() (in module iqm.station_control.client.serializers.channel_property_serializer)</a>
+</li>
       <li><a href="api/iqm.station_control.client.serializers.datetime_serializers.serialize_datetime.html#iqm.station_control.client.serializers.datetime_serializers.serialize_datetime">serialize_datetime() (in module iqm.station_control.client.serializers.datetime_serializers)</a>
 </li>
       <li><a href="api/iqm.station_control.client.serializers.run_serializers.serialize_run_data.html#iqm.station_control.client.serializers.run_serializers.serialize_run_data">serialize_run_data() (in module iqm.station_control.client.serializers.run_serializers)</a>
@@ -991,10 +1009,10 @@
 </li>
       <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.serialize_sweep_definition.html#iqm.station_control.client.serializers.sweep_serializers.serialize_sweep_definition">serialize_sweep_definition() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
 </li>
-      <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.serialize_sweep_results.html#iqm.station_control.client.serializers.sweep_serializers.serialize_sweep_results">serialize_sweep_results() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.station_control.client.serializers.sweep_serializers.serialize_sweep_results.html#iqm.station_control.client.serializers.sweep_serializers.serialize_sweep_results">serialize_sweep_results() (in module iqm.station_control.client.serializers.sweep_serializers)</a>
+</li>
       <li><a href="api/iqm.station_control.client.serializers.task_serializers.serialize_sweep_task_request.html#iqm.station_control.client.serializers.task_serializers.serialize_sweep_task_request">serialize_sweep_task_request() (in module iqm.station_control.client.serializers.task_serializers)</a>
 </li>
       <li><a href="api/iqm.station_control.interface.pydantic_base.serialize_value.html#iqm.station_control.interface.pydantic_base.serialize_value">serialize_value() (in module iqm.station_control.interface.pydantic_base)</a>
@@ -1055,6 +1073,8 @@
         <li><a href="api/iqm.station_control.interface.models.observation.ObservationBase.html#iqm.station_control.interface.models.observation.ObservationBase.unit">(ObservationBase attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/iqm.station_control.client.serializers.channel_property_serializer.unpack_channel_properties.html#iqm.station_control.client.serializers.channel_property_serializer.unpack_channel_properties">unpack_channel_properties() (in module iqm.station_control.client.serializers.channel_property_serializer)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.station_control.client.serializers.playlist_serializers.unpack_playlist.html#iqm.station_control.client.serializers.playlist_serializers.unpack_playlist">unpack_playlist() (in module iqm.station_control.client.serializers.playlist_serializers)</a>
@@ -1123,7 +1143,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-24.
+  Last updated on 2025-01-25.
   <br/>
 </p>
   </div>
