@@ -21,7 +21,8 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-          apt-get install graphviz
+          apt-get update
+          apt-get install -y graphviz
 
       - name: Build documentation
         run: |
