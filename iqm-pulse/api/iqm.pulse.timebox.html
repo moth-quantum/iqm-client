@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>timebox &#8212; iqm.pulse 7.11 documentation</title>
+    <title>timebox &#8212; iqm.pulse 7.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=7c732549"></script>
+    <script src="../_static/documentation_options.js?v=d8b595a4"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="SegmentPointer" href="iqm.pulse.scheduler.SegmentPointer.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.11" />
+  <meta name="docsearch:version" content="7.12" />
     <meta name="docbuild:last-update" content="2025-01-27"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.12 documentation - Home"/>
   
   
 </a></div>
@@ -379,20 +379,14 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritancea802a21a10 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;Enum&quot; [URL=&quot;https://docs.python.org/3.11/library/enum.html#enum.Enum&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Create a collection of name/value pairs.&quot;];
-  &quot;MultiplexedProbeTimeBox&quot; [URL=&quot;iqm.pulse.timebox.MultiplexedProbeTimeBox.html#iqm.pulse.timebox.MultiplexedProbeTimeBox&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;A ``TimeBox`` that contains any number of multiplexed readout pulses for probe channels.&quot;];
-  &quot;TimeBox&quot; -&gt; &quot;MultiplexedProbeTimeBox&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;SchedulingAlgorithm&quot; [URL=&quot;iqm.pulse.timebox.SchedulingAlgorithm.html#iqm.pulse.timebox.SchedulingAlgorithm&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Algorithms for resolving composite TimeBoxes into atomic ones.&quot;];
-  &quot;Enum&quot; -&gt; &quot;SchedulingAlgorithm&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;SchedulingStrategy&quot; [URL=&quot;iqm.pulse.timebox.SchedulingStrategy.html#iqm.pulse.timebox.SchedulingStrategy&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Different scheduling strategies for the contents of composite TimeBoxes.&quot;];
-  &quot;Enum&quot; -&gt; &quot;SchedulingStrategy&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;TimeBox&quot; [URL=&quot;iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Container for one or more instruction schedule fragments, to be scheduled according to a given strategy.&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-be95e165eaa8615eb51cba191250ae934214e06a.png" alt="Inheritance diagram of iqm.pulse.timebox" usemap="#inheritancea802a21a10" class="inheritance graphviz" /></div>
+<map id="inheritancea802a21a10" name="inheritancea802a21a10">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/enum.html#enum.Enum" target="_top" title="Create a collection of name/value pairs." alt="" coords="9,80,81,105"/>
+<area shape="rect" id="node4" href="iqm.pulse.timebox.SchedulingAlgorithm.html#iqm.pulse.timebox.SchedulingAlgorithm" target="_top" title="Algorithms for resolving composite TimeBoxes into atomic ones." alt="" coords="151,55,309,80"/>
+<area shape="rect" id="node5" href="iqm.pulse.timebox.SchedulingStrategy.html#iqm.pulse.timebox.SchedulingStrategy" target="_top" title="Different scheduling strategies for the contents of composite TimeBoxes." alt="" coords="156,104,304,129"/>
+<area shape="rect" id="node2" href="iqm.pulse.timebox.MultiplexedProbeTimeBox.html#iqm.pulse.timebox.MultiplexedProbeTimeBox" target="_top" title="A ``TimeBox`` that contains any number of multiplexed readout pulses for probe channels." alt="" coords="133,5,327,31"/>
+<area shape="rect" id="node3" href="iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox" target="_top" title="Container for one or more instruction schedule fragments, to be scheduled according to a given strategy." alt="" coords="5,5,85,31"/>
+</map></section>
 
 
                 </article>

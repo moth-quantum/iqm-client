@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>waveforms &#8212; iqm.pulse 7.11 documentation</title>
+    <title>waveforms &#8212; iqm.pulse 7.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=7c732549"></script>
+    <script src="../_static/documentation_options.js?v=d8b595a4"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="iqm.pulse.playlist.visualisation.base.inspect_playlist" href="iqm.pulse.playlist.visualisation.base.inspect_playlist.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.11" />
+  <meta name="docsearch:version" content="7.12" />
     <meta name="docbuild:last-update" content="2025-01-27"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.12 documentation - Home"/>
   
   
 </a></div>
@@ -388,25 +388,15 @@ See the link for documentation of waveforms that don’t appear here.</p>
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance72336fd8c1 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;Chirp&quot; [URL=&quot;iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Linear chirp, defined as&quot;];
-  &quot;Waveform&quot; -&gt; &quot;Chirp&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ChirpImag&quot; [URL=&quot;iqm.pulse.playlist.waveforms.ChirpImag.html#iqm.pulse.playlist.waveforms.ChirpImag&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Imaginary part of the linear chirp, which sets the phase to $-\pi/2$.&quot;];
-  &quot;Chirp&quot; -&gt; &quot;ChirpImag&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Cosine&quot; [URL=&quot;iqm.pulse.playlist.waveforms.Cosine.html#iqm.pulse.playlist.waveforms.Cosine&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Periodic sinusoidal waveform which defaults to cosine.&quot;];
-  &quot;Waveform&quot; -&gt; &quot;Cosine&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CosineRiseFallDerivative&quot; [URL=&quot;iqm.pulse.playlist.waveforms.CosineRiseFallDerivative.html#iqm.pulse.playlist.waveforms.CosineRiseFallDerivative&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Derivative of a waveform that has a sinusoidal rise and fall, and a constant part in between.&quot;];
-  &quot;Waveform&quot; -&gt; &quot;CosineRiseFallDerivative&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ModulatedCosineRiseFall&quot; [URL=&quot;iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall.html#iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Modulated Cosine Rise Fall waveform.&quot;];
-  &quot;Waveform&quot; -&gt; &quot;ModulatedCosineRiseFall&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Slepian&quot; [URL=&quot;iqm.pulse.playlist.waveforms.Slepian.html#iqm.pulse.playlist.waveforms.Slepian&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Slepian waveform, which minimizes non-adiabatic errors during a gate.&quot;];
-  &quot;Waveform&quot; -&gt; &quot;Slepian&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Waveform&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Describes the normalized shape of a real-valued control pulse.&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-32343f3162533c8d4a876ad68b501df8e265de85.png" alt="Inheritance diagram of iqm.pulse.playlist.waveforms" usemap="#inheritance72336fd8c1" class="inheritance graphviz" /></div>
+<map id="inheritance72336fd8c1" name="inheritance72336fd8c1">
+<area shape="rect" id="node1" href="iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp" target="_top" title="Linear chirp, defined as" alt="" coords="199,5,271,31"/>
+<area shape="rect" id="node3" href="iqm.pulse.playlist.waveforms.ChirpImag.html#iqm.pulse.playlist.waveforms.ChirpImag" target="_top" title="Imaginary part of the linear chirp, which sets the phase to $&#45;pi/2$." alt="" coords="376,5,465,31"/>
+<area shape="rect" id="node4" href="iqm.pulse.playlist.waveforms.Cosine.html#iqm.pulse.playlist.waveforms.Cosine" target="_top" title="Periodic sinusoidal waveform which defaults to cosine." alt="" coords="199,55,271,80"/>
+<area shape="rect" id="node5" href="iqm.pulse.playlist.waveforms.CosineRiseFallDerivative.html#iqm.pulse.playlist.waveforms.CosineRiseFallDerivative" target="_top" title="Derivative of a waveform that has a sinusoidal rise and fall, and a constant part in between." alt="" coords="143,104,327,129"/>
+<area shape="rect" id="node6" href="iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall.html#iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall" target="_top" title="Modulated Cosine Rise Fall waveform." alt="" coords="143,153,328,179"/>
+<area shape="rect" id="node7" href="iqm.pulse.playlist.waveforms.Slepian.html#iqm.pulse.playlist.waveforms.Slepian" target="_top" title="Slepian waveform, which minimizes non&#45;adiabatic errors during a gate." alt="" coords="199,203,271,228"/>
+</map></section>
 
 
                 </article>

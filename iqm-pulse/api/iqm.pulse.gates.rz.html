@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>rz &#8212; iqm.pulse 7.11 documentation</title>
+    <title>rz &#8212; iqm.pulse 7.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=7c732549"></script>
+    <script src="../_static/documentation_options.js?v=d8b595a4"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,7 +55,7 @@
     <link rel="prev" title="Reset_Wait" href="iqm.pulse.gates.reset.Reset_Wait.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.11" />
+  <meta name="docsearch:version" content="7.12" />
     <meta name="docbuild:last-update" content="2025-01-27"/>
   </head>
   
@@ -135,8 +135,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.12 documentation - Home"/>
   
   
 </a></div>
@@ -382,21 +382,14 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance67b093b5be {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
-  &quot;GateImplementation&quot; [URL=&quot;iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for implementing quantum gates and other quantum operations using instruction schedules.&quot;];
-  &quot;ABC&quot; -&gt; &quot;GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;RZ_ACStarkShift&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_ACStarkShift.html#iqm.pulse.gates.rz.RZ_ACStarkShift&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Implementation of the RZ gate using an AC Stark pulse.&quot;];
-  &quot;GateImplementation&quot; -&gt; &quot;RZ_ACStarkShift&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;RZ_ACStarkShift_CosineRiseFall&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall.html#iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;AC stark pulse implemented as a modulated cosine rise fall pulse.&quot;];
-  &quot;RZ_ACStarkShift&quot; -&gt; &quot;RZ_ACStarkShift_CosineRiseFall&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;RZ_Virtual&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_Virtual.html#iqm.pulse.gates.rz.RZ_Virtual&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Implementation of the RZ gate using the virtual z rotation technique.&quot;];
-  &quot;GateImplementation&quot; -&gt; &quot;RZ_Virtual&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-fe6de85370c766ed601cc3df3bf9ddd958530cb0.png" alt="Inheritance diagram of iqm.pulse.gates.rz" usemap="#inheritance67b093b5be" class="inheritance graphviz" /></div>
+<map id="inheritance67b093b5be" name="inheritance67b093b5be">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="5,31,77,56"/>
+<area shape="rect" id="node2" href="iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" target="_top" title="ABC for implementing quantum gates and other quantum operations using instruction schedules." alt="" coords="125,31,283,56"/>
+<area shape="rect" id="node3" href="iqm.pulse.gates.rz.RZ_ACStarkShift.html#iqm.pulse.gates.rz.RZ_ACStarkShift" target="_top" title="Implementation of the RZ gate using an AC Stark pulse." alt="" coords="331,5,459,31"/>
+<area shape="rect" id="node5" href="iqm.pulse.gates.rz.RZ_Virtual.html#iqm.pulse.gates.rz.RZ_Virtual" target="_top" title="Implementation of the RZ gate using the virtual z rotation technique." alt="" coords="349,55,440,80"/>
+<area shape="rect" id="node4" href="iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall.html#iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall" target="_top" title="AC stark pulse implemented as a modulated cosine rise fall pulse." alt="" coords="507,5,736,31"/>
+</map></section>
 
 
                 </article>

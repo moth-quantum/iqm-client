@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>cz &#8212; iqm.pulse 7.11 documentation</title>
+    <title>cz &#8212; iqm.pulse 7.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=7c732549"></script>
+    <script src="../_static/documentation_options.js?v=d8b595a4"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,7 +55,7 @@
     <link rel="prev" title="CCPRX_Composite" href="iqm.pulse.gates.conditional.CCPRX_Composite.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.11" />
+  <meta name="docsearch:version" content="7.12" />
     <meta name="docbuild:last-update" content="2025-01-27"/>
   </head>
   
@@ -135,8 +135,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.12 documentation - Home"/>
   
   
 </a></div>
@@ -406,37 +406,22 @@ It can be represented by the unitary matrix</p>
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritancecbad8c2f32 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
-  &quot;CZ_CRF&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_CRF.html#iqm.pulse.gates.cz.CZ_CRF&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a CosineRiseFall flux pulse on the coupler.&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;CZ_CRF&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CZ_CRF_ACStarkCRF&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_CRF_ACStarkCRF.html#iqm.pulse.gates.cz.CZ_CRF_ACStarkCRF&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Controlled-Z two-qubit gate.&quot;];
-  &quot;CouplerFluxPulseQubitACStarkPulseGate&quot; -&gt; &quot;CZ_CRF_ACStarkCRF&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CZ_GaussianSmoothedSquare&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_GaussianSmoothedSquare.html#iqm.pulse.gates.cz.CZ_GaussianSmoothedSquare&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a GaussianSmoothedSquare flux pulse on the coupler.&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;CZ_GaussianSmoothedSquare&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CZ_Slepian&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_Slepian.html#iqm.pulse.gates.cz.CZ_Slepian&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a Slepian flux pulse on the coupler.&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;CZ_Slepian&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CZ_Slepian_ACStarkCRF&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_Slepian_ACStarkCRF.html#iqm.pulse.gates.cz.CZ_Slepian_ACStarkCRF&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Controlled-Z two-qubit gate.&quot;];
-  &quot;CouplerFluxPulseQubitACStarkPulseGate&quot; -&gt; &quot;CZ_Slepian_ACStarkCRF&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CZ_Slepian_CRF&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_Slepian_CRF.html#iqm.pulse.gates.cz.CZ_Slepian_CRF&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a Slepian flux pulse on the coupler and a CosineRiseFall flux pulse on the qubit.&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;CZ_Slepian_CRF&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CZ_TruncatedGaussianSmoothedSquare&quot; [URL=&quot;iqm.pulse.gates.cz.CZ_TruncatedGaussianSmoothedSquare.html#iqm.pulse.gates.cz.CZ_TruncatedGaussianSmoothedSquare&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a TruncatedGaussianSmoothedSquare flux pulse on the coupler.&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;CZ_TruncatedGaussianSmoothedSquare&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CouplerFluxPulseQubitACStarkPulseGate&quot; [URL=&quot;iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate.html#iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Base class for CZ gates with coupler flux pulse and a qubit AC Stark pulse.&quot;];
-  &quot;GateImplementation&quot; -&gt; &quot;CouplerFluxPulseQubitACStarkPulseGate&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;FluxPulseGate&quot; [URL=&quot;iqm.pulse.gates.cz.FluxPulseGate.html#iqm.pulse.gates.cz.FluxPulseGate&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Discrete two locus component gate implemented using flux pulses, virtual RZs,&quot;];
-  &quot;GateImplementation&quot; -&gt; &quot;FluxPulseGate&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;FluxPulseGate_CRF_CRF&quot; [URL=&quot;iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a CosineRiseFall flux pulse on the coupler and on the qubit.&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;FluxPulseGate_CRF_CRF&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;FluxPulseGate_TGSS_CRF&quot; [URL=&quot;iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;CZ gate using a TruncatedGaussianSmoothedSquare flux pulse on the coupler and a CosineRiseFall&quot;];
-  &quot;FluxPulseGate&quot; -&gt; &quot;FluxPulseGate_TGSS_CRF&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;GateImplementation&quot; [URL=&quot;iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for implementing quantum gates and other quantum operations using instruction schedules.&quot;];
-  &quot;ABC&quot; -&gt; &quot;GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-e213c3a9c2c1e13e50bae9e3696c81e6d385fc65.png" alt="Inheritance diagram of iqm.pulse.gates.cz" usemap="#inheritancecbad8c2f32" class="inheritance graphviz" /></div>
+<map id="inheritancecbad8c2f32" name="inheritancecbad8c2f32">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="4,223,62,244"/>
+<area shape="rect" id="node11" href="iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" target="_top" title="ABC for implementing quantum gates and other quantum operations using instruction schedules." alt="" coords="101,223,228,244"/>
+<area shape="rect" id="node2" href="iqm.pulse.gates.cz.CZ_CRF.html#iqm.pulse.gates.cz.CZ_CRF" target="_top" title="CZ gate using a CosineRiseFall flux pulse on the coupler." alt="" coords="621,4,680,25"/>
+<area shape="rect" id="node3" href="iqm.pulse.gates.cz.FluxPulseGate.html#iqm.pulse.gates.cz.FluxPulseGate" target="_top" title="Discrete two locus component gate implemented using flux pulses, virtual RZs," alt="" coords="336,144,429,164"/>
+<area shape="rect" id="node6" href="iqm.pulse.gates.cz.CZ_GaussianSmoothedSquare.html#iqm.pulse.gates.cz.CZ_GaussianSmoothedSquare" target="_top" title="CZ gate using a GaussianSmoothedSquare flux pulse on the coupler." alt="" coords="562,44,738,64"/>
+<area shape="rect" id="node7" href="iqm.pulse.gates.cz.CZ_Slepian.html#iqm.pulse.gates.cz.CZ_Slepian" target="_top" title="CZ gate using a Slepian flux pulse on the coupler." alt="" coords="612,84,689,104"/>
+<area shape="rect" id="node9" href="iqm.pulse.gates.cz.CZ_Slepian_CRF.html#iqm.pulse.gates.cz.CZ_Slepian_CRF" target="_top" title="CZ gate using a Slepian flux pulse on the coupler and a CosineRiseFall flux pulse on the qubit." alt="" coords="599,124,702,144"/>
+<area shape="rect" id="node10" href="iqm.pulse.gates.cz.CZ_TruncatedGaussianSmoothedSquare.html#iqm.pulse.gates.cz.CZ_TruncatedGaussianSmoothedSquare" target="_top" title="CZ gate using a TruncatedGaussianSmoothedSquare flux pulse on the coupler." alt="" coords="537,163,764,184"/>
+<area shape="rect" id="node12" href="iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF" target="_top" title="CZ gate using a CosineRiseFall flux pulse on the coupler and on the qubit." alt="" coords="577,203,724,223"/>
+<area shape="rect" id="node13" href="iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF" target="_top" title="CZ gate using a TruncatedGaussianSmoothedSquare flux pulse on the coupler and a CosineRiseFall" alt="" coords="574,243,727,263"/>
+<area shape="rect" id="node4" href="iqm.pulse.gates.cz.CZ_CRF_ACStarkCRF.html#iqm.pulse.gates.cz.CZ_CRF_ACStarkCRF" target="_top" title="Controlled&#45;Z two&#45;qubit gate." alt="" coords="586,282,714,303"/>
+<area shape="rect" id="node5" href="iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate.html#iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate" target="_top" title="Base class for CZ gates with coupler flux pulse and a qubit AC Stark pulse." alt="" coords="266,282,498,303"/>
+<area shape="rect" id="node8" href="iqm.pulse.gates.cz.CZ_Slepian_ACStarkCRF.html#iqm.pulse.gates.cz.CZ_Slepian_ACStarkCRF" target="_top" title="Controlled&#45;Z two&#45;qubit gate." alt="" coords="578,322,723,343"/>
+</map></section>
 
 
                 </article>
