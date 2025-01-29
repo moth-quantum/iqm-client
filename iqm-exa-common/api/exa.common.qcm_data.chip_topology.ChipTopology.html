@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ChipTopology &#8212; exa-common 25.29 documentation</title>
+    <title>ChipTopology &#8212; exa-common 25.31 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=f878977f"></script>
+    <script src="../_static/documentation_options.js?v=afac2cc9"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="exa.common.qcm_data.chip_topology.sort_couplers" href="exa.common.qcm_data.chip_topology.sort_couplers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="25.29" />
-    <meta name="docbuild:last-update" content="2025-01-28"/>
+  <meta name="docsearch:version" content="25.31" />
+    <meta name="docbuild:last-update" content="2025-01-29"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 25.29 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 25.29 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 25.31 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 25.31 documentation - Home"/>
   
   
 </a></div>
@@ -408,7 +408,7 @@
 <td><p>Construct a ChipTopology instance from a raw Chip design record.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_all_common_resonators" title="exa.common.qcm_data.chip_topology.ChipTopology.get_all_common_resonators"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_all_common_resonators</span></code></a></p></td>
-<td><p>Extracts common resonator connected to all qubits.</p></td>
+<td><p>Computational resonators connected to all the given qubits via a coupler.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_common_computational_resonator" title="exa.common.qcm_data.chip_topology.ChipTopology.get_common_computational_resonator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_common_computational_resonator</span></code></a></p></td>
 <td><p>Convenience method for getting the name of a computational resonator which is connected to both specified qubit components via tunable couplers.</p></td>
@@ -732,10 +732,10 @@ subgraph of the coupling topology.</p>
 <span class="sig-name descname"><span class="pre">set_locus_mapping</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mapping</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.qcm_data.chip_topology.ChipTopology.set_locus_mapping" title="Link to this definition">#</a></dt>
 <dd><p>Add a custom mapping from a gate locus to a set of components required for the gate operation.</p>
 <p>The mapping is of the form {&lt;locus&gt;: &lt;components mapped to locus&gt;}, where a locus can be mapped to one or more
-components. The locus itself can be a set (denoting a reciprocal gate) or a tuple (non-reciprocal gate).</p>
+components. The locus itself can be a frozenset (denoting a symmetric gate) or a tuple (non-symmetric gate).</p>
 <p>Some examples:
-- The default mapping (added in init of self) maps pairs of qubits to their common coupler reciprocally.
-- Fast flux CZ-gate maps couplers to their pairs of qubits that can perform qubit flux pulses non-reciprocally
+- <code class="docutils literal notranslate"><span class="pre">DEFAULT_2QB_MAPPING</span></code> (added in <code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code>) maps pairs of qubits to their common coupler symmetrically.
+- Fast flux CZ-gate maps pairs of qubits to their couplers non-symmetrically (first locus qubit can perform flux pulses).
 - A two-qubit gate implementation that includes playing pulses on neighboring components in addition to the</p>
 <blockquote>
 <div><p>connecting coupler.</p>
@@ -875,16 +875,16 @@ second_qubit: The name of the second qubit.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="exa.common.qcm_data.chip_topology.ChipTopology.get_all_common_resonators">
 <span class="sig-name descname"><span class="pre">get_all_common_resonators</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">qubits</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_all_common_resonators" title="Link to this definition">#</a></dt>
-<dd><p>Extracts common resonator connected to all qubits.</p>
+<dd><p>Computational resonators connected to all the given qubits via a coupler.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>qubits</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – List of qubit names.</p>
+<dd class="field-odd"><p><strong>qubits</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Qubit names.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Returns a set containing computational resonator names. If there is no common resonator returns an empty set.</p>
+<dd class="field-even"><p>Names of the computational resonators neighboring all of <code class="docutils literal notranslate"><span class="pre">qubits</span></code> (can be an empty set).</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#set" title="(in Python v3.11)"><em>set</em></a></p>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#set" title="(in Python v3.11)"><em>set</em></a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -1001,7 +1001,7 @@ second_qubit: The name of the second qubit.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-28.
+  Last updated on 2025-01-29.
   <br/>
 </p>
   </div>

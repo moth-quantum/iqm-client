@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ScheduleBuilder &#8212; iqm.pulse 7.12 documentation</title>
+    <title>ScheduleBuilder &#8212; iqm.pulse 7.15 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=d8b595a4"></script>
+    <script src="../_static/documentation_options.js?v=29f46264"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -49,12 +49,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="gate_implementation" href="iqm.pulse.gate_implementation.html" />
+    <link rel="next" title="circuit_operations" href="iqm.pulse.circuit_operations.html" />
     <link rel="prev" title="CircuitOperation" href="iqm.pulse.builder.CircuitOperation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.12" />
-    <meta name="docbuild:last-update" content="2025-01-28"/>
+  <meta name="docsearch:version" content="7.15" />
+    <meta name="docbuild:last-update" content="2025-01-29"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.12 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.15 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.15 documentation - Home"/>
   
   
 </a></div>
@@ -157,8 +157,17 @@
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="iqm.pulse.builder.html">builder</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.validate_quantum_circuit.html">iqm.pulse.builder.validate_quantum_circuit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html">CircuitOperation</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">ScheduleBuilder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.circuit_operations.html">circuit_operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.get_unitary_from_circuit.html">iqm.pulse.circuit_operations.get_unitary_from_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.get_unitary_from_op.html">iqm.pulse.circuit_operations.get_unitary_from_op</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.reorder.html">iqm.pulse.circuit_operations.reorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.reshape_unitary.html">iqm.pulse.circuit_operations.reshape_unitary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.CircuitOperationList.html">CircuitOperationList</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.gate_implementation.html">gate_implementation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -357,8 +366,8 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._cache"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._cache</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._channel_to_component"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._channel_to_component</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._variable_sample_rates"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._variable_sample_rates</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._channel_types"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._channel_types</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._require_scheduling_in_seconds"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._require_scheduling_in_seconds</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._channel_templates"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._channel_templates</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.inject_calibration"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.inject_calibration()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.validate_calibration"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.validate_calibration()</span></code></a></li>
@@ -506,21 +515,18 @@ block their components, just themselves.</p>
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="iqm.pulse.builder.ScheduleBuilder._variable_sample_rates">
-<span class="sig-name descname"><span class="pre">_variable_sample_rates</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder._variable_sample_rates" title="Link to this definition">#</a></dt>
-<dd><p>the drive and flux channels should
-always have uniform sampling rates, so this can happen only due to readout channels.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Whether the builder has variable sampling rates in its channels. NOTE</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
 <dt class="sig sig-object py" id="iqm.pulse.builder.ScheduleBuilder._channel_types">
 <span class="sig-name descname"><span class="pre">_channel_types</span></span><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder._channel_types" title="Link to this definition">#</a></dt>
 <dd><p>Cache the probe and non-probe channel names for the scheduling algorithm performance</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.pulse.builder.ScheduleBuilder._require_scheduling_in_seconds">
+<span class="sig-name descname"><span class="pre">_require_scheduling_in_seconds</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></em><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder._require_scheduling_in_seconds" title="Link to this definition">#</a></dt>
+<dd><p>Whether to require scheduling of probe instructions in seconds instead of in samples. This can happen for two
+reasons: 1) the probe channel has a different sampling rate to the other channels (e.g. with UHFQA) or
+2) the probe channels have a different instruction granularity to some of the other channels (e.g. with
+mixed stations that have the RO device from a different vendor than some of the AWGs).</p>
 </dd></dl>
 
 <dl class="py attribute">
@@ -1247,11 +1253,11 @@ a warning is raised.</p>
       </div>
     </a>
     <a class="right-next"
-       href="iqm.pulse.gate_implementation.html"
+       href="iqm.pulse.circuit_operations.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">gate_implementation</p>
+        <p class="prev-next-title">circuit_operations</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1275,8 +1281,8 @@ a warning is raised.</p>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._cache"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._cache</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._channel_to_component"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._channel_to_component</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._variable_sample_rates"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._variable_sample_rates</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._channel_types"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._channel_types</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._require_scheduling_in_seconds"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._require_scheduling_in_seconds</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._channel_templates"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._channel_templates</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.inject_calibration"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.inject_calibration()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.validate_calibration"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.validate_calibration()</span></code></a></li>
@@ -1338,7 +1344,7 @@ a warning is raised.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-28.
+  Last updated on 2025-01-29.
   <br/>
 </p>
   </div>

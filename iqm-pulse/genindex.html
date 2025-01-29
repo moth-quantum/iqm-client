@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; iqm.pulse 7.12 documentation</title>
+    <title>Index &#8212; iqm.pulse 7.15 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=d8b595a4"></script>
+    <script src="_static/documentation_options.js?v=29f46264"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,8 +50,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.12" />
-    <meta name="docbuild:last-update" content="2025-01-28"/>
+  <meta name="docsearch:version" content="7.15" />
+    <meta name="docbuild:last-update" content="2025-01-29"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.12 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.12 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.15 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.15 documentation - Home"/>
   
   
 </a></div>
@@ -156,8 +156,17 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.validate_quantum_circuit.html">iqm.pulse.builder.validate_quantum_circuit</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.CircuitOperation.html">CircuitOperation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html">ScheduleBuilder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.circuit_operations.html">circuit_operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.get_unitary_from_circuit.html">iqm.pulse.circuit_operations.get_unitary_from_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.get_unitary_from_op.html">iqm.pulse.circuit_operations.get_unitary_from_op</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.reorder.html">iqm.pulse.circuit_operations.reorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.reshape_unitary.html">iqm.pulse.circuit_operations.reshape_unitary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.CircuitOperationList.html">CircuitOperationList</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.gate_implementation.html">gate_implementation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -479,6 +488,8 @@
 </li>
       <li><a href="api/iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms._multiplexed_timeboxes">_multiplexed_timeboxes (iqm.pulse.gates.measure.Measure_CustomWaveforms attribute)</a>
 </li>
+      <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._require_scheduling_in_seconds">_require_scheduling_in_seconds (iqm.pulse.builder.ScheduleBuilder attribute)</a>
+</li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._resolve_timebox_hard_boundary">_resolve_timebox_hard_boundary() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._resolve_timebox_tetris">_resolve_timebox_tetris() (iqm.pulse.builder.ScheduleBuilder method)</a>
@@ -499,13 +510,13 @@
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._set_gate_implementation_shortcut">_set_gate_implementation_shortcut() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList._set_specific_operation_shortcut">_set_specific_operation_shortcut() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.waveforms.Slepian.html#iqm.pulse.playlist.waveforms.Slepian._t_tau">_t_tau() (iqm.pulse.playlist.waveforms.Slepian method)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.waveforms.Slepian.html#iqm.pulse.playlist.waveforms.Slepian._theta_tau">_theta_tau() (iqm.pulse.playlist.waveforms.Slepian method)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms._time_traces">_time_traces (iqm.pulse.gates.measure.Measure_CustomWaveforms attribute)</a>
-</li>
-      <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._variable_sample_rates">_variable_sample_rates (iqm.pulse.builder.ScheduleBuilder attribute)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -522,6 +533,10 @@
       <li><a href="api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule.add_channels">add_channels() (iqm.pulse.playlist.schedule.Schedule method)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.channel.ChannelDescription.html#iqm.pulse.playlist.channel.ChannelDescription.add_instruction">add_instruction() (iqm.pulse.playlist.channel.ChannelDescription method)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.add_op">add_op() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.add_qubits">add_qubits() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
 </li>
       <li><a href="api/iqm.pulse.timebox.SchedulingStrategy.html#iqm.pulse.timebox.SchedulingStrategy.ALAP">ALAP (iqm.pulse.timebox.SchedulingStrategy attribute)</a>
 </li>
@@ -557,14 +572,16 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.gates.barrier.Barrier.html#iqm.pulse.gates.barrier.Barrier">Barrier (class in iqm.pulse.gates.barrier)</a>
 </li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.barrier">barrier() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.instructions.Block.html#iqm.pulse.playlist.instructions.Block">Block (class in iqm.pulse.playlist.instructions)</a>
 </li>
       <li><a href="api/iqm.pulse.scheduler.BLOCKING.html#iqm.pulse.scheduler.BLOCKING">BLOCKING (in module iqm.pulse.scheduler)</a>
 </li>
-      <li><a href="api/iqm.pulse.playlist.channel.ChannelProperties.html#iqm.pulse.playlist.channel.ChannelProperties.blocks_component">blocks_component (iqm.pulse.playlist.channel.ChannelProperties attribute)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.playlist.channel.ChannelProperties.html#iqm.pulse.playlist.channel.ChannelProperties.blocks_component">blocks_component (iqm.pulse.playlist.channel.ChannelProperties attribute)</a>
+</li>
       <li><a href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate.build">build() (iqm.pulse.gate_implementation.CompositeGate method)</a>
 
       <ul>
@@ -603,6 +620,8 @@
 </li>
       <li><a href="api/iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation">CircuitOperation (class in iqm.pulse.builder)</a>
 </li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList">CircuitOperationList (class in iqm.pulse.circuit_operations)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule.cleanup">cleanup() (iqm.pulse.playlist.schedule.Schedule method)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation.clifford">clifford() (iqm.pulse.gates.prx.PRX_GateImplementation method)</a>
@@ -610,6 +629,8 @@
       <li><a href="api/iqm.pulse.playlist.channel.ChannelProperties.html#iqm.pulse.playlist.channel.ChannelProperties.compatible_instructions">compatible_instructions (iqm.pulse.playlist.channel.ChannelProperties attribute)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.instructions.ComplexIntegration.html#iqm.pulse.playlist.instructions.ComplexIntegration">ComplexIntegration (class in iqm.pulse.playlist.instructions)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.compose">compose() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
 </li>
       <li><a href="api/iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox.composite">composite() (iqm.pulse.timebox.TimeBox static method)</a>
 </li>
@@ -636,6 +657,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.playlist.waveforms.CosineRiseFallDerivative.html#iqm.pulse.playlist.waveforms.CosineRiseFallDerivative">CosineRiseFallDerivative (class in iqm.pulse.playlist.waveforms)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.count_ops">count_ops() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate.html#iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate.coupler_wave">coupler_wave (iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate attribute)</a>
 
@@ -819,6 +842,8 @@
 </li>
       <li><a href="api/iqm.pulse.playlist.instructions.ThresholdStateDiscrimination.html#iqm.pulse.playlist.instructions.ThresholdStateDiscrimination.feedback_signal_label">feedback_signal_label (iqm.pulse.playlist.instructions.ThresholdStateDiscrimination attribute)</a>
 </li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.find_qubits">find_qubits() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
+</li>
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate.html#iqm.pulse.gates.cz.FluxPulseGate">FluxPulseGate (class in iqm.pulse.gates.cz)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF">FluxPulseGate_CRF_CRF (class in iqm.pulse.gates.cz)</a>
@@ -881,8 +906,6 @@
         <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.get_implementation_class">(iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation.get_locus_mapping_name">get_locus_mapping_name() (iqm.pulse.gate_implementation.GateImplementation class method)</a>
 
       <ul>
@@ -901,9 +924,23 @@
         <li><a href="api/iqm.pulse.gates.rz.RZ_Virtual.html#iqm.pulse.gates.rz.RZ_Virtual.get_locus_mapping_name">(iqm.pulse.gates.rz.RZ_Virtual class method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation.get_parameters">get_parameters() (iqm.pulse.gate_implementation.GateImplementation class method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.get_probe_channel">get_probe_channel() (iqm.pulse.builder.ScheduleBuilder method)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.get_unitary">get_unitary() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.get_unitary_from_circuit.html#iqm.pulse.circuit_operations.get_unitary_from_circuit">get_unitary_from_circuit() (in module iqm.pulse.circuit_operations)</a>
+</li>
+      <li><a href="api/iqm.pulse.circuit_operations.get_unitary_from_op.html#iqm.pulse.circuit_operations.get_unitary_from_op">get_unitary_from_op() (in module iqm.pulse.circuit_operations)</a>
+</li>
+      <li><a href="api/iqm.pulse.gates.prx.get_unitary_prx.html#iqm.pulse.gates.prx.get_unitary_prx">get_unitary_prx() (in module iqm.pulse.gates.prx)</a>
+</li>
+      <li><a href="api/iqm.pulse.gates.rz.get_unitary_rz.html#iqm.pulse.gates.rz.get_unitary_rz">get_unitary_rz() (in module iqm.pulse.gates.rz)</a>
+</li>
+      <li><a href="api/iqm.pulse.gates.u.get_unitary_u.html#iqm.pulse.gates.u.get_unitary_u">get_unitary_u() (in module iqm.pulse.gates.u)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.get_virtual_feedback_channel_for">get_virtual_feedback_channel_for() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
@@ -977,6 +1014,13 @@
 
       <ul>
         <li><a href="api/iqm.pulse.builder.html#module-iqm.pulse.builder">module</a>
+</li>
+      </ul></li>
+      <li>
+    iqm.pulse.circuit_operations
+
+      <ul>
+        <li><a href="api/iqm.pulse.circuit_operations.html#module-iqm.pulse.circuit_operations">module</a>
 </li>
       </ul></li>
       <li>
@@ -1203,6 +1247,8 @@
 <h2 id="M">M</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList.map_loci">map_loci() (iqm.pulse.circuit_operations.CircuitOperationList method)</a>
+</li>
       <li><a href="api/iqm.pulse.utils.map_waveform_param_types.html#iqm.pulse.utils.map_waveform_param_types">map_waveform_param_types() (in module iqm.pulse.utils)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant">Measure_Constant (class in iqm.pulse.gates.measure)</a>
@@ -1222,6 +1268,8 @@
         <li><a href="api/iqm.pulse.html#module-iqm.pulse">iqm.pulse</a>
 </li>
         <li><a href="api/iqm.pulse.builder.html#module-iqm.pulse.builder">iqm.pulse.builder</a>
+</li>
+        <li><a href="api/iqm.pulse.circuit_operations.html#module-iqm.pulse.circuit_operations">iqm.pulse.circuit_operations</a>
 </li>
         <li><a href="api/iqm.pulse.gate_implementation.html#module-iqm.pulse.gate_implementation">iqm.pulse.gate_implementation</a>
 </li>
@@ -1526,6 +1574,8 @@
       </ul></li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.remainder">remainder (iqm.pulse.scheduler.SegmentPointer property)</a>
 </li>
+      <li><a href="api/iqm.pulse.circuit_operations.reorder.html#iqm.pulse.circuit_operations.reorder">reorder() (in module iqm.pulse.circuit_operations)</a>
+</li>
       <li><a href="api/iqm.pulse.gates.reset.Reset_Conditional.html#iqm.pulse.gates.reset.Reset_Conditional">Reset_Conditional (class in iqm.pulse.gates.reset)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.reset.RESET_FEEDBACK_KEY.html#iqm.pulse.gates.reset.RESET_FEEDBACK_KEY">RESET_FEEDBACK_KEY (in module iqm.pulse.gates.reset)</a>
@@ -1534,12 +1584,14 @@
 </li>
       <li><a href="api/iqm.pulse.gates.reset.Reset_Wait.html#iqm.pulse.gates.reset.Reset_Wait">Reset_Wait (class in iqm.pulse.gates.reset)</a>
 </li>
-      <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.resolve_timebox">resolve_timebox() (iqm.pulse.builder.ScheduleBuilder method)</a>
+      <li><a href="api/iqm.pulse.circuit_operations.reshape_unitary.html#iqm.pulse.circuit_operations.reshape_unitary">reshape_unitary() (in module iqm.pulse.circuit_operations)</a>
 </li>
-      <li><a href="api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule.reverse">reverse() (iqm.pulse.playlist.schedule.Schedule method)</a>
+      <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.resolve_timebox">resolve_timebox() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule.reverse">reverse() (iqm.pulse.playlist.schedule.Schedule method)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule.reverse_hard_box">reverse_hard_box() (iqm.pulse.playlist.schedule.Schedule method)</a>
 </li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.rewind">rewind() (iqm.pulse.scheduler.SegmentPointer method)</a>
@@ -1715,14 +1767,20 @@
       <li><a href="api/iqm.pulse.gates.u.UGate.html#iqm.pulse.gates.u.UGate">UGate (class in iqm.pulse.gates.u)</a>
 </li>
   </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.unitary">unitary (iqm.pulse.quantum_ops.QuantumOp attribute)</a>
+</li>
+  </ul></td>
 </tr></table>
 
 <h2 id="V">V</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/iqm.pulse.playlist.instructions.ConditionalInstruction.html#iqm.pulse.playlist.instructions.ConditionalInstruction.validate">validate() (iqm.pulse.playlist.instructions.ConditionalInstruction method)</a>
+      <li><a href="api/iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation.validate">validate() (iqm.pulse.builder.CircuitOperation method)</a>
 
       <ul>
+        <li><a href="api/iqm.pulse.playlist.instructions.ConditionalInstruction.html#iqm.pulse.playlist.instructions.ConditionalInstruction.validate">(iqm.pulse.playlist.instructions.ConditionalInstruction method)</a>
+</li>
         <li><a href="api/iqm.pulse.playlist.instructions.Instruction.html#iqm.pulse.playlist.instructions.Instruction.validate">(iqm.pulse.playlist.instructions.Instruction method)</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse.validate">(iqm.pulse.playlist.instructions.IQPulse method)</a>
@@ -1752,8 +1810,12 @@
 </li>
       <li><a href="api/iqm.pulse.validation.validate_playlist_compatibility.html#iqm.pulse.validation.validate_playlist_compatibility">validate_playlist_compatibility() (in module iqm.pulse.validation)</a>
 </li>
-      <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.validate_quantum_circuit">validate_quantum_circuit() (iqm.pulse.builder.ScheduleBuilder method)</a>
+      <li><a href="api/iqm.pulse.builder.validate_quantum_circuit.html#iqm.pulse.builder.validate_quantum_circuit">validate_quantum_circuit() (in module iqm.pulse.builder)</a>
+
+      <ul>
+        <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.validate_quantum_circuit">(iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
+      </ul></li>
       <li><a href="api/iqm.pulse.playlist.instructions.VirtualRZ.html#iqm.pulse.playlist.instructions.VirtualRZ">VirtualRZ (class in iqm.pulse.playlist.instructions)</a>
 </li>
   </ul></td>
@@ -1864,7 +1926,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-01-28.
+  Last updated on 2025-01-29.
   <br/>
 </p>
   </div>
