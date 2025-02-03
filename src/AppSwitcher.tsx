@@ -28,7 +28,7 @@ const AppSwitcher: React.FC = () => {
                 />
             </button>
             {switcherOpen && (
-                <div className="absolute mt-[12em] bg-white w-44 rounded-lg p-1 pt-1">
+                <div className="absolute mt-[12em] bg-white w-44 rounded-lg p-1 pt-1 z-50">
                     <div>
                         <a href="/" aria-label="IQM Academy">
                             <img

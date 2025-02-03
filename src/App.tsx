@@ -52,19 +52,68 @@ function App() {
     setIsModalOpen(true);
   };
 
+  const [isDocumentationSelected, setIsDocumentationSelected] = useState(true);
+
+
+  const docLinks = [
+    { href: "/docs/iqm-pulse", title: "IQM Pulse", description: "Interface and implementations for control pulses." },
+    { href: "/docs/iqm-pulla", title: "IQM Pulla", description: "Pulse-level access library for compiling quantum circuits." },
+    { href: "https://iqm-finland.github.io/qiskit-on-iqm/", title: "Qiskit on IQM", description: "Qiskit adapter for IQM’s quantum computers." },
+    { href: "https://iqm-finland.github.io/cirq-on-iqm/", title: "Cirq on IQM", description: "Cirq adapter for IQM’s quantum computers." },
+    { href: "https://iqm-finland.github.io/iqm-benchmarks/", title: "IQM Benchmarks", description: "Quantum Characterization, Verification, and Validation (QCVV) tools for quantum computing." },
+    { href: "https://iqm-finland.github.io/iqm-client/", title: "IQM Client", description: "Python client for remote access to quantum computers for circuit-level access." },
+    { href: "/docs/iqm-station-control-client", title: "IQM Station Control Client", description: "Python client for remote access to quantum computers for pulse-level access." },
+    { href: "/docs/iqm-exa-common", title: "IQM EXA Common", description: "Abstract interfaces, helpers, utility classes, etc." },
+  ];
+
   return (
-    <div className="min-h-screen bg-[#ebece4] p-8">
+    <div className="min-h-screen p-8">
       <div className="max-w-4xl mx-auto">
 
-        <AppSwitcher />
+        <div className="flex flex-col sm:flex-row mb-4">
+          <AppSwitcher />
 
-        <div
-          onClick={handleSearchClick}
-          className="mt-6 flex items-center gap-2 p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-gray-300 transition-colors"
-        >
-          <Search className="w-5 h-5 text-gray-400" />
-          <span className="text-gray-500">Search all documentation... (Press ⌘K)</span>
+
+          <div className="flex gap-4">
+            <button
+              className="relative px-4 py-2 text-gray-500"
+              onClick={() => setIsDocumentationSelected(true)}
+            >
+              Documentation
+              <span className={`block h-1 mt-1 ${isDocumentationSelected ? 'bg-green-500' : 'bg-transparent'} absolute bottom-0 left-0 right-0`}></span>
+            </button>
+            <button
+              className="relative px-4 py-2 text-gray-500"
+              onClick={() => setIsDocumentationSelected(false)}
+            >
+              Features
+              <span className={`block h-1 mt-1 ${!isDocumentationSelected ? 'bg-green-500' : 'bg-transparent'} absolute bottom-0 left-0 right-0`}></span>
+            </button>
+          </div>
         </div>
+
+        {isDocumentationSelected ? (
+          <>
+            <div
+              onClick={handleSearchClick}
+              className="mt-6 flex items-center gap-2 p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-gray-300 transition-colors"
+            >
+              <Search className="w-5 h-5 text-gray-400" />
+              <span className="text-gray-500">Search all documentation... (Press ⌘K)</span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+              {docLinks.map((doc, index) => (
+                <a key={index} href={doc.href} className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <h2 className="text-lg font-semibold text-gray-900">{doc.title}</h2>
+                  <p className="mt-2 text-sm text-gray-600">{doc.description}</p>
+                </a>
+              ))}
+            </div>
+          </>
+        ) : (
+          <h1>Feature List</h1>
+        )}
 
         {/* Modal */}
         {isModalOpen && (
@@ -109,50 +158,12 @@ function App() {
           </div>
         )}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          <a href="/docs/iqm-pulse" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">IQM Pulse</h2>
-            <p className="mt-2 text-sm text-gray-600">Interface and implementations for control pulses.</p>
-          </a>
 
-          <a href="/docs/iqm-pulla" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">IQM Pulla</h2>
-            <p className="mt-2 text-sm text-gray-600">Pulse-level access library for compiling quantum circuits.</p>
-          </a>
 
-          <a href="https://iqm-finland.github.io/qiskit-on-iqm/" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">Qiskit on IQM</h2>
-            <p className="mt-2 text-sm text-gray-600">Qiskit adapter for IQM’s quantum computers.</p>
-          </a>
-
-          <a href="https://iqm-finland.github.io/cirq-on-iqm/" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">Cirq on IQM</h2>
-            <p className="mt-2 text-sm text-gray-600">Cirq adapter for IQM’s quantum computers.</p>
-          </a>
-
-          <a href="https://iqm-finland.github.io/iqm-benchmarks/" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">IQM Benchmarks</h2>
-            <p className="mt-2 text-sm text-gray-600">Quantum Characterization, Verification, and Validation (QCVV) tools for quantum computing.</p>
-          </a>
-
-          <a href="https://iqm-finland.github.io/iqm-client/" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">IQM Client</h2>
-            <p className="mt-2 text-sm text-gray-600">Python client for remote access to quantum computers for circuit-level access.</p>
-          </a>
-
-          <a href="/docs/iqm-station-control-client" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">IQM Station Control Client</h2>
-            <p className="mt-2 text-sm text-gray-600">Python client for remote access to quantum computers for pulse-level access.</p>
-          </a>
-
-          <a href="/docs/iqm-exa-common" className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-            <h2 className="text-lg font-semibold text-gray-900">IQM EXA Common</h2>
-            <p className="mt-2 text-sm text-gray-600">Abstract interfaces, helpers, utility classes, etc.</p>
-          </a>
-        </div>
-
-        <footer className="mt-8 text-center text-sm text-gray-500">
-          Copyright IQM Quantum Computers 2021-2025.
+        <footer className="mt-8 text-center text-sm text-gray-500 border-gray-300 border-t pt-4">
+          <span>Copyright IQM Quantum Computers 2021-2025.</span>
+          <br />
+          <span>Need assistance? Contact us <a href="mailto:support@meetiqm.com">support@meetiqm.com</a></span>
         </footer>
       </div>
     </div>
