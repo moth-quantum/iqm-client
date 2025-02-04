@@ -6,6 +6,7 @@ SEARCH_INDEX_FILE = "./search.json"
 DOCS_DIR = "./"
 PACKAGE_DIRS = ["iqm-exa-common", "iqm-pulla", "iqm-pulse", "iqm-station-control-client"]
 EXCLUDED_FILE_NAMES = ["genindex.html", "license.html", "search.html", "changelog.html", "py-modindex.html"]
+
 def extract_text_from_html(file_path):
     """Extracts text from <p> elements in an HTML file."""
     with open(file_path, "r", encoding="utf-8") as f:

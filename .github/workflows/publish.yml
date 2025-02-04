@@ -24,7 +24,7 @@ jobs:
           apt-get update
           apt-get install -y graphviz
 
-      - name: Build documentation
+      - name: Build sphinx documentation
         run: |
           mkdir -p public
           cp index.html public
@@ -54,6 +54,29 @@ jobs:
           rm -rf temp
           rm -rf public/jupyter_execute
           touch public/.nojekyll
+
+      - name: Generate search index
+        run: python generate_search_index.py
+
+      - name: Ensure search index is in public folder
+        run: |
+          mv search.json public/ || echo "No search index found"
+
+      - name: Install Node.js and Yarn
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'yarn'
+  
+      - name: Install and build React project
+        run: |
+          yarn install --frozen-lockfile
+          yarn build
+  
+      - name: Copy React build to public folder
+        run: |
+          mkdir -p public
+          cp -r dist/* public/
 
       - name: Install rsync
         run: |

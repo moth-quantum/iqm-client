@@ -80,36 +80,38 @@ function App() {
               onClick={() => setIsDocumentationSelected(true)}
             >
               Documentation
-              <span className={`block h-1 mt-1 ${isDocumentationSelected ? 'bg-green-500' : 'bg-transparent'} absolute bottom-0 left-0 right-0`}></span>
+              <span className={`block h-1 ml-4 mr-4 ${isDocumentationSelected ? 'bg-green-500' : 'bg-transparent'} absolute bottom-0 left-0 right-0`}></span>
             </button>
-            <button
+            {/*<button
               className="relative px-4 py-2 text-gray-500"
               onClick={() => setIsDocumentationSelected(false)}
             >
               Features
-              <span className={`block h-1 mt-1 ${!isDocumentationSelected ? 'bg-green-500' : 'bg-transparent'} absolute bottom-0 left-0 right-0`}></span>
-            </button>
+              <span className={`block h-1 ml-4 mr-4 ${!isDocumentationSelected ? 'bg-green-500' : 'bg-transparent'} absolute bottom-0 left-0 right-0`}></span>
+            </button>*/}
           </div>
         </div>
 
+        <div
+          onClick={handleSearchClick}
+          className="mt-6 mb-6 flex items-center gap-2 p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-gray-300 transition-colors"
+        >
+          <Search className="w-5 h-5 text-gray-400" />
+          <span className="text-gray-500">Search all documentation... (Press ⌘K)</span>
+        </div>
         {isDocumentationSelected ? (
           <>
-            <div
-              onClick={handleSearchClick}
-              className="mt-6 flex items-center gap-2 p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-gray-300 transition-colors"
-            >
-              <Search className="w-5 h-5 text-gray-400" />
-              <span className="text-gray-500">Search all documentation... (Press ⌘K)</span>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-              {docLinks.map((doc, index) => (
-                <a key={index} href={doc.href} className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <h2 className="text-lg font-semibold text-gray-900">{doc.title}</h2>
-                  <p className="mt-2 text-sm text-gray-600">{doc.description}</p>
-                </a>
-              ))}
-            </div>
+          <p>Find below the documentation for IQM client-side libraries that can be used to connect to {" "}
+            <a href="https://resonance.meetiqm.com" target="_blank">IQM Resonance</a> and any IQM on-premise quantum computer.
+            </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+            {docLinks.map((doc, index) => (
+              <a key={index} href={doc.href} target='_blank' className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <h2 className="text-lg font-semibold text-gray-900">{doc.title}</h2>
+                <p className="mt-2 text-sm text-gray-600">{doc.description}</p>
+              </a>
+            ))}
+          </div>
           </>
         ) : (
           <h1>Feature List</h1>
@@ -142,6 +144,7 @@ function App() {
                   <a
                     key={index}
                     href={doc.url}
+                    target="_blank"
                     className="block p-4 hover:bg-gray-50 transition-colors"
                   >
                     <h3 className="font-medium text-gray-900">{doc.title}</h3>
