@@ -20,7 +20,7 @@ const AppSwitcher: React.FC = () => {
             >
                 <img
                     className="title-image cursor-pointer"
-                    alt="IQM Academy"
+                    alt="IQM Docs Application Switcher"
                     src={LogoSwitcher}
                     height={50}
                     width={176}
@@ -30,7 +30,7 @@ const AppSwitcher: React.FC = () => {
             {switcherOpen && (
                 <div className="absolute mt-[12em] bg-white w-44 rounded-lg p-1 pt-1 z-50">
                     <div>
-                        <a href="/" aria-label="IQM Academy">
+                        <a href="/" aria-label="IQM Docs" target="_blank">
                             <img
                                 className="switcher-title-image hover:filter hover:contrast-[.90]"
                                 alt="IQM Academy"
@@ -41,7 +41,7 @@ const AppSwitcher: React.FC = () => {
                         </a>
                     </div>
                     <div>
-                        <a href="https://academy.meetiqm.com" aria-label="IQM Academy">
+                        <a href="https://academy.meetiqm.com" target="_blank" aria-label="IQM Academy">
                             <img
                                 className="switcher-title-image hover:filter hover:contrast-[.90]"
                                 alt="IQM Academy"
