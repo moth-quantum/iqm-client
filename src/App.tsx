@@ -97,7 +97,7 @@ function App() {
           className="mt-6 mb-6 flex items-center gap-2 p-3 bg-white border border-gray-200 rounded-lg cursor-pointer hover:border-gray-300 transition-colors"
         >
           <Search className="w-5 h-5 text-gray-400" />
-          <span className="text-gray-500">Search all documentation... (Press ⌘K)</span>
+          <span className="text-gray-500">Search all documentation... {navigator.userAgent.includes('Mac') ? "Press ⌘K" : "Press Ctrl+K"}</span>
         </div>
         {isDocumentationSelected ? (
           <>
@@ -145,7 +145,7 @@ function App() {
                     key={index}
                     href={"." + doc.url}
                     target="_blank"
-                    className="block p-4 hover:bg-gray-50 transition-colors"
+                    className="block p-4 hover:bg-gray-50 transition-colors overflow-hidden"
                   >
                     <h3 className="font-medium text-gray-900">{doc.title}</h3>
                     <span className="text-sm text-gray-500 block mt-1">
