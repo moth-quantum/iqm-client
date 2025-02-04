@@ -11,8 +11,8 @@ on:
     - cron: "0 0 * * *"
 
 env:
-  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
-
+  PACKAGES: "iqm-pulse"
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -62,7 +62,7 @@ jobs:
 
       - name: Ensure search index is in public folder
         run: |
-          mv search.json public/ || echo "No search index found"
+          cp search.json public/ || echo "No search index found"
 
       - name: Install Node.js
         uses: actions/setup-node@v4
