@@ -27,7 +27,6 @@ jobs:
       - name: Build sphinx documentation
         run: |
           mkdir -p public
-          cp index.html public
           mkdir -p temp
           cd temp
 
