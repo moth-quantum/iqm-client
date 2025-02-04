@@ -11,8 +11,8 @@ on:
     - cron: "0 0 * * *"
 
 env:
-  PACKAGES: "iqm-pulse"
-  
+  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
+
 jobs:
   build:
     runs-on: ubuntu-latest
