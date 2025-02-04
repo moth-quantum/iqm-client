@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CircuitOperationList &#8212; iqm.pulse 7.17 documentation</title>
+    <title>CircuitOperationList &#8212; iqm.pulse 7.19 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=ee8f42d2"></script>
+    <script src="../_static/documentation_options.js?v=d77dab13"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="iqm.pulse.circuit_operations.reshape_unitary" href="iqm.pulse.circuit_operations.reshape_unitary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.17" />
+  <meta name="docsearch:version" content="7.19" />
     <meta name="docbuild:last-update" content="2025-02-04"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.17 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.17 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.19 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.19 documentation - Home"/>
   
   
 </a></div>
@@ -596,7 +596,7 @@ a <code class="xref py py-class docutils literal notranslate"><span class="pre">
 
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.pulse.circuit_operations.CircuitOperationList.compose">
-<span class="sig-name descname"><span class="pre">compose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locus_indices</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.circuit_operations.CircuitOperationList.compose" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">compose</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locus_indices</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.circuit_operations.CircuitOperationList.compose" title="Link to this definition">#</a></dt>
 <dd><p>A safer way to add circuits together, but will probably take time.</p>
 <p>All the <a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> s from the <code class="docutils literal notranslate"><span class="pre">'other'</span></code> list are appended to the end of
 this list. The wire <code class="docutils literal notranslate"><span class="pre">k</span></code> of the second circuit is connected to wire <code class="docutils literal notranslate"><span class="pre">locus_indices[k]</span></code> of the first. This
@@ -608,7 +608,7 @@ their <code class="docutils literal notranslate"><span class="pre">'QB3'</span><
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>other</strong> – Second CircuitOperationList. Must have less or equal qubits than this one.</p></li>
-<li><p><strong>locus_indices</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em>]</em>) – Indices of the qubits in this CircuitOperationList onto which the qubits in the second
+<li><p><strong>locus_indices</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em>] </em><em>| </em><em>None</em>) – Indices of the qubits in this CircuitOperationList onto which the qubits in the second
 circuit ar mapped.</p></li>
 </ul>
 </dd>
@@ -637,7 +637,7 @@ circuit ar mapped.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.pulse.circuit_operations.CircuitOperationList.map_loci">
-<span class="sig-name descname"><span class="pre">map_loci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locus</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.circuit_operations.CircuitOperationList.map_loci" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">map_loci</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">locus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">make_circuit</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.circuit_operations.CircuitOperationList.map_loci" title="Link to this definition">#</a></dt>
 <dd><p>Creates a new list of <code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code> s with locus mapped onto physical qubits.</p>
 <p>Creates a fresh list of fresh <a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> s with fresh arguments. If
 <code class="docutils literal notranslate"><span class="pre">locus</span></code> is provided, it needs to have the same length as the total number of qubits across the circuit,
@@ -645,13 +645,16 @@ and the qubits will then be mapped onto the new locus. If it is not provided, th
 of the original list.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – List of new qubits to replace the qubits in the loci of the operations in the circuit.</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – List of new qubits to replace the qubits in the loci of the operations in the circuit.</p></li>
+<li><p><strong>make_circuit</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If True, creates a <a class="reference internal" href="#iqm.pulse.circuit_operations.CircuitOperationList" title="iqm.pulse.circuit_operations.CircuitOperationList"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperationList</span></code></a>. If False, it is just a list.</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>New CircuitOperationList with loci mapped onto new locus.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="#iqm.pulse.circuit_operations.CircuitOperationList" title="iqm.pulse.circuit_operations.CircuitOperationList"><em>CircuitOperationList</em></a></p>
+<dd class="field-odd"><p><a class="reference internal" href="#iqm.pulse.circuit_operations.CircuitOperationList" title="iqm.pulse.circuit_operations.CircuitOperationList"><em>CircuitOperationList</em></a> | <a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a>[<a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><em>CircuitOperation</em></a>]</p>
 </dd>
 </dl>
 </dd></dl>

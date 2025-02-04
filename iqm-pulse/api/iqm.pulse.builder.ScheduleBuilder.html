@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ScheduleBuilder &#8212; iqm.pulse 7.17 documentation</title>
+    <title>ScheduleBuilder &#8212; iqm.pulse 7.19 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=ee8f42d2"></script>
+    <script src="../_static/documentation_options.js?v=d77dab13"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="CircuitOperation" href="iqm.pulse.builder.CircuitOperation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.17" />
+  <meta name="docsearch:version" content="7.19" />
     <meta name="docbuild:last-update" content="2025-02-04"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.17 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.17 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.19 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.19 documentation - Home"/>
   
   
 </a></div>
@@ -949,7 +949,7 @@ the calibration data for the locus implied by the args <cite>op</cite>, <cite>im
 
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.pulse.builder.ScheduleBuilder.circuit_to_timebox">
-<span class="sig-name descname"><span class="pre">circuit_to_timebox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduling_algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SchedulingAlgorithm.HARD_BOUNDARY</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder.circuit_to_timebox" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">circuit_to_timebox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuit</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scheduling_algorithm</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">SchedulingAlgorithm.HARD_BOUNDARY</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locus_mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder.circuit_to_timebox" title="Link to this definition">#</a></dt>
 <dd><p>Convert a quantum circuit to a TimeBox.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -957,6 +957,8 @@ the calibration data for the locus implied by the args <cite>op</cite>, <cite>im
 <li><p><strong>circuit</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><em>CircuitOperation</em></a><em>]</em>) – quantum circuit</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – name of the circuit</p></li>
 <li><p><strong>scheduling_algorithm</strong> (<a class="reference internal" href="iqm.pulse.timebox.SchedulingAlgorithm.html#iqm.pulse.timebox.SchedulingAlgorithm" title="iqm.pulse.timebox.SchedulingAlgorithm"><em>SchedulingAlgorithm</em></a>) – scheduling algorithm to be used in resolving the TimeBoxes.</p></li>
+<li><p><strong>locus_mapping</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – optional mapping of placeholder component names to the physical component names used
+while resolving the circuit into a TimeBox.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
