@@ -78,6 +78,7 @@ jobs:
         run: |
           mkdir -p public
           cp -r dist/* public/
+          cp src/favicon.ico public/favicon.ico
 
       - name: Install rsync
         run: |
