@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>QuantumOp &#8212; iqm.pulse 7.15 documentation</title>
+    <title>QuantumOp &#8212; iqm.pulse 7.17 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=29f46264"></script>
+    <script src="../_static/documentation_options.js?v=ee8f42d2"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="iqm.pulse.quantum_ops.validate_op_calibration" href="iqm.pulse.quantum_ops.validate_op_calibration.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.15" />
-    <meta name="docbuild:last-update" content="2025-02-03"/>
+  <meta name="docsearch:version" content="7.17" />
+    <meta name="docbuild:last-update" content="2025-02-04"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.15 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.15 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.17 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.17 documentation - Home"/>
   
   
 </a></div>
@@ -182,6 +182,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.get_waveform_parameters.html">iqm.pulse.gate_implementation.get_waveform_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.CompositeCache.html">CompositeCache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.CompositeGate.html">CompositeGate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.CustomIQWaveforms.html">CustomIQWaveforms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.GateImplementation.html">GateImplementation</a></li>
@@ -444,7 +445,7 @@ its own, independent set of calibration data for each locus.</p>
 <td><p>True iff the effect of operation is symmetric in the quantum subsystems it acts on.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.pulse.quantum_ops.QuantumOp.unitary" title="iqm.pulse.quantum_ops.QuantumOp.unitary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unitary</span></code></a></p></td>
-<td><p>Unitary matrix that represents the effect of this quantum operation in the computational basis, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the quantum operation is not unitary.</p></td>
+<td><p>Unitary matrix that represents the effect of this quantum operation in the computational basis, or <code class="docutils literal notranslate"><span class="pre">None</span></code> if the quantum operation is not unitary or the exact unitary is not known.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.pulse.quantum_ops.QuantumOp.name" title="iqm.pulse.quantum_ops.QuantumOp.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
 <td><p>Unique name of the operation.</p></td>
@@ -550,7 +551,7 @@ global order defined in <code class="docutils literal notranslate"><span class="
 <dt class="sig sig-object py" id="iqm.pulse.quantum_ops.QuantumOp.unitary">
 <span class="sig-name descname"><span class="pre">unitary</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Callable</span><span class="p"><span class="pre">[</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">np.ndarray</span><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#iqm.pulse.quantum_ops.QuantumOp.unitary" title="Link to this definition">#</a></dt>
 <dd><p>Unitary matrix that represents the effect of this quantum operation in the computational basis, or <code class="docutils literal notranslate"><span class="pre">None</span></code>
-if the quantum operation is not unitary.
+if the quantum operation is not unitary or the exact unitary is not known.
 The Callable needs to take exactly the arguments given in <a class="reference internal" href="#iqm.pulse.quantum_ops.QuantumOp.params" title="iqm.pulse.quantum_ops.QuantumOp.params"><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></a>, for example if
 <code class="docutils literal notranslate"><span class="pre">params=('angle','phase')</span></code>, the function must have signature <code class="docutils literal notranslate"><span class="pre">f(angle:float,</span> <span class="pre">phase:</span> <span class="pre">float)</span> <span class="pre">-&gt;</span> <span class="pre">np.ndarray</span></code>.
 For operations acting on more than 1 qubit, unitary should be given in the big-endian order, i.e. in the basis
@@ -725,7 +726,7 @@ For operations acting on more than 1 qubit, unitary should be given in the big-e
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-03.
+  Last updated on 2025-02-04.
   <br/>
 </p>
   </div>

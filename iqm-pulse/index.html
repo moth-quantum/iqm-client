@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>IQM Pulse &#8212; iqm.pulse 7.15 documentation</title>
+    <title>IQM Pulse &#8212; iqm.pulse 7.17 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=29f46264"></script>
+    <script src="_static/documentation_options.js?v=ee8f42d2"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -52,8 +52,8 @@
     <link rel="next" title="Concepts and Classes" href="concepts.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.15" />
-    <meta name="docbuild:last-update" content="2025-02-03"/>
+  <meta name="docsearch:version" content="7.17" />
+    <meta name="docbuild:last-update" content="2025-02-04"/>
   </head>
   
   
@@ -134,8 +134,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.15 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.15 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.17 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.17 documentation - Home"/>
   
   
 </a></div>
@@ -183,6 +183,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.get_waveform_parameters.html">iqm.pulse.gate_implementation.get_waveform_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeCache.html">CompositeCache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html">CompositeGate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CustomIQWaveforms.html">CustomIQWaveforms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html">GateImplementation</a></li>
@@ -383,10 +384,10 @@
 <h1>IQM Pulse<a class="headerlink" href="#iqm-pulse" title="Link to this heading">#</a></h1>
 <dl class="field-list simple">
 <dt class="field-odd">Version<span class="colon">:</span></dt>
-<dd class="field-odd"><p>7.15</p>
+<dd class="field-odd"><p>7.17</p>
 </dd>
 <dt class="field-even">Date<span class="colon">:</span></dt>
-<dd class="field-even"><p>2025-02-03</p>
+<dd class="field-even"><p>2025-02-04</p>
 </dd>
 </dl>
 <p>IQM Pulse provides an abstraction that transforms high-level quantum circuit operations
@@ -426,7 +427,12 @@ concepts.</p>
 <li class="toctree-l2"><a class="reference internal" href="using_builder.html#common-pitfalls">Common pitfalls</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="custom_gates.html">Custom gate implementations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_gates.html">Custom gate implementations</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="custom_gates.html#quantumop">QuantumOp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_gates.html#id1">Custom gate implementations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="custom_gates.html#registering-gates-and-implementations">Registering gates and implementations</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="pulse_timing.html#measure-and-readouttrigger">Measure and ReadoutTrigger</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pulse_timing.html#fast-feedback-timing">Fast feedback timing</a></li>
@@ -526,7 +532,7 @@ concepts.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-03.
+  Last updated on 2025-02-04.
   <br/>
 </p>
   </div>

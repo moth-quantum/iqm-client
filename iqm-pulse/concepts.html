@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Concepts and Classes &#8212; iqm.pulse 7.15 documentation</title>
+    <title>Concepts and Classes &#8212; iqm.pulse 7.17 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=29f46264"></script>
+    <script src="_static/documentation_options.js?v=ee8f42d2"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="IQM Pulse" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.15" />
-    <meta name="docbuild:last-update" content="2025-02-03"/>
+  <meta name="docsearch:version" content="7.17" />
+    <meta name="docbuild:last-update" content="2025-02-04"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.15 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.15 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.17 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.17 documentation - Home"/>
   
   
 </a></div>
@@ -182,6 +182,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.get_waveform_parameters.html">iqm.pulse.gate_implementation.get_waveform_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeCache.html">CompositeCache</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html">CompositeGate</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CustomIQWaveforms.html">CustomIQWaveforms</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html">GateImplementation</a></li>
@@ -465,7 +466,7 @@ gates, Schedules, or larger TimeBoxes.</p>
 <p>A key process is the scheduling, in which TimeBoxes are resolved recursively into a fixed Schedule.
 When resolving, all Schedules inside the TimeBox are concatenated and are either left-aligned (ASAP) or right-aligned
 (ALAP), respecting the hardware constraints.
-Importantly, if some TimeBoxes have content on disjoint channels, the Schedules are allowed to happen simulteneously.
+Importantly, if some TimeBoxes have content on disjoint channels, the Schedules are allowed to happen simultaneously.
 If they have content on partly overlapping channels, the Schedules are concatenated while preserving their internal
 timing.
 Any interval that does not have explicit instructions is filled with Wait Instructions.
@@ -512,7 +513,7 @@ thus resetting the qubits.
 Alternatively, the reset can be encoded in each segment as a long Wait instruction or using some active reset scheme.</p>
 <p>Station Control aims to execute all segments together, but sometimes this is not possible due to various memory
 constraints.
-In case the whole Playlist does not fit in memeory, the segments are split into chunks which are executed separately.
+In case the whole Playlist does not fit in memory, the segments are split into chunks which are executed separately.
 The delay between chunks is undefined.
 Therefore, the time between segments is guaranteed to be at least the duration of the end delay, but can be much larger.</p>
 <p><a class="reference internal" href="api/iqm.pulse.playlist.visualisation.base.inspect_playlist.html#iqm.pulse.playlist.visualisation.base.inspect_playlist" title="iqm.pulse.playlist.visualisation.base.inspect_playlist"><code class="xref py py-func docutils literal notranslate"><span class="pre">inspect_playlist()</span></code></a> provides a neat visual representation of the playlist, as blocks of instructions on a
@@ -602,7 +603,7 @@ timeline.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-03.
+  Last updated on 2025-02-04.
   <br/>
 </p>
   </div>
