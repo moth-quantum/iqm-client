@@ -143,7 +143,7 @@ function App() {
                 {searchResults.map((doc, index) => (
                   <a
                     key={index}
-                    href={doc.url}
+                    href={"." + doc.url}
                     target="_blank"
                     className="block p-4 hover:bg-gray-50 transition-colors"
                   >
