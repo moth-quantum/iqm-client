@@ -3,7 +3,7 @@ import json
 from bs4 import BeautifulSoup
 
 SEARCH_INDEX_FILE = "./search.json"
-DOCS_DIR = "./"
+DOCS_DIR = "./public/"
 
 EXCLUDED_FILE_NAMES = ["genindex.html", "license.html", "search.html", "changelog.html", "py-modindex.html"]
 
