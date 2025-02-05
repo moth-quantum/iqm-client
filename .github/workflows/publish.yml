@@ -8,7 +8,7 @@ on:
     - cron: "0 0 * * *"
 
 env:
-  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla"
+  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
 
 jobs:
   build:
@@ -24,10 +24,9 @@ jobs:
           apt-get update
           apt-get install -y graphviz
 
-      - name: Build documentation
+      - name: Build sphinx documentation
         run: |
           mkdir -p public
-          cp index.html public
           mkdir -p temp
           cd temp
 
@@ -54,6 +53,29 @@ jobs:
           rm -rf temp
           rm -rf public/jupyter_execute
           touch public/.nojekyll
+
+      - name: Generate search index
+        run: python generate_search_index.py
+
+      - name: Ensure search index is in public folder
+        run: |
+          cp search.json public/ || echo "No search index found"
+
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+  
+      - name: Install and build React project
+        run: |
+          npm ci
+          npm run build
+  
+      - name: Copy React build to public folder
+        run: |
+          mkdir -p public
+          cp -r dist/* public/
+          cp src/favicon.ico public/favicon.ico
 
       - name: Install rsync
         run: |
