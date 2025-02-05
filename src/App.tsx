@@ -56,14 +56,14 @@ function App() {
 
 
   const docLinks = [
-    { href: "/docs/iqm-pulse", title: "IQM Pulse", description: "Interface and implementations for control pulses." },
-    { href: "/docs/iqm-pulla", title: "IQM Pulla", description: "Pulse-level access library for compiling quantum circuits." },
-    { href: "https://iqm-finland.github.io/qiskit-on-iqm/", title: "Qiskit on IQM", description: "Qiskit adapter for IQM’s quantum computers." },
-    { href: "https://iqm-finland.github.io/cirq-on-iqm/", title: "Cirq on IQM", description: "Cirq adapter for IQM’s quantum computers." },
-    { href: "https://iqm-finland.github.io/iqm-benchmarks/", title: "IQM Benchmarks", description: "Quantum Characterization, Verification, and Validation (QCVV) tools for quantum computing." },
-    { href: "https://iqm-finland.github.io/iqm-client/", title: "IQM Client", description: "Python client for remote access to quantum computers for circuit-level access." },
-    { href: "/docs/iqm-station-control-client", title: "IQM Station Control Client", description: "Python client for remote access to quantum computers for pulse-level access." },
-    { href: "/docs/iqm-exa-common", title: "IQM EXA Common", description: "Abstract interfaces, helpers, utility classes, etc." },
+    { href: "./iqm-pulse", title: "IQM Pulse", description: "Interface and implementations for control pulses." },
+    { href: "./iqm-pulla", title: "IQM Pulla", description: "Pulse-level access library for compiling quantum circuits." },
+    { href: "./qiskit-on-iqm/", title: "Qiskit on IQM", description: "Qiskit adapter for IQM’s quantum computers." },
+    { href: "./cirq-on-iqm/", title: "Cirq on IQM", description: "Cirq adapter for IQM’s quantum computers." },
+    { href: "./iqm-benchmarks/", title: "IQM Benchmarks", description: "Quantum Characterization, Verification, and Validation (QCVV) tools for quantum computing." },
+    { href: "./iqm-client/", title: "IQM Client", description: "Python client for remote access to quantum computers for circuit-level access." },
+    { href: "./iqm-station-control-client", title: "IQM Station Control Client", description: "Python client for remote access to quantum computers for pulse-level access." },
+    { href: "./iqm-exa-common", title: "IQM EXA Common", description: "Abstract interfaces, helpers, utility classes, etc." },
   ];
 
   return (
@@ -114,7 +114,7 @@ function App() {
           </div>
           </>
         ) : (
-          <h1>Feature List</h1>
+          <h1>Feature List</h1> 
         )}
 
         {/* Modal */}
