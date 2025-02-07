@@ -40,8 +40,8 @@ jobs:
             tar -xvzf *.tar.gz
             cd "$(tar -tzf *.tar.gz | head -1 | cut -f1 -d"/")"
             echo "building docs..."
-            python -m sphinx docs ../../public/$package
-            # add .nojekyll in order to stop Github from treating the directory as a Jekyll blog generator, 
+            USE_LOCAL_TARGET=true python -m sphinx docs ../../public/$package
+            # add .nojekyll in order to stop Github from treating the directory as a Jekyll blog generator,
             # which ignores directories starting with underscore
             touch ../../public/$package/.nojekyll
             echo "cleaning up..."
@@ -65,12 +65,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
-  
+
       - name: Install and build React project
         run: |
           npm ci
           npm run build
-  
+
       - name: Copy React build to public folder
         run: |
           mkdir -p public
