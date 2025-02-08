@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PRX_CustomWaveformsSX &#8212; iqm.pulse 7.20 documentation</title>
+    <title>PRX_CustomWaveformsSX &#8212; iqm.pulse 7.21 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=c1d1ed67"></script>
+    <script src="../_static/documentation_options.js?v=a26c7d3c"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,8 +55,8 @@
     <link rel="prev" title="PRX_CustomWaveforms" href="iqm.pulse.gates.prx.PRX_CustomWaveforms.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.20" />
-    <meta name="docbuild:last-update" content="2025-02-07"/>
+  <meta name="docsearch:version" content="7.21" />
+    <meta name="docbuild:last-update" content="2025-02-08"/>
   </head>
   
   
@@ -135,8 +135,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.20 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.20 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.21 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.21 documentation - Home"/>
   
   
 </a></div>
@@ -394,6 +394,7 @@
 <dl class="simple">
 <dt>The schedule used to implement the PRX gate depends on the arguments:</dt><dd><ol class="arabic simple">
 <li><p>If the rotation angle <span class="math notranslate nohighlight">\(\theta = \pi/2\)</span>, the timebox will consist of just the SX IQ pulse, with phase.</p></li>
+<li><p>If the rotation angle <span class="math notranslate nohighlight">\(\theta = 0.0\)</span>, the timebox will consist of a single zero-amplitude pulse.</p></li>
 <li><p>If not, the timebox will consist of two IQ pulses, with phase.</p></li>
 </ol>
 </dd>
@@ -450,7 +451,7 @@ to all such implementations.</p>
 <dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_CustomWaveformsSX._call">
 <span class="sig-name descname"><span class="pre">_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_CustomWaveformsSX._call" title="Link to this definition">#</a></dt>
 <dd><p>Convert pulses into timebox, via extra Z rotations.</p>
-<p>There are exceptions while using pi/2 and pi rotation in angle, for calibration reason. The duration of the
+<p>There are exceptions while using 0, pi/2 and pi rotation in angle, for calibration reason. The duration of the
 timebox can be different.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -577,7 +578,7 @@ will be initialised as <code class="docutils literal notranslate"><span class="p
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-07.
+  Last updated on 2025-02-08.
   <br/>
 </p>
   </div>

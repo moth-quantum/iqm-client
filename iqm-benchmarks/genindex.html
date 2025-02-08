@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; IQM Benchmarks 2.14 documentation</title>
+    <title>Index &#8212; IQM Benchmarks 2.16 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=eb63f014"></script>
+    <script src="_static/documentation_options.js?v=47ebf26f"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,8 +50,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.14" />
-    <meta name="docbuild:last-update" content="2025-02-07"/>
+  <meta name="docsearch:version" content="2.16" />
+    <meta name="docbuild:last-update" content="2025-02-08"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="IQM Benchmarks 2.14 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Benchmarks 2.14 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="IQM Benchmarks 2.16 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Benchmarks 2.16 documentation - Home"/>
   
   
 </a></div>
@@ -158,6 +158,7 @@
 <li class="toctree-l2"><a class="reference internal" href="examples/example_quantum_volume_deneb.html">QV on Deneb</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/example_clops.html">Circuit Layer Operations Per Second (CLOPS)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/example_ghz.html">Greenberger–Horne–Zeilinger (GHZ) State Fidelity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="examples/example_ghz_deneb.html">Greenberger–Horne–Zeilinger (GHZ) State Fidelity</a></li>
 <li class="toctree-l2"><a class="reference internal" href="examples/example_qscore.html">Q-Score</a></li>
 </ul>
 </details></li>
@@ -660,6 +661,8 @@
 </li>
       <li><a href="api/iqm.benchmarks.entanglement.ghz.generate_ghz_spanning_tree.html#iqm.benchmarks.entanglement.ghz.generate_ghz_spanning_tree">generate_ghz_spanning_tree() (in module iqm.benchmarks.entanglement.ghz)</a>
 </li>
+      <li><a href="api/iqm.benchmarks.entanglement.ghz.generate_ghz_star.html#iqm.benchmarks.entanglement.ghz.generate_ghz_star">generate_ghz_star() (in module iqm.benchmarks.entanglement.ghz)</a>
+</li>
       <li><a href="api/iqm.benchmarks.optimization.qscore.QScoreBenchmark.html#iqm.benchmarks.optimization.qscore.QScoreBenchmark.generate_maxcut_ansatz">generate_maxcut_ansatz() (iqm.benchmarks.optimization.qscore.QScoreBenchmark method)</a>
 </li>
       <li><a href="api/iqm.benchmarks.entanglement.ghz.GHZBenchmark.html#iqm.benchmarks.entanglement.ghz.GHZBenchmark.generate_native_ghz">generate_native_ghz() (iqm.benchmarks.entanglement.ghz.GHZBenchmark method)</a>
@@ -674,14 +677,14 @@
 </li>
       <li><a href="api/iqm.benchmarks.benchmark.BenchmarkBase.html#iqm.benchmarks.benchmark.BenchmarkBase.generate_requirements">generate_requirements() (iqm.benchmarks.benchmark.BenchmarkBase method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.benchmarks.quantum_volume.clops.CLOPSBenchmark.html#iqm.benchmarks.quantum_volume.clops.CLOPSBenchmark.generate_single_circuit">generate_single_circuit() (iqm.benchmarks.quantum_volume.clops.CLOPSBenchmark method)</a>
 
       <ul>
         <li><a href="api/iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeBenchmark.html#iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeBenchmark.generate_single_circuit">(iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeBenchmark static method)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.benchmarks.quantum_volume.clops.CLOPSBenchmark.html#iqm.benchmarks.quantum_volume.clops.CLOPSBenchmark.generate_transpiled_clops_templates">generate_transpiled_clops_templates() (iqm.benchmarks.quantum_volume.clops.CLOPSBenchmark method)</a>
 </li>
       <li><a href="api/iqm.benchmarks.circuit_containers.Circuits.html#iqm.benchmarks.circuit_containers.Circuits.get_benchmark_circuits_by_name">get_benchmark_circuits_by_name() (iqm.benchmarks.circuit_containers.Circuits method)</a>
@@ -952,6 +955,8 @@
       <li><a href="api/iqm.benchmarks.entanglement.ghz.GHZConfiguration.html#iqm.benchmarks.entanglement.ghz.GHZConfiguration.mit_shots">mit_shots (iqm.benchmarks.entanglement.ghz.GHZConfiguration attribute)</a>
 
       <ul>
+        <li><a href="api/iqm.benchmarks.optimization.qscore.QScoreConfiguration.html#iqm.benchmarks.optimization.qscore.QScoreConfiguration.mit_shots">(iqm.benchmarks.optimization.qscore.QScoreConfiguration attribute)</a>
+</li>
         <li><a href="api/iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration.html#iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration.mit_shots">(iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration attribute)</a>
 </li>
       </ul></li>
@@ -1253,17 +1258,17 @@
       <li><a href="api/iqm.benchmarks.randomized_benchmarking.randomized_benchmarking_common.relabel_qubits_array_from_zero.html#iqm.benchmarks.randomized_benchmarking.randomized_benchmarking_common.relabel_qubits_array_from_zero">relabel_qubits_array_from_zero() (in module iqm.benchmarks.randomized_benchmarking.randomized_benchmarking_common)</a>
 </li>
       <li><a href="api/iqm.benchmarks.entanglement.ghz.GHZConfiguration.html#iqm.benchmarks.entanglement.ghz.GHZConfiguration.rem">rem (iqm.benchmarks.entanglement.ghz.GHZConfiguration attribute)</a>
-
-      <ul>
-        <li><a href="api/iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration.html#iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration.rem">(iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration attribute)</a>
 </li>
-      </ul></li>
+      <li><a href="api/iqm.benchmarks.optimization.qscore.QScoreConfiguration.html#iqm.benchmarks.optimization.qscore.QScoreConfiguration.REM">REM (iqm.benchmarks.optimization.qscore.QScoreConfiguration attribute)</a>
+</li>
+      <li><a href="api/iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration.html#iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration.rem">rem (iqm.benchmarks.quantum_volume.quantum_volume.QuantumVolumeConfiguration attribute)</a>
+</li>
       <li><a href="api/iqm.benchmarks.utils.retrieve_all_counts.html#iqm.benchmarks.utils.retrieve_all_counts">retrieve_all_counts() (in module iqm.benchmarks.utils)</a>
-</li>
-      <li><a href="api/iqm.benchmarks.utils.retrieve_all_job_metadata.html#iqm.benchmarks.utils.retrieve_all_job_metadata">retrieve_all_job_metadata() (in module iqm.benchmarks.utils)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.benchmarks.utils.retrieve_all_job_metadata.html#iqm.benchmarks.utils.retrieve_all_job_metadata">retrieve_all_job_metadata() (in module iqm.benchmarks.utils)</a>
+</li>
       <li><a href="api/iqm.benchmarks.quantum_volume.clops.retrieve_clops_elapsed_times.html#iqm.benchmarks.quantum_volume.clops.retrieve_clops_elapsed_times">retrieve_clops_elapsed_times() (in module iqm.benchmarks.quantum_volume.clops)</a>
 </li>
       <li><a href="api/iqm.benchmarks.benchmark.BenchmarkConfigurationBase.html#iqm.benchmarks.benchmark.BenchmarkConfigurationBase.routing_method">routing_method (iqm.benchmarks.benchmark.BenchmarkConfigurationBase attribute)</a>
@@ -1428,7 +1433,7 @@ By IQM Benchmarks developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-07.
+  Last updated on 2025-02-08.
   <br/>
 </p>
   </div>
