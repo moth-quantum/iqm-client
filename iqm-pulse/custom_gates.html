@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Custom gate implementations &#8212; iqm.pulse 7.21 documentation</title>
+    <title>Custom gate implementations &#8212; iqm.pulse 7.22 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=a26c7d3c"></script>
+    <script src="_static/documentation_options.js?v=06aacdd1"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="Using ScheduleBuilder" href="using_builder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.21" />
-    <meta name="docbuild:last-update" content="2025-02-10"/>
+  <meta name="docsearch:version" content="7.22" />
+    <meta name="docbuild:last-update" content="2025-02-11"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.21 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.21 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.22 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.22 documentation - Home"/>
   
   
 </a></div>
@@ -196,6 +196,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.move.html">move</a></li>
@@ -502,10 +503,10 @@ use this exact call method, as this is a simplified example for educational purp
     <span class="p">)</span>
 </pre></div>
 </div>
-<p>Here, we first create an <code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code> object which is a low-level Instruction. IQPulse
+<p>Here, we first create an <a class="reference internal" href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse" title="iqm.pulse.playlist.instructions.IQPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code></a> object which is a low-level Instruction. IQPulse
 means a “complex pulse” which has two orthogonal components i and q – this what drive pulses look like in general. In
-this simplified example, we have hardcoded the pulse waveforms into <code class="docutils literal notranslate"><span class="pre">TruncatedGaussian</span></code> and
-<code class="docutils literal notranslate"><span class="pre">TruncatedGaussianDerivative</span></code> for the i and q components, respectively (this is a DRAG implementation, so the
+this simplified example, we have hardcoded the pulse waveforms into <code class="xref py py-class docutils literal notranslate"><span class="pre">TruncatedGaussian</span></code> and
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TruncatedGaussianDerivative</span></code> for the i and q components, respectively (this is a DRAG implementation, so the
 q component is the derivative of the i component). The waveforms are parametrized by the <code class="docutils literal notranslate"><span class="pre">calibration_data</span></code> for the
 given <code class="docutils literal notranslate"><span class="pre">locus</span></code> (see the next subsection for more info on Waveforms and calibration data). The PRX QuantumOp param
 <code class="docutils literal notranslate"><span class="pre">angle</span></code> scales the pulse amplitude linearly (the waveforms are normalized to one), and the param <code class="docutils literal notranslate"><span class="pre">phase</span></code> defines relative
@@ -538,7 +539,7 @@ so it is then mandatory to define the mapping explicitly using the aforementione
 <p>In order to implement most QuantumOps, one has to physically alter the state of the QPU. This is typically done by playing
 specified and correctly calibrated pulses via the control electronics (this applies to all typical logical gates such as
 e.g. PRX or CZ – non-physcial metaoperations such as Barrier are an exception). In defining these pulses, there are two
-levels of abstractions: <code class="xref py py-class docutils literal notranslate"><span class="pre">Waveform</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Instruction</span></code>.</p>
+levels of abstractions: <code class="xref py py-class docutils literal notranslate"><span class="pre">Waveform</span></code> and <a class="reference internal" href="api/iqm.pulse.playlist.instructions.Instruction.html#iqm.pulse.playlist.instructions.Instruction" title="iqm.pulse.playlist.instructions.Instruction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Instruction</span></code></a>.</p>
 <p>Waveform represents the physical form of the control pulse, typically normalized to the interval <code class="docutils literal notranslate"><span class="pre">[-1.0,</span> <span class="pre">1.0]</span></code>. The
 Each <code class="xref py py-class docutils literal notranslate"><span class="pre">Waveform</span></code> subclass can define any number of waveform parameters as class
 attributes, which can be used to programmatically define the waveform. For example, a Gaussian could be defined in terms
@@ -556,8 +557,8 @@ for <code class="docutils literal notranslate"><span class="pre">Gaussian</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">offset_coords</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The Instructions <code class="xref py py-class docutils literal notranslate"><span class="pre">RealPulse</span></code> and
-<code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code> allow handling the amplitudes (via the attribute <code class="docutils literal notranslate"><span class="pre">scale</span></code>) without
+<p>The Instructions <a class="reference internal" href="api/iqm.pulse.playlist.instructions.RealPulse.html#iqm.pulse.playlist.instructions.RealPulse" title="iqm.pulse.playlist.instructions.RealPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">RealPulse</span></code></a> and
+<a class="reference internal" href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse" title="iqm.pulse.playlist.instructions.IQPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code></a> allow handling the amplitudes (via the attribute <code class="docutils literal notranslate"><span class="pre">scale</span></code>) without
 having to resample the waveform for every different amplitude value. However, one can always choose to include
 the amplitude into the sampling and then use <code class="docutils literal notranslate"><span class="pre">scale=1</span></code>.</p>
 <p>The waveform parameters (like <code class="docutils literal notranslate"><span class="pre">sigma</span></code> in the above Gaussian) typically require calibration when the Waveform is used
@@ -591,7 +592,7 @@ with the method <code class="xref py py-meth docutils literal notranslate"><span
 <section id="more-base-classes">
 <h3>More base classes<a class="headerlink" href="#more-base-classes" title="Link to this heading">#</a></h3>
 <p>To make creating new GateImplementations more comfortable, there are additional base classes on top of
-<code class="docutils literal notranslate"><span class="pre">GateImplementation</span></code> itself.</p>
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" title="iqm.pulse.gate_implementation.GateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code></a> itself.</p>
 <p><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate" title="iqm.pulse.gate_implementation.CompositeGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeGate</span></code></a> allows quick implementation of gates in terms of other gates,
 using a similar syntax as with creating/scheduling several TimeBoxes together (see <a class="reference internal" href="using_builder.html"><span class="doc">Using ScheduleBuilder</span></a>). At it
 simplest, a ComposteGate is just the <cite>_call</cite> method:</p>
@@ -657,7 +658,7 @@ in addition to adding new implementations allows one to add altogether new quant
 </div>
 <p>Here, the CNOT implementation <code class="docutils literal notranslate"><span class="pre">MyCNotClass</span></code> needs to be of course defined first (a QuantumOp always needs at least one
 implementation).</p>
-<p>Note that often <code class="docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code> is created and operated by some client application, and the same application usually
+<p>Note that often <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a> is created and operated by some client application, and the same application usually
 has its own interface for adding/manipulating QuantumOps. However, if the user has access to the builder object, the
 above method will always work.</p>
 </section>
@@ -746,7 +747,7 @@ above method will always work.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-10.
+  Last updated on 2025-02-11.
   <br/>
 </p>
   </div>

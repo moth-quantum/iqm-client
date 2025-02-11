@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ChannelProperties &#8212; iqm.pulse 7.21 documentation</title>
+    <title>ChannelProperties &#8212; iqm.pulse 7.22 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=a26c7d3c"></script>
+    <script src="../_static/documentation_options.js?v=06aacdd1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="ChannelDescription" href="iqm.pulse.playlist.channel.ChannelDescription.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.21" />
-    <meta name="docbuild:last-update" content="2025-02-10"/>
+  <meta name="docsearch:version" content="7.22" />
+    <meta name="docbuild:last-update" content="2025-02-11"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.21 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.21 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.22 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.22 documentation - Home"/>
   
   
 </a></div>
@@ -196,6 +196,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
@@ -398,7 +399,6 @@
 <p>Defines the properties of a control or measurement channel.</p>
 <p>All ZI instruments (HDAWG, UHFQA, SHFSG, SHFQA) can handle control pulses and waits where the
 number of samples is <code class="docutils literal notranslate"><span class="pre">32</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">16</span></code>, where <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">in</span> <span class="pre">{0,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">...}</span></code>.</p>
-<p>TODO Some of them might be more capable (at least some SHFQA commands can handle <code class="docutils literal notranslate"><span class="pre">4</span> <span class="pre">+</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">4</span></code>) ?</p>
 <p>Module: <a class="reference internal" href="iqm.pulse.playlist.channel.html#module-iqm.pulse.playlist.channel" title="iqm.pulse.playlist.channel"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.playlist.channel</span></code></a></p>
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -573,9 +573,8 @@ that number must be something the channel can handle.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – time duration in s</p></li>
-<li><p><strong>round_up</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – whether to round the durations up to the closest granularity</p></li>
-<li><p><strong>force_min_duration</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – whether to force the duration to be at least <code class="docutils literal notranslate"><span class="pre">self.instruction_duration_min</span></code> in
-seconds</p></li>
+<li><p><strong>round_up</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – whether to round the durations up, or to the closest granularity</p></li>
+<li><p><strong>force_min_duration</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – whether to force the duration to be at least <a class="reference internal" href="#iqm.pulse.playlist.channel.ChannelProperties.instruction_duration_min" title="iqm.pulse.playlist.channel.ChannelProperties.instruction_duration_min"><code class="xref py py-attr docutils literal notranslate"><span class="pre">instruction_duration_min</span></code></a></p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -680,7 +679,7 @@ seconds</p></li>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-10.
+  Last updated on 2025-02-11.
   <br/>
 </p>
   </div>

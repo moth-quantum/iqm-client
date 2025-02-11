@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>pulse &#8212; iqm.pulse 7.21 documentation</title>
+    <title>pulse &#8212; iqm.pulse 7.22 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=a26c7d3c"></script>
+    <script src="../_static/documentation_options.js?v=06aacdd1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="API Reference" href="../API.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.21" />
-    <meta name="docbuild:last-update" content="2025-02-10"/>
+  <meta name="docsearch:version" content="7.22" />
+    <meta name="docbuild:last-update" content="2025-02-11"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.21 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.21 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.22 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.22 documentation - Home"/>
   
   
 </a></div>
@@ -196,6 +196,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
@@ -368,7 +369,7 @@
                   
   <section id="module-iqm.pulse">
 <span id="pulse"></span><h1>pulse<a class="headerlink" href="#module-iqm.pulse" title="Link to this heading">#</a></h1>
-<p>Control pulses and pulse sequences for quantum processors.</p>
+<p>Control pulses, gates and instruction schedules for quantum computers.</p>
 <p>Full path: iqm.pulse</p>
 <p class="rubric">Subpackages and modules</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -377,22 +378,22 @@
 <td><p>Tools for building instruction schedules.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.circuit_operations.html#module-iqm.pulse.circuit_operations" title="iqm.pulse.circuit_operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit_operations</span></code></a></p></td>
-<td><p>Methods for operating on lists of CircuitOperation objects.</p></td>
+<td><p>Representing quantum circuits as lists of CircuitOperations.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gate_implementation.html#module-iqm.pulse.gate_implementation" title="iqm.pulse.gate_implementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gate_implementation</span></code></a></p></td>
-<td><p>Factories for implementing quantum operations in terms of instruction schedules.</p></td>
+<td><p>Implementing abstract quantum operations as instruction schedules.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.html#module-iqm.pulse.gates" title="iqm.pulse.gates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gates</span></code></a></p></td>
-<td><p>GateImplementations for implementing quantum gates.</p></td>
+<td><p>Implementations of quantum gates.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.playlist.html#module-iqm.pulse.playlist" title="iqm.pulse.playlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist</span></code></a></p></td>
-<td><p>Control pulses and pulse sequences for quantum processors.</p></td>
+<td><p>Control pulses and instruction schedules for quantum computers.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.quantum_ops.html#module-iqm.pulse.quantum_ops" title="iqm.pulse.quantum_ops"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantum_ops</span></code></a></p></td>
 <td><p>Quantum operations.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.scheduler.html#module-iqm.pulse.scheduler" title="iqm.pulse.scheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler</span></code></a></p></td>
-<td><p>Tools for merging instruction schedules in time.</p></td>
+<td><p>Tools for composing instruction schedules in time.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.timebox.html#module-iqm.pulse.timebox" title="iqm.pulse.timebox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timebox</span></code></a></p></td>
 <td><p>Reserving QPU resources in instruction scheduling.</p></td>
@@ -401,7 +402,7 @@
 <td><p>Utility functions.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.validation.html#module-iqm.pulse.validation" title="iqm.pulse.validation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validation</span></code></a></p></td>
-<td><p>Validation of Schedule related data.</p></td>
+<td><p>Validation of playlists and instructions schedules.</p></td>
 </tr>
 </tbody>
 </table>
@@ -468,7 +469,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-10.
+  Last updated on 2025-02-11.
   <br/>
 </p>
   </div>

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>scheduler &#8212; iqm.pulse 7.21 documentation</title>
+    <title>scheduler &#8212; iqm.pulse 7.22 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=a26c7d3c"></script>
+    <script src="../_static/documentation_options.js?v=06aacdd1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="QuantumOp" href="iqm.pulse.quantum_ops.QuantumOp.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.21" />
-    <meta name="docbuild:last-update" content="2025-02-10"/>
+  <meta name="docsearch:version" content="7.22" />
+    <meta name="docbuild:last-update" content="2025-02-11"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.21 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.21 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.22 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.22 documentation - Home"/>
   
   
 </a></div>
@@ -196,6 +196,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
@@ -368,15 +369,15 @@
                   
   <section id="module-iqm.pulse.scheduler">
 <span id="scheduler"></span><h1>scheduler<a class="headerlink" href="#module-iqm.pulse.scheduler" title="Link to this heading">#</a></h1>
-<p>Tools for merging instruction schedules in time.</p>
+<p>Tools for composing instruction schedules in time.</p>
 <p>Under the idealized, noiseless, crosstalk-less computational model, the scheduling algorithms
 should preserve the effect of the schedules on the computational subspace, i.e.
 executing <a class="reference internal" href="iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule" title="iqm.pulse.playlist.schedule.Schedule"><code class="xref py py-class docutils literal notranslate"><span class="pre">Schedule</span></code></a> <code class="docutils literal notranslate"><span class="pre">A</span></code> immediately followed by <code class="docutils literal notranslate"><span class="pre">B</span></code> should be equivalent to
-executing the merged schedule <code class="docutils literal notranslate"><span class="pre">A+B</span></code>.</p>
-<p>The merging is always done so that in <code class="docutils literal notranslate"><span class="pre">A+B</span></code> all the channels of <code class="docutils literal notranslate"><span class="pre">B</span></code> start
+executing the composed schedule <code class="docutils literal notranslate"><span class="pre">A+B</span></code>.</p>
+<p>The composing is always done so that in <code class="docutils literal notranslate"><span class="pre">A+B</span></code> all the channels of <code class="docutils literal notranslate"><span class="pre">B</span></code> start
 their execution simultaneously, and remain in sync. <a class="reference internal" href="iqm.pulse.playlist.schedule.Nothing.html#iqm.pulse.playlist.schedule.Nothing" title="iqm.pulse.playlist.schedule.Nothing"><code class="xref py py-class docutils literal notranslate"><span class="pre">Nothing</span></code></a> instructions can be added
 as spacers between the channels of <code class="docutils literal notranslate"><span class="pre">A</span></code> and <code class="docutils literal notranslate"><span class="pre">B</span></code> as necessary to make this happen.</p>
-<p>Typically the scheduling algorithms also try to minimize the total duration of the merged schedule.</p>
+<p>Typically the scheduling algorithms also try to minimize the total duration of the composed schedule.</p>
 <p>Full path: iqm.pulse.scheduler</p>
 <p class="rubric">Module Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
@@ -483,7 +484,7 @@ as spacers between the channels of <code class="docutils literal notranslate"><s
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-10.
+  Last updated on 2025-02-11.
   <br/>
 </p>
   </div>

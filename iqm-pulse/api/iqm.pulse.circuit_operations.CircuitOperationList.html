@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>CircuitOperationList &#8212; iqm.pulse 7.21 documentation</title>
+    <title>CircuitOperationList &#8212; iqm.pulse 7.22 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=a26c7d3c"></script>
+    <script src="../_static/documentation_options.js?v=06aacdd1"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="iqm.pulse.circuit_operations.reshape_unitary" href="iqm.pulse.circuit_operations.reshape_unitary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="7.21" />
-    <meta name="docbuild:last-update" content="2025-02-10"/>
+  <meta name="docsearch:version" content="7.22" />
+    <meta name="docbuild:last-update" content="2025-02-11"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.21 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.21 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 7.22 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 7.22 documentation - Home"/>
   
   
 </a></div>
@@ -196,6 +196,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
@@ -391,82 +392,86 @@
 <h1>CircuitOperationList<a class="headerlink" href="#circuitoperationlist" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="iqm.pulse.circuit_operations.CircuitOperationList">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.pulse.circuit_operations.</span></span><span class="sig-name descname"><span class="pre">CircuitOperationList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.circuit_operations.CircuitOperationList" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.pulse.circuit_operations.</span></span><span class="sig-name descname"><span class="pre">CircuitOperationList</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">contents</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">()</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">num_qubits</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">table</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.circuit_operations.CircuitOperationList" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">list</span></code></a></p>
-<p>A list of <a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">iqm.pulse.builder.CircuitOperation</span></code></a> objects with methods to add, remove and transform them.</p>
-<p>The class is used to work with <a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> s directly. It is mostly meant as
+<p>List of <a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> objects representing a quantum circuit.</p>
+<p>The class is used to work with CircuitOperations directly. It is mostly meant as
 convenience to enable easy creation of circuits, calculations of their properties, and mapping them onto physical
-qubits. In addition to the list of contents, this class has two important attributes: <code class="docutils literal notranslate"><span class="pre">qubits</span></code> and <code class="docutils literal notranslate"><span class="pre">table</span></code>.
-The former defines the list of qubits which are allowed to be in the loci of all the
-<a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> s present in the list. Think about it as the qiskit’s Quantum
-Register. The latter is a <a class="reference internal" href="iqm.pulse.quantum_ops.QuantumOpTable.html#iqm.pulse.quantum_ops.QuantumOpTable" title="iqm.pulse.quantum_ops.QuantumOpTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">iqm.pulse.quantum_ops.QuantumOpTable</span></code></a>, which contains all the
-<a class="reference internal" href="iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp" title="iqm.pulse.quantum_ops.QuantumOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code></a> s which are allowed to be in the circuit. In most cases, the table is
-simply taken to contain all the default operations defined in iqm-pulse. If using this class in the context of a
-<a class="reference internal" href="iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a>, it is good practice to set <code class="docutils literal notranslate"><span class="pre">table</span> <span class="pre">=</span> <span class="pre">builder.op_table</span></code>. The
-<a class="reference internal" href="iqm.pulse.quantum_ops.QuantumOpTable.html#iqm.pulse.quantum_ops.QuantumOpTable" title="iqm.pulse.quantum_ops.QuantumOpTable"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOpTable</span></code></a> is mutable, so any additional registered gates will automatically
-be possible to be used in any CircuitOperationList associated with that
-<a class="reference internal" href="iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a> instance.</p>
+qubits. In addition to the circuit contents, this class has two important attributes:
+<code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">table</span></code>.</p>
+<p><code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> defines the list of qubits which are allowed to be in the loci of all the
+CircuitOperations present in the list. Think about it as Qiskit’s QuantumRegister.</p>
+<p><code class="xref py py-attr docutils literal notranslate"><span class="pre">table</span></code> is a <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOpTable</span></code>, which contains all the
+<a class="reference internal" href="iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp" title="iqm.pulse.quantum_ops.QuantumOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code></a> s which are allowed in the circuit. In most cases, the table is
+simply taken to contain all the default operations defined in <a class="reference internal" href="iqm.pulse.html#module-iqm.pulse" title="iqm.pulse"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse</span></code></a>.
+When you use this class with a <a class="reference internal" href="iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a>, it is good practice to set
+<code class="docutils literal notranslate"><span class="pre">table</span> <span class="pre">=</span> <span class="pre">builder.op_table</span></code>. The QuantumOpTable is mutable, so any additional registered
+gates can automatically be usable in any CircuitOperationList associated with that
+ScheduleBuilder instance.</p>
 <p>The fundamental use of the class would be to first define a new instance:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">num_qubits</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">num_qubits</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The <cite>num_qubits</cite> parameter populates the <cite>.qubits</cite> argument with qubits QB1-QBn, in this case <code class="docutils literal notranslate"><span class="pre">['QB1',</span> <span class="pre">'QB2']</span></code>.</p>
-<p>Alternatively, you can use <code class="docutils literal notranslate"><span class="pre">qubits</span></code> directly:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">qubits</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;QB1&#39;</span><span class="p">,</span> <span class="s1">&#39;QB2&#39;</span><span class="p">])</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">num_qubits</span></code> parameter populates the <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> attribute with qubits QB1-QBn,
+in this case <code class="docutils literal notranslate"><span class="pre">['QB1',</span> <span class="pre">'QB2']</span></code>.</p>
+<p>Alternatively, you can provide <code class="docutils literal notranslate"><span class="pre">qubits</span></code> directly:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">qubits</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;QB1&#39;</span><span class="p">,</span> <span class="s1">&#39;QB2&#39;</span><span class="p">])</span>
 </pre></div>
 </div>
 <p>To add your own QuantumOpTable, initialize like this:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">num_qubits</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">my_table</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">num_qubits</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">my_table</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>Remembering that the table is mutable.</p>
 <p>If you already have a list of CircuitOperations, you can initialize with it:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">circuit_ops</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">my_table</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span> <span class="o">=</span> <span class="n">CircuitOperationList</span><span class="p">(</span><span class="n">circuit_ops</span><span class="p">,</span> <span class="n">table</span><span class="o">=</span><span class="n">my_table</span><span class="p">)</span>
 <span class="n">circuit</span><span class="o">.</span><span class="n">find_qubits</span><span class="p">()</span>
 </pre></div>
 </div>
-<p>Calling the <a class="reference internal" href="#iqm.pulse.circuit_operations.CircuitOperationList.find_qubits" title="iqm.pulse.circuit_operations.CircuitOperationList.find_qubits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_qubits()</span></code></a> populates the <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> attribute with the qubits found in loci of
-the operations included in the original circuit. If the list is empty, it will set <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> to an empty list,
+<p>Calling the <a class="reference internal" href="#iqm.pulse.circuit_operations.CircuitOperationList.find_qubits" title="iqm.pulse.circuit_operations.CircuitOperationList.find_qubits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">find_qubits()</span></code></a> method populates the <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> attribute with the qubits found in loci of
+the operations in the original circuit. If the list is empty, it will set <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> to an empty list,
 which most of the time is not what you want to do.</p>
-<p>The class has the add, multiply, and get_item methods redefined, which means all the following: <code class="docutils literal notranslate"><span class="pre">circuit</span> <span class="pre">*</span> <span class="pre">3</span></code>,
-<code class="docutils literal notranslate"><span class="pre">circuit1</span> <span class="pre">+</span> <span class="pre">circuit2</span></code>, and <code class="docutils literal notranslate"><span class="pre">circuit[0:4]</span></code> will produce a CircuitOperationList with the same <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code>
-and <code class="xref py py-attr docutils literal notranslate"><span class="pre">table</span></code> attributes as the original.</p>
-<p>To add a prx operation to the list, call:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">.</span><span class="n">add_op</span><span class="p">(</span><span class="s1">&#39;prx&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">angle</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">impl_name</span><span class="o">=</span><span class="s1">&#39;drag_crf&#39;</span><span class="p">)</span>
+<p>The class has the <code class="docutils literal notranslate"><span class="pre">__add__</span></code>, <code class="docutils literal notranslate"><span class="pre">__mul__</span></code> and <code class="docutils literal notranslate"><span class="pre">__getitem__</span></code> methods redefined, which means
+<code class="docutils literal notranslate"><span class="pre">circuit</span> <span class="pre">*</span> <span class="pre">3</span></code>, <code class="docutils literal notranslate"><span class="pre">circuit1</span> <span class="pre">+</span> <span class="pre">circuit2</span></code> and <code class="docutils literal notranslate"><span class="pre">circuit[0:4]</span></code> will produce a CircuitOperationList
+with the same <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">table</span></code> attributes as the original.</p>
+<p>To add a <code class="docutils literal notranslate"><span class="pre">prx</span></code> operation to the list, call:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">.</span><span class="n">add_op</span><span class="p">(</span><span class="s1">&#39;prx&#39;</span><span class="p">,</span> <span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">angle</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="n">impl_name</span><span class="o">=</span><span class="s1">&#39;drag_crf&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The class also has shortcut methods defined, so the above can be shortened to:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">.</span><span class="n">prx</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">impl_name</span><span class="o">=</span><span class="s1">&#39;drag_crf&#39;</span><span class="p">)</span>
+<p>The class also has shortcut methods defined, so the above can be shortened to</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">circuit</span><span class="o">.</span><span class="n">prx</span><span class="p">(</span><span class="n">angle</span><span class="p">,</span> <span class="n">phase</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">impl_name</span><span class="o">=</span><span class="s1">&#39;drag_crf&#39;</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>Which is exactly the same syntax as in qiskit + implementation name, which usually does not need to be used. The
-names of the shortcut methods are taken from the attached <cite>table</cite> at init. All the operations with non-zero arity
+<p>which is exactly the same syntax as in Qiskit, with the addition of the implementation name
+which usually does not need to be used. The names of the shortcut methods are taken from the
+attached <code class="docutils literal notranslate"><span class="pre">table</span></code> at init. All the operations with non-zero arity
 will be added as shortcuts.</p>
-<p>If all the operations in the circuit are unitary, you can quickly calculate the unitary of the entire circuit
-by calling:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">get_unitary</span><span class="p">()</span>
+<p>If all the operations in the circuit are unitary, you can calculate the unitary propagator of
+the entire circuit by calling:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">U</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">get_unitary</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>The dimension of the unitary will always be defined by the <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> attribute. In particular, if your circuit
 contains 3 qubits, <code class="docutils literal notranslate"><span class="pre">'QB1',</span> <span class="pre">'QB2',</span> <span class="pre">'QB3'</span></code>, but you only add gates to the first two, the resulting unitary will
 still be an 8x8 matrix, corresponding to the three qubits <code class="docutils literal notranslate"><span class="pre">'QB1',</span> <span class="pre">'QB2',</span> <span class="pre">'QB3'</span></code>, in the big endian convention.
-With no operations affecting <code class="docutils literal notranslate"><span class="pre">'QB3'</span></code>, you should expect the action of the unitary on this qubit to be an identity.</p>
+With no operations affecting <code class="docutils literal notranslate"><span class="pre">'QB3'</span></code>, the action of the unitary on this qubit is identity.</p>
 <p>To map the circuit onto physical qubits, all you need to do is call:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">physical_circuit</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">map_loci</span><span class="p">(</span><span class="n">physical_qubits</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">physical_circuit</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">map_loci</span><span class="p">(</span><span class="n">physical_qubits</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>This will create a copy of the circuit, with all the placeholder qubits replaced by the physical qubits, with the
-order defined by the <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> attribute. For example, if <code class="docutils literal notranslate"><span class="pre">qubits</span> <span class="pre">=</span> <span class="pre">['QB1',</span> <span class="pre">'QB2',</span> <span class="pre">'QB3']</span></code>, and
-<code class="docutils literal notranslate"><span class="pre">physical_qubits</span> <span class="pre">=</span> <span class="pre">['QB2',</span> <span class="pre">'QB5',</span> <span class="pre">'QB10']</span></code>, all occurrences of <code class="docutils literal notranslate"><span class="pre">'QB1'</span></code> will be mapped to <code class="docutils literal notranslate"><span class="pre">'QB2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'QB2'</span></code>
-to <code class="docutils literal notranslate"><span class="pre">'QB5'</span></code> and <code class="docutils literal notranslate"><span class="pre">'QB3'</span></code> to <code class="docutils literal notranslate"><span class="pre">'QB10'</span></code>. The original circuit is not modified, so you can create many copies with
+order defined by the <code class="xref py py-attr docutils literal notranslate"><span class="pre">qubits</span></code> attribute. For example, if <code class="docutils literal notranslate"><span class="pre">qubits</span> <span class="pre">=</span> <span class="pre">['QB1',</span> <span class="pre">'Alice',</span> <span class="pre">'ZZZ']</span></code>, and
+<code class="docutils literal notranslate"><span class="pre">physical_qubits</span> <span class="pre">=</span> <span class="pre">['QB2',</span> <span class="pre">'QB5',</span> <span class="pre">'QB10']</span></code>, all occurrences of <code class="docutils literal notranslate"><span class="pre">'QB1'</span></code> will be mapped to <code class="docutils literal notranslate"><span class="pre">'QB2'</span></code>, <code class="docutils literal notranslate"><span class="pre">'Alice'</span></code>
+to <code class="docutils literal notranslate"><span class="pre">'QB5'</span></code> and <code class="docutils literal notranslate"><span class="pre">'ZZZ'</span></code> to <code class="docutils literal notranslate"><span class="pre">'QB10'</span></code>. The original circuit is not modified, so you can create many copies with
 different physical qubits, which is helpful when running parallel experiments on a large chip.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>args</strong> – a list of CircuitOperation objects. Can be empty.</p></li>
-<li><p><strong>qubits</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – a list of qubits allowed to be in the circuit.</p></li>
-<li><p><strong>num_qubits</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – the number of qubits allowed to be in the circuit. Ignored if <code class="docutils literal notranslate"><span class="pre">qubits</span></code> is given.</p></li>
-<li><p><strong>table</strong> (<em>QuantumOpTable</em><em> | </em><em>None</em>) – table containing allowed quantum operations.</p></li>
+<li><p><strong>contents</strong> (<em>Iterable</em><em>[</em><a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><em>CircuitOperation</em></a><em>]</em>) – Circuit operations to initialize the circuit with. Can be left out.</p></li>
+<li><p><strong>qubits</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Qubits allowed to be used in operation loci in the circuit.</p></li>
+<li><p><strong>num_qubits</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Number of qubits in the circuit, will initialize <code class="docutils literal notranslate"><span class="pre">qubits</span></code> with <code class="docutils literal notranslate"><span class="pre">['QB1',</span> <span class="pre">'QB2',</span> <span class="pre">...]</span></code>.
+Ignored if <code class="docutils literal notranslate"><span class="pre">qubits</span></code> is given.</p></li>
+<li><p><strong>table</strong> (<em>QuantumOpTable</em><em> | </em><em>None</em>) – Allowed quantum operations.</p></li>
 </ul>
 </dd>
 </dl>
@@ -764,7 +769,7 @@ of the original list.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-10.
+  Last updated on 2025-02-11.
   <br/>
 </p>
   </div>
