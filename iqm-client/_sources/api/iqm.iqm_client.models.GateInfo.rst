@@ -30,5 +30,6 @@ iqm.iqm\_client.models.GateInfo
 
    .. autosummary::
    
+      ~GateInfo.override_default_implementation_validator
    
    
