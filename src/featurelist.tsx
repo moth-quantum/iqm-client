@@ -1,10 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { createPortal } from "react-dom";
+
 
 const Tooltip = ({ content, children }: { content: JSX.Element, children: JSX.Element }) => {
     const [visible, setVisible] = useState(false);
+    const [tooltipContainer, setTooltipContainer] = useState<HTMLElement | null>(null);
+    const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+    useEffect(() => {
+        const container = document.createElement('div');
+        document.body.appendChild(container);
+        setTooltipContainer(container);
+
+        return () => {
+            document.body.removeChild(container);
+        };
+    }, []);
+
+    const handleMouseMove = (event: React.MouseEvent) => {
+        setMousePosition({ x: event.clientX, y: event.clientY });
+    };
+
+    if (!tooltipContainer) return null;
 
     return (
-        <div className="relative inline-block">
+        <div className="relative inline-block" onMouseMove={handleMouseMove}>
             {children}
             <span
                 className="tooltip-trigger ml-1 cursor-pointer"
@@ -14,14 +34,19 @@ const Tooltip = ({ content, children }: { content: JSX.Element, children: JSX.El
             >
                 &#9432;
             </span>
-            {visible && (
-                <div className="absolute left-0 mt-2 w-64 p-2 bg-gray-700 text-white text-sm rounded shadow-lg z-10">
+            {visible && createPortal(
+                <div
+                    className="fixed p-2 bg-gray-700 text-white text-sm rounded shadow-lg z-50"
+                    style={{ top: mousePosition.y + 10, left: mousePosition.x + 10 }}
+                >
                     {content}
-                </div>
+                </div>,
+                tooltipContainer
             )}
         </div>
     );
 };
+
 
 const gateFeatures = [
     {
