@@ -22,6 +22,7 @@ iqm.pulla.utils
       :toctree:
    
       build_settings
+      calset_from_observations
       calset_to_cal_data_tree
       circuit_operations_to_cpc
       convert_sweep_spot

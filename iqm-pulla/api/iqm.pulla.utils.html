@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.pulla.utils &#8212; IQM Pulla 5.23 documentation</title>
+    <title>iqm.pulla.utils &#8212; IQM Pulla 5.24 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=32938398"></script>
+    <script src="../_static/documentation_options.js?v=a7860149"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="iqm.pulla.pulla.Pulla" href="iqm.pulla.pulla.Pulla.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="5.23" />
-    <meta name="docbuild:last-update" content="2025-02-12"/>
+  <meta name="docsearch:version" content="5.24" />
+    <meta name="docbuild:last-update" content="2025-02-13"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.23 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.23 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.24 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.24 documentation - Home"/>
   
   
 </a></div>
@@ -208,6 +208,7 @@
 <li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">iqm.pulla.utils</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.InstructionLocation.html">iqm.pulla.utils.InstructionLocation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.build_settings.html">iqm.pulla.utils.build_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.calset_from_observations.html">iqm.pulla.utils.calset_from_observations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.calset_to_cal_data_tree.html">iqm.pulla.utils.calset_to_cal_data_tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.circuit_operations_to_cpc.html">iqm.pulla.utils.circuit_operations_to_cpc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot.html">iqm.pulla.utils.convert_sweep_spot</a></li>
@@ -410,49 +411,52 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.build_settings.html#iqm.pulla.utils.build_settings" title="iqm.pulla.utils.build_settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">build_settings</span></code></a>(shots, calibration_set, ...)</p></td>
 <td><p>Construct the Station Control settings needed for executing a batch of quantum circuits.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.calset_to_cal_data_tree.html#iqm.pulla.utils.calset_to_cal_data_tree" title="iqm.pulla.utils.calset_to_cal_data_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calset_to_cal_data_tree</span></code></a>(calibration_set)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.calset_from_observations.html#iqm.pulla.utils.calset_from_observations" title="iqm.pulla.utils.calset_from_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calset_from_observations</span></code></a>(calset_observations)</p></td>
+<td><p>Create a Pulla calibration set from the given observations.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.calset_to_cal_data_tree.html#iqm.pulla.utils.calset_to_cal_data_tree" title="iqm.pulla.utils.calset_to_cal_data_tree"><code class="xref py py-obj docutils literal notranslate"><span class="pre">calset_to_cal_data_tree</span></code></a>(calibration_set)</p></td>
 <td><p>Build an iqm-pulse QuantumOp calibration data tree from a calibration set.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.circuit_operations_to_cpc.html#iqm.pulla.utils.circuit_operations_to_cpc" title="iqm.pulla.utils.circuit_operations_to_cpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit_operations_to_cpc</span></code></a>(circ_ops[, name])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.circuit_operations_to_cpc.html#iqm.pulla.utils.circuit_operations_to_cpc" title="iqm.pulla.utils.circuit_operations_to_cpc"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit_operations_to_cpc</span></code></a>(circ_ops[, name])</p></td>
 <td><p>Convert a list of CircuitOperations to an IQM CPC Circuit.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot.html#iqm.pulla.utils.convert_sweep_spot" title="iqm.pulla.utils.convert_sweep_spot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_sweep_spot</span></code></a>(results, readout_mappings)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot.html#iqm.pulla.utils.convert_sweep_spot" title="iqm.pulla.utils.convert_sweep_spot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_sweep_spot</span></code></a>(results, readout_mappings)</p></td>
 <td><p>Convert the sweep measurement results from Station Control into circuit measurement results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot_with_heralding_mode_zero.html#iqm.pulla.utils.convert_sweep_spot_with_heralding_mode_zero" title="iqm.pulla.utils.convert_sweep_spot_with_heralding_mode_zero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_sweep_spot_with_heralding_mode_zero</span></code></a>(...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot_with_heralding_mode_zero.html#iqm.pulla.utils.convert_sweep_spot_with_heralding_mode_zero" title="iqm.pulla.utils.convert_sweep_spot_with_heralding_mode_zero"><code class="xref py py-obj docutils literal notranslate"><span class="pre">convert_sweep_spot_with_heralding_mode_zero</span></code></a>(...)</p></td>
 <td><p>Like <a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot.html#iqm.pulla.utils.convert_sweep_spot" title="iqm.pulla.utils.convert_sweep_spot"><code class="xref py py-func docutils literal notranslate"><span class="pre">convert_sweep_spot()</span></code></a>, but for results that contain heralding measurements.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.extract_readout_controller_result_names.html#iqm.pulla.utils.extract_readout_controller_result_names" title="iqm.pulla.utils.extract_readout_controller_result_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_readout_controller_result_names</span></code></a>(...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.extract_readout_controller_result_names.html#iqm.pulla.utils.extract_readout_controller_result_names" title="iqm.pulla.utils.extract_readout_controller_result_names"><code class="xref py py-obj docutils literal notranslate"><span class="pre">extract_readout_controller_result_names</span></code></a>(...)</p></td>
 <td><p>Prepare readout controller names for the request.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.find_circuit_boundary.html#iqm.pulla.utils.find_circuit_boundary" title="iqm.pulla.utils.find_circuit_boundary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_circuit_boundary</span></code></a>(mode, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.find_circuit_boundary.html#iqm.pulla.utils.find_circuit_boundary" title="iqm.pulla.utils.find_circuit_boundary"><code class="xref py py-obj docutils literal notranslate"><span class="pre">find_circuit_boundary</span></code></a>(mode, ...)</p></td>
 <td><p>Determine the boundary of a circuit executed on the QPU.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.get_hash_for.html#iqm.pulla.utils.get_hash_for" title="iqm.pulla.utils.get_hash_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_hash_for</span></code></a>(circuit)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.get_hash_for.html#iqm.pulla.utils.get_hash_for" title="iqm.pulla.utils.get_hash_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_hash_for</span></code></a>(circuit)</p></td>
 <td><p>Get a unique id hash for a given circuit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.initialize_schedule_builder.html#iqm.pulla.utils.initialize_schedule_builder" title="iqm.pulla.utils.initialize_schedule_builder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize_schedule_builder</span></code></a>(calibration_set, ...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.initialize_schedule_builder.html#iqm.pulla.utils.initialize_schedule_builder" title="iqm.pulla.utils.initialize_schedule_builder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">initialize_schedule_builder</span></code></a>(calibration_set, ...)</p></td>
 <td><p>Initialize a new schedule builder for the station, validate that it is configured properly.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.iqm_circuit_to_gate_implementation.html#iqm.pulla.utils.iqm_circuit_to_gate_implementation" title="iqm.pulla.utils.iqm_circuit_to_gate_implementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iqm_circuit_to_gate_implementation</span></code></a>(circuit, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.iqm_circuit_to_gate_implementation.html#iqm.pulla.utils.iqm_circuit_to_gate_implementation" title="iqm.pulla.utils.iqm_circuit_to_gate_implementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">iqm_circuit_to_gate_implementation</span></code></a>(circuit, ...)</p></td>
 <td><p>Wrap a circuit to a single GateImplementation that can then be registered as an independent &quot;gate&quot;.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.locate_instructions.html#iqm.pulla.utils.locate_instructions" title="iqm.pulla.utils.locate_instructions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locate_instructions</span></code></a>(schedule, instruction_type)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.locate_instructions.html#iqm.pulla.utils.locate_instructions" title="iqm.pulla.utils.locate_instructions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">locate_instructions</span></code></a>(schedule, instruction_type)</p></td>
 <td><p>Locate specific instructions in a schedule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.map_qubit_indices.html#iqm.pulla.utils.map_qubit_indices" title="iqm.pulla.utils.map_qubit_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_qubit_indices</span></code></a>(circuits, context)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.map_qubit_indices.html#iqm.pulla.utils.map_qubit_indices" title="iqm.pulla.utils.map_qubit_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_qubit_indices</span></code></a>(circuits, context)</p></td>
 <td><p>Map qubit indices in circuits to the indices in the component mapping.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.map_sweep_results_to_logical_qubits.html#iqm.pulla.utils.map_sweep_results_to_logical_qubits" title="iqm.pulla.utils.map_sweep_results_to_logical_qubits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_sweep_results_to_logical_qubits</span></code></a>(...)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.map_sweep_results_to_logical_qubits.html#iqm.pulla.utils.map_sweep_results_to_logical_qubits" title="iqm.pulla.utils.map_sweep_results_to_logical_qubits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_sweep_results_to_logical_qubits</span></code></a>(...)</p></td>
 <td><p>Convert sweep results returned by Station Control to the circuit measurement results the client expects.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.print_channel.html#iqm.pulla.utils.print_channel" title="iqm.pulla.utils.print_channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_channel</span></code></a>(schedule, channel_name)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.print_channel.html#iqm.pulla.utils.print_channel" title="iqm.pulla.utils.print_channel"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_channel</span></code></a>(schedule, channel_name)</p></td>
 <td><p>Print all instructions in a channel of a schedule.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.print_schedule.html#iqm.pulla.utils.print_schedule" title="iqm.pulla.utils.print_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_schedule</span></code></a>(schedule)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.print_schedule.html#iqm.pulla.utils.print_schedule" title="iqm.pulla.utils.print_schedule"><code class="xref py py-obj docutils literal notranslate"><span class="pre">print_schedule</span></code></a>(schedule)</p></td>
 <td><p>Print all instructions in each segment of a schedule.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulla.utils.replace_instruction_in_place.html#iqm.pulla.utils.replace_instruction_in_place" title="iqm.pulla.utils.replace_instruction_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">replace_instruction_in_place</span></code></a>(schedule, ...)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulla.utils.replace_instruction_in_place.html#iqm.pulla.utils.replace_instruction_in_place" title="iqm.pulla.utils.replace_instruction_in_place"><code class="xref py py-obj docutils literal notranslate"><span class="pre">replace_instruction_in_place</span></code></a>(schedule, ...)</p></td>
 <td><p>Replace an instruction in a schedule with one or more instructions.</p></td>
 </tr>
 </tbody>
@@ -537,7 +541,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-12.
+  Last updated on 2025-02-13.
   <br/>
 </p>
   </div>

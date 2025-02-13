@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.pulla.pulla.Pulla &#8212; IQM Pulla 5.23 documentation</title>
+    <title>iqm.pulla.pulla.Pulla &#8212; IQM Pulla 5.24 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=32938398"></script>
+    <script src="../_static/documentation_options.js?v=a7860149"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="iqm.pulla.pulla" href="iqm.pulla.pulla.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="5.23" />
-    <meta name="docbuild:last-update" content="2025-02-12"/>
+  <meta name="docsearch:version" content="5.24" />
+    <meta name="docbuild:last-update" content="2025-02-13"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.23 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.23 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 5.24 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 5.24 documentation - Home"/>
   
   
 </a></div>
@@ -208,6 +208,7 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulla.utils.html">iqm.pulla.utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.InstructionLocation.html">iqm.pulla.utils.InstructionLocation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.build_settings.html">iqm.pulla.utils.build_settings</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.calset_from_observations.html">iqm.pulla.utils.calset_from_observations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.calset_to_cal_data_tree.html">iqm.pulla.utils.calset_to_cal_data_tree</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.circuit_operations_to_cpc.html">iqm.pulla.utils.circuit_operations_to_cpc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulla.utils.convert_sweep_spot.html">iqm.pulla.utils.convert_sweep_spot</a></li>
@@ -441,7 +442,7 @@ Can create a compiler instance ready to be used with the connected quantum compu
 <td><p>Fetches a specific calibration set from the server, and returns its decoded representation.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.pulla.pulla.Pulla.fetch_latest_calibration_set" title="iqm.pulla.pulla.Pulla.fetch_latest_calibration_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">fetch_latest_calibration_set</span></code></a>()</p></td>
-<td><p>Fetches the latest default calibration set from the server, and returns its decoded representation and UUID.</p></td>
+<td><p>Fetches the latest default calibration set from the server, and returns its decoded representation and id.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.pulla.pulla.Pulla.get_channel_properties" title="iqm.pulla.pulla.Pulla.get_channel_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_properties</span></code></a>()</p></td>
 <td><p>Control channel properties from Station Control controller settings.</p></td>
@@ -483,7 +484,7 @@ overridden for the present keys in that dict. If left <code class="docutils lite
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.pulla.pulla.Pulla.fetch_latest_calibration_set">
 <span class="sig-name descname"><span class="pre">fetch_latest_calibration_set</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulla.pulla.Pulla.fetch_latest_calibration_set" title="Link to this definition">#</a></dt>
-<dd><p>Fetches the latest default calibration set from the server, and returns its decoded representation and UUID.</p>
+<dd><p>Fetches the latest default calibration set from the server, and returns its decoded representation and id.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#tuple" title="(in Python v3.11)">tuple</a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)">dict</a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)">bool</a> | <a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)">str</a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)">int</a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)">float</a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)">complex</a> | <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><em>ndarray</em></a>], <a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>]</p>
@@ -499,7 +500,7 @@ All calibration sets are cached in-memory, so if the calibration set with the gi
 it will be returned immediately.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – UUID of the calibration set to fetch.</p>
+<dd class="field-odd"><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the calibration set to fetch.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)">dict</a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)">str</a>, <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)">bool</a> | <a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)">str</a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)">int</a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)">float</a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)">complex</a> | <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><em>ndarray</em></a>]</p>
@@ -663,7 +664,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-12.
+  Last updated on 2025-02-13.
   <br/>
 </p>
   </div>
