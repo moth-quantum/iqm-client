@@ -149,7 +149,7 @@ const gateFeatures = [
         qrisp: true,
     },
     {
-        name: <Tooltip content="The qubits are actively reset once more using conditional pulses feedback loop before circuit execution.">Automated active reset</Tooltip>,
+        name: <Tooltip content="The qubits are actively reset once more using conditional pulses feedback loops before circuit execution.">Automated active reset</Tooltip>,
         qccsw: "3.3.0",
         qiskit: {
             tutorial: "https://iqm-finland.github.io/iqm-client/api/iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions.active_reset_cycles"
