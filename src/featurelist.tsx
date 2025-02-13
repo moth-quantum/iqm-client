@@ -101,7 +101,6 @@ const gateFeatures = [
         cirq: {
             tutorial: "https://iqm-finland.github.io/iqm-client/api/iqm.iqm_client.models.CircuitCompilationOptions.html"
         },
-        cudaq: "-",
     },
     {
         name: <div style={{ display: "flex" }}> <Tooltip content={"Using a secondary detection event to confirm the successful preparation or measurement of a quantum state."
