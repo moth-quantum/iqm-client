@@ -9,6 +9,7 @@ on:
 
 env:
   PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
+  EXTRAS: "iqm-pulla[qiskit,qir]"
 
 jobs:
   build:
@@ -30,12 +31,15 @@ jobs:
           mkdir -p temp
           cd temp
 
-          for package in $PACKAGES; do
+          for package in $PACKAGES $EXTRAS; do
             echo "Processing $package..."
             # download source distribution
             python -m pip download --no-deps --no-binary :all: $package
             echo "installing package (required for namespace resolution when building docs with Sphinx)..."
             python -m pip install $package
+          done
+          for package in $PACKAGES; do
+            echo "Processing $package..."
             echo "unarchiving source distribution and cd-ing into the resulting directory..."
             tar -xvzf *.tar.gz
             cd "$(tar -tzf *.tar.gz | head -1 | cut -f1 -d"/")"
