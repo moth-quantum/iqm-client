@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>User guide &#8212; Cirq on IQM 15.4 documentation</title>
+    <title>User guide &#8212; Cirq on IQM 16.0 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=84a18d08"></script>
+    <script src="_static/documentation_options.js?v=d8dfd7ca"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -52,8 +52,8 @@
     <link rel="prev" title="Cirq on IQM" href="index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="15.4" />
-    <meta name="docbuild:last-update" content="2025-02-17"/>
+  <meta name="docsearch:version" content="16.0" />
+    <meta name="docbuild:last-update" content="2025-02-18"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="Cirq on IQM 15.4 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cirq on IQM 15.4 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="Cirq on IQM 16.0 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="Cirq on IQM 16.0 documentation - Home"/>
   
   
 </a></div>
@@ -548,15 +548,22 @@ of qubits in the <code class="docutils literal notranslate"><span class="pre">qu
 routing. This is particularly useful when running Quantum Volume benchmarks.</p>
 <section id="iqm-star-architecture">
 <h3>IQM Star architecture<a class="headerlink" href="#iqm-star-architecture" title="Link to this heading">#</a></h3>
-<p>Devices that have the IQM Star architecture (e.g. IQM Deneb) support MOVE gates that are used
-to move quantum states between qubits and computational resonators.
-For these devices a final MOVE gate insertion step must be performed, which introduces
-the computational resonators to the circuit, and routes the two-qubit gates through them using MOVEs.</p>
-<p>Under the hood, this uses the <a class="reference external" href="https://iqm-finland.github.io/iqm-client/api/iqm.iqm_client.transpile.transpile_insert_moves.html#iqm.iqm_client.transpile.transpile_insert_moves" title="(in IQM client v22.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">transpile_insert_moves()</span></code></a> function of the
-<a class="reference external" href="https://iqm-finland.github.io/iqm-client/api/iqm.iqm_client.html#module-iqm.iqm_client" title="(in IQM client v22.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm_client</span></code></a> library. This method is exposed through <a class="reference internal" href="api/iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit.html#iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit" title="iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit"><code class="xref py py-func docutils literal notranslate"><span class="pre">transpile_insert_moves_into_circuit()</span></code></a> which
-can also be used by advanced users to transpile circuits that have already some MOVE gates in them,
-or to remove existing MOVE gates from a circuit so the circuit can be reused on a device that does
-not support them.</p>
+<p>Devices that have the IQM Star architecture (e.g. IQM Deneb) contain
+computational resonators in addition to qubits, and use qubit-resonator gates instead of two-qubit
+gates. These include the MOVE gate which moves qubit states to and from the resonators.
+There are two main supported workflows for the Star architecture:</p>
+<ol class="arabic simple">
+<li><p>Construct your circuit as you would for a regular qubits-only device, decompose (and optimize)
+it to native gates, and then route it using <a class="reference internal" href="api/iqm.cirq_iqm.devices.iqm_device.IQMDevice.html#iqm.cirq_iqm.devices.iqm_device.IQMDevice.route_circuit" title="iqm.cirq_iqm.devices.iqm_device.IQMDevice.route_circuit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IQMDevice.route_circuit()</span></code></a>.
+This will attempt to route all the (fictional) two-qubit gates in the circuit through the
+resonator(s) using the native gates, adding MOVE gates as necessary.
+Under the hood, this uses the <a class="reference external" href="https://iqm-finland.github.io/iqm-client/api/iqm.iqm_client.transpile.transpile_insert_moves.html#iqm.iqm_client.transpile.transpile_insert_moves" title="(in IQM client v22.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">transpile_insert_moves()</span></code></a> function of the
+<a class="reference external" href="https://iqm-finland.github.io/iqm-client/api/iqm.iqm_client.html#module-iqm.iqm_client" title="(in IQM client v22.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm_client</span></code></a> library.</p></li>
+<li><p>Construct your circuit directly using the device qubits, resonators, and qubit-resonator gates,
+routing it manually.</p></li>
+</ol>
+<p>Advanced users can use <a class="reference internal" href="api/iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit.html#iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit" title="iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit"><code class="xref py py-func docutils literal notranslate"><span class="pre">transpile_insert_moves_into_circuit()</span></code></a> to transpile circuits that
+have some MOVE gates in them in addition to fictional qubit-qubit gates.</p>
 </section>
 </section>
 <section id="optimization">
@@ -899,7 +906,7 @@ By Cirq on IQM developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-17.
+  Last updated on 2025-02-18.
   <br/>
 </p>
   </div>
