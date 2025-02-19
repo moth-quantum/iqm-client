@@ -8,7 +8,7 @@ on:
     - cron: "0 0 * * *"
 
 env:
-  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
+  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla[qiskit,qir] iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
 
 jobs:
   build:
@@ -40,10 +40,10 @@ jobs:
             tar -xvzf *.tar.gz
             cd "$(tar -tzf *.tar.gz | head -1 | cut -f1 -d"/")"
             echo "building docs..."
-            USE_LOCAL_TARGET=true python -m sphinx docs ../../public/$package
+            USE_LOCAL_TARGET=true python -m sphinx docs ../../public/${package%[*}
             # add .nojekyll in order to stop Github from treating the directory as a Jekyll blog generator,
             # which ignores directories starting with underscore
-            touch ../../public/$package/.nojekyll
+            touch ../../public/${package%[*}/.nojekyll
             echo "cleaning up..."
             cd ..
             rm -rf *
