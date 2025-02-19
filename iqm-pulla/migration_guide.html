@@ -235,6 +235,18 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_dd.generate_phases_of_urn_sequence.html">iqm.pulla.utils_dd.generate_phases_of_urn_sequence</a></li>
 </ul>
 </details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulla.utils_qir.html">iqm.pulla.utils_qir</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_qir.qir_to_pulla.html">iqm.pulla.utils_qir.qir_to_pulla</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulla.utils_qiskit.html">iqm.pulla.utils_qiskit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla.html">iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_qiskit.qiskit_to_pulla.html">iqm.pulla.utils_qiskit.qiskit_to_pulla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_qiskit.station_control_result_to_qiskit.html">iqm.pulla.utils_qiskit.station_control_result_to_qiskit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_qiskit.DummyJob.html">iqm.pulla.utils_qiskit.DummyJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulla.utils_qiskit.IQMPullaBackend.html">iqm.pulla.utils_qiskit.IQMPullaBackend</a></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -425,11 +437,11 @@ that is used to control the reset functionality. By default, it is set to <code 
 <section id="from-2-x-to-3-0">
 <h2>From 2.x to 3.0<a class="headerlink" href="#from-2-x-to-3-0" title="Link to this heading">#</a></h2>
 <p>The function <code class="docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.qiskit_to_cpc</span></code> was replaced by
-<code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.qiskit_to_pulla()</span></code>.</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">qiskit_circuits_to_pulla()</span></code> is a more direct replacement, with the difference that it also requires a
+<a class="reference internal" href="api/iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla.html#iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla" title="iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla"><code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla()</span></code></a> and <a class="reference internal" href="api/iqm.pulla.utils_qiskit.qiskit_to_pulla.html#iqm.pulla.utils_qiskit.qiskit_to_pulla" title="iqm.pulla.utils_qiskit.qiskit_to_pulla"><code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.qiskit_to_pulla()</span></code></a>.</p>
+<p><a class="reference internal" href="api/iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla.html#iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla" title="iqm.pulla.utils_qiskit.qiskit_circuits_to_pulla"><code class="xref py py-func docutils literal notranslate"><span class="pre">qiskit_circuits_to_pulla()</span></code></a> is a more direct replacement, with the difference that it also requires a
 mapping of qiskit qubit indices to physical qubit names which was not required before.
 This can be e.g. obtained from an <code class="xref py py-class docutils literal notranslate"><span class="pre">iqm.qiskit_iqm.iqm_provider.IQMBackend</span></code> instance.</p>
-<p><code class="xref py py-func docutils literal notranslate"><span class="pre">qiskit_to_pulla()</span></code> is a convenience method that in addition to
+<p><a class="reference internal" href="api/iqm.pulla.utils_qiskit.qiskit_to_pulla.html#iqm.pulla.utils_qiskit.qiskit_to_pulla" title="iqm.pulla.utils_qiskit.qiskit_to_pulla"><code class="xref py py-func docutils literal notranslate"><span class="pre">qiskit_to_pulla()</span></code></a> is a convenience method that in addition to
 converting the Qiskit circuit(s) also returns a <a class="reference internal" href="api/iqm.cpc.compiler.compiler.Compiler.html#iqm.cpc.compiler.compiler.Compiler" title="iqm.cpc.compiler.compiler.Compiler"><code class="xref py py-class docutils literal notranslate"><span class="pre">Compiler</span></code></a> instance that can be used to compile them
 into a playlist. It takes as additional parameters a <a class="reference internal" href="api/iqm.pulla.pulla.Pulla.html#iqm.pulla.pulla.Pulla" title="iqm.pulla.pulla.Pulla"><code class="xref py py-class docutils literal notranslate"><span class="pre">Pulla</span></code></a> instance (for building the compiler),
 and an <code class="xref py py-class docutils literal notranslate"><span class="pre">IQMBackend</span></code> instance (containing the calibration set ID and
@@ -508,7 +520,7 @@ instead of string qubit name, so you can apply the change to multiple loci in a 
 </div>
 <p><code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils.qiskit_to_cpc()</span></code> and <code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.station_control_result_to_qiskit()</span></code>, previously marked for
 deprecation in v. 1.0, are now removed. Use <code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.qiskit_to_cpc()</span></code> and
-<code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.station_control_result_to_qiskit()</span></code>, respectively.</p>
+<a class="reference internal" href="api/iqm.pulla.utils_qiskit.station_control_result_to_qiskit.html#iqm.pulla.utils_qiskit.station_control_result_to_qiskit" title="iqm.pulla.utils_qiskit.station_control_result_to_qiskit"><code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulla.utils_qiskit.station_control_result_to_qiskit()</span></code></a>, respectively.</p>
 </section>
 <section id="from-0-x-to-1-0">
 <h2>From 0.x to 1.0<a class="headerlink" href="#from-0-x-to-1-0" title="Link to this heading">#</a></h2>
