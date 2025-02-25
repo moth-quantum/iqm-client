@@ -21,9 +21,7 @@ iqm.cpc.compiler.dd
    .. autosummary::
       :toctree:
    
-      get_component_name
       insert_dd_sequences
-      is_drive_channel
       merge_wait_instructions_in_schedule
    
    
