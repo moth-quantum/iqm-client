@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>StartStopBaseOptions &#8212; exa-common 25.34 documentation</title>
+    <title>StartStopBaseOptions &#8212; exa-common 26.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=9996fbbf"></script>
+    <script src="../_static/documentation_options.js?v=44e0a51f"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="start_stop_base_options" href="exa.common.control.sweep.option.start_stop_base_options.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="25.34" />
-    <meta name="docbuild:last-update" content="2025-02-27"/>
+  <meta name="docsearch:version" content="26.0" />
+    <meta name="docbuild:last-update" content="2025-02-28"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 25.34 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 25.34 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.0 documentation - Home"/>
   
   
 </a></div>
@@ -151,7 +151,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exa.common.html">common</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.api.html">api</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="exa.common.api.model.html">model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.api.proto_serialization.html">proto_serialization</a></li>
 </ul>
 </details></li>
@@ -160,8 +159,10 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.data.html">data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.data.base_model.html">base_model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.data.parameter.html">parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.data.setting_node.html">setting_node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.data.value.html">value</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.errors.html">errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -300,6 +301,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.stop"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.stop</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.count</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.base"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.base</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.data"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.data</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -332,10 +334,13 @@ The number of values = <cite>count</cite>. These options are used only for expon
 <tr class="row-even"><td><p><a class="reference internal" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count" title="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count"><code class="xref py py-obj docutils literal notranslate"><span class="pre">count</span></code></a></p></td>
 <td><p>Number of values to generate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.start" title="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.data" title="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
+<td><p>List of values for <code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.start" title="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.start"><code class="xref py py-obj docutils literal notranslate"><span class="pre">start</span></code></a></p></td>
 <td><p>The power for the start of the interval.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.stop" title="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.stop" title="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.stop"><code class="xref py py-obj docutils literal notranslate"><span class="pre">stop</span></code></a></p></td>
 <td><p>The power for the end of the interval.</p></td>
 </tr>
 </tbody>
@@ -352,8 +357,8 @@ The number of values = <cite>count</cite>. These options are used only for expon
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>start</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)"><em>complex</em></a>) – </p></li>
 <li><p><strong>stop</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)"><em>complex</em></a>) – </p></li>
-<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – </p></li>
-<li><p><strong>base</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – </p></li>
+<li><p><strong>count</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>base</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -371,16 +376,22 @@ The number of values = <cite>count</cite>. These options are used only for expon
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count">
-<span class="sig-name descname"><span class="pre">count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">count</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count" title="Link to this definition">#</a></dt>
 <dd><p>Number of values to generate. Default to
 <a class="reference internal" href="exa.common.control.sweep.option.constants.DEFAULT_COUNT.html#exa.common.control.sweep.option.constants.DEFAULT_COUNT" title="exa.common.control.sweep.option.constants.DEFAULT_COUNT"><code class="xref py py-const docutils literal notranslate"><span class="pre">exa.common.control.sweep.option.constants.DEFAULT_COUNT</span></code></a>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.base">
-<span class="sig-name descname"><span class="pre">base</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.base" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">base</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.base" title="Link to this definition">#</a></dt>
 <dd><p>Number, that is raised to the power <cite>start</cite> or <cite>stop</cite>. Default to
 <a class="reference internal" href="exa.common.control.sweep.option.constants.DEFAULT_BASE.html#exa.common.control.sweep.option.constants.DEFAULT_BASE" title="exa.common.control.sweep.option.constants.DEFAULT_BASE"><code class="xref py py-const docutils literal notranslate"><span class="pre">exa.common.control.sweep.option.constants.DEFAULT_BASE</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.data">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)"><span class="pre">complex</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.data" title="Link to this definition">#</a></dt>
+<dd><p>List of values for <code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></p>
 </dd></dl>
 
 </dd></dl>
@@ -438,6 +449,7 @@ The number of values = <cite>count</cite>. These options are used only for expon
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.stop"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.stop</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.count"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.count</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.base"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.base</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.option.start_stop_base_options.StartStopBaseOptions.data"><code class="docutils literal notranslate"><span class="pre">StartStopBaseOptions.data</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -469,7 +481,7 @@ The number of values = <cite>count</cite>. These options are used only for expon
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-27.
+  Last updated on 2025-02-28.
   <br/>
 </p>
   </div>

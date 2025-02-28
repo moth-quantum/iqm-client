@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Sweep &#8212; exa-common 25.34 documentation</title>
+    <title>Sweep &#8212; exa-common 26.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=9996fbbf"></script>
+    <script src="../_static/documentation_options.js?v=44e0a51f"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -49,12 +49,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="utils" href="exa.common.control.sweep.utils.html" />
+    <link rel="next" title="sweep_values" href="exa.common.control.sweep.sweep_values.html" />
     <link rel="prev" title="sweep" href="exa.common.control.sweep.sweep.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="25.34" />
-    <meta name="docbuild:last-update" content="2025-02-27"/>
+  <meta name="docsearch:version" content="26.0" />
+    <meta name="docbuild:last-update" content="2025-02-28"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 25.34 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 25.34 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.0 documentation - Home"/>
   
   
 </a></div>
@@ -151,7 +151,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exa.common.html">common</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.api.html">api</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="exa.common.api.model.html">model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.api.proto_serialization.html">proto_serialization</a></li>
 </ul>
 </details></li>
@@ -160,8 +159,10 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.data.html">data</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.data.base_model.html">base_model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.data.parameter.html">parameter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.data.setting_node.html">setting_node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.data.value.html">value</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.errors.html">errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -297,8 +298,9 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep"><code class="docutils literal notranslate"><span class="pre">Sweep</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.parameter"><code class="docutils literal notranslate"><span class="pre">Sweep.parameter</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.options"><code class="docutils literal notranslate"><span class="pre">Sweep.options</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.data"><code class="docutils literal notranslate"><span class="pre">Sweep.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.model_post_init"><code class="docutils literal notranslate"><span class="pre">Sweep.model_post_init()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.model_config"><code class="docutils literal notranslate"><span class="pre">Sweep.model_config</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -316,21 +318,25 @@
 <h1>Sweep<a class="headerlink" href="#sweep" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="exa.common.control.sweep.sweep.Sweep">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Sweep</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep" title="Link to this definition">#</a></dt>
+<dd><p>Bases: <a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
 <p>Base immutable class for sweeps.</p>
+<p>Create a new model by parsing and validating input data from keyword arguments.</p>
+<p>Raises [<cite>ValidationError</cite>][pydantic_core.ValidationError] if the input data cannot be
+validated to form a valid model.</p>
+<p><cite>self</cite> is explicitly positional-only to allow <cite>self</cite> as a field name.</p>
 <p>Module: <a class="reference internal" href="exa.common.control.sweep.sweep.html#module-exa.common.control.sweep.sweep" title="exa.common.control.sweep.sweep"><code class="xref py py-mod docutils literal notranslate"><span class="pre">exa.common.control.sweep.sweep</span></code></a></p>
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.data" title="exa.common.control.sweep.sweep.Sweep.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
-<td><p>List of values for <a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.parameter" title="exa.common.control.sweep.sweep.Sweep.parameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.model_config" title="exa.common.control.sweep.sweep.Sweep.model_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_config</span></code></a></p></td>
+<td><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.parameter" title="exa.common.control.sweep.sweep.Sweep.parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameter</span></code></a></p></td>
 <td><p>The Sweep represents changing the values of this Parameter.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.options" title="exa.common.control.sweep.sweep.Sweep.options"><code class="xref py py-obj docutils literal notranslate"><span class="pre">options</span></code></a></p></td>
-<td><p>Range specification where the values are derived from.</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.data" title="exa.common.control.sweep.sweep.Sweep.data"><code class="xref py py-obj docutils literal notranslate"><span class="pre">data</span></code></a></p></td>
+<td><p>List of values for <a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.parameter" title="exa.common.control.sweep.sweep.Sweep.parameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -338,6 +344,9 @@
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.model_post_init" title="exa.common.control.sweep.sweep.Sweep.model_post_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_post_init</span></code></a></p></td>
+<td><p>Override this method to perform additional initialization after <cite>__init__</cite> and <cite>model_construct</cite>.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -345,7 +354,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>parameter</strong> (<a class="reference internal" href="exa.common.data.parameter.Parameter.html#exa.common.data.parameter.Parameter" title="exa.common.data.parameter.Parameter"><em>Parameter</em></a>) – </p></li>
-<li><p><strong>options</strong> (<a class="reference internal" href="exa.common.control.sweep.option.sweep_options.SweepOptions.html#exa.common.control.sweep.option.sweep_options.SweepOptions" title="exa.common.control.sweep.option.sweep_options.SweepOptions"><em>SweepOptions</em></a>) – </p></li>
+<li><p><strong>options</strong> (<a class="reference internal" href="exa.common.control.sweep.option.sweep_options.SweepOptions.html#exa.common.control.sweep.option.sweep_options.SweepOptions" title="exa.common.control.sweep.option.sweep_options.SweepOptions"><em>SweepOptions</em></a><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>data</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>] </em><em>| </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><em>ndarray</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>]</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -356,15 +366,30 @@
 </dd></dl>
 
 <dl class="py attribute">
-<dt class="sig sig-object py" id="exa.common.control.sweep.sweep.Sweep.options">
-<span class="sig-name descname"><span class="pre">options</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="exa.common.control.sweep.option.sweep_options.SweepOptions.html#exa.common.control.sweep.option.sweep_options.SweepOptions" title="exa.common.control.sweep.option.sweep_options.SweepOptions"><span class="pre">SweepOptions</span></a></em><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep.options" title="Link to this definition">#</a></dt>
-<dd><p>Range specification where the values are derived from.</p>
+<dt class="sig sig-object py" id="exa.common.control.sweep.sweep.Sweep.data">
+<span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><span class="pre">ndarray</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep.data" title="Link to this definition">#</a></dt>
+<dd><p>List of values for <a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.parameter" title="exa.common.control.sweep.sweep.Sweep.parameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></a></p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="exa.common.control.sweep.sweep.Sweep.data">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">data</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.List" title="(in Python v3.11)"><span class="pre">List</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep.data" title="Link to this definition">#</a></dt>
-<dd><p>List of values for <a class="reference internal" href="#exa.common.control.sweep.sweep.Sweep.parameter" title="exa.common.control.sweep.sweep.Sweep.parameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></a></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="exa.common.control.sweep.sweep.Sweep.model_post_init">
+<span class="sig-name descname"><span class="pre">model_post_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">_Sweep__context</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep.model_post_init" title="Link to this definition">#</a></dt>
+<dd><p>Override this method to perform additional initialization after <cite>__init__</cite> and <cite>model_construct</cite>.
+This is useful if you want to do some validation that requires the entire model to be initialized.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>_Sweep__context</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="exa.common.control.sweep.sweep.Sweep.model_config">
+<span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'ignore',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'ser_json_inf_nan':</span> <span class="pre">'constants',</span> <span class="pre">'validate_assignment':</span> <span class="pre">True,</span> <span class="pre">'validate_default':</span> <span class="pre">True}</span></em><a class="headerlink" href="#exa.common.control.sweep.sweep.Sweep.model_config" title="Link to this definition">#</a></dt>
+<dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
 </dd></dl>
 
 </dd></dl>
@@ -392,11 +417,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="exa.common.control.sweep.utils.html"
+       href="exa.common.control.sweep.sweep_values.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">utils</p>
+        <p class="prev-next-title">sweep_values</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -419,8 +444,9 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep"><code class="docutils literal notranslate"><span class="pre">Sweep</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.parameter"><code class="docutils literal notranslate"><span class="pre">Sweep.parameter</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.options"><code class="docutils literal notranslate"><span class="pre">Sweep.options</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.data"><code class="docutils literal notranslate"><span class="pre">Sweep.data</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.model_post_init"><code class="docutils literal notranslate"><span class="pre">Sweep.model_post_init()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.control.sweep.sweep.Sweep.model_config"><code class="docutils literal notranslate"><span class="pre">Sweep.model_config</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -452,7 +478,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-27.
+  Last updated on 2025-02-28.
   <br/>
 </p>
   </div>

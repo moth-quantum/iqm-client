@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SweepDefinition &#8212; station-control-client 2.20 documentation</title>
+    <title>SweepDefinition &#8212; station-control-client 3.1 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=99d873d9"></script>
+    <script src="../_static/documentation_options.js?v=01f82f25"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="SweepData" href="iqm.station_control.interface.models.sweep.SweepData.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.20" />
-    <meta name="docbuild:last-update" content="2025-02-27"/>
+  <meta name="docsearch:version" content="3.1" />
+    <meta name="docbuild:last-update" content="2025-02-28"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 2.20 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 2.20 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 3.1 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 3.1 documentation - Home"/>
   
   
 </a></div>
@@ -202,8 +202,6 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.station_control.interface.pydantic_base.html">pydantic_base</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.interface.pydantic_base.serialize_value.html">iqm.station_control.interface.pydantic_base.serialize_value</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.interface.pydantic_base.validate_value.html">iqm.station_control.interface.pydantic_base.validate_value</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.interface.pydantic_base.PydanticBase.html">PydanticBase</a></li>
 </ul>
 </details></li>
@@ -312,7 +310,6 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.interface.models.sweep.SweepDefinition"><code class="docutils literal notranslate"><span class="pre">SweepDefinition</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlist"><code class="docutils literal notranslate"><span class="pre">SweepDefinition.playlist</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlists"><code class="docutils literal notranslate"><span class="pre">SweepDefinition.playlists</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -330,32 +327,29 @@
 <h1>SweepDefinition<a class="headerlink" href="#sweepdefinition" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="iqm.station_control.interface.models.sweep.SweepDefinition">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SweepDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">playlist</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">playlists</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.interface.models.sweep.SweepDefinition" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SweepDefinition</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweep_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dut_label</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">settings</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">sweeps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_parameters</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">playlist</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.interface.models.sweep.SweepDefinition" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="iqm.station_control.interface.models.sweep.SweepBase.html#iqm.station_control.interface.models.sweep.SweepBase" title="iqm.station_control.interface.models.sweep.SweepBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">SweepBase</span></code></a></p>
 <p>The content of the sweep object when creating it.</p>
 <p>Module: <a class="reference internal" href="iqm.station_control.interface.models.sweep.html#module-iqm.station_control.interface.models.sweep" title="iqm.station_control.interface.models.sweep"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.station_control.interface.models.sweep</span></code></a></p>
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlists" title="iqm.station_control.interface.models.sweep.SweepDefinition.playlists"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlists</span></code></a></p></td>
-<td><p>Returns playlists for backwards compatibility.</p></td>
-</tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlist" title="iqm.station_control.interface.models.sweep.SweepDefinition.playlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlist" title="iqm.station_control.interface.models.sweep.SweepDefinition.playlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist</span></code></a></p></td>
 <td><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Playlist</span></code> that should be uploaded to the controllers.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweep_id</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweep_id</span></code></p></td>
 <td><p>Unique identifier of the sweep.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dut_label</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">dut_label</span></code></p></td>
 <td><p>DUT label of the device being used.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">settings</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">settings</span></code></p></td>
 <td><p>A tree representation of the initial settings to set before the sweep.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweeps</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweeps</span></code></p></td>
 <td><p>Sweeps that define the swept parameters, i.e. a list of parallel sweeps, where the data values of all sweeps in the tuple are interleaved, and updated simultaneously during the sweep.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_parameters</span></code></p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">return_parameters</span></code></p></td>
 <td><p>Parameters that will be queried from devices and saved for each spot (variable-tuple) of the N-dimensional sweep.</p></td>
 </tr>
 </tbody>
@@ -370,8 +364,12 @@
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>sweep_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – </p></li>
+<li><p><strong>dut_label</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – </p></li>
+<li><p><strong>settings</strong> (<em>SettingNode</em>) – </p></li>
+<li><p><strong>sweeps</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#tuple" title="(in Python v3.11)"><em>tuple</em></a><em>[</em><em>Sweep</em><em>, </em><em>...</em><em>]</em><em>]</em>) – </p></li>
+<li><p><strong>return_parameters</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><em>list</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – </p></li>
 <li><p><strong>playlist</strong> (<em>Playlist</em><em> | </em><em>None</em>) – </p></li>
-<li><p><strong>playlists</strong> (<em>Playlist</em><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -379,12 +377,6 @@
 <dt class="sig sig-object py" id="iqm.station_control.interface.models.sweep.SweepDefinition.playlist">
 <span class="sig-name descname"><span class="pre">playlist</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Playlist</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlist" title="Link to this definition">#</a></dt>
 <dd><p>A <code class="xref py py-class docutils literal notranslate"><span class="pre">Playlist</span></code> that should be uploaded to the controllers.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="iqm.station_control.interface.models.sweep.SweepDefinition.playlists">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">playlists</span></span><a class="headerlink" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlists" title="Link to this definition">#</a></dt>
-<dd><p>Returns playlists for backwards compatibility.</p>
 </dd></dl>
 
 </dd></dl>
@@ -439,7 +431,6 @@
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.interface.models.sweep.SweepDefinition"><code class="docutils literal notranslate"><span class="pre">SweepDefinition</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlist"><code class="docutils literal notranslate"><span class="pre">SweepDefinition.playlist</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.interface.models.sweep.SweepDefinition.playlists"><code class="docutils literal notranslate"><span class="pre">SweepDefinition.playlists</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -471,7 +462,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-27.
+  Last updated on 2025-02-28.
   <br/>
 </p>
   </div>

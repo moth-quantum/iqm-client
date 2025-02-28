@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>setting_node &#8212; exa-common 25.34 documentation</title>
+    <title>setting_node &#8212; exa-common 26.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=9996fbbf"></script>
+    <script src="../_static/documentation_options.js?v=44e0a51f"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="Setting" href="exa.common.data.parameter.Setting.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="25.34" />
-    <meta name="docbuild:last-update" content="2025-02-27"/>
+  <meta name="docsearch:version" content="26.0" />
+    <meta name="docbuild:last-update" content="2025-02-28"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 25.34 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 25.34 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.0 documentation - Home"/>
   
   
 </a></div>
@@ -151,7 +151,6 @@
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exa.common.html">common</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.api.html">api</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="exa.common.api.model.html">model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.api.proto_serialization.html">proto_serialization</a></li>
 </ul>
 </details></li>
@@ -160,8 +159,10 @@
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="exa.common.data.html">data</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="exa.common.data.base_model.html">base_model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.data.parameter.html">parameter</a></li>
 <li class="toctree-l4 current active"><a class="current reference internal" href="#">setting_node</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.data.value.html">value</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.errors.html">errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -364,6 +365,12 @@ This follows the typical naming convention in EXA: Subnodes include the names of
 <p class="admonition-title">Note</p>
 <p><code class="docutils literal notranslate"><span class="pre">node.setting</span></code> refers to the Setting object. <code class="docutils literal notranslate"><span class="pre">node.setting.value</span></code> syntax refers to the data stored inside.</p>
 </div>
+<p><code class="docutils literal notranslate"><span class="pre">SettingNode</span></code> also supports “the path notation” by default (but not if <code class="docutils literal notranslate"><span class="pre">align_name</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False</span></code>,
+since it cannot be made to work consistently if nodes are allowed to be named differently from their paths):</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="p">[</span><span class="s1">&#39;flux.voltage&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>is the same as <code class="docutils literal notranslate"><span class="pre">node['flux']['voltage']</span></code>.</p>
 </section>
 <section id="basic-manipulation">
 <h2>Basic manipulation<a class="headerlink" href="#basic-manipulation" title="Link to this heading">#</a></h2>
@@ -375,6 +382,22 @@ This follows the typical naming convention in EXA: Subnodes include the names of
 </pre></div>
 </div>
 <p>It is usually a good idea to make a copy of the original node, so that it won’t be modified accidentally.</p>
+<p>The path notation of <a href="#id1"><span class="problematic" id="id2">``</span></a>SettingNode``also works when inserting:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="p">[</span><span class="s1">&#39;flux.my.new.path.foo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Setting</span><span class="p">(</span><span class="n">Parameter</span><span class="p">(</span><span class="s1">&#39;foo&#39;</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>Any nodes that did not already exist under <code class="docutils literal notranslate"><span class="pre">node</span></code> will be inserted (in this case <code class="docutils literal notranslate"><span class="pre">flux</span></code> already existed, but
+the rest not, so under <code class="docutils literal notranslate"><span class="pre">flux</span></code> the nodes <code class="docutils literal notranslate"><span class="pre">my</span></code>, <code class="docutils literal notranslate"><span class="pre">new</span></code>, and <code class="docutils literal notranslate"><span class="pre">path</span></code> would be added), and then finally the
+value is added as child to the final node. Note: <code class="docutils literal notranslate"><span class="pre">SettingNode</span></code> always alings the path and name of any nodes under it,
+so this would result in the new setting being renamed as “flux.my.new.path.foo”:</p>
+<div class="highlight-pycon notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">node</span><span class="p">[</span><span class="s1">&#39;flux.my.new.path.foo&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">Setting</span><span class="p">(</span><span class="n">Parameter</span><span class="p">(</span><span class="s1">&#39;bar&#39;</span><span class="p">),</span> <span class="mf">1.0</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>If <code class="docutils literal notranslate"><span class="pre">align_name</span></code> is set to <code class="docutils literal notranslate"><span class="pre">False&quot;,</span> <span class="pre">the</span> <span class="pre">name</span> <span class="pre">and</span> <span class="pre">path</span> <span class="pre">of</span> <span class="pre">nodes</span> <span class="pre">are</span> <span class="pre">not</span> <span class="pre">automatically</span> <span class="pre">aligned,</span> <span class="pre">but</span> <span class="pre">otherwise</span> <span class="pre">the</span> <span class="pre">above</span>
+<span class="pre">path</span> <span class="pre">notation</span> <span class="pre">will</span> <span class="pre">still</span> <span class="pre">work.</span> <span class="pre">The</span> <span class="pre">added</span> <span class="pre">nodes</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">named</span> <span class="pre">by</span> <span class="pre">just</span> <span class="pre">their</span> <span class="pre">path</span> <span class="pre">fragments</span> <span class="pre">(&quot;my&quot;,</span> <span class="pre">&quot;new&quot;,</span> <span class="pre">&quot;path&quot;,</span> <span class="pre">and</span>
+<span class="pre">so</span> <span class="pre">on),</span> <span class="pre">and</span> <span class="pre">the</span> <span class="pre">Setting</span> <span class="pre">will</span> <span class="pre">be</span> <span class="pre">added</span> <span class="pre">under</span> <span class="pre">the</span> <span class="pre">key</span> <span class="pre">&quot;foo&quot;,</span> <span class="pre">but</span> <span class="pre">it</span> <span class="pre">will</span> <span class="pre">still</span> <span class="pre">retain</span> <span class="pre">its</span> <span class="pre">name</span> <span class="pre">&quot;bar&quot;.</span> <span class="pre">Note:</span> <span class="pre">the</span> <span class="pre">root</span> <span class="pre">node</span>
+<span class="pre">name</span> <span class="pre">will</span> <span class="pre">always</span> <span class="pre">be</span> <span class="pre">excluded</span> <span class="pre">from</span> <span class="pre">the</span> <span class="pre">paths</span> <span class="pre">(and</span> <span class="pre">names</span> <span class="pre">when</span> <span class="pre">they</span> <span class="pre">are</span> <span class="pre">aligned</span> <span class="pre">with</span> <span class="pre">the</span> <span class="pre">path),</span> <span class="pre">so</span> <span class="pre">that</span> <span class="pre">the</span> <span class="pre">path</span> <span class="pre">of</span>
+<span class="pre">``root.foo.bar</span></code> is <code class="docutils literal notranslate"><span class="pre">&quot;foo.bar&quot;</span></code>.</p>
 <p>To merge values of two SettingNodes, there are helpers <a class="reference internal" href="exa.common.data.setting_node.SettingNode.html#exa.common.data.setting_node.SettingNode.merge" title="exa.common.data.setting_node.SettingNode.merge"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SettingNode.merge()</span></code></a> and
 <a class="reference internal" href="exa.common.data.setting_node.SettingNode.html#exa.common.data.setting_node.SettingNode.merge_values" title="exa.common.data.setting_node.SettingNode.merge_values"><code class="xref py py-meth docutils literal notranslate"><span class="pre">SettingNode.merge_values()</span></code></a>.</p>
 <p>The first one merges the tree structure and values of two nodes and outputs a third one as a result.
@@ -430,9 +453,10 @@ flag is used.</p>
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-<div class="graphviz"><img src="../_images/inheritance-595a06bc06d23b48dfdb7c5b78e5bd2ed80cea26.png" alt="Inheritance diagram of exa.common.data.setting_node" usemap="#inheritance73f9298f86" class="inheritance graphviz" /></div>
+<div class="graphviz"><img src="../_images/inheritance-fdd2dadf39621f289a01a25f7a5de90f7dbbb948.png" alt="Inheritance diagram of exa.common.data.setting_node" usemap="#inheritance73f9298f86" class="inheritance graphviz" /></div>
 <map id="inheritance73f9298f86" name="inheritance73f9298f86">
-<area shape="rect" id="node1" href="exa.common.data.setting_node.SettingNode.html#exa.common.data.setting_node.SettingNode" target="_top" title="A tree&#45;structured :class:`.Setting` container." alt="" coords="5,5,108,31"/>
+<area shape="rect" id="node1" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" target="_top" title="Usage docs: https://docs.pydantic.dev/2.10/concepts/models/" alt="" coords="5,29,100,55"/>
+<area shape="rect" id="node2" href="exa.common.data.setting_node.SettingNode.html#exa.common.data.setting_node.SettingNode" target="_top" title="A tree&#45;structured :class:`.Setting` container." alt="" coords="148,29,251,55"/>
 </map></section>
 
 
@@ -513,7 +537,7 @@ flag is used.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-02-27.
+  Last updated on 2025-02-28.
   <br/>
 </p>
   </div>
