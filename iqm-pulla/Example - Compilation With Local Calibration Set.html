@@ -413,21 +413,21 @@
 <p><strong>NOTE:</strong> Some of the libraries used in this notebook are only available to on-premise customers and are not currently available publicly.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>import os
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">calibration_graphs</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardQPURecalibrationGraphBuilder</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">exa.core.calibration_set_wrapper</span><span class="w"> </span><span class="kn">import</span> <span class="n">CalibrationSetWrapper</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">exa.core.provider</span><span class="w"> </span><span class="kn">import</span> <span class="n">provider</span> <span class="k">as</span> <span class="n">exa_provider</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">gbc</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">QuantumCircuit</span><span class="p">,</span> <span class="n">visualization</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span>
+from calibration_graphs import StandardQPURecalibrationGraphBuilder
+from exa.core.calibration_set_wrapper import CalibrationSetWrapper
+from exa.core.provider import provider as exa_provider
+import gbc
+from qiskit import QuantumCircuit, visualization
+from qiskit.compiler import transpile
 
-<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.cpc.compiler.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">Compiler</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.pulla</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pulla</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils</span><span class="w"> </span><span class="kn">import</span> <span class="n">calset_from_observations</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">qiskit_to_pulla</span><span class="p">,</span> <span class="n">station_control_result_to_qiskit</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm</span><span class="w"> </span><span class="kn">import</span> <span class="n">IQMProvider</span>
-<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm.iqm_transpilation</span><span class="w"> </span><span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
+from iqm.cpc.compiler.compiler import Compiler
+from iqm.pulla.pulla import Pulla
+from iqm.pulla.utils import calset_from_observations
+from iqm.pulla.utils_qiskit import qiskit_to_pulla, station_control_result_to_qiskit
+from iqm.qiskit_iqm import IQMProvider
+from iqm.qiskit_iqm.iqm_transpilation import optimize_single_qubit_gates
 </pre></div>
 </div>
 </div>
@@ -435,22 +435,22 @@
 <p>First we prepare a Pulla object, a <code class="docutils literal notranslate"><span class="pre">qiskit-iqm</span></code> backend, and a circuit as explained in <code class="docutils literal notranslate"><span class="pre">Quick</span> <span class="pre">Start.ipynb</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">cocos_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_COCOS_URL&#39;</span><span class="p">]</span>                      <span class="c1"># or set the URL directly here</span>
-<span class="n">station_control_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_STATION_CONTROL_URL&#39;</span><span class="p">]</span>  <span class="c1"># or set the URL directly here</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>cocos_url = os.environ[&#39;PULLA_COCOS_URL&#39;]                      # or set the URL directly here
+station_control_url = os.environ[&#39;PULLA_STATION_CONTROL_URL&#39;]  # or set the URL directly here
 
-<span class="n">p</span> <span class="o">=</span> <span class="n">Pulla</span><span class="p">(</span><span class="n">station_control_url</span><span class="p">)</span>
-<span class="n">provider</span> <span class="o">=</span> <span class="n">IQMProvider</span><span class="p">(</span><span class="n">cocos_url</span><span class="p">)</span>
-<span class="n">backend</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
+p = Pulla(station_control_url)
+provider = IQMProvider(cocos_url)
+backend = provider.get_backend()
 
-<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">qc</span><span class="o">.</span><span class="n">measure_all</span><span class="p">()</span>
+qc = QuantumCircuit(3, 3)
+qc.h(0)
+qc.cx(0, 1)
+qc.cx(0, 2)
+qc.measure_all()
 
-<span class="n">qc_transpiled</span> <span class="o">=</span> <span class="n">transpile</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span> <span class="n">layout_method</span><span class="o">=</span><span class="s1">&#39;sabre&#39;</span><span class="p">,</span> <span class="n">optimization_level</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
-<span class="n">qc_optimized</span> <span class="o">=</span> <span class="n">optimize_single_qubit_gates</span><span class="p">(</span><span class="n">qc_transpiled</span><span class="p">)</span>
-<span class="n">circuits</span><span class="p">,</span> <span class="n">compiler</span> <span class="o">=</span> <span class="n">qiskit_to_pulla</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">backend</span><span class="p">,</span> <span class="n">qc_optimized</span><span class="p">)</span>
+qc_transpiled = transpile(qc, backend=backend, layout_method=&#39;sabre&#39;, optimization_level=3)
+qc_optimized = optimize_single_qubit_gates(qc_transpiled)
+circuits, compiler = qiskit_to_pulla(p, backend, qc_optimized)
 </pre></div>
 </div>
 </div>
@@ -458,20 +458,20 @@
 <p>Let’s also define a function that compiles and runs the above circuit using the given compiler state. This function will be used to compile and execute the circuit at different points of the calibration process:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">compile_and_execute_circuit</span><span class="p">(</span><span class="n">c</span><span class="p">:</span> <span class="n">Compiler</span><span class="p">):</span>
-    <span class="n">shots</span> <span class="o">=</span> <span class="mi">1000</span>
-    <span class="n">playlist</span><span class="p">,</span> <span class="n">context</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">circuits</span><span class="p">)</span>
-    <span class="n">settings</span><span class="p">,</span> <span class="n">context</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">build_settings</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">)</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>def compile_and_execute_circuit(c: Compiler):
+    shots = 1000
+    playlist, context = c.compile(circuits)
+    settings, context = c.build_settings(context, shots=shots)
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Playlist:</span><span class="se">\n</span><span class="si">{</span><span class="n">playlist</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Settings:&quot;</span><span class="p">)</span>
-    <span class="n">settings</span><span class="o">.</span><span class="n">print_tree</span><span class="p">()</span>
+    print(f&quot;Playlist:\n{playlist}&quot;)
+    print(f&quot;Settings:&quot;)
+    settings.print_tree()
 
-    <span class="n">response_data</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="n">playlist</span><span class="p">,</span> <span class="n">context</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
-    <span class="n">qiskit_result</span> <span class="o">=</span> <span class="n">station_control_result_to_qiskit</span><span class="p">(</span><span class="n">response_data</span><span class="p">,</span> <span class="n">shots</span><span class="o">=</span><span class="n">shots</span><span class="p">,</span> <span class="n">execution_options</span><span class="o">=</span><span class="n">context</span><span class="p">[</span><span class="s1">&#39;options&#39;</span><span class="p">])</span>
+    response_data = p.execute(playlist, context, settings, verbose=False)
+    qiskit_result = station_control_result_to_qiskit(response_data, shots=shots, execution_options=context[&#39;options&#39;])
 
-    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Qiskit result counts:</span><span class="se">\n</span><span class="si">{</span><span class="n">qiskit_result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">()</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-    <span class="n">visualization</span><span class="o">.</span><span class="n">plot_histogram</span><span class="p">(</span><span class="n">qiskit_result</span><span class="o">.</span><span class="n">get_counts</span><span class="p">())</span>
+    print(f&quot;Qiskit result counts:\n{qiskit_result.get_counts()}\n&quot;)
+    visualization.plot_histogram(qiskit_result.get_counts())
 </pre></div>
 </div>
 </div>
@@ -479,7 +479,7 @@
 <p>First we compile and execute the circuit using the compiler obtained above, which uses the current default calibration set on the server. The results of this execution can then be compared to the results after performing (parts of) the recalibration process.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">compile_and_execute_circuit</span><span class="p">(</span><span class="n">compiler</span><span class="p">)</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>compile_and_execute_circuit(compiler)
 </pre></div>
 </div>
 </div>
@@ -652,32 +652,32 @@ Qiskit result counts:
 <p>Now we will start recalibration using GBC. We need a CalibrationSetWrapper instance for handling calibration sets and a Calibrator for running the calibration:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># CalibrationSetWrapper requires explicitly initializing station control and experiment configuration.</span>
-<span class="n">exa_provider</span><span class="o">.</span><span class="n">init_station_control</span><span class="p">(</span><span class="n">station_control_url</span><span class="p">)</span>
-<span class="n">exa_provider</span><span class="o">.</span><span class="n">init_experiment_configuration</span><span class="p">(</span><span class="s2">&quot;experiment.yml&quot;</span><span class="p">)</span>  <span class="c1"># replace with the path to your experiment.yml</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># CalibrationSetWrapper requires explicitly initializing station control and experiment configuration.
+exa_provider.init_station_control(station_control_url)
+exa_provider.init_experiment_configuration(&quot;experiment.yml&quot;)  # replace with the path to your experiment.yml
 
-<span class="c1"># Obtain CalibrationSetWrapper and observation stash based on the latest calibration set.</span>
-<span class="n">chip_topology</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_chip_topology</span><span class="p">()</span>
-<span class="n">qubits_to_calibrate</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;QB1&#39;</span><span class="p">,</span> <span class="s1">&#39;QB2&#39;</span><span class="p">,</span> <span class="s1">&#39;QB3&#39;</span><span class="p">,</span> <span class="s1">&#39;QB5&#39;</span><span class="p">]</span>  <span class="c1"># Set here the qubits you want to calibrate</span>
-<span class="n">wrapper</span> <span class="o">=</span> <span class="n">CalibrationSetWrapper</span><span class="p">(</span>
-    <span class="n">qubits_to_calibrate</span><span class="p">,</span>
-    <span class="p">[],</span>  <span class="c1"># no computational resonators</span>
-    <span class="n">chip_topology</span><span class="o">.</span><span class="n">get_connecting_couplers</span><span class="p">(</span><span class="n">qubits_to_calibrate</span><span class="p">),</span>
-    <span class="n">chip_topology</span><span class="o">.</span><span class="n">get_connected_probe_lines</span><span class="p">(</span><span class="n">qubits_to_calibrate</span><span class="p">)</span>
-<span class="p">)</span>
-<span class="n">stash_before_recalibration</span> <span class="o">=</span> <span class="n">wrapper</span><span class="o">.</span><span class="n">observation_stash_from_calset</span><span class="p">(</span><span class="n">p</span><span class="o">.</span><span class="n">fetch_latest_calibration_set</span><span class="p">()[</span><span class="mi">1</span><span class="p">])</span>
+# Obtain CalibrationSetWrapper and observation stash based on the latest calibration set.
+chip_topology = p.get_chip_topology()
+qubits_to_calibrate = [&#39;QB1&#39;, &#39;QB2&#39;, &#39;QB3&#39;, &#39;QB5&#39;]  # Set here the qubits you want to calibrate
+wrapper = CalibrationSetWrapper(
+    qubits_to_calibrate,
+    [],  # no computational resonators
+    chip_topology.get_connecting_couplers(qubits_to_calibrate),
+    chip_topology.get_connected_probe_lines(qubits_to_calibrate)
+)
+stash_before_recalibration = wrapper.observation_stash_from_calset(p.fetch_latest_calibration_set()[1])
 
-<span class="c1"># Initialize the GBC calibration graph and calibrator.</span>
-<span class="c1"># NOTE: This is a conceptual example that may not work with the latest GBC version. See GBC docs for up-to-date instructions.</span>
-<span class="n">graph</span> <span class="o">=</span> <span class="n">StandardQPURecalibrationGraphBuilder</span><span class="p">(</span>
-    <span class="n">qubits</span><span class="o">=</span><span class="n">qubits_to_calibrate</span><span class="p">,</span>
-    <span class="n">default_implementations</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;cz&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;tgss&#39;</span><span class="p">],</span> <span class="s1">&#39;prx&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;drag_gaussian&#39;</span><span class="p">]},</span> <span class="c1"># This needs to be consistent with the stash.</span>
-    <span class="n">include_benchmarks_rb</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">include_benchmarks_coherence</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-    <span class="n">include_cz_recalibration</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
-<span class="p">)</span><span class="o">.</span><span class="n">build</span><span class="p">()</span>
-<span class="n">calibrator</span> <span class="o">=</span> <span class="n">gbc</span><span class="o">.</span><span class="n">Calibrator</span><span class="p">(</span><span class="n">graph</span><span class="p">)</span>
-<span class="n">calibrator</span><span class="o">.</span><span class="n">initial_stash</span> <span class="o">=</span> <span class="n">stash_before_recalibration</span><span class="o">.</span><span class="n">get_latest_observations</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">()</span>  <span class="c1"># recalibration will start from observations of latest calset obtained above</span>
+# Initialize the GBC calibration graph and calibrator.
+# NOTE: This is a conceptual example that may not work with the latest GBC version. See GBC docs for up-to-date instructions.
+graph = StandardQPURecalibrationGraphBuilder(
+    qubits=qubits_to_calibrate,
+    default_implementations={&#39;cz&#39;: [&#39;tgss&#39;], &#39;prx&#39;: [&#39;drag_gaussian&#39;]}, # This needs to be consistent with the stash.
+    include_benchmarks_rb=True,
+    include_benchmarks_coherence=True,
+    include_cz_recalibration=True,
+).build()
+calibrator = gbc.Calibrator(graph)
+calibrator.initial_stash = stash_before_recalibration.get_latest_observations().values()  # recalibration will start from observations of latest calset obtained above
 </pre></div>
 </div>
 </div>
@@ -685,7 +685,7 @@ Qiskit result counts:
 <p>To start with, we run the first node that runs any actual calibration experiments:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">calibrator</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="n">calibrator</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">freq_initial_recal</span><span class="p">)</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>calibrator.calibrate(calibrator.nodes.freq_initial_recal)
 </pre></div>
 </div>
 </div>
@@ -708,16 +708,16 @@ Calibration process Recalibration graph succeeded
 <p>Then we can create a local calibration set based on the results of the above calibration node, and update the compiler to use this calibration set. We compile and execute a circuit using the updated compiler to see how our updates to the calibration set affect the results. Because many observations of the updated calibration set don’t yet take into account the results of the executed node, the results could even be worse than before updating the calibration set with these intermediate results.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Obtain observation stash based on results of the given calibration node and its dependencies.</span>
-<span class="n">stash_after_calibration_node</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">get_observations</span><span class="p">(</span><span class="n">calibrator</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">freq_initial_recal</span><span class="p">)</span>
-<span class="c1"># Use the calset wrapper to obtain only the observations that constitute a calibration set.</span>
-<span class="n">observations</span> <span class="o">=</span> <span class="n">wrapper</span><span class="o">.</span><span class="n">filter_stash</span><span class="p">(</span><span class="n">stash_after_calibration_node</span><span class="p">)</span>
-<span class="c1"># Convert into Pulla calibration set format.</span>
-<span class="n">calset</span> <span class="o">=</span> <span class="n">calset_from_observations</span><span class="p">(</span><span class="n">observations</span><span class="p">)</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span># Obtain observation stash based on results of the given calibration node and its dependencies.
+stash_after_calibration_node = calibrator.get_observations(calibrator.nodes.freq_initial_recal)
+# Use the calset wrapper to obtain only the observations that constitute a calibration set.
+observations = wrapper.filter_stash(stash_after_calibration_node)
+# Convert into Pulla calibration set format.
+calset = calset_from_observations(observations)
 
-<span class="c1"># Update the compiler to use the local calibration set and compile+execute a circuit using it.</span>
-<span class="n">compiler</span><span class="o">.</span><span class="n">set_calibration</span><span class="p">(</span><span class="n">calset</span><span class="p">)</span>
-<span class="n">compile_and_execute_circuit</span><span class="p">(</span><span class="n">compiler</span><span class="p">)</span>
+# Update the compiler to use the local calibration set and compile+execute a circuit using it.
+compiler.set_calibration(calset)
+compile_and_execute_circuit(compiler)
 </pre></div>
 </div>
 </div>
@@ -891,7 +891,7 @@ Qiskit result counts:
 <p>Finally, we run the full recalibration, which runs all the remaining nodes that we did not run above:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">calibrator</span><span class="o">.</span><span class="n">calibrate</span><span class="p">(</span><span class="n">calibrate_all</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>calibrator.calibrate(calibrate_all=True)
 </pre></div>
 </div>
 </div>
@@ -1095,12 +1095,12 @@ Calibration process Recalibration graph succeeded
 <p>Then we again update the compiler using the results of the calibration in the same way as before. If the full recalibration was successful, the execution results should hopefully be at least as good as before the recalibration.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span><span class="n">stash_after_full_recalibration</span> <span class="o">=</span> <span class="n">calibrator</span><span class="o">.</span><span class="n">get_observations</span><span class="p">(</span><span class="n">calibrator</span><span class="o">.</span><span class="n">nodes</span><span class="o">.</span><span class="n">full_recalibration</span><span class="p">)</span>  <span class="c1"># now we use observations from the full recalibration</span>
-<span class="n">observations</span> <span class="o">=</span> <span class="n">wrapper</span><span class="o">.</span><span class="n">filter_stash</span><span class="p">(</span><span class="n">stash_after_full_recalibration</span><span class="p">)</span>
-<span class="n">calset</span> <span class="o">=</span> <span class="n">calset_from_observations</span><span class="p">(</span><span class="n">observations</span><span class="p">)</span>
+<div class="highlight-ipython2 notranslate"><div class="highlight"><pre><span></span>stash_after_full_recalibration = calibrator.get_observations(calibrator.nodes.full_recalibration)  # now we use observations from the full recalibration
+observations = wrapper.filter_stash(stash_after_full_recalibration)
+calset = calset_from_observations(observations)
 
-<span class="n">compiler</span><span class="o">.</span><span class="n">set_calibration</span><span class="p">(</span><span class="n">calset</span><span class="p">)</span>
-<span class="n">compile_and_execute_circuit</span><span class="p">(</span><span class="n">compiler</span><span class="p">)</span>
+compiler.set_calibration(calset)
+compile_and_execute_circuit(compiler)
 </pre></div>
 </div>
 </div>
