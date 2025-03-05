@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>exa.common.errors.exa_error.RequestError &#8212; exa-common 26.2 documentation</title>
+    <title>exa.common.errors.server_errors.ServiceUnavailableError &#8212; exa-common 26.3 documentation</title>
   
   
   
@@ -41,19 +41,19 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=839b85a9"></script>
+    <script src="../_static/documentation_options.js?v=e02615f2"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/exa.common.errors.exa_error.RequestError';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/exa.common.errors.server_errors.ServiceUnavailableError';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="exa.common.errors.exa_error.UnknownSettingError" href="exa.common.errors.exa_error.UnknownSettingError.html" />
-    <link rel="prev" title="exa.common.errors.exa_error.InvalidSweepOptionsTypeError" href="exa.common.errors.exa_error.InvalidSweepOptionsTypeError.html" />
+    <link rel="next" title="exa.common.errors.server_errors.StationControlError" href="exa.common.errors.server_errors.StationControlError.html" />
+    <link rel="prev" title="exa.common.errors.server_errors.NotFoundError" href="exa.common.errors.server_errors.NotFoundError.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.2" />
+  <meta name="docsearch:version" content="26.3" />
     <meta name="docbuild:last-update" content="2025-03-05"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.2 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.2 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.3 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.3 documentation - Home"/>
   
   
 </a></div>
@@ -166,7 +166,8 @@
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="exa.common.errors.html">errors</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l4 current active"><a class="reference internal" href="exa.common.errors.exa_error.html">exa_error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.errors.exa_error.html">exa_error</a></li>
+<li class="toctree-l4 current active"><a class="reference internal" href="exa.common.errors.server_errors.html">server_errors</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.helpers.html">helpers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -286,7 +287,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>exa.common.errors.exa_error.RequestError</h1>
+    <h1>exa.common.errors.server_errors.ServiceUnavailableError</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -296,7 +297,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.exa_error.RequestError"><code class="docutils literal notranslate"><span class="pre">RequestError</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.server_errors.ServiceUnavailableError"><code class="docutils literal notranslate"><span class="pre">ServiceUnavailableError</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -308,12 +309,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="exa-common-errors-exa-error-requesterror">
-<h1>exa.common.errors.exa_error.RequestError<a class="headerlink" href="#exa-common-errors-exa-error-requesterror" title="Link to this heading">#</a></h1>
+  <section id="exa-common-errors-server-errors-serviceunavailableerror">
+<h1>exa.common.errors.server_errors.ServiceUnavailableError<a class="headerlink" href="#exa-common-errors-server-errors-serviceunavailableerror" title="Link to this heading">#</a></h1>
 <dl class="py exception">
-<dt class="sig sig-object py" id="exa.common.errors.exa_error.RequestError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RequestError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.errors.exa_error.RequestError" title="Link to this definition">#</a></dt>
-<dd><p>Error raised when something went wrong on the server after sending a request.</p>
+<dt class="sig sig-object py" id="exa.common.errors.server_errors.ServiceUnavailableError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ServiceUnavailableError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.errors.server_errors.ServiceUnavailableError" title="Link to this definition">#</a></dt>
+<dd><p>Error raised when the service is unavailable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – </p>
@@ -335,20 +336,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="exa.common.errors.exa_error.InvalidSweepOptionsTypeError.html"
+       href="exa.common.errors.server_errors.NotFoundError.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">exa.common.errors.exa_error.InvalidSweepOptionsTypeError</p>
+        <p class="prev-next-title">exa.common.errors.server_errors.NotFoundError</p>
       </div>
     </a>
     <a class="right-next"
-       href="exa.common.errors.exa_error.UnknownSettingError.html"
+       href="exa.common.errors.server_errors.StationControlError.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">exa.common.errors.exa_error.UnknownSettingError</p>
+        <p class="prev-next-title">exa.common.errors.server_errors.StationControlError</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -369,7 +370,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.exa_error.RequestError"><code class="docutils literal notranslate"><span class="pre">RequestError</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.server_errors.ServiceUnavailableError"><code class="docutils literal notranslate"><span class="pre">ServiceUnavailableError</span></code></a></li>
 </ul>
   </nav></div>
 
