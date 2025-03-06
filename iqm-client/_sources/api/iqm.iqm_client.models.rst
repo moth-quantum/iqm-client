@@ -40,6 +40,7 @@ iqm.iqm\_client.models
       :toctree:
       :template: autosummary-class-template.rst
    
+      CalibrationSet
       Circuit
       CircuitCompilationOptions
       ClientLibrary
@@ -56,6 +57,7 @@ iqm.iqm\_client.models
       MoveGateFrameTrackingMode
       MoveGateValidationMode
       NativeOperation
+      QualityMetricSet
       QuantumArchitecture
       QuantumArchitectureSpecification
       RunCounts

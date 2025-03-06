@@ -32,6 +32,7 @@ iqm.iqm\_client.api.APIEndpoint
       ~APIEndpoint.QUANTUM_ARCHITECTURE
       ~APIEndpoint.CHANNEL_PROPERTIES
       ~APIEndpoint.QUALITY_METRICS_LATEST
+      ~APIEndpoint.QUALITY_METRICS
       ~APIEndpoint.QUALITY_METRICS_MONITORING
       ~APIEndpoint.CALIBRATED_GATES
       ~APIEndpoint.START_CALIBRATION_JOB

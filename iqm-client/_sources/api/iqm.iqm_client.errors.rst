@@ -24,12 +24,14 @@ iqm.iqm\_client.errors
    
       APITimeoutError
       ArchitectureRetrievalError
+      CalibrationSetRetrievalError
       CircuitExecutionError
       CircuitTranspilationError
       CircuitValidationError
       ClientAuthenticationError
       ClientConfigurationError
       JobAbortionError
+      QualityMetricSetRetrievalError
    
    
 
