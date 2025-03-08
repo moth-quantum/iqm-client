@@ -28,6 +28,5 @@ iqm.iqm\_client.models.RunCounts
 
    .. autosummary::
    
-      ~RunCounts.from_dict
    
    

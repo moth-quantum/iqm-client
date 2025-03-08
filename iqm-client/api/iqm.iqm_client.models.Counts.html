@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.iqm_client.models.Counts &#8212; IQM client 22.5 documentation</title>
+    <title>iqm.iqm_client.models.Counts &#8212; IQM client 22.7 documentation</title>
   
   
   
@@ -40,10 +40,12 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=847916b9"></script>
+    <script src="../_static/documentation_options.js?v=28f114c2"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>window.MathJax = {"tex": {"macros": {"vr": "\\vec{r}", "ket": ["\\left| #1 \\right\\rangle", 1], "iprod": ["\\left\\langle #1 | #2 \\right\\rangle", 2]}}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'api/iqm.iqm_client.models.Counts';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -52,8 +54,8 @@
     <link rel="prev" title="iqm.iqm_client.models.ClientLibrary" href="iqm.iqm_client.models.ClientLibrary.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.5" />
-    <meta name="docbuild:last-update" content="2025-03-07"/>
+  <meta name="docsearch:version" content="22.7" />
+    <meta name="docbuild:last-update" content="2025-03-08"/>
   </head>
   
   
@@ -132,8 +134,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.5 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.5 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.7 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.7 documentation - Home"/>
   
   
 </a></div>
@@ -166,15 +168,13 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.iqm_client.errors.html">iqm.iqm_client.errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.APITimeoutError.html">iqm.iqm_client.errors.APITimeoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.ArchitectureRetrievalError.html">iqm.iqm_client.errors.ArchitectureRetrievalError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CalibrationSetRetrievalError.html">iqm.iqm_client.errors.CalibrationSetRetrievalError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CircuitExecutionError.html">iqm.iqm_client.errors.CircuitExecutionError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CircuitTranspilationError.html">iqm.iqm_client.errors.CircuitTranspilationError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CircuitValidationError.html">iqm.iqm_client.errors.CircuitValidationError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html">iqm.iqm_client.errors.ClientAuthenticationError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.ClientConfigurationError.html">iqm.iqm_client.errors.ClientConfigurationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html">iqm.iqm_client.errors.EndpointRequestError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.JobAbortionError.html">iqm.iqm_client.errors.JobAbortionError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.QualityMetricSetRetrievalError.html">iqm.iqm_client.errors.QualityMetricSetRetrievalError</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.iqm_client.iqm_client.html">iqm.iqm_client.iqm_client</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -412,7 +412,7 @@
 <dt class="sig sig-object py" id="iqm.iqm_client.models.Counts">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.iqm_client.models.</span></span><span class="sig-name descname"><span class="pre">Counts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">measurement_keys</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">counts</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.iqm_client.models.Counts" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
-<p>Measurement results in the counts representation</p>
+<p>Circuit measurement results in histogram representation.</p>
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
@@ -426,10 +426,10 @@
 <td><p>Metadata about the fields defined on the model, mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Counts.measurement_keys" title="iqm.iqm_client.models.Counts.measurement_keys"><code class="xref py py-obj docutils literal notranslate"><span class="pre">measurement_keys</span></code></a></p></td>
-<td><p>measurement keys in the order they are concatenated to form the states in counts</p></td>
+<td><p>Measurement keys in the order they are concatenated to form the state bitstrings in <a class="reference internal" href="#iqm.iqm_client.models.Counts.counts" title="iqm.iqm_client.models.Counts.counts"><code class="xref py py-attr docutils literal notranslate"><span class="pre">counts</span></code></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Counts.counts" title="iqm.iqm_client.models.Counts.counts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">counts</span></code></a></p></td>
-<td><p>counts as a dictionary mapping states represented as bitstrings to the number of shots they were measured</p></td>
+<td><p>mapping from computational basis states, represented as bitstrings, to the number of times they were observed when executing the circuit</p></td>
 </tr>
 </tbody>
 </table>
@@ -471,13 +471,18 @@ mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] ob
 <dl class="py attribute">
 <dt class="sig sig-object py" id="iqm.iqm_client.models.Counts.measurement_keys">
 <span class="sig-name descname"><span class="pre">measurement_keys</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#iqm.iqm_client.models.Counts.measurement_keys" title="Link to this definition">#</a></dt>
-<dd><p>measurement keys in the order they are concatenated to form the states in counts</p>
+<dd><p>Measurement keys in the order they are concatenated to form the state bitstrings in <a class="reference internal" href="#iqm.iqm_client.models.Counts.counts" title="iqm.iqm_client.models.Counts.counts"><code class="xref py py-attr docutils literal notranslate"><span class="pre">counts</span></code></a>.</p>
+<p>For example, if <a class="reference internal" href="#iqm.iqm_client.models.Counts.measurement_keys" title="iqm.iqm_client.models.Counts.measurement_keys"><code class="xref py py-attr docutils literal notranslate"><span class="pre">measurement_keys</span></code></a> is <code class="docutils literal notranslate"><span class="pre">['mk_1',</span> <span class="pre">'mk2']</span></code> and <code class="docutils literal notranslate"><span class="pre">'mk_1'</span></code> measures <code class="docutils literal notranslate"><span class="pre">QB1</span></code>
+and <code class="docutils literal notranslate"><span class="pre">'mk_2'</span></code> measures <code class="docutils literal notranslate"><span class="pre">QB3</span></code> and <code class="docutils literal notranslate"><span class="pre">QB5</span></code>, then <a class="reference internal" href="#iqm.iqm_client.models.Counts.counts" title="iqm.iqm_client.models.Counts.counts"><code class="xref py py-attr docutils literal notranslate"><span class="pre">counts</span></code></a> could contains keys such as <code class="docutils literal notranslate"><span class="pre">'010'</span></code> representing
+shots where <code class="docutils literal notranslate"><span class="pre">QB1`,</span> <span class="pre">``QB3</span></code> and <code class="docutils literal notranslate"><span class="pre">QB5</span></code> were observed to be in the state <span class="math notranslate nohighlight">\(|010
+angle\)</span>.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt class="sig sig-object py" id="iqm.iqm_client.models.Counts.counts">
 <span class="sig-name descname"><span class="pre">counts</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#iqm.iqm_client.models.Counts.counts" title="Link to this definition">#</a></dt>
-<dd><p>counts as a dictionary mapping states represented as bitstrings to the number of shots they were measured</p>
+<dd><p>mapping from computational basis states, represented as bitstrings, to the number of times they were observed
+when executing the circuit</p>
 </dd></dl>
 
 </dd></dl>
@@ -571,7 +576,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-07.
+  Last updated on 2025-03-08.
   <br/>
 </p>
   </div>

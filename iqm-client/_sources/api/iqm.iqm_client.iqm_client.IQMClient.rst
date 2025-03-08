@@ -23,6 +23,8 @@ iqm.iqm\_client.iqm\_client.IQMClient
       ~IQMClient._check_not_found_error
       ~IQMClient._check_versions
       ~IQMClient._default_headers
+      ~IQMClient._deserialize_response
+      ~IQMClient._get_request
       ~IQMClient._get_run_v1
       ~IQMClient._get_run_v2
       ~IQMClient._retry_request_on_error

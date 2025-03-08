@@ -23,15 +23,13 @@ iqm.iqm\_client.errors
       :toctree:
    
       APITimeoutError
-      ArchitectureRetrievalError
-      CalibrationSetRetrievalError
       CircuitExecutionError
       CircuitTranspilationError
       CircuitValidationError
       ClientAuthenticationError
       ClientConfigurationError
+      EndpointRequestError
       JobAbortionError
-      QualityMetricSetRetrievalError
    
    
 

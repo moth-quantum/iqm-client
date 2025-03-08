@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.iqm_client.iqm_client.IQMClient &#8212; IQM client 22.5 documentation</title>
+    <title>iqm.iqm_client.iqm_client.IQMClient &#8212; IQM client 22.7 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=847916b9"></script>
+    <script src="../_static/documentation_options.js?v=28f114c2"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -52,8 +52,8 @@
     <link rel="prev" title="iqm.iqm_client.iqm_client" href="iqm.iqm_client.iqm_client.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.5" />
-    <meta name="docbuild:last-update" content="2025-03-07"/>
+  <meta name="docsearch:version" content="22.7" />
+    <meta name="docbuild:last-update" content="2025-03-08"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.5 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.5 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.7 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.7 documentation - Home"/>
   
   
 </a></div>
@@ -166,15 +166,13 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.iqm_client.errors.html">iqm.iqm_client.errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.APITimeoutError.html">iqm.iqm_client.errors.APITimeoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.ArchitectureRetrievalError.html">iqm.iqm_client.errors.ArchitectureRetrievalError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CalibrationSetRetrievalError.html">iqm.iqm_client.errors.CalibrationSetRetrievalError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CircuitExecutionError.html">iqm.iqm_client.errors.CircuitExecutionError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CircuitTranspilationError.html">iqm.iqm_client.errors.CircuitTranspilationError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.CircuitValidationError.html">iqm.iqm_client.errors.CircuitValidationError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html">iqm.iqm_client.errors.ClientAuthenticationError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.ClientConfigurationError.html">iqm.iqm_client.errors.ClientConfigurationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html">iqm.iqm_client.errors.EndpointRequestError</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.JobAbortionError.html">iqm.iqm_client.errors.JobAbortionError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.errors.QualityMetricSetRetrievalError.html">iqm.iqm_client.errors.QualityMetricSetRetrievalError</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="iqm.iqm_client.iqm_client.html">iqm.iqm_client.iqm_client</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -429,7 +427,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Endpoint for accessing the server. Has to start with http or https.</p></li>
 <li><p><strong>client_signature</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – String that IQMClient adds to User-Agent header of requests
-it sends to the server. The signature is appended to IQMClients own version
+it sends to the server. The signature is appended to IQMClient’s own version
 information and is intended to carry additional version information,
 for example the version information of the caller.</p></li>
 <li><p><strong>token</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – Long-lived authentication token in plain text format. Used by IQM Resonance.
@@ -463,46 +461,52 @@ for values given as environment variables as for keyword arguments.</p>
 <td><p>Raise HTTPError with appropriate message if <code class="docutils literal notranslate"><span class="pre">response.status_code</span> <span class="pre">==</span> <span class="pre">404</span></code>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_check_versions</span></code>()</p></td>
-<td><p>Checks the client version against compatible client versions reported by server.</p></td>
+<td><p>Check the client version against compatible client versions reported by server.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_default_headers</span></code>()</p></td>
 <td><p>Default headers for HTTP requests to the IQM server.</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_deserialize_response</span></code>(response, model_class)</p></td>
+<td><p>Deserialize a HTTP endpoint response.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_request</span></code>(api_endpoint[, endpoint_args, ...])</p></td>
+<td><p>Make a HTTP GET request to an IQM server endpoint.</p></td>
+</tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_run_v1</span></code>(job_id[, timeout_secs])</p></td>
-<td><p>V1 API (Cocos circuits execution and Resonance) has an inefficient <cite>GET /jobs/&lt;id&gt;</cite> endpoint that returns the full job status, including the result and the original request, in a single call.</p></td>
+<td><p>V1 API (Cocos circuit execution and Resonance) has an inefficient <cite>GET /jobs/&lt;id&gt;</cite> endpoint that returns the full job status, including the result and the original request, in a single call.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_get_run_v2</span></code>(job_id[, timeout_secs])</p></td>
-<td><p>V2 API (Station-based circuits execution) has granular endpoints for job status and result.</p></td>
+<td><p>V2 API (Station-based circuit execution) has granular endpoints for job status and result.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_retry_request_on_error</span></code>(request)</p></td>
-<td><p>This is a temporary workaround for 502 errors.</p></td>
+<td><p>Temporary workaround for 502 errors.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_circuit_instructions</span></code>(architecture, ...)</p></td>
 <td><p>Validate the given circuits against the given quantum architecture.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_circuit_moves</span></code>(architecture, circuit)</p></td>
-<td><p>Raises an error if the MOVE gates in the circuit are not valid in the given architecture.</p></td>
+<td><p>Raise an error if the MOVE gates in the circuit are not valid in the given architecture.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_instruction</span></code>(architecture, instruction)</p></td>
 <td><p>Validate an instruction against the dynamic quantum quantum architecture.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_qubit_mapping</span></code>(architecture, circuits)</p></td>
-<td><p>Validates the given qubit mapping, if defined.</p></td>
+<td><p>Validate the given qubit mapping.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.abort_job" title="iqm.iqm_client.iqm_client.IQMClient.abort_job"><code class="xref py py-obj docutils literal notranslate"><span class="pre">abort_job</span></code></a>(job_id, *[, timeout_secs])</p></td>
 <td><p>Abort a job that was submitted for execution.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.close_auth_session" title="iqm.iqm_client.iqm_client.IQMClient.close_auth_session"><code class="xref py py-obj docutils literal notranslate"><span class="pre">close_auth_session</span></code></a>()</p></td>
-<td><p>Terminate session with authentication server if there was one created.</p></td>
+<td><p>Terminate session with authentication server if there is one.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.create_run_request" title="iqm.iqm_client.iqm_client.IQMClient.create_run_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">create_run_request</span></code></a>(circuits, *[, ...])</p></td>
-<td><p>Creates a run request for executing circuits without sending it to the server.</p></td>
+<td><p>Create a run request for executing circuits without sending it to the server.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.get_calibration_set" title="iqm.iqm_client.iqm_client.IQMClient.get_calibration_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_calibration_set</span></code></a>([calibration_set_id, ...])</p></td>
 <td><p>Retrieve the given calibration set from the server.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.get_dynamic_quantum_architecture" title="iqm.iqm_client.iqm_client.IQMClient.get_dynamic_quantum_architecture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dynamic_quantum_architecture</span></code></a>([...])</p></td>
-<td><p>Retrieve dynamic quantum architecture (DQA) for the given calibration set from server.</p></td>
+<td><p>Retrieve the dynamic quantum architecture (DQA) for the given calibration set from the server.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.get_feedback_groups" title="iqm.iqm_client.iqm_client.IQMClient.get_feedback_groups"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_feedback_groups</span></code></a>(*[, timeout_secs])</p></td>
 <td><p>Retrieve groups of qubits that can receive real-time feedback signals from each other.</p></td>
@@ -523,13 +527,13 @@ for values given as environment variables as for keyword arguments.</p>
 <td><p>Query the status of a submitted job.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.get_supported_client_libraries" title="iqm.iqm_client.iqm_client.IQMClient.get_supported_client_libraries"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_supported_client_libraries</span></code></a>([timeout_secs])</p></td>
-<td><p>Retrieves information about supported client libraries from the server.</p></td>
+<td><p>Retrieve information about supported client libraries from the server.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="iqm.iqm_client.iqm_client.IQMClient.submit_circuits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_circuits</span></code></a>(circuits, *[, ...])</p></td>
-<td><p>Submits a batch of quantum circuits for execution on a quantum computer.</p></td>
+<td><p>Submit a batch of quantum circuits for execution on a quantum computer.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_run_request" title="iqm.iqm_client.iqm_client.IQMClient.submit_run_request"><code class="xref py py-obj docutils literal notranslate"><span class="pre">submit_run_request</span></code></a>(run_request)</p></td>
-<td><p>Submits a run request for execution on a quantum computer.</p></td>
+<td><p>Submit a run request for execution on a quantum computer.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.wait_for_compilation" title="iqm.iqm_client.iqm_client.IQMClient.wait_for_compilation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">wait_for_compilation</span></code></a>(job_id[, timeout_secs])</p></td>
 <td><p>Poll results until a job is either pending execution, ready, failed, aborted, or timed out.</p></td>
@@ -543,7 +547,7 @@ for values given as environment variables as for keyword arguments.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.submit_circuits">
 <span class="sig-name descname"><span class="pre">submit_circuits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="iqm.iqm_client.models.Circuit.html#iqm.iqm_client.models.Circuit" title="iqm.iqm_client.models.Circuit"><span class="pre">Circuit</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit_mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_set_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><span class="pre">UUID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions" title="iqm.iqm_client.models.CircuitCompilationOptions"><span class="pre">CircuitCompilationOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><span class="pre">UUID</span></a></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="Link to this definition">#</a></dt>
-<dd><p>Submits a batch of quantum circuits for execution on a quantum computer.</p>
+<dd><p>Submit a batch of quantum circuits for execution on a quantum computer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -553,8 +557,8 @@ Can be set to <code class="docutils literal notranslate"><span class="pre">None<
 Note that the <code class="docutils literal notranslate"><span class="pre">qubit_mapping</span></code> is used for all <code class="docutils literal notranslate"><span class="pre">circuits</span></code>.</p></li>
 <li><p><strong>custom_settings</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>] </em><em>| </em><em>None</em>) – Custom settings to override default settings and calibration data.
 Note: This field should always be <code class="docutils literal notranslate"><span class="pre">None</span></code> in normal use.</p></li>
-<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set to use, or <code class="docutils literal notranslate"><span class="pre">None</span></code> to use the latest one</p></li>
-<li><p><strong>shots</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Number of times <code class="docutils literal notranslate"><span class="pre">circuits</span></code> are executed. Must be greater than zero</p></li>
+<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set to use, or <code class="docutils literal notranslate"><span class="pre">None</span></code> to use the current default calibration.</p></li>
+<li><p><strong>shots</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Number of times <code class="docutils literal notranslate"><span class="pre">circuits</span></code> are executed. Must be greater than zero.</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions" title="iqm.iqm_client.models.CircuitCompilationOptions"><em>CircuitCompilationOptions</em></a><em> | </em><em>None</em>) – Various discrete options for compiling quantum circuits to instruction schedules.</p></li>
 </ul>
 </dd>
@@ -570,8 +574,8 @@ Note: This field should always be <code class="docutils literal notranslate"><sp
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.create_run_request">
 <span class="sig-name descname"><span class="pre">create_run_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">circuits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="iqm.iqm_client.models.Circuit.html#iqm.iqm_client.models.Circuit" title="iqm.iqm_client.models.Circuit"><span class="pre">Circuit</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit_mapping</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">custom_settings</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_set_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><span class="pre">UUID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shots</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">options</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions" title="iqm.iqm_client.models.CircuitCompilationOptions"><span class="pre">CircuitCompilationOptions</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="iqm.iqm_client.models.RunRequest.html#iqm.iqm_client.models.RunRequest" title="iqm.iqm_client.models.RunRequest"><span class="pre">RunRequest</span></a></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.create_run_request" title="Link to this definition">#</a></dt>
-<dd><p>Creates a run request for executing circuits without sending it to the server.</p>
-<p>This is called inside <a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="iqm.iqm_client.iqm_client.IQMClient.submit_circuits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">submit_circuits()</span></code></a> and does not need to be called separately in normal usage.</p>
+<dd><p>Create a run request for executing circuits without sending it to the server.</p>
+<p>This is called in <a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="iqm.iqm_client.iqm_client.IQMClient.submit_circuits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">submit_circuits()</span></code></a> and does not need to be called separately in normal usage.</p>
 <p>Can be used to inspect the run request that would be submitted by <a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="iqm.iqm_client.iqm_client.IQMClient.submit_circuits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">submit_circuits()</span></code></a>, without actually
 submitting it for execution.</p>
 <dl class="field-list simple">
@@ -583,7 +587,7 @@ Can be set to <code class="docutils literal notranslate"><span class="pre">None<
 Note that the <code class="docutils literal notranslate"><span class="pre">qubit_mapping</span></code> is used for all <code class="docutils literal notranslate"><span class="pre">circuits</span></code>.</p></li>
 <li><p><strong>custom_settings</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>] </em><em>| </em><em>None</em>) – Custom settings to override default settings and calibration data.
 Note: This field should always be <code class="docutils literal notranslate"><span class="pre">None</span></code> in normal use.</p></li>
-<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set to use, or <code class="docutils literal notranslate"><span class="pre">None</span></code> to use the latest one</p></li>
+<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set to use, or <code class="docutils literal notranslate"><span class="pre">None</span></code> to use the current default calibration.</p></li>
 <li><p><strong>shots</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a>) – Number of times <code class="docutils literal notranslate"><span class="pre">circuits</span></code> are executed. Must be greater than zero.</p></li>
 <li><p><strong>options</strong> (<a class="reference internal" href="iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions" title="iqm.iqm_client.models.CircuitCompilationOptions"><em>CircuitCompilationOptions</em></a><em> | </em><em>None</em>) – Various discrete options for compiling quantum circuits to instruction schedules.</p></li>
 </ul>
@@ -600,11 +604,11 @@ Note: This field should always be <code class="docutils literal notranslate"><sp
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.submit_run_request">
 <span class="sig-name descname"><span class="pre">submit_run_request</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">run_request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.RunRequest.html#iqm.iqm_client.models.RunRequest" title="iqm.iqm_client.models.RunRequest"><span class="pre">RunRequest</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><span class="pre">UUID</span></a></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.submit_run_request" title="Link to this definition">#</a></dt>
-<dd><p>Submits a run request for execution on a quantum computer.</p>
-<p>This is called inside <a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="iqm.iqm_client.iqm_client.IQMClient.submit_circuits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">submit_circuits()</span></code></a> and does not need to be called separately in normal usage.</p>
+<dd><p>Submit a run request for execution on a quantum computer.</p>
+<p>This is called in <a class="reference internal" href="#iqm.iqm_client.iqm_client.IQMClient.submit_circuits" title="iqm.iqm_client.iqm_client.IQMClient.submit_circuits"><code class="xref py py-meth docutils literal notranslate"><span class="pre">submit_circuits()</span></code></a> and does not need to be called separately in normal usage.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>run_request</strong> (<a class="reference internal" href="iqm.iqm_client.models.RunRequest.html#iqm.iqm_client.models.RunRequest" title="iqm.iqm_client.models.RunRequest"><em>RunRequest</em></a>) – the run request to be submitted for execution.</p>
+<dd class="field-odd"><p><strong>run_request</strong> (<a class="reference internal" href="iqm.iqm_client.models.RunRequest.html#iqm.iqm_client.models.RunRequest" title="iqm.iqm_client.models.RunRequest"><em>RunRequest</em></a>) – Run request to be submitted for execution.</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>ID for the created job. This ID is needed to query the job status and the execution results.</p>
@@ -622,12 +626,12 @@ Note: This field should always be <code class="docutils literal notranslate"><sp
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the job to query</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p></li>
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – ID of the job to query.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>result of the job (can be pending)</p>
+<dd class="field-even"><p>Result of the job (can be pending).</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -648,12 +652,12 @@ Note: This field should always be <code class="docutils literal notranslate"><sp
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the job to query</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p></li>
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – ID of the job to query.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>status of the job</p>
+<dd class="field-even"><p>Job status.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
@@ -674,12 +678,12 @@ Note: This field should always be <code class="docutils literal notranslate"><sp
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the job to wait for</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – how long to wait for a response before raising an APITimeoutError</p></li>
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – ID of the job to wait for.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – How long to wait for a response before raising an APITimeoutError (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>job result</p>
+<dd class="field-even"><p>Job result.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="iqm.iqm_client.errors.APITimeoutError.html#iqm.iqm_client.errors.APITimeoutError" title="iqm.iqm_client.errors.APITimeoutError"><strong>APITimeoutError</strong></a> – time exceeded the set timeout</p>
@@ -693,21 +697,21 @@ Note: This field should always be <code class="docutils literal notranslate"><sp
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.wait_for_results">
 <span class="sig-name descname"><span class="pre">wait_for_results</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">job_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><span class="pre">UUID</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_secs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">900</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="iqm.iqm_client.models.RunResult.html#iqm.iqm_client.models.RunResult" title="iqm.iqm_client.models.RunResult"><span class="pre">RunResult</span></a></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.wait_for_results" title="Link to this definition">#</a></dt>
-<dd><dl class="simple">
-<dt>Poll results until a job is either ready, failed, aborted, or timed out.</dt><dd><p>Note, that jobs handling on the server side is async and if we try to request the results
+<dd><p>Poll results until a job is either ready, failed, aborted, or timed out.</p>
+<blockquote>
+<div><p>Note that jobs handling on the server side is async and if we try to request the results
 right after submitting the job (which is usually the case)
 we will find the job is still pending at least for the first query.</p>
-</dd>
-</dl>
+</div></blockquote>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the job to wait for</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – how long to wait for a response before raising an APITimeoutError</p></li>
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – ID of the job to wait for.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – How long to wait for a response before raising an APITimeoutError (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>job result</p>
+<dd class="field-even"><p>Job result.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="iqm.iqm_client.errors.APITimeoutError.html#iqm.iqm_client.errors.APITimeoutError" title="iqm.iqm_client.errors.APITimeoutError"><strong>APITimeoutError</strong></a> – time exceeded the set timeout</p>
@@ -725,12 +729,12 @@ we will find the job is still pending at least for the first query.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the job to be aborted</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p></li>
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – ID of the job to be aborted.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="iqm.iqm_client.errors.JobAbortionError.html#iqm.iqm_client.errors.JobAbortionError" title="iqm.iqm_client.errors.JobAbortionError"><strong>JobAbortionError</strong></a> – if aborting the job failed</p>
+<dd class="field-even"><p><a class="reference internal" href="iqm.iqm_client.errors.JobAbortionError.html#iqm.iqm_client.errors.JobAbortionError" title="iqm.iqm_client.errors.JobAbortionError"><strong>JobAbortionError</strong></a> – aborting the job failed</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>None</p>
@@ -745,15 +749,15 @@ we will find the job is still pending at least for the first query.</p>
 <p>Caches the result and returns it on later invocations.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p>
+<dd class="field-odd"><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>quantum architecture</p>
+<dd class="field-even"><p>Quantum architecture of the server.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ArchitectureRetrievalError.html#iqm.iqm_client.errors.ArchitectureRetrievalError" title="iqm.iqm_client.errors.ArchitectureRetrievalError"><strong>ArchitectureRetrievalError</strong></a> – IQM server specific exceptions</p></li>
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if no valid authentication is provided</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
 <li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
 </dd>
@@ -771,8 +775,8 @@ we will find the job is still pending at least for the first query.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set for which the quality metrics are returned.
-If None, the current default calibration set is used.</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout.</p></li>
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current default calibration set is used.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -780,8 +784,8 @@ If None, the current default calibration set is used.</p></li>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>QualityMetricsRetrievalError</strong> – IQM server specific exceptions</p></li>
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if no valid authentication is provided</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
 <li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
 </dd>
@@ -798,9 +802,9 @@ If None, the current default calibration set is used.</p></li>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set to retrieve. If None, the current default
-calibration set is used.</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p></li>
+<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set to retrieve.
+If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the current default calibration set is retrieved.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -808,8 +812,8 @@ calibration set is used.</p></li>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.CalibrationSetRetrievalError.html#iqm.iqm_client.errors.CalibrationSetRetrievalError" title="iqm.iqm_client.errors.CalibrationSetRetrievalError"><strong>CalibrationSetRetrievalError</strong></a> – IQM server specific exceptions</p></li>
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – No valid authentication is provided</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
 <li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
 </dd>
@@ -822,25 +826,25 @@ calibration set is used.</p></li>
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.get_dynamic_quantum_architecture">
 <span class="sig-name descname"><span class="pre">get_dynamic_quantum_architecture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_set_id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><span class="pre">UUID</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timeout_secs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="iqm.iqm_client.models.DynamicQuantumArchitecture.html#iqm.iqm_client.models.DynamicQuantumArchitecture" title="iqm.iqm_client.models.DynamicQuantumArchitecture"><span class="pre">DynamicQuantumArchitecture</span></a></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.get_dynamic_quantum_architecture" title="Link to this definition">#</a></dt>
-<dd><p>Retrieve dynamic quantum architecture (DQA) for the given calibration set from server.</p>
+<dd><p>Retrieve the dynamic quantum architecture (DQA) for the given calibration set from the server.</p>
 <p>Caches the result and returns the same result on later invocations, unless <code class="docutils literal notranslate"><span class="pre">calibration_set_id</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>.
-If <code class="docutils literal notranslate"><span class="pre">calibration_set_id</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, always retrieves the result from the server because the “default”
+If <code class="docutils literal notranslate"><span class="pre">calibration_set_id</span></code> is <code class="docutils literal notranslate"><span class="pre">None</span></code>, always retrieves the result from the server because the default
 calibration set may have changed.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set for which the DQA is returned.
+<li><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a><em> | </em><em>None</em>) – ID of the calibration set for which the DQA is retrieved.
 If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use current default calibration set on the server.</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>dynamic quantum architecture corresponding to the given calibration set</p>
+<dd class="field-even"><p>Dynamic quantum architecture corresponding to the given calibration set.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ArchitectureRetrievalError.html#iqm.iqm_client.errors.ArchitectureRetrievalError" title="iqm.iqm_client.errors.ArchitectureRetrievalError"><strong>ArchitectureRetrievalError</strong></a> – IQM server specific exceptions</p></li>
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if no valid authentication is provided</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
 <li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
 </dd>
@@ -858,22 +862,23 @@ If <code class="docutils literal notranslate"><span class="pre">None</span></cod
 Some hardware configurations support routing real-time feedback only between certain qubits.</p>
 <p>This method is only supported for the API variant V2.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p><dl class="simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><dl class="simple">
 <dt>Feedback groups. Within a group, any qubit can receive real-time feedback from any other qubit in</dt><dd><p>the same group. A qubit can belong to multiple groups.
 If there is only one group, there are no restrictions regarding feedback routing.</p>
 </dd>
 </dl>
 </p>
 </dd>
-<dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if no valid authentication is provided</p></li>
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
 <li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
-</dd>
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – </p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#tuple" title="(in Python v3.11)">tuple</a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#frozenset" title="(in Python v3.11)">frozenset</a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)">str</a>], …]</p>
@@ -884,15 +889,15 @@ If there is only one group, there are no restrictions regarding feedback routing
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.close_auth_session">
 <span class="sig-name descname"><span class="pre">close_auth_session</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.close_auth_session" title="Link to this definition">#</a></dt>
-<dd><p>Terminate session with authentication server if there was one created.</p>
+<dd><p>Terminate session with authentication server if there is one.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>True iff session was successfully closed</p>
+<dd class="field-odd"><p>True iff session was successfully closed.</p>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
 <dd class="field-even"><ul class="simple">
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if logout failed</p></li>
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if asked to close externally managed authentication session</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – logout failed</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – asked to close externally managed authentication session</p></li>
 </ul>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
@@ -908,16 +913,17 @@ If there is only one group, there are no restrictions regarding feedback routing
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – id of the job to query</p></li>
-<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout</p></li>
+<li><p><strong>job_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – ID of the job to query.</p></li>
+<li><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>counts strings dictionary</p>
+<dd class="field-even"><p>Measurement results of the job in histogram representation.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.CircuitExecutionError.html#iqm.iqm_client.errors.CircuitExecutionError" title="iqm.iqm_client.errors.CircuitExecutionError"><strong>CircuitExecutionError</strong></a> – IQM server specific exceptions</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
 <li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
 </dd>
@@ -930,18 +936,19 @@ If there is only one group, there are no restrictions regarding feedback routing
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.iqm_client.iqm_client.IQMClient.get_supported_client_libraries">
 <span class="sig-name descname"><span class="pre">get_supported_client_libraries</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">timeout_secs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">60.0</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="iqm.iqm_client.models.ClientLibrary.html#iqm.iqm_client.models.ClientLibrary" title="iqm.iqm_client.models.ClientLibrary"><span class="pre">ClientLibrary</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#iqm.iqm_client.iqm_client.IQMClient.get_supported_client_libraries" title="Link to this definition">#</a></dt>
-<dd><p>Retrieves information about supported client libraries from the server.</p>
+<dd><p>Retrieve information about supported client libraries from the server.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – network request timeout in seconds</p>
+<dd class="field-odd"><p><strong>timeout_secs</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Network request timeout (seconds).</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Dictionary mapping library identifiers to their metadata</p>
+<dd class="field-even"><p>Mapping from library identifiers to their metadata.</p>
 </dd>
 <dt class="field-odd">Raises<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>HTTPError</strong> – HTTP exceptions</p></li>
-<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – if authentication fails</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.EndpointRequestError.html#iqm.iqm_client.errors.EndpointRequestError" title="iqm.iqm_client.errors.EndpointRequestError"><strong>EndpointRequestError</strong></a> – did not understand the endpoint response</p></li>
+<li><p><a class="reference internal" href="iqm.iqm_client.errors.ClientAuthenticationError.html#iqm.iqm_client.errors.ClientAuthenticationError" title="iqm.iqm_client.errors.ClientAuthenticationError"><strong>ClientAuthenticationError</strong></a> – no valid authentication provided</p></li>
+<li><p><strong>HTTPException</strong> – HTTP exceptions</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -1052,7 +1059,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-07.
+  Last updated on 2025-03-08.
   <br/>
 </p>
   </div>

@@ -29,6 +29,5 @@ iqm.iqm\_client.models.RunStatus
 
    .. autosummary::
    
-      ~RunStatus.from_dict
    
    
