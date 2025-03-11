@@ -2,10 +2,14 @@ name: Build and Deploy Docs
 
 on:
   push:
+    branches:
+      - main
     paths:
       - 'docs/**'
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
+    # Allow manual triggering
 
 env:
   PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla[qiskit,qir] iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
