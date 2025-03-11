@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; IQM client 22.7 documentation</title>
+    <title>Index &#8212; IQM client 22.8 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=28f114c2"></script>
+    <script src="_static/documentation_options.js?v=6257953c"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -49,8 +49,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.7" />
-    <meta name="docbuild:last-update" content="2025-03-10"/>
+  <meta name="docsearch:version" content="22.8" />
+    <meta name="docbuild:last-update" content="2025-03-11"/>
   </head>
   
   
@@ -131,8 +131,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="IQM client 22.7 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.7 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="IQM client 22.8 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.8 documentation - Home"/>
   
   
 </a></div>
@@ -372,6 +372,10 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.iqm_client.IQMClient.html#iqm.iqm_client.iqm_client.IQMClient.abort_job">abort_job() (iqm.iqm_client.iqm_client.IQMClient method)</a>
 </li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.ABORTED">ABORTED (iqm.iqm_client.models.Status attribute)</a>
+</li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.ACCEPTED">ACCEPTED (iqm.iqm_client.models.Status attribute)</a>
+</li>
       <li><a href="api/iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions.active_reset_cycles">active_reset_cycles (iqm.iqm_client.models.CircuitCompilationOptions attribute)</a>
 
       <ul>
@@ -384,10 +388,10 @@
 </li>
       <li><a href="api/iqm.iqm_client.api.APIConfig.html#iqm.iqm_client.api.APIConfig">APIConfig (class in iqm.iqm_client.api)</a>
 </li>
-      <li><a href="api/iqm.iqm_client.api.APIEndpoint.html#iqm.iqm_client.api.APIEndpoint">APIEndpoint (class in iqm.iqm_client.api)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.iqm_client.api.APIEndpoint.html#iqm.iqm_client.api.APIEndpoint">APIEndpoint (class in iqm.iqm_client.api)</a>
+</li>
       <li><a href="api/iqm.iqm_client.errors.APITimeoutError.html#iqm.iqm_client.errors.APITimeoutError">APITimeoutError</a>
 </li>
       <li><a href="api/iqm.iqm_client.api.APIVariant.html#iqm.iqm_client.api.APIVariant">APIVariant (class in iqm.iqm_client.api)</a>
@@ -498,6 +502,8 @@
 </li>
       <li><a href="api/iqm.iqm_client.models.QuantumArchitectureSpecification.html#iqm.iqm_client.models.QuantumArchitectureSpecification.compare_operations">compare_operations() (iqm.iqm_client.models.QuantumArchitectureSpecification static method)</a>
 </li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.COMPILED">COMPILED (iqm.iqm_client.models.Status attribute)</a>
+</li>
       <li><a href="api/iqm.iqm_client.models.DynamicQuantumArchitecture.html#iqm.iqm_client.models.DynamicQuantumArchitecture.components">components (iqm.iqm_client.models.DynamicQuantumArchitecture property)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.DynamicQuantumArchitecture.html#iqm.iqm_client.models.DynamicQuantumArchitecture.computational_resonators">computational_resonators (iqm.iqm_client.models.DynamicQuantumArchitecture attribute)</a>
@@ -534,15 +540,19 @@
         <li><a href="api/iqm.iqm_client.models.RunRequest.html#iqm.iqm_client.models.RunRequest.dd_strategy">(iqm.iqm_client.models.RunRequest attribute)</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.models.DDMode.html#iqm.iqm_client.models.DDMode">DDMode (class in iqm.iqm_client.models)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.models.DDStrategy.html#iqm.iqm_client.models.DDStrategy">DDStrategy (class in iqm.iqm_client.models)</a>
 </li>
       <li><a href="api/iqm.iqm_client.util.IQMJSONEncoder.html#iqm.iqm_client.util.IQMJSONEncoder.default">default() (iqm.iqm_client.util.IQMJSONEncoder method)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.GateInfo.html#iqm.iqm_client.models.GateInfo.default_implementation">default_implementation (iqm.iqm_client.models.GateInfo attribute)</a>
+</li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.DELETED">DELETED (iqm.iqm_client.models.Status attribute)</a>
+</li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.DELETION_FAILED">DELETION_FAILED (iqm.iqm_client.models.Status attribute)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.DDMode.html#iqm.iqm_client.models.DDMode.DISABLED">DISABLED (iqm.iqm_client.models.DDMode attribute)</a>
 </li>
@@ -592,6 +602,8 @@
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.models.NativeOperation.html#iqm.iqm_client.models.NativeOperation.factorizable">factorizable (iqm.iqm_client.models.NativeOperation attribute)</a>
+</li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.FAILED">FAILED (iqm.iqm_client.models.Status attribute)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -1052,8 +1064,14 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.models.Metadata.html#iqm.iqm_client.models.Metadata.parameters">parameters (iqm.iqm_client.models.Metadata attribute)</a>
 </li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.PENDING_COMPILATION">PENDING_COMPILATION (iqm.iqm_client.models.Status attribute)</a>
+</li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.PENDING_DELETION">PENDING_DELETION (iqm.iqm_client.models.Status attribute)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.PENDING_EXECUTION">PENDING_EXECUTION (iqm.iqm_client.models.Status attribute)</a>
+</li>
       <li><a href="api/iqm.iqm_client.models.SingleQubitMapping.html#iqm.iqm_client.models.SingleQubitMapping.physical_name">physical_name (iqm.iqm_client.models.SingleQubitMapping attribute)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.PRXSequence.html#iqm.iqm_client.models.PRXSequence">PRXSequence (in module iqm.iqm_client.models)</a>
@@ -1106,16 +1124,20 @@
 <h2 id="R">R</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.READY">READY (iqm.iqm_client.models.Status attribute)</a>
+</li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.RECEIVED">RECEIVED (iqm.iqm_client.models.Status attribute)</a>
+</li>
       <li><a href="api/iqm.iqm_client.transpile.ExistingMoveHandlingOptions.html#iqm.iqm_client.transpile.ExistingMoveHandlingOptions.REMOVE">REMOVE (iqm.iqm_client.transpile.ExistingMoveHandlingOptions attribute)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.NativeOperation.html#iqm.iqm_client.models.NativeOperation.renamed_to">renamed_to (iqm.iqm_client.models.NativeOperation attribute)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.Metadata.html#iqm.iqm_client.models.Metadata.request">request (iqm.iqm_client.models.Metadata attribute)</a>
 </li>
-      <li><a href="api/iqm.iqm_client.transpile.Resolution.html#iqm.iqm_client.transpile.Resolution">Resolution (in module iqm.iqm_client.transpile)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.iqm_client.transpile.Resolution.html#iqm.iqm_client.transpile.Resolution">Resolution (in module iqm.iqm_client.transpile)</a>
+</li>
       <li><a href="api/iqm.iqm_client.models.RunCounts.html#iqm.iqm_client.models.RunCounts">RunCounts (class in iqm.iqm_client.models)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.RunRequest.html#iqm.iqm_client.models.RunRequest">RunRequest (class in iqm.iqm_client.models)</a>
@@ -1176,6 +1198,8 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.models.DDStrategy.html#iqm.iqm_client.models.DDStrategy.target_qubits">target_qubits (iqm.iqm_client.models.DDStrategy attribute)</a>
 </li>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.terminal_statuses">terminal_statuses() (iqm.iqm_client.models.Status class method)</a>
+</li>
       <li><a href="api/iqm.iqm_client.authentication.TokenManager.html#iqm.iqm_client.authentication.TokenManager.time_left_seconds">time_left_seconds() (iqm.iqm_client.authentication.TokenManager static method)</a>
 </li>
       <li><a href="api/iqm.iqm_client.models.Metadata.html#iqm.iqm_client.models.Metadata.timestamps">timestamps (iqm.iqm_client.models.Metadata attribute)</a>
@@ -1203,6 +1227,10 @@
 
 <h2 id="U">U</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.iqm_client.models.Status.html#iqm.iqm_client.models.Status.UNKNOWN">UNKNOWN (iqm.iqm_client.models.Status attribute)</a>
+</li>
+  </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.iqm_client.api.APIConfig.html#iqm.iqm_client.api.APIConfig.url">url() (iqm.iqm_client.api.APIConfig method)</a>
 </li>
@@ -1290,7 +1318,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-10.
+  Last updated on 2025-03-11.
   <br/>
 </p>
   </div>

@@ -18,12 +18,14 @@ iqm.iqm\_client.models.Status
       ~Status.ACCEPTED
       ~Status.PENDING_COMPILATION
       ~Status.PENDING_EXECUTION
+      ~Status.COMPILED
       ~Status.READY
       ~Status.FAILED
       ~Status.ABORTED
       ~Status.PENDING_DELETION
       ~Status.DELETION_FAILED
       ~Status.DELETED
+      ~Status.UNKNOWN
    
    
 
@@ -35,6 +37,7 @@ iqm.iqm\_client.models.Status
    .. autosummary::
    
       ~Status._generate_next_value_
+      ~Status.terminal_statuses
       ~Status._new_member_
       ~Status._value_repr_
       ~Status.__format__

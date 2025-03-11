@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.iqm_client.models.Status &#8212; IQM client 22.7 documentation</title>
+    <title>iqm.iqm_client.models.Status &#8212; IQM client 22.8 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=28f114c2"></script>
+    <script src="../_static/documentation_options.js?v=6257953c"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -52,8 +52,8 @@
     <link rel="prev" title="iqm.iqm_client.models.SingleQubitMapping" href="iqm.iqm_client.models.SingleQubitMapping.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.7" />
-    <meta name="docbuild:last-update" content="2025-03-10"/>
+  <meta name="docsearch:version" content="22.8" />
+    <meta name="docbuild:last-update" content="2025-03-11"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.7 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.7 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.8 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.8 documentation - Home"/>
   
   
 </a></div>
@@ -385,7 +385,22 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.RECEIVED"><code class="docutils literal notranslate"><span class="pre">Status.RECEIVED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.ACCEPTED"><code class="docutils literal notranslate"><span class="pre">Status.ACCEPTED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.PENDING_COMPILATION"><code class="docutils literal notranslate"><span class="pre">Status.PENDING_COMPILATION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.PENDING_EXECUTION"><code class="docutils literal notranslate"><span class="pre">Status.PENDING_EXECUTION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.COMPILED"><code class="docutils literal notranslate"><span class="pre">Status.COMPILED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.READY"><code class="docutils literal notranslate"><span class="pre">Status.READY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.FAILED"><code class="docutils literal notranslate"><span class="pre">Status.FAILED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.ABORTED"><code class="docutils literal notranslate"><span class="pre">Status.ABORTED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.PENDING_DELETION"><code class="docutils literal notranslate"><span class="pre">Status.PENDING_DELETION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.DELETION_FAILED"><code class="docutils literal notranslate"><span class="pre">Status.DELETION_FAILED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.DELETED"><code class="docutils literal notranslate"><span class="pre">Status.DELETED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">Status.UNKNOWN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.terminal_statuses"><code class="docutils literal notranslate"><span class="pre">Status.terminal_statuses()</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -407,38 +422,44 @@
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">RECEIVED</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.RECEIVED" title="iqm.iqm_client.models.Status.RECEIVED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">RECEIVED</span></code></a></p></td>
+<td><p>Job has been received but nothing has been done about it.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PROCESSING</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACCEPTED</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.ACCEPTED" title="iqm.iqm_client.models.Status.ACCEPTED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ACCEPTED</span></code></a></p></td>
+<td><p>Job has passed initial checks and will proceed to compilation.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PENDING_COMPILATION</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.PENDING_COMPILATION" title="iqm.iqm_client.models.Status.PENDING_COMPILATION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PENDING_COMPILATION</span></code></a></p></td>
+<td><p>Job has been queued for compilation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PENDING_EXECUTION</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.PENDING_EXECUTION" title="iqm.iqm_client.models.Status.PENDING_EXECUTION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PENDING_EXECUTION</span></code></a></p></td>
+<td><p>Job has been compiled and is queued for execution.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">READY</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.COMPILED" title="iqm.iqm_client.models.Status.COMPILED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">COMPILED</span></code></a></p></td>
+<td><p>Job has been compiled to a low-level representation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">FAILED</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.READY" title="iqm.iqm_client.models.Status.READY"><code class="xref py py-obj docutils literal notranslate"><span class="pre">READY</span></code></a></p></td>
+<td><p>Job has been executed and results are available.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ABORTED</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.FAILED" title="iqm.iqm_client.models.Status.FAILED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FAILED</span></code></a></p></td>
+<td><p>Execution or compilation failed.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">PENDING_DELETION</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.ABORTED" title="iqm.iqm_client.models.Status.ABORTED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ABORTED</span></code></a></p></td>
+<td><p>User caneceled the execution.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DELETION_FAILED</span></code></p></td>
-<td><p></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.PENDING_DELETION" title="iqm.iqm_client.models.Status.PENDING_DELETION"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PENDING_DELETION</span></code></a></p></td>
+<td><p>Job is set to be deleted.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">DELETED</span></code></p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.DELETION_FAILED" title="iqm.iqm_client.models.Status.DELETION_FAILED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DELETION_FAILED</span></code></a></p></td>
+<td><p>Job was supposed to be deleted but deletion failed.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.DELETED" title="iqm.iqm_client.models.Status.DELETED"><code class="xref py py-obj docutils literal notranslate"><span class="pre">DELETED</span></code></a></p></td>
+<td><p>Job deleted from the database.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.UNKNOWN" title="iqm.iqm_client.models.Status.UNKNOWN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">UNKNOWN</span></code></a></p></td>
+<td><p>Job is in a state not recognized by this version of the client.</p></td>
 </tr>
 </tbody>
 </table>
@@ -449,27 +470,113 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_generate_next_value_</span></code>(start, count, last_values)</p></td>
 <td><p>Generate the next value when not given.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_new_member_</span></code>(**kwargs)</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Status.terminal_statuses" title="iqm.iqm_client.models.Status.terminal_statuses"><code class="xref py py-obj docutils literal notranslate"><span class="pre">terminal_statuses</span></code></a>()</p></td>
+<td><p>Statuses from which the execution can't continue.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_new_member_</span></code>(**kwargs)</p></td>
 <td><p>Create and return a new object.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_value_repr_</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_value_repr_</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code>(format_spec)</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__format__</span></code>(format_spec)</p></td>
 <td><p>Return a formatted version of the string as described by format_spec.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code>(value)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__new__</span></code>(value)</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__str__</span></code>()</p></td>
 <td><p>Return str(self).</p></td>
 </tr>
 </tbody>
 </table>
 </div>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.RECEIVED">
+<span class="sig-name descname"><span class="pre">RECEIVED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'received'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.RECEIVED" title="Link to this definition">#</a></dt>
+<dd><p>Job has been received but nothing has been done about it.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.ACCEPTED">
+<span class="sig-name descname"><span class="pre">ACCEPTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'accepted'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.ACCEPTED" title="Link to this definition">#</a></dt>
+<dd><p>Job has passed initial checks and will proceed to compilation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.PENDING_COMPILATION">
+<span class="sig-name descname"><span class="pre">PENDING_COMPILATION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending</span> <span class="pre">compilation'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.PENDING_COMPILATION" title="Link to this definition">#</a></dt>
+<dd><p>Job has been queued for compilation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.PENDING_EXECUTION">
+<span class="sig-name descname"><span class="pre">PENDING_EXECUTION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending</span> <span class="pre">execution'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.PENDING_EXECUTION" title="Link to this definition">#</a></dt>
+<dd><p>Job has been compiled and is queued for execution.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.COMPILED">
+<span class="sig-name descname"><span class="pre">COMPILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'compiled'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.COMPILED" title="Link to this definition">#</a></dt>
+<dd><p>Job has been compiled to a low-level representation.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.READY">
+<span class="sig-name descname"><span class="pre">READY</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'ready'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.READY" title="Link to this definition">#</a></dt>
+<dd><p>Job has been executed and results are available.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.FAILED">
+<span class="sig-name descname"><span class="pre">FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'failed'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.FAILED" title="Link to this definition">#</a></dt>
+<dd><p>Execution or compilation failed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.ABORTED">
+<span class="sig-name descname"><span class="pre">ABORTED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'aborted'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.ABORTED" title="Link to this definition">#</a></dt>
+<dd><p>User caneceled the execution.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.PENDING_DELETION">
+<span class="sig-name descname"><span class="pre">PENDING_DELETION</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'pending</span> <span class="pre">deletion'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.PENDING_DELETION" title="Link to this definition">#</a></dt>
+<dd><p>Job is set to be deleted.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.DELETION_FAILED">
+<span class="sig-name descname"><span class="pre">DELETION_FAILED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'deletion</span> <span class="pre">failed'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.DELETION_FAILED" title="Link to this definition">#</a></dt>
+<dd><p>Job was supposed to be deleted but deletion failed.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.DELETED">
+<span class="sig-name descname"><span class="pre">DELETED</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'deleted'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.DELETED" title="Link to this definition">#</a></dt>
+<dd><p>Job deleted from the database.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.UNKNOWN">
+<span class="sig-name descname"><span class="pre">UNKNOWN</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'unknown'</span></em><a class="headerlink" href="#iqm.iqm_client.models.Status.UNKNOWN" title="Link to this definition">#</a></dt>
+<dd><p>Job is in a state not recognized by this version of the client.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Status.terminal_statuses">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">terminal_statuses</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#set" title="(in Python v3.11)"><span class="pre">set</span></a><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#iqm.iqm_client.models.Status" title="iqm.iqm_client.models.Status"><span class="pre">Status</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#iqm.iqm_client.models.Status.terminal_statuses" title="Link to this definition">#</a></dt>
+<dd><p>Statuses from which the execution can’t continue.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#set" title="(in Python v3.11)">set</a>[<a class="reference internal" href="#iqm.iqm_client.models.Status" title="iqm.iqm_client.models.Status"><em>Status</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -520,7 +627,22 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status"><code class="docutils literal notranslate"><span class="pre">Status</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.RECEIVED"><code class="docutils literal notranslate"><span class="pre">Status.RECEIVED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.ACCEPTED"><code class="docutils literal notranslate"><span class="pre">Status.ACCEPTED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.PENDING_COMPILATION"><code class="docutils literal notranslate"><span class="pre">Status.PENDING_COMPILATION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.PENDING_EXECUTION"><code class="docutils literal notranslate"><span class="pre">Status.PENDING_EXECUTION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.COMPILED"><code class="docutils literal notranslate"><span class="pre">Status.COMPILED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.READY"><code class="docutils literal notranslate"><span class="pre">Status.READY</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.FAILED"><code class="docutils literal notranslate"><span class="pre">Status.FAILED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.ABORTED"><code class="docutils literal notranslate"><span class="pre">Status.ABORTED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.PENDING_DELETION"><code class="docutils literal notranslate"><span class="pre">Status.PENDING_DELETION</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.DELETION_FAILED"><code class="docutils literal notranslate"><span class="pre">Status.DELETION_FAILED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.DELETED"><code class="docutils literal notranslate"><span class="pre">Status.DELETED</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.UNKNOWN"><code class="docutils literal notranslate"><span class="pre">Status.UNKNOWN</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Status.terminal_statuses"><code class="docutils literal notranslate"><span class="pre">Status.terminal_statuses()</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -554,7 +676,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-10.
+  Last updated on 2025-03-11.
   <br/>
 </p>
   </div>
