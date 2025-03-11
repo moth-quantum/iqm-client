@@ -21,6 +21,7 @@ jobs:
       - name: Install dependencies
         working-directory: ./docs
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
           apt-get update
           apt-get install -y graphviz
