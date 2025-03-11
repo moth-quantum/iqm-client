@@ -80,14 +80,12 @@ jobs:
           npm run build
 
       - name: Copy React build to public folder
-        working-directory: ./docs
         run: |
           mkdir -p public
           cp -r dist/* public/
           cp src/favicon.ico public/favicon.ico
 
       - name: Install rsync
-        working-directory: ./docs
         run: |
           apt-get update && apt-get install -y rsync
 
