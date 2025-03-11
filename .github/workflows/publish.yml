@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'docs/**'
+      - '*/**'
   schedule:
     - cron: "0 0 * * *"
 
@@ -68,9 +67,9 @@ jobs:
           cp search.json public/ || echo "No search index found"
 
       - name: Install Node.js
-        working-directory: ./docs
         uses: actions/setup-node@v4
         with:
+          working-directory: ./docs
           node-version: 18
 
       - name: Install and build React project
@@ -92,7 +91,7 @@ jobs:
           apt-get update && apt-get install -y rsync
 
       - name: Publish to gh-pages
-        working-directory: ./docs
         uses: JamesIves/github-pages-deploy-action@v4
         with:
+          working-directory: ./docs
           folder: public
