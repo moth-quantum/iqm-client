@@ -8,6 +8,8 @@ on:
       - 'docs/**'
   schedule:
     - cron: "0 0 * * *"
+  workflow_dispatch:
+    # Allow manual triggering
 
 env:
   PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla[qiskit,qir] iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
@@ -23,6 +25,7 @@ jobs:
       - name: Install dependencies
         working-directory: ./docs
         run: |
+          pip install --upgrade pip
           pip install -r requirements.txt
           apt-get update
           apt-get install -y graphviz
@@ -80,16 +83,18 @@ jobs:
           npm run build
 
       - name: Copy React build to public folder
+        working-directory: ./docs
         run: |
           mkdir -p public
           cp -r dist/* public/
           cp src/favicon.ico public/favicon.ico
 
       - name: Install rsync
+        working-directory: ./docs
         run: |
           apt-get update && apt-get install -y rsync
 
       - name: Publish to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: public
+          folder: docs/public

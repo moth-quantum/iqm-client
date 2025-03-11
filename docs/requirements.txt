@@ -9,4 +9,4 @@ sphinx-paramlinks
 sphinx-favicon==1.0.1
 sphinx-immaterial==0.11.11
 jupyter-sphinx==0.4.0
-beautifulsoup4==4.13.3
+beautifulsoup4==4.13.2
