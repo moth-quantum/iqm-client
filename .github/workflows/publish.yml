@@ -94,5 +94,4 @@ jobs:
       - name: Publish to gh-pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          working-directory: ./docs
           folder: public
