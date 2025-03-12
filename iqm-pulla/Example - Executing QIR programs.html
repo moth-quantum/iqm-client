@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Executing QIR programs &#8212; IQM Pulla 6.6 documentation</title>
+    <title>Executing QIR programs &#8212; IQM Pulla 6.7 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=13fd6e03"></script>
+    <script src="_static/documentation_options.js?v=a801ec1e"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="Example: Dynamical decoupling" href="Example%20-%20Simple%20Dynamical%20Decoupling.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="6.6" />
-    <meta name="docbuild:last-update" content="2025-03-11"/>
+  <meta name="docsearch:version" content="6.7" />
+    <meta name="docbuild:last-update" content="2025-03-12"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="IQM Pulla 6.6 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 6.6 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="IQM Pulla 6.7 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 6.7 documentation - Home"/>
   
   
 </a></div>
@@ -417,55 +417,59 @@
                   
   <section id="executing-qir-programs">
 <h1>Executing QIR programs<a class="headerlink" href="#executing-qir-programs" title="Link to this heading">#</a></h1>
-<p>If you have a QIR IR string or bitcode, you can start by creating Pulla-compatible circuits representation:</p>
+<p>If you have a QIR string or bitcode, you can start by creating Pulla-compatible circuits representation. You can also generate a QIR string or bitcode from a qiskit circuit using IQM’s fork of <code class="docutils literal notranslate"><span class="pre">qiskit_qir</span></code>, available as the package <code class="docutils literal notranslate"><span class="pre">iqm-qiskit-qir</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">visualization</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit.compiler</span><span class="w"> </span><span class="kn">import</span> <span class="n">transpile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">iqm.qiskit_iqm.iqm_transpilation</span><span class="w"> </span><span class="kn">import</span> <span class="n">optimize_single_qubit_gates</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.pulla</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pulla</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qiskit</span><span class="w"> </span><span class="kn">import</span> <span class="n">station_control_result_to_qiskit</span>
 <span class="kn">from</span><span class="w"> </span><span class="nn">iqm.pulla.utils_qir</span><span class="w"> </span><span class="kn">import</span> <span class="n">qir_to_pulla</span>
-
-<span class="n">station_control_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_STATION_CONTROL_URL&#39;</span><span class="p">]</span> <span class="c1"># or set the URL directly here</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">qiskit_qir</span><span class="w"> </span><span class="kn">import</span> <span class="n">to_qir_module</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># An example of a QIR program in a form of LLVM IR, it could also be bitcode bytes</span>
-<span class="n">ir</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
-<span class="s2">%Qubit = type opaque</span>
-<span class="s2">%Result = type opaque</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a Pulla object and a qiskit-iqm backend for accessing the quantum computer.</span>
+<span class="n">cocos_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_COCOS_URL&#39;</span><span class="p">]</span>                      <span class="c1"># or set the URL directly here</span>
+<span class="n">station_control_url</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">environ</span><span class="p">[</span><span class="s1">&#39;PULLA_STATION_CONTROL_URL&#39;</span><span class="p">]</span>  <span class="c1"># or set the URL directly here</span>
+<span class="n">p</span> <span class="o">=</span> <span class="n">Pulla</span><span class="p">(</span><span class="n">station_control_url</span><span class="p">)</span>
+<span class="n">provider</span> <span class="o">=</span> <span class="n">IQMProvider</span><span class="p">(</span><span class="n">cocos_url</span><span class="p">)</span>
+<span class="n">backend</span> <span class="o">=</span> <span class="n">provider</span><span class="o">.</span><span class="n">get_backend</span><span class="p">()</span>
+<span class="n">shots</span> <span class="o">=</span> <span class="mi">100</span>
+<span class="err">```</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Define a quantum circuit.</span>
+<span class="n">qc</span> <span class="o">=</span> <span class="n">QuantumCircuit</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">h</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">cx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">measure</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">qc</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">output</span><span class="o">=</span><span class="s1">&#39;mpl&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Transpile the circuit using Qiskit</span>
+<span class="n">qc_transpiled</span> <span class="o">=</span> <span class="n">transpile</span><span class="p">(</span><span class="n">qc</span><span class="p">,</span> <span class="n">backend</span><span class="o">=</span><span class="n">backend</span><span class="p">,</span> <span class="n">layout_method</span><span class="o">=</span><span class="s1">&#39;sabre&#39;</span><span class="p">,</span> <span class="n">optimization_level</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">qc_optimized</span> <span class="o">=</span> <span class="n">optimize_single_qubit_gates</span><span class="p">(</span><span class="n">qc_transpiled</span><span class="p">)</span>
 
-<span class="s2">@cstr.72303030303000 = private constant [7 x i8] c&quot;r00000</span><span class="se">\00</span><span class="s2">&quot;</span>
-
-<span class="s2">declare void @__quantum__qis__phased_rx__body(double, double, %Qubit*) local_unnamed_addr</span>
-
-<span class="s2">declare void @__quantum__rt__result_record_output(%Result*, i8*) local_unnamed_addr</span>
-
-<span class="s2">declare void @__quantum__qis__mz__body(%Qubit*, %Result* writeonly) local_unnamed_addr #0</span>
-
-<span class="s2">define void @__nvqpp__mlirgen__adonis_ghz() local_unnamed_addr #1 {</span>
-<span class="s2">&quot;0&quot;:</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x3FF921FB54442D18, double 0x3FF921FB54442D18, %Qubit* null)</span>
-<span class="s2">  tail call void @__quantum__qis__phased_rx__body(double 0x400921FB54442D18, double 0.000000e+00, %Qubit* null)</span>
-<span class="s2">  tail call void @__quantum__qis__mz__body(%Qubit* null, %Result* writeonly null)</span>
-<span class="s2">  tail call void @__quantum__rt__result_record_output(%Result* null, i8* nonnull getelementptr inbounds ([7 x i8], [7 x i8]* @cstr.72303030303000, i64 0, i64 0))</span>
-<span class="s2">  ret void</span>
-<span class="s2">}</span>
-
-<span class="s2">attributes #0 = { &quot;irreversible&quot; }</span>
-<span class="s2">attributes #1 = { &quot;entry_point&quot; &quot;output_labeling_schema&quot;=&quot;schema_id&quot; &quot;output_names&quot;=&quot;[[[0,[0,</span><span class="se">\22</span><span class="s2">r00000</span><span class="se">\22</span><span class="s2">]]]]&quot; &quot;qir_profiles&quot;=&quot;base_profile&quot; &quot;requiredQubits&quot;=&quot;1&quot; &quot;requiredResults&quot;=&quot;1&quot; }</span>
-
-<span class="s2">!llvm.module.flags = !{!0, !1, !2, !3, !4}</span>
-
-<span class="s2">!0 = !{i32 2, !&quot;Debug Info Version&quot;, i32 3}</span>
-<span class="s2">!1 = !{i32 1, !&quot;qir_major_version&quot;, i32 1}</span>
-<span class="s2">!2 = !{i32 7, !&quot;qir_minor_version&quot;, i32 0}</span>
-<span class="s2">!3 = !{i32 1, !&quot;dynamic_qubit_management&quot;, i1 false}</span>
-<span class="s2">!4 = !{i32 1, !&quot;dynamic_result_management&quot;, i1 false}</span>
-<span class="s2">&quot;&quot;&quot;</span>
+<span class="c1">#Generate the QIR</span>
+<span class="n">module</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">to_qir_module</span><span class="p">(</span><span class="n">circuit</span><span class="p">)</span>
+<span class="n">qir</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">module</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -475,7 +479,7 @@
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">Pulla</span><span class="p">(</span><span class="n">station_control_url</span><span class="p">)</span>
-<span class="n">circuits</span><span class="p">,</span> <span class="n">compiler</span> <span class="o">=</span> <span class="n">qir_to_pulla</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">ir</span><span class="p">)</span>
+<span class="n">circuits</span><span class="p">,</span> <span class="n">compiler</span> <span class="o">=</span> <span class="n">qir_to_pulla</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">qir</span><span class="p">)</span>
 
 <span class="n">playlist</span><span class="p">,</span> <span class="n">context</span> <span class="o">=</span> <span class="n">compiler</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">circuits</span><span class="p">)</span>
 
@@ -595,7 +599,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-11.
+  Last updated on 2025-03-12.
   <br/>
 </p>
   </div>
