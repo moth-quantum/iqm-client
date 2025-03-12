@@ -16,6 +16,7 @@
 from __future__ import annotations
 
 import logging
+import warnings
 
 from pyqir import (
     Call,
@@ -184,8 +185,7 @@ def qir_to_pulla(pulla: Pulla, qir: str | bytes) -> tuple[list[CPC_Circuit], Com
             qir_logger.info("Required number of results: %s", _required_num_results)
 
     if _qir_profiles not in ["base_profile", "basic_qir"]:
-        qir_logger.error("Unsupported QIR profiles: %s", _qir_profiles)
-        raise ValueError(f"Unsupported QIR profiles: {_qir_profiles}")
+        warnings.warn(f"{_qir_profiles} may not be a supported QIR profile")
 
     if not _required_num_qubits or _required_num_qubits == 0:
         err_msg = "QIR program must specify the number of qubits required"
