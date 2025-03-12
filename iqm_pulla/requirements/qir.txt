@@ -1,4 +1,5 @@
 iqm-exa-common>=26,<27
 iqm-station-control-client>=3,<4
 iqm-pulse>=8,<9
-pyqir == 0.10.6
+iqm-pyqir==0.12.0
+iqm-qiskit-qir==0.8.0

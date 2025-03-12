@@ -2,6 +2,15 @@
 Changelog
 =========
 
+Version 6.7 (2025-03-11)
+========================
+
+Bugfix
+--------
+
+- Only raise a warning when a custom QIR-profile is submitted, such that qiskit circuits
+can be converted to QIR and submitted to our devices. :issue:`SW-1005`
+
 Version 6.6 (2025-03-10)
 ========================
 
