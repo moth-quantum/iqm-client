@@ -2,6 +2,16 @@
 Changelog
 =========
 
+Version 8.2 (2025-03-13)
+========================
+
+Features
+-------
+
+- added 'Constant_PRX_with_smooth_rise_fall' and 'RZ_ACStarkShift_smoothConstant' pulses, which create a 3-pulse
+schedule, consisting of rise, constant, and fall pulses. These pulses can have arbitrarily long duration, not limited
+by the electronics memory.
+
 Version 8.1 (2025-02-28)
 ========================
 

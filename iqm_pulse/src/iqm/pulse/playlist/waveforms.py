@@ -439,3 +439,34 @@ class ModulatedCosineRiseFall(Waveform):
     @staticmethod
     def non_timelike_attributes() -> dict[str, str]:
         return {"modulation_frequency": "Hz", "phase": "rad"}
+
+
+@dataclass(frozen=True)
+class CosineRise(Waveform):
+    r"""Cosine Rise waveform.
+
+    This waveform assumes that during its duration, the only thing happening is signal occurring to the required
+    amplitude.
+    The waveform is made for pairing with 'Constant' waveform to enable arbitrarily long pulses with smooth rise part.
+    The rise time is equal to pulse duration.
+
+    Args:
+        rise_time: Dummy parameter, used only as due to a bug. FIXME it is not used, placed for resolving exa bug
+
+    """
+
+    def _sample(self, sample_coords: np.ndarray) -> np.ndarray:
+        return 0.5 + 0.5 * np.sin(np.pi * sample_coords)
+
+
+@dataclass(frozen=True)
+class CosineFall(Waveform):
+    r"""Cosine Rise waveform.
+
+    This waveform assumes that during its duration, the only thing occurring is signal falling to 0.
+    The waveform is made for pairing with 'Constant' waveform to enable arbitrarily long pulses with smooth fall part.
+    The fall time is equal to pulse duration.
+    """
+
+    def _sample(self, sample_coords: np.ndarray) -> np.ndarray:
+        return 0.5 - 0.5 * np.sin(np.pi * sample_coords)

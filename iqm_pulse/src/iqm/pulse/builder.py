@@ -1308,7 +1308,7 @@ class ScheduleBuilder:
         }
 
         pl = Playlist()
-        mapped_instructions: dict[int, Any] = {}
+        mapped_instructions: dict[int | Instruction, Any] = {}
         # add the schedules in the playlist
         # NOTE that there is no implicit right-alignment or equal duration for schedules, unlike in old-style playlists!
         for schedule in schedules:
@@ -1322,10 +1322,16 @@ class ScheduleBuilder:
                 pl.add_channel(channel)
                 for instruction in segment:
                     try:
-                        instr_id = hash(instruction)
+                        # Check if it can be used as a dictionary key, and use it if possible.
+                        # 2 dataclasses can have the same hash if their fields are identical. We must distinguish
+                        # between different Waveform classes which may have identical fields,
+                        # so we use the instruction itself as a key, so that the class is checked too.
+                        instr_id = instruction
+                        is_mapped = instr_id in mapped_instructions
                     except TypeError:
-                        instr_id = instruction.id  # waveforms may have non-hashable fields
-                    if instr_id in mapped_instructions:
+                        instr_id = instruction.id
+                        is_mapped = instr_id in mapped_instructions
+                    if is_mapped:
                         sc_schedule.add_to_segment(channel, mapped_instructions[instr_id])
                     else:
                         mapped = _map_instruction(instruction)

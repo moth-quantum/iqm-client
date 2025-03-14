@@ -50,6 +50,7 @@ from iqm.pulse.gates.delay import Delay
 from iqm.pulse.gates.measure import Measure_Constant
 from iqm.pulse.gates.move import MOVE_CRF_CRF, MOVE_TGSS_CRF
 from iqm.pulse.gates.prx import (
+    Constant_PRX_with_smooth_rise_fall,
     PRX_DRAGCosineRiseFall,
     PRX_DRAGCosineRiseFallSX,
     PRX_DRAGGaussian,
@@ -57,7 +58,12 @@ from iqm.pulse.gates.prx import (
     get_unitary_prx,
 )
 from iqm.pulse.gates.reset import Reset_Conditional, Reset_Wait
-from iqm.pulse.gates.rz import RZ_ACStarkShift_CosineRiseFall, RZ_Virtual, get_unitary_rz
+from iqm.pulse.gates.rz import (
+    RZ_ACStarkShift_CosineRiseFall,
+    RZ_ACStarkShift_smoothConstant,
+    RZ_Virtual,
+    get_unitary_rz,
+)
 from iqm.pulse.gates.sx import SXGate
 from iqm.pulse.gates.u import UGate, get_unitary_u
 from iqm.pulse.quantum_ops import QuantumOp, QuantumOpTable
@@ -66,6 +72,7 @@ _exposed_implementations: dict[str, type[GateImplementation]] = {
     cls.__name__: cls  # type: ignore[misc]
     for cls in (
         Barrier,
+        Constant_PRX_with_smooth_rise_fall,
         PRX_DRAGGaussian,
         PRX_DRAGCosineRiseFall,
         PRX_DRAGGaussianSX,
@@ -86,6 +93,7 @@ _exposed_implementations: dict[str, type[GateImplementation]] = {
         MOVE_CRF_CRF,
         MOVE_TGSS_CRF,
         RZ_ACStarkShift_CosineRiseFall,
+        RZ_ACStarkShift_smoothConstant,
         CCPRX_Composite,
         CCPRX_Composite_DRAGCosineRiseFall,
         CCPRX_Composite_DRAGGaussian,

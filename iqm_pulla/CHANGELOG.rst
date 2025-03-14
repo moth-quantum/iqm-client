@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 6.8 (2025-03-12)
+========================
+
+Bugfix
+--------
+
+- Small issue where extra characters were left in the notebook from SW-1005. :issue:`SW-1005`
+
 Version 6.7 (2025-03-11)
 ========================
 

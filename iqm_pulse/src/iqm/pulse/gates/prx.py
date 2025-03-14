@@ -26,6 +26,7 @@ It rotates the qubit state around an axis that lies in the XY plane of the Bloch
 
 from __future__ import annotations
 
+import copy
 from functools import lru_cache
 from typing import TYPE_CHECKING
 
@@ -39,11 +40,12 @@ from iqm.pulse.gate_implementation import (
     Locus,
     OILCalibrationData,
     SinglePulseGate,
+    get_waveform_parameters,
 )
 from iqm.pulse.gates.enums import XYGate
 from iqm.pulse.playlist.instructions import Block, IQPulse
 from iqm.pulse.playlist.schedule import TOLERANCE, Schedule
-from iqm.pulse.playlist.waveforms import CosineRiseFall, TruncatedGaussian
+from iqm.pulse.playlist.waveforms import Constant, CosineFall, CosineRise, CosineRiseFall, TruncatedGaussian, Waveform
 from iqm.pulse.playlist.waveforms import CosineRiseFallDerivative as CosineRiseFallD
 from iqm.pulse.playlist.waveforms import TruncatedGaussianDerivative as TruncatedGaussianD
 from iqm.pulse.utils import normalize_angle, phase_transformation
@@ -403,3 +405,171 @@ def _normalize_params(angle: float, phase: float) -> tuple[float, float]:
         angle = -angle
         phase += half_turn
     return angle / half_turn, normalize_angle(phase)
+
+
+class ABC_Constant_smooth(PRX_GateImplementation):
+    r"""ABC class for creating gates with an arbitrarily long Constant pulses with smooth rise and fall.
+    This pulse creates a :'Segment' consisting of three instructions : [rise_waveform, main_waveform, fall_waveform].
+    This class is created so that one can use middle waveform as a constant, thus enabling to use arbitrarily
+    long pulses, not limited by the awg memory.
+
+    Attributes::
+        main_waveform: The middle part of the pulse, which should (but doesn't have to) be a Constant waveform
+        rise_waveform: rise part of the pulse
+        fall_waveform: fall part of the pulse
+        channel: Name of the drive channel on which the AC Stark pulse is played.
+
+    """
+
+    main_waveform: type[Waveform]
+    rise_waveform: type[Waveform]
+    fall_waveform: type[Waveform]
+
+    def __init__(
+        self,
+        parent: QuantumOp,
+        name: str,
+        locus: Locus,
+        calibration_data: OILCalibrationData,
+        builder: ScheduleBuilder,
+    ):
+        """Constructs an instance of the AC Stark pulse for the given locus."""
+        super().__init__(parent, name, locus, calibration_data, builder)
+        drive_channel = builder.get_drive_channel(locus[0])
+
+        params = self.convert_calibration_data(calibration_data, self.parameters, builder.channels[drive_channel])
+
+        params_for_stark = copy.deepcopy(params)
+        params_for_risefall = copy.deepcopy(params)
+
+        params_for_stark["n_samples"] = max(
+            int(params_for_stark["n_samples"] * (1 - 2 * params_for_stark["rise_time"])), 0
+        )
+        self.main_waveform = self._main_pulse(**params_for_stark)
+
+        params_for_risefall["n_samples"] = int(params_for_risefall["n_samples"] * params_for_risefall["rise_time"])
+
+        self.fall_waveform = self._fall_pulse(**params_for_risefall)
+        self.rise_waveform = self._rise_pulse(**params_for_risefall)
+
+        self.channel = drive_channel
+        self.special_implementation = True  # DEBUG
+
+    def __init_subclass__(
+        cls,
+        /,  # TODO likely a bad way of doing things, fix
+        fall_waveform: type[Waveform],
+        rise_waveform: type[Waveform],
+        main_waveform: type[Waveform],
+    ):
+        """Store the Waveform types used by this subclass, and their parameters."""
+        cls.main_waveform = main_waveform
+        cls.rise_waveform = rise_waveform
+        cls.fall_waveform = fall_waveform
+
+        cls.symmetric = True
+        parameters = get_waveform_parameters(main_waveform)
+        parameters["amplitude_i"] = Parameter("", "amplitude_i", "")
+        parameters["amplitude_q"] = Parameter("", "amplitude_q", "")
+
+        parameters["rise_time"] = Parameter("", "gate rise time", "s")
+
+        cls.parameters = {
+            "duration": Parameter("", "Gate duration", "s"),
+        } | parameters
+
+    def _call(self, angle: float, phase: float = 0.0) -> TimeBox:
+        scale, new_phase = _normalize_params(angle, phase)
+
+        pulse_rise = self.rise_waveform.copy(
+            scale_i=scale * self.rise_waveform.scale_i,
+            scale_q=scale * self.rise_waveform.scale_q,
+            phase=self.rise_waveform.phase + new_phase,
+        )
+        pulse_fall = self.fall_waveform.copy(
+            scale_i=scale * self.fall_waveform.scale_i,
+            scale_q=scale * self.fall_waveform.scale_q,
+            phase=self.fall_waveform.phase + new_phase,
+        )
+        stark_pulse = self.main_waveform.copy(
+            scale_i=scale * self.main_waveform.scale_i,
+            scale_q=scale * self.main_waveform.scale_q,
+            phase=self.main_waveform.phase + new_phase,
+        )
+
+        return self.to_timebox(
+            Schedule(
+                {self.channel: [pulse_rise, stark_pulse, pulse_fall]},
+            )
+        )
+
+    @classmethod
+    def _main_pulse(
+        cls,
+        *,
+        n_samples: int,
+        amplitude_i: float,
+        amplitude_q: float,
+        phase: float = 0.0,
+        **kwargs,
+    ) -> IQPulse:
+        """Returns the main part pulse. Waveform is the same for both I and Q channels"""
+        wave = cls.main_waveform(n_samples=n_samples)
+
+        return IQPulse(
+            n_samples,
+            wave_i=wave,
+            wave_q=wave,
+            scale_i=amplitude_i,
+            scale_q=amplitude_q,
+        )
+
+    @classmethod
+    def _rise_pulse(
+        cls,
+        *,
+        n_samples: int,
+        amplitude_i: float,
+        amplitude_q: float,
+        **kwargs,
+    ) -> IQPulse:
+        """Returns a rise pulse."""
+        wave_i = cls.rise_waveform(n_samples=n_samples)
+        wave_q = cls.rise_waveform(n_samples=n_samples)
+
+        return IQPulse(
+            n_samples,
+            wave_i=wave_i,
+            wave_q=wave_q,
+            scale_i=amplitude_i,
+            scale_q=amplitude_q,
+        )
+
+    @classmethod
+    def _fall_pulse(
+        cls,
+        *,
+        n_samples: int,
+        amplitude_i: float,
+        amplitude_q: float,
+        **kwargs,
+    ) -> IQPulse:
+        """Returns a fall pulse"""
+        return IQPulse(
+            n_samples,
+            wave_i=cls.fall_waveform(n_samples=n_samples),
+            wave_q=cls.fall_waveform(n_samples=n_samples),
+            scale_i=amplitude_i,
+            scale_q=amplitude_q,
+        )
+
+
+class Constant_PRX_with_smooth_rise_fall(
+    ABC_Constant_smooth,
+    rise_waveform=CosineRise,
+    main_waveform=Constant,
+    fall_waveform=CosineFall,
+):
+    """Constant PRX pulse with cosine rise and fall padding.
+    Implemented as a 3-instruction Schedule.
+    """
