@@ -37,9 +37,10 @@ from iqm.pulse.gate_implementation import (
     OILCalibrationData,
     get_waveform_parameters,
 )
+from iqm.pulse.gates.prx import Constant_PRX_with_smooth_rise_fall
 from iqm.pulse.playlist.instructions import IQPulse, VirtualRZ
 from iqm.pulse.playlist.schedule import Schedule
-from iqm.pulse.playlist.waveforms import ModulatedCosineRiseFall
+from iqm.pulse.playlist.waveforms import Constant, CosineFall, CosineRise, ModulatedCosineRiseFall
 from iqm.pulse.utils import normalize_angle, phase_transformation
 
 if TYPE_CHECKING:  # pragma: no cover
@@ -230,3 +231,17 @@ class RZ_ACStarkShift(GateImplementation):
 
 class RZ_ACStarkShift_CosineRiseFall(RZ_ACStarkShift, ac_stark_waveform=ModulatedCosineRiseFall):
     """AC stark pulse implemented as a modulated cosine rise fall pulse."""
+
+
+class RZ_ACStarkShift_smoothConstant(
+    Constant_PRX_with_smooth_rise_fall,
+    rise_waveform=CosineRise,
+    main_waveform=Constant,
+    fall_waveform=CosineFall,
+):
+    """Constant AC stark pulse with cosine rise and fall padding.
+    Implemented as a 3-instruction Schedule.
+    """
+
+    def __call__(self):
+        return super().__call__(angle=np.pi)
