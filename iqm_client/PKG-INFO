@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: iqm-client
-Version: 22.8
+Version: 22.9
 Summary: Client library for accessing an IQM quantum computer
 Author-email: IQM Finland Oy <developers@meetiqm.com>
 License:                                  Apache License
@@ -212,7 +212,7 @@ Classifier: Programming Language :: Python :: 3 :: Only
 Classifier: Topic :: Scientific/Engineering :: Physics
 Classifier: Intended Audience :: Science/Research
 Classifier: License :: OSI Approved :: Apache Software License
-Requires-Python: <3.13,>=3.11
+Requires-Python: <3.13,>=3.10
 Description-Content-Type: text/x-rst
 License-File: LICENSE.txt
 License-File: AUTHORS.rst

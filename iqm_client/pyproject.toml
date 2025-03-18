@@ -9,7 +9,7 @@ description = "Client library for accessing an IQM quantum computer"
 dynamic = [ "version", "dependencies",]
 name = "iqm-client"
 readme = "README.rst"
-requires-python = ">=3.11, <3.13"
+requires-python = ">=3.10, <3.13"
 [[project.authors]]
 name = "IQM Finland Oy"
 email = "developers@meetiqm.com"
