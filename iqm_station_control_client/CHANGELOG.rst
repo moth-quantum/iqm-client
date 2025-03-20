@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 3.8 (2025-03-19)
+========================
+
+Bug fixes
+---------
+
+- Update dependency on exa-common
+
 Version 3.7 (2025-03-11)
 ========================
 

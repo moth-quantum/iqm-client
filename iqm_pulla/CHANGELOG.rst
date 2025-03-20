@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 6.9 (2025-03-19)
+========================
+
+Bug fixes
+---------
+
+- Update dependency on station-control-client
+
 Version 6.8 (2025-03-12)
 ========================
 

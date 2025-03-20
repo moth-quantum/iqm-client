@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 8.3 (2025-03-19)
+========================
+
+Bug fixes
+---------
+
+- Update dependency on exa-common
+
 Version 8.2 (2025-03-13)
 ========================
 
