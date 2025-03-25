@@ -12,6 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 """Waveform definitions."""
+
 # pylint: disable=no-name-in-module
 from __future__ import annotations
 
@@ -111,7 +112,7 @@ _CANONICAL_WAVEFORMS: set[type[CanonicalWaveform]] = set()
 ``register_canonical_waveform`` to make a Waveform canonical."""
 
 
-def register_canonical_waveform(cls: type[Waveform]) -> None:
+def register_canonical_waveform(cls: type[Waveform]) -> type:
     """Decorator for making a Waveform into a canonical waveform."""
     _CANONICAL_WAVEFORMS.add(cls)
     return cls

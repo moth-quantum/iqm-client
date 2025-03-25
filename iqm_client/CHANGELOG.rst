@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 22.10 (2025-03-24)
+==========================
+
+Features
+--------
+
+- Add ``qiskit_iqm`` to ``iqm-client`` distribution package as an optional feature. :issue:`SW-1146`
+
 Version 22.9 (2025-03-17)
 =========================
 

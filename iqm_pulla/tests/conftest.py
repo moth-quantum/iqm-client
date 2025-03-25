@@ -52,9 +52,9 @@ def chip_topology() -> ChipTopology:
 
 
 @pytest.fixture(scope="module")
-def chip_topology_ndonis() -> ChipTopology:
-    """ChipTopology for NDonis variant, constructed from chip design record."""
-    path = RESOURCES / "chip_design_record_ndonis.json"
+def chip_topology_star() -> ChipTopology:
+    """ChipTopology for Star variant, constructed from chip design record."""
+    path = RESOURCES / "chip_design_record_star.json"
     with open(path, mode="r", encoding="utf-8") as f:
         record = json.load(f)
     return ChipTopology.from_chip_design_record(record)
@@ -173,7 +173,7 @@ def qiskit_backend_spark(monkeypatch) -> IQMBackend:
 def pulla_backend_spark(pulla_on_spark) -> IQMPullaBackend:
     compiler = pulla_on_spark.get_standard_compiler()
     architecture = QuantumArchitectureSpecification(
-        name="Adonis",
+        name="crystal_5",
         operations={
             "prx": [["QB1"], ["QB2"], ["QB3"], ["QB4"], ["QB5"]],
             "cc_prx": [["QB1"], ["QB2"], ["QB3"], ["QB4"], ["QB5"]],

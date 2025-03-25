@@ -2,4 +2,4 @@ iqm-exa-common>=26,<27
 iqm-station-control-client>=3,<4
 iqm-pulse>=8,<9
 iqm-client>=22,<23
-qiskit-iqm >= 17.5, < 18
+iqm-client[qiskit]>=22,<23

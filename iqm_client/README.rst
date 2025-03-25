@@ -3,13 +3,31 @@ IQM Client
 
 Client-side Python library for connecting to an `IQM <https://meetiqm.com/>`_ quantum computer.
 
+Includes as an optional feature a `Qiskit <https://qiskit.org/>`_ adapter for `IQM's <https://www.meetiqm.com>`_
+quantum computers, which allows you to:
+
+* Transpile arbitrary quantum circuits for IQM quantum architectures
+* Simulate execution with an IQM-specific noise model
+* Run quantum circuits on an IQM quantum computer
+
 Installation
 ============
 
-IQM client is not intended to be used directly by human users. For executing code on an IQM quantum computer,
-you can use for example the `Qiskit on IQM <https://iqm-finland.github.io/qiskit-on-iqm/>`_ library.
+For executing code on an IQM quantum computer, you can use for example
+`Qiskit on IQM <https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html>`_, which can be installed as an optional
+feature of IQM Client from the Python Package Index (PyPI), e.g.:
 
-If you want just this library, though, you can install it from the Python Package Index (PyPI), e.g.:
+.. code-block:: bash
+
+    $ uv pip install iqm-client[qiskit]
+
+.. note::
+
+    If you have previously installed the (now deprecated) ``qiskit-iqm`` package in your Python environment,
+    you should first uninstall it with ``$ pip uninstall qiskit-iqm``.
+
+IQM Client by itself is not intended to be used directly by human users. If you want just the base IQM Client library,
+though, you can install it with
 
 .. code-block:: bash
 
@@ -28,11 +46,12 @@ and running the docs builder. For versions 20.12 and later this is done by runni
 ``iqm-client`` root directory, and for earlier versions by running ``tox run -e docs``.
 
 ``./docbuild`` or ``tox run -e docs`` will build the documentation at ``./build/sphinx/html``.
-This command requires the ``sphinx`` and ``sphinx-book-theme`` Python packages.
+These commands require installing the ``sphinx`` and ``sphinx-book-theme`` Python packages and
+`graphviz <https://graphviz.org/>`_.
 
 Copyright
 =========
 
-IQM client is free software, released under the Apache License, version 2.0.
+IQM Client is free software, released under the Apache License, version 2.0.
 
-Copyright 2021-2025 IQM client developers.
+Copyright 2021-2025 IQM Client developers.

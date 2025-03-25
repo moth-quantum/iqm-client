@@ -23,8 +23,8 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://gitlab.iqm.fi/iqm/qccsw/iqm-data-definitions"
-Documentation = "https://gitlab.iqm.fi/iqm/qccsw/iqm-data-definitions"
+Homepage = "https://pypi.org/project/iqm-data-definitions/"
+Documentation = "https://iqm-finland.github.io/docs/"
 
 [project.optional-dependencies]
 testing = [

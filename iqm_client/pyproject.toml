@@ -6,7 +6,7 @@ requires = [ "setuptools", "setuptools_scm[toml]",]
 [project]
 classifiers = [ "Development Status :: 4 - Beta", "Programming Language :: Python :: 3 :: Only", "Topic :: Scientific/Engineering :: Physics", "Intended Audience :: Science/Research", "License :: OSI Approved :: Apache Software License",]
 description = "Client library for accessing an IQM quantum computer"
-dynamic = [ "version", "dependencies",]
+dynamic = [ "version", "dependencies", "optional-dependencies",]
 name = "iqm-client"
 readme = "README.rst"
 requires-python = ">=3.10, <3.13"
@@ -28,6 +28,23 @@ line-length = 120
 
 [tool.setuptools_scm]
 fallback_version = "0.1"
+
+[project.entry-points."qiskit.transpiler.scheduling"]
+iqm_default_scheduling = "iqm.qiskit_iqm:IQMDefaultSchedulingPlugin"
+move_routing = "iqm.qiskit_iqm:MoveGateRoutingPlugin"
+move_routing_exact_global_phase = "iqm.qiskit_iqm:MoveGateRoutingWithExactRZPlugin"
+move_routing_keep = "iqm.qiskit_iqm:MoveGateRoutingKeepExistingMovesPlugin"
+move_routing_remove = "iqm.qiskit_iqm:MoveGateRoutingRemoveExistingMovesPlugin"
+move_routing_rz_optimization_ignores_barriers = "iqm.qiskit_iqm:MoveGateRoutingWithRZOptimizationIgnoreBarriersPlugin"
+move_routing_trust = "iqm.qiskit_iqm:MoveGateRoutingTrustExistingMovesPlugin"
+only_move_routing = "iqm.qiskit_iqm:MoveGateRoutingOnlyPlugin"
+only_move_routing_keep = "iqm.qiskit_iqm:MoveGateRoutingOnlyKeepExistingMovesPlugin"
+only_move_routing_remove = "iqm.qiskit_iqm:MoveGateRoutingOnlyRemoveExistingMovesPlugin"
+only_move_routing_trust = "iqm.qiskit_iqm:MoveGateRoutingOnlyTrustExistingMovesPlugin"
+only_rz_optimization = "iqm.qiskit_iqm:OnlyRZOptimizationPlugin"
+only_rz_optimization_exact_global_phase = "iqm.qiskit_iqm:OnlyRZOptimizationExactPlugin"
+only_rz_optimization_exact_global_phase_ignore_barriers = "iqm.qiskit_iqm:OnlyRZOptimizationExactIgnoreBarriersPlugin"
+only_rz_optimization_ignore_barriers = "iqm.qiskit_iqm:OnlyRZOptimizationIgnoreBarriersPlugin"
 
 [tool.coverage.paths]
 source = [ "src/", "*/site-packages/",]
@@ -70,3 +87,6 @@ max-statements = 60
 
 [tool.setuptools.dynamic.dependencies]
 file = "requirements/base.txt"
+
+[tool.setuptools.dynamic.optional-dependencies.qiskit]
+file = "requirements/qiskit.txt"

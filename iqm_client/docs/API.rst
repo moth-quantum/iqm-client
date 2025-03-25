@@ -7,3 +7,4 @@ API Reference
    :recursive:
 
    iqm.iqm_client
+   iqm.qiskit_iqm

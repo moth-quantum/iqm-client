@@ -154,6 +154,11 @@ mathjax3_config = {
 python_version = ".".join(map(str, sys.version_info[0:2]))
 intersphinx_mapping = {
     "python": ("https://docs.python.org/" + python_version, None),
+    "sphinx": ("https://www.sphinx-doc.org/en/master", None),
+    "matplotlib": ("https://matplotlib.org/stable", None),
+    "numpy": ("https://numpy.org/doc/stable", None),
+    "scipy": ("https://docs.scipy.org/doc/scipy", None),
+    "qiskit": ("https://docs.quantum.ibm.com/api/qiskit", None),
 }
 
 use_local_target = os.getenv("USE_LOCAL_TARGET", "").lower()
