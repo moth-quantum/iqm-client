@@ -22,13 +22,13 @@ const AppSwitcher: React.FC = () => {
                     className="title-image cursor-pointer"
                     alt="IQM Docs Application Switcher"
                     src={LogoSwitcher}
-                    height={50}
-                    width={176}
-                    style={{ maxWidth: "fit-content", height: "50px", width: "176px" }}
+                    height={42}
+                    width={222}
+                    style={{ height: "42px", width: "222px" }}
                 />
             </button>
             {switcherOpen && (
-                <div className="absolute mt-[12em] bg-white w-44 rounded-lg p-1 pt-1 z-50">
+                <div className="absolute mt-[14em] ml-[0.5em] bg-white w-[208px] rounded-lg p-1 pt-1 z-50 border border-gray-300">
                     <div>
                         <a href="/" aria-label="IQM Docs" target="_blank">
                             <img
@@ -36,7 +36,7 @@ const AppSwitcher: React.FC = () => {
                                 alt="IQM Academy"
                                 src={LogoDocs}
                                 height={40}
-                                width={176}
+                                width={200}
                             />
                         </a>
                     </div>
@@ -47,7 +47,7 @@ const AppSwitcher: React.FC = () => {
                                 alt="IQM Academy"
                                 src={LogoAcademy}
                                 height={40}
-                                width={176}
+                                width={200}
                             />
                         </a>
                     </div>
@@ -63,7 +63,7 @@ const AppSwitcher: React.FC = () => {
                                 alt="IQM Resonance"
                                 src={LogoResonance}
                                 height={40}
-                                width={176}
+                                width={200}
                             />
                         </a>
                     </div>
@@ -79,7 +79,7 @@ const AppSwitcher: React.FC = () => {
                                 alt="IQM Support"
                                 src={LogoSupport}
                                 height={40}
-                                width={176}
+                                width={200}
                             />
                         </a>
                     </div>
