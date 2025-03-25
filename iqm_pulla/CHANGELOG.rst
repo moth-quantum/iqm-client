@@ -2,6 +2,22 @@
 Changelog
 =========
 
+Version 6.11 (2025-03-24)
+=========================
+
+Features
+--------
+
+* Update dependencies, no functional changes.
+
+Version 6.10 (2025-03-21)
+=========================
+
+Features
+--------
+
+- Bump dependencies.
+
 Version 6.9 (2025-03-19)
 ========================
 

@@ -16,6 +16,28 @@ import typing
 DESCRIPTOR: google.protobuf.descriptor.FileDescriptor
 
 @typing.final
+class NumcodecsConfig(google.protobuf.message.Message):
+    """Describes a numcodec codec:
+    https://numcodecs.readthedocs.io/en/stable/abc.html
+    """
+
+    DESCRIPTOR: google.protobuf.descriptor.Descriptor
+
+    CONFIG_JSON_FIELD_NUMBER: builtins.int
+    config_json: builtins.str
+    """more elegant formats go here, eventually"""
+    def __init__(
+        self,
+        *,
+        config_json: builtins.str = ...,
+    ) -> None: ...
+    def HasField(self, field_name: typing.Literal["config", b"config", "config_json", b"config_json"]) -> builtins.bool: ...
+    def ClearField(self, field_name: typing.Literal["config", b"config", "config_json", b"config_json"]) -> None: ...
+    def WhichOneof(self, oneof_group: typing.Literal["config", b"config"]) -> typing.Literal["config_json"] | None: ...
+
+global___NumcodecsConfig = NumcodecsConfig
+
+@typing.final
 class NpyArray(google.protobuf.message.Message):
     """A numeric array as raw bytes buffer, with "array header" to
     identify the data type; analogous to numpy's own '.npy' format (see numpy.lib.format).
@@ -26,6 +48,7 @@ class NpyArray(google.protobuf.message.Message):
     SHAPE_FIELD_NUMBER: builtins.int
     DTYPE_STR_FIELD_NUMBER: builtins.int
     FORTRAN_ORDER_FIELD_NUMBER: builtins.int
+    ENCODE_NUMCODECS_FIELD_NUMBER: builtins.int
     ARRAY_BYTES_FIELD_NUMBER: builtins.int
     dtype_str: builtins.str
     """encodes dtype, as np.dtype.str. cf. numpy.lib.dtype_to_descr.
@@ -34,11 +57,20 @@ class NpyArray(google.protobuf.message.Message):
     fortran_order: builtins.bool
     """whether array_bytes is serialized in Fortran order."""
     array_bytes: builtins.bytes
-    """raw array buffer in memory"""
+    """contents of array buffer in memory, encoded as described by `encode_numcodecs`."""
     @property
     def shape(self) -> google.protobuf.internal.containers.RepeatedScalarFieldContainer[builtins.int]:
         """np.ndarray.shape; it is permissible to elide a leading shape[0] > 1,
         which will be implied by length(array_bytes)
+        """
+
+    @property
+    def encode_numcodecs(self) -> google.protobuf.internal.containers.RepeatedCompositeFieldContainer[global___NumcodecsConfig]:
+        """Sequence of numcodecs [1] Codecs configuration JSON used to encode array_bytes.
+        Order is that in which codecs were applied to encode; for decoding, use codecs in reverse order.
+        (Empty list indicates `array_bytes` are the unencoded array buffer.)
+
+        [1] https://numcodecs.readthedocs.io/en/stable/abc.html
         """
 
     def __init__(
@@ -47,9 +79,10 @@ class NpyArray(google.protobuf.message.Message):
         shape: collections.abc.Iterable[builtins.int] | None = ...,
         dtype_str: builtins.str = ...,
         fortran_order: builtins.bool = ...,
+        encode_numcodecs: collections.abc.Iterable[global___NumcodecsConfig] | None = ...,
         array_bytes: builtins.bytes = ...,
     ) -> None: ...
-    def ClearField(self, field_name: typing.Literal["array_bytes", b"array_bytes", "dtype_str", b"dtype_str", "fortran_order", b"fortran_order", "shape", b"shape"]) -> None: ...
+    def ClearField(self, field_name: typing.Literal["array_bytes", b"array_bytes", "dtype_str", b"dtype_str", "encode_numcodecs", b"encode_numcodecs", "fortran_order", b"fortran_order", "shape", b"shape"]) -> None: ...
 
 global___NpyArray = NpyArray
 

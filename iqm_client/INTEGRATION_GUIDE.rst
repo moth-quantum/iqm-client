@@ -4,8 +4,7 @@ Integration Guide
 
 IQM client is designed to be the Python adapter to IQM's quantum computers for application-level
 quantum computing frameworks.  For example integrations maintained by IQM, please refer to the
-`Qiskit <https://github.com/iqm-finland/qiskit-on-iqm>`_ and
-`Cirq <https://github.com/iqm-finland/cirq-on-iqm>`_ packages.
+:ref:`Qiskit <User guide Qiskit>` and `Cirq <https://github.com/iqm-finland/cirq-on-iqm>`_ packages.
 
 IQM client offers the functionality to submit quantum circuits to an IQM quantum computer, query a
 job or a job status, and retrieve the quantum architecture of the quantum computer.

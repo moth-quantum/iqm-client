@@ -6,6 +6,9 @@ IQM client
 
 Client-side library for connecting to an `IQM <https://meetiqm.com/>`_ quantum computer.
 
+Includes a `Qiskit <https://qiskit.org/>`_ adapter for `IQM's <https://www.meetiqm.com>`_ quantum computers.
+See the :ref:`User guide Qiskit` for an introduction on how to install and use the Qiskit adapter.
+
 Contents
 ========
 
@@ -15,6 +18,7 @@ Contents
    readme
    API
    integration_guide
+   user_guide_qiskit
    license
    authors
 

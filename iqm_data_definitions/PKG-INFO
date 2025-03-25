@@ -1,6 +1,6 @@
-Metadata-Version: 2.2
+Metadata-Version: 2.4
 Name: iqm-data-definitions
-Version: 2.8
+Version: 2.9
 Summary: Common repository for data definitions inside IQM
 Author-email: IQM Finland Oy <developers@meetiqm.com>
 License:                                  Apache License
@@ -204,8 +204,8 @@ License:                                  Apache License
            WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
            See the License for the specific language governing permissions and
            limitations under the License.
-Project-URL: Homepage, https://gitlab.iqm.fi/iqm/qccsw/iqm-data-definitions
-Project-URL: Documentation, https://gitlab.iqm.fi/iqm/qccsw/iqm-data-definitions
+Project-URL: Homepage, https://pypi.org/project/iqm-data-definitions/
+Project-URL: Documentation, https://iqm-finland.github.io/docs/
 Classifier: Development Status :: 4 - Beta
 Classifier: Programming Language :: Python :: 3 :: Only
 Classifier: Topic :: Scientific/Engineering :: Physics
@@ -225,6 +225,7 @@ Requires-Dist: pytest-pylint==0.21.0; extra == "testing"
 Provides-Extra: docs
 Requires-Dist: sphinx==7.2.6; extra == "docs"
 Requires-Dist: sphinx-book-theme==1.1.2; extra == "docs"
+Dynamic: license-file
 
 iqm-data-definitions
 ====================
