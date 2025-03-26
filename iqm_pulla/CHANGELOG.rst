@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 6.12 (2025-03-25)
+=========================
+
+Features
+--------
+
+- Update links to ``qiskit_iqm`` documentation.
+
 Version 6.11 (2025-03-24)
 =========================
 

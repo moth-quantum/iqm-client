@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 22.11 (2025-03-25)
+==========================
+
+Features
+--------
+
+- Improve ``qiskit_iqm`` installation instructions and update links to ``qiskit_iqm`` documentation.
+
 Version 22.10 (2025-03-24)
 ==========================
 

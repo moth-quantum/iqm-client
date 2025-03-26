@@ -24,7 +24,8 @@ feature of IQM Client from the Python Package Index (PyPI), e.g.:
 .. note::
 
     If you have previously installed the (now deprecated) ``qiskit-iqm`` package in your Python environment,
-    you should first uninstall it with ``$ pip uninstall qiskit-iqm``.
+    you should first uninstall it with ``$ pip uninstall qiskit-iqm``. In this case, you should also include
+    the ``--force-reinstall`` option in the ``iqm-client`` installation command.
 
 IQM Client by itself is not intended to be used directly by human users. If you want just the base IQM Client library,
 though, you can install it with
