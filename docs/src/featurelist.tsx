@@ -68,20 +68,16 @@ const gateFeatures = [
         cudaq: true,
     },
     {
-        name: "Multiplexed measurements",
-        qccsw: "1.0.0",
-        qiskit: {
-            tutorial: "https://iqm-finland.github.io/qiskit-on-iqm/user_guide.html#multiplexed-measurements"
-        },
-        cirq: {}
-    },
-    {
         name: "Classically controlled gates",
         qccsw: "3.1.0",
-        qiskit: true,
+        qiskit: {
+            tutorial: "https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html#classically-controlled-gates"
+        },
         qrisp: true,
-        cirq: false,
-        cudaq: true,
+        cirq: {
+            tutorial: "https://docs.meetiqm.com/cirq-iqm/user_guide.html#classical-control"
+        },
+        cudaq: false,
     },
     {
         name: <Tooltip content={"Increase throughput by batching circuits that all read out the same qubits."}>Batched execution </Tooltip>,
@@ -117,7 +113,7 @@ const gateFeatures = [
         name: "Benchmarking tools",
         qccsw: "-",
         qiskit: {
-            tutorial: "https://iqm-finland.github.io/qiskit-on-iqm/user_guide.html#benchmarking"
+            tutorial: "https://docs.meetiqm.com/iqm-benchmarks/"
         }
     },
     {
@@ -142,7 +138,7 @@ const gateFeatures = [
         name: "Resetting qubits",
         qccsw: "3.2.0",
         qiskit: {
-            tutorial: "https://iqm-finland.github.io/qiskit-on-iqm/user_guide.html#resetting-qubits"
+            tutorial: "https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html#resetting-qubits"
         },
         cirq: false,
         cudaq: false,
@@ -218,6 +214,11 @@ const pulseFeatures = [
     {
         name: "Custom compiler stages",
         resonance: "Coming soon",
+        onprem: true,
+    },
+    {
+        name: "Calibration workflows",
+        resonance: false,
         onprem: true,
     }
 ]

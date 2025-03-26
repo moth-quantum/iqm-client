@@ -12,7 +12,7 @@ on:
     # Allow manual triggering
 
 env:
-  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla[qiskit,qir] iqm-benchmarks qiskit-iqm cirq-iqm iqm-client"
+  PACKAGES: "iqm-pulse iqm-exa-common iqm-station-control-client iqm-pulla[qiskit,qir] iqm-benchmarks cirq-iqm iqm-client iqm-data-definitions"
 
 jobs:
   build:

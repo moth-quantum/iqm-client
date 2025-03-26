@@ -59,12 +59,12 @@ function App() {
   const docLinks = [
     { href: "./iqm-pulse", title: "IQM Pulse", description: "Interface and implementations for control pulses." },
     { href: "./iqm-pulla", title: "IQM Pulla", description: "Pulse-level access library for compiling quantum circuits." },
-    { href: "./qiskit-iqm/", title: "Qiskit on IQM", description: "Qiskit adapter for IQM’s quantum computers." },
     { href: "./cirq-iqm/", title: "Cirq on IQM", description: "Cirq adapter for IQM’s quantum computers." },
     { href: "./iqm-benchmarks/", title: "IQM Benchmarks", description: "Quantum Characterization, Verification, and Validation (QCVV) tools for quantum computing." },
-    { href: "./iqm-client/", title: "IQM Client", description: "Python client for remote access to quantum computers for circuit-level access." },
+    { href: "./iqm-client/", title: "IQM Client", description: "Python client for remote access to quantum computers for circuit-level access (e.g. via Qiskit)." },
     { href: "./iqm-station-control-client", title: "IQM Station Control Client", description: "Python client for remote access to quantum computers for pulse-level access." },
     { href: "./iqm-exa-common", title: "IQM EXA Common", description: "Abstract interfaces, helpers, utility classes, etc." },
+    { href: "./iqm-data-definitions", title: "IQM Data Definitions", description: "A common place for data definitions shared inside IQM." },
   ];
 
   return (
