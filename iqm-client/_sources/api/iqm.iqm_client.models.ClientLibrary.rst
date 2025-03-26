@@ -13,9 +13,7 @@ iqm.iqm\_client.models.ClientLibrary
 
    .. autosummary::
    
-      ~ClientLibrary.model_computed_fields
       ~ClientLibrary.model_config
-      ~ClientLibrary.model_fields
       ~ClientLibrary.name
       ~ClientLibrary.package_name
       ~ClientLibrary.repo_url
