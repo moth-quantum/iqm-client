@@ -13,7 +13,7 @@
 # limitations under the License.
 """This file is an example of using Qiskit on IQM to run a simple but non-trivial quantum circuit on an IQM quantum
 computer. See the Qiskit on IQM user guide for instructions:
-https://iqm-finland.github.io/qiskit-on-iqm/user_guide.html
+https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html
 """
 
 import argparse

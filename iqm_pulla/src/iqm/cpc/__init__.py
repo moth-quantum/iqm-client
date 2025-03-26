@@ -24,7 +24,7 @@ CPC is normally only accessed indirectly through Cocos or its reference client
 `IQM client <https://iqm-finland.github.io/iqm-client/index.html>`_,
 or a frontend such as
 `Cirq on IQM <https://iqm-finland.github.io/cirq-on-iqm/index.html>`_ or
-`Qiskit on IQM <https://iqm-finland.github.io/qiskit-on-iqm/index.html>`_.
+`Qiskit on IQM <https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html>`_.
 """
 
 # from importlib.metadata import PackageNotFoundError, version

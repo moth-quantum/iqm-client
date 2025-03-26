@@ -14,7 +14,7 @@
 """This file is an example of using Qiskit on IQM to run a simple but non-trivial quantum circuit on
 Resonance, the IQM quantum cloud service.
 See the Qiskit on IQM user guide for instructions:
-https://iqm-finland.github.io/qiskit-on-iqm/user_guide.html
+https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html
 """
 
 import argparse
@@ -71,7 +71,7 @@ if __name__ == "__main__":
         "--token",
         help="IQM Resonance access token",
         # Provide the API token explicitly or set it as an environment variable
-        # following the https://iqm-finland.github.io/qiskit-on-iqm/user_guide.html#authentication
+        # following the https://docs.meetiqm.com/iqm-client/user_guide_qiskit.html#authentication
         default="<INSERT YOUR TOKEN>",
     )
 
