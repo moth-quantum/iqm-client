@@ -29,6 +29,10 @@ jobs:
       - name: Set PACKAGES as a global environment variable
         run: echo "PACKAGES=${{ steps.construct-packages.outputs.packages }}" >> $GITHUB_ENV
 
+      - name: Write environment variables for React
+        working-directory: ./docs
+        run: |
+          echo "VITE_PACKAGES=${PACKAGES}" > .env
 
       - name: Install dependencies
         working-directory: ./docs
