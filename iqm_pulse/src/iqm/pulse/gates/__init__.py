@@ -47,6 +47,7 @@ from iqm.pulse.gates.cz import (
     FluxPulseGate_TGSS_CRF,
 )
 from iqm.pulse.gates.delay import Delay
+from iqm.pulse.gates.flux_multiplexer import FluxMultiplexer_SampleLinear
 from iqm.pulse.gates.measure import Measure_Constant
 from iqm.pulse.gates.move import MOVE_CRF_CRF, MOVE_TGSS_CRF
 from iqm.pulse.gates.prx import (
@@ -312,6 +313,7 @@ _default_operations: QuantumOpTable = {
             symmetric=True,
             factorizable=True,
         ),
+        QuantumOp("flux_multiplexer", 0, implementations={"sample_linear": FluxMultiplexer_SampleLinear}),
     ]
 }
 """Native quantum operations are hardcoded here. They can be overridden using the YAML config file."""

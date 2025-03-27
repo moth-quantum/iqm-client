@@ -33,6 +33,7 @@ from iqm.models.playlist.channel_descriptions import (
 import iqm.models.playlist.instructions as sc_instructions  # TODO make SC use iqm.pulse Instructions?
 from iqm.models.playlist.segment import Segment as SC_Schedule  # iqm.models names are temporary
 from iqm.models.playlist.waveforms import to_canonical
+import numpy as np
 
 from exa.common.qcm_data.chip_topology import ChipTopology, sort_components
 from iqm.pulse.gate_implementation import (
@@ -48,6 +49,7 @@ from iqm.pulse.playlist.instructions import (
     AcquisitionMethod,
     ComplexIntegration,
     ConditionalInstruction,
+    FluxPulse,
     Instruction,
     IQPulse,
     MultiplexedIQPulse,
@@ -228,6 +230,16 @@ def validate_quantum_circuit(
         raise ValueError("Circuit contains no measurements.")
 
 
+def _dicts_differ(a: Any, b: Any) -> bool:
+    if isinstance(a, dict) and isinstance(b, dict):
+        if a.keys() != b.keys():
+            return True
+        return any(_dicts_differ(a[key], b[key]) for key in a)
+    if isinstance(a, np.ndarray) and isinstance(b, np.ndarray):
+        return not np.array_equal(a, b)
+    return a != b
+
+
 class ScheduleBuilder:
     """Builds instruction schedules out of quantum circuits or individual quantum operations.
 
@@ -336,7 +348,7 @@ class ScheduleBuilder:
                         op in self._cache
                         and impl in self._cache[op]
                         and locus in self._cache[op][impl]
-                        and prev_calibration != new_calibration
+                        and _dicts_differ(prev_calibration, new_calibration)
                     ):
                         del self._cache[op][impl][locus]
                         if self.op_table[op].factorizable:
@@ -975,15 +987,23 @@ class ScheduleBuilder:
 
         Args:
             schedule: schedule to finish
+
         Returns:
             finished copy of ``schedule``
 
         """
+        has_long_distance_rzs = False
 
-        def convert(inst: Instruction) -> Instruction:
-            """Convert Blocks and Nothings to Waits."""
+        def segment_pass(inst: Instruction) -> Instruction:
+            """Convert Blocks and Nothings to Waits. Also checks for FluxPulses that have long-distance VirtualZ
+            corrections in order to determine if these need handling (for performance reasons, we want to do this
+            step only on-demand).
+            """
+            nonlocal has_long_distance_rzs
             if isinstance(inst, NONSOLID) and not isinstance(inst, Wait):
                 return Wait(inst.duration)
+            if isinstance(inst, FluxPulse) and inst.rzs:
+                has_long_distance_rzs = True
             return inst
 
         def not_zero_block(inst: Instruction) -> bool:
@@ -1007,10 +1027,46 @@ class ScheduleBuilder:
         for channel in schedule.channels():
             seg = schedule[channel]
             schedule[channel] = Segment(
-                functools.reduce(merge_waits, map(convert, filter(not_zero_block, seg)), []),  # type: ignore[arg-type]
+                functools.reduce(merge_waits, map(segment_pass, filter(not_zero_block, seg)), []),
                 duration=seg.duration,
             )
-        return schedule.cleanup()
+        if not has_long_distance_rzs:
+            return schedule.cleanup()
+        return self._fuse_long_distance_virtual_rzs(schedule)
+
+    def _fuse_long_distance_virtual_rzs(self, schedule: Schedule) -> Schedule:
+        """Fuse long-distance (i.e. out-of-gate-locus) VirtualRZ corrections with the next drive pulse
+        happening after the FluxPulse they are correcting.
+
+        """
+
+        def fuse(inst: Instruction, idx: int, rz_angle: float, segment: Segment) -> None:
+            """Fuse a VirtualRZ angle to an IQPulse."""
+            if isinstance(inst, (VirtualRZ, IQPulse)):
+                segment._instructions[idx] = replace(inst, phase_increment=inst.phase_increment + rz_angle)
+            else:
+                raise ValueError(f"Unknown drive channel instruction {inst}")
+
+        schedule_copy = schedule.copy()
+        for channel in [ch for ch in schedule.channels() if "flux" in ch]:
+            sample_counter = 0
+            for inst in schedule[channel]:
+                if isinstance(inst, FluxPulse):
+                    rzs = {ch: angle for ch, angle in inst.rzs if ch in schedule}
+                    for drive_channel, rz_angle in rzs.items():
+                        drive_sample_counter = 0
+                        for drive_inst_idx, drive_inst in enumerate(schedule[drive_channel]):
+                            if not isinstance(drive_inst, Wait) and drive_sample_counter >= sample_counter:
+                                fuse(
+                                    schedule_copy[drive_channel][drive_inst_idx],
+                                    drive_inst_idx,
+                                    -rz_angle,  # invert the angle as per the agreed convention
+                                    schedule_copy[drive_channel],
+                                )
+                                break
+                            drive_sample_counter += drive_inst.duration
+                sample_counter += inst.duration
+        return schedule_copy.cleanup()
 
     def resolve_timebox(
         self, box: TimeBox, *, neighborhood: int, compute_neighborhood_hard_boundary: bool = False

@@ -22,6 +22,7 @@ from iqm.pulse.playlist.channel import ChannelProperties
 from iqm.pulse.playlist.instructions import (
     Block,
     ConditionalInstruction,
+    FluxPulse,
     Instruction,
     IQPulse,
     ReadoutTrigger,
@@ -202,7 +203,8 @@ class Schedule:
             Wait: ("|", " "),
             Block: ("B", "."),
             IQPulse: ("!", "="),
-            RealPulse: ("F", "-"),
+            RealPulse: ("R", "-"),
+            FluxPulse: ("F", "-"),
             VirtualRZ: ("Z", "~"),
             ConditionalInstruction: ("C", "*"),
             ReadoutTrigger: ("R", "="),

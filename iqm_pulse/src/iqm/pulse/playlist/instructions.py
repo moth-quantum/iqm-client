@@ -16,7 +16,7 @@
 from __future__ import annotations
 
 import dataclasses
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import random
 
 from iqm.pulse.playlist.waveforms import Waveform
@@ -110,6 +110,17 @@ class RealPulse(Instruction):
 
     def get_waveforms(self) -> tuple[Waveform, ...]:
         return (self.wave,)
+
+
+@dataclass(frozen=True)
+class FluxPulse(RealPulse):
+    """RealPulse representing a flux pulse.
+
+    Can store RZ angles for correcting local phase shifts from the computational frame due to flux crosstalk.
+    """
+
+    rzs: tuple[tuple[str, float], ...] = field(default_factory=tuple)
+    """Collection of (drive) channel names and RZ angles."""
 
 
 @dataclass(frozen=True)
