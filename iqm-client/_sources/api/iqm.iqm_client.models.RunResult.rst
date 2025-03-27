@@ -13,7 +13,9 @@ iqm.iqm\_client.models.RunResult
 
    .. autosummary::
    
+      ~RunResult.model_computed_fields
       ~RunResult.model_config
+      ~RunResult.model_fields
       ~RunResult.status
       ~RunResult.measurements
       ~RunResult.message

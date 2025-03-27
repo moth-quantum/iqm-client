@@ -1,5 +1,5 @@
 <map id="inheritance587d2887de" name="inheritance587d2887de">
-<area shape="rect" id="node1" title="Usage docs: https://docs.pydantic.dev/2.10/concepts/models/" alt="" coords="54,685,147,710"/>
+<area shape="rect" id="node1" title="Usage docs: https://docs.pydantic.dev/2.9/concepts/models/" alt="" coords="54,685,147,710"/>
 <area shape="rect" id="node2" href="iqm.iqm_client.models.CalibrationSet.html#iqm.iqm_client.models.CalibrationSet" target="_top" title="Metadata and observations of a calibration set." alt="" coords="306,248,419,273"/>
 <area shape="rect" id="node3" href="iqm.iqm_client.models.Circuit.html#iqm.iqm_client.models.Circuit" target="_top" title="Quantum circuit to be executed." alt="" coords="327,297,398,321"/>
 <area shape="rect" id="node5" href="iqm.iqm_client.models.ClientLibrary.html#iqm.iqm_client.models.ClientLibrary" target="_top" title="Represents a client library with its metadata." alt="" coords="311,345,415,370"/>

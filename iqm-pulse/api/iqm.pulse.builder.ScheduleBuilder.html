@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ScheduleBuilder &#8212; iqm.pulse 8.4 documentation</title>
+    <title>ScheduleBuilder &#8212; iqm.pulse 8.6 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=5d27d24f"></script>
+    <script src="../_static/documentation_options.js?v=9a5cf2f9"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="CircuitOperation" href="iqm.pulse.builder.CircuitOperation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.4" />
-    <meta name="docbuild:last-update" content="2025-03-26"/>
+  <meta name="docsearch:version" content="8.6" />
+    <meta name="docbuild:last-update" content="2025-03-27"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.4 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.4 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.6 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.6 documentation - Home"/>
   
   
 </a></div>
@@ -198,6 +198,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.prx.html">prx</a></li>
@@ -394,6 +395,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.timeboxes_to_playlist"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.timeboxes_to_playlist()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.timebox_to_schedule"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.timebox_to_schedule()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._finish_schedule"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._finish_schedule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._fuse_long_distance_virtual_rzs"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._fuse_long_distance_virtual_rzs()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.resolve_timebox"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.resolve_timebox()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._resolve_timebox_hard_boundary"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._resolve_timebox_hard_boundary()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._get_neighborhood_hard_boundary"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._get_neighborhood_hard_boundary()</span></code></a></li>
@@ -1077,6 +1079,21 @@ all the spacer instructions are gone).</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="iqm.pulse.builder.ScheduleBuilder._fuse_long_distance_virtual_rzs">
+<span class="sig-name descname"><span class="pre">_fuse_long_distance_virtual_rzs</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder._fuse_long_distance_virtual_rzs" title="Link to this definition">#</a></dt>
+<dd><p>Fuse long-distance (i.e. out-of-gate-locus) VirtualRZ corrections with the next drive pulse
+happening after the FluxPulse they are correcting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>schedule</strong> (<a class="reference internal" href="iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule" title="iqm.pulse.playlist.schedule.Schedule"><em>Schedule</em></a>) – </p>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule" title="iqm.pulse.playlist.schedule.Schedule"><em>Schedule</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="iqm.pulse.builder.ScheduleBuilder.resolve_timebox">
 <span class="sig-name descname"><span class="pre">resolve_timebox</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">box</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">neighborhood</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">compute_neighborhood_hard_boundary</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder.resolve_timebox" title="Link to this definition">#</a></dt>
 <dd><p>Resolve a TimeBox.</p>
@@ -1327,6 +1344,7 @@ a warning is raised.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.timeboxes_to_playlist"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.timeboxes_to_playlist()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.timebox_to_schedule"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.timebox_to_schedule()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._finish_schedule"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._finish_schedule()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._fuse_long_distance_virtual_rzs"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._fuse_long_distance_virtual_rzs()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder.resolve_timebox"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.resolve_timebox()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._resolve_timebox_hard_boundary"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._resolve_timebox_hard_boundary()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.builder.ScheduleBuilder._get_neighborhood_hard_boundary"><code class="docutils literal notranslate"><span class="pre">ScheduleBuilder._get_neighborhood_hard_boundary()</span></code></a></li>
@@ -1365,7 +1383,7 @@ a warning is raised.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-26.
+  Last updated on 2025-03-27.
   <br/>
 </p>
   </div>

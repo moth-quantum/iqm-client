@@ -13,7 +13,9 @@ iqm.iqm\_client.models.Instruction
 
    .. autosummary::
    
+      ~Instruction.model_computed_fields
       ~Instruction.model_config
+      ~Instruction.model_fields
       ~Instruction.name
       ~Instruction.implementation
       ~Instruction.qubits

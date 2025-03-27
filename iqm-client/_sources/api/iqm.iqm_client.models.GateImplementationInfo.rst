@@ -13,7 +13,9 @@ iqm.iqm\_client.models.GateImplementationInfo
 
    .. autosummary::
    
+      ~GateImplementationInfo.model_computed_fields
       ~GateImplementationInfo.model_config
+      ~GateImplementationInfo.model_fields
       ~GateImplementationInfo.loci
    
    

@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>gates &#8212; iqm.pulse 8.4 documentation</title>
+    <title>gates &#8212; iqm.pulse 8.6 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=5d27d24f"></script>
+    <script src="../_static/documentation_options.js?v=9a5cf2f9"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="SinglePulseGate" href="iqm.pulse.gate_implementation.SinglePulseGate.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.4" />
-    <meta name="docbuild:last-update" content="2025-03-26"/>
+  <meta name="docsearch:version" content="8.6" />
+    <meta name="docbuild:last-update" content="2025-03-27"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.4 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.4 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.6 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.6 documentation - Home"/>
   
   
 </a></div>
@@ -198,6 +198,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.prx.html">prx</a></li>
@@ -412,25 +413,28 @@ through different calibration data.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.enums.html#module-iqm.pulse.gates.enums" title="iqm.pulse.gates.enums"><code class="xref py py-obj docutils literal notranslate"><span class="pre">enums</span></code></a></p></td>
 <td><p>Enumerations for representing a set of important one- and two-qubit gates.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.html#module-iqm.pulse.gates.measure" title="iqm.pulse.gates.measure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">measure</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.flux_multiplexer.html#module-iqm.pulse.gates.flux_multiplexer" title="iqm.pulse.gates.flux_multiplexer"><code class="xref py py-obj docutils literal notranslate"><span class="pre">flux_multiplexer</span></code></a></p></td>
+<td><p>GateImplementation for correcting flux crosstalk for a given set of flux-pulse TimeBoxes</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.html#module-iqm.pulse.gates.measure" title="iqm.pulse.gates.measure"><code class="xref py py-obj docutils literal notranslate"><span class="pre">measure</span></code></a></p></td>
 <td><p>Projective measurement in the Z basis.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.move.html#module-iqm.pulse.gates.move" title="iqm.pulse.gates.move"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.move.html#module-iqm.pulse.gates.move" title="iqm.pulse.gates.move"><code class="xref py py-obj docutils literal notranslate"><span class="pre">move</span></code></a></p></td>
 <td><p>Two-qubit MOVE gate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.html#module-iqm.pulse.gates.prx" title="iqm.pulse.gates.prx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prx</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.html#module-iqm.pulse.gates.prx" title="iqm.pulse.gates.prx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">prx</span></code></a></p></td>
 <td><p>Single-qubit PRX gate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.reset.html#module-iqm.pulse.gates.reset" title="iqm.pulse.gates.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.reset.html#module-iqm.pulse.gates.reset" title="iqm.pulse.gates.reset"><code class="xref py py-obj docutils literal notranslate"><span class="pre">reset</span></code></a></p></td>
 <td><p>Resetting qubits to the zero state.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.rz.html#module-iqm.pulse.gates.rz" title="iqm.pulse.gates.rz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rz</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.rz.html#module-iqm.pulse.gates.rz" title="iqm.pulse.gates.rz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rz</span></code></a></p></td>
 <td><p>Single-qubit RZ gate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.sx.html#module-iqm.pulse.gates.sx" title="iqm.pulse.gates.sx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sx</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.sx.html#module-iqm.pulse.gates.sx" title="iqm.pulse.gates.sx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sx</span></code></a></p></td>
 <td><p>Single-qubit sqrt(X) gate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.u.html#module-iqm.pulse.gates.u" title="iqm.pulse.gates.u"><code class="xref py py-obj docutils literal notranslate"><span class="pre">u</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.u.html#module-iqm.pulse.gates.u" title="iqm.pulse.gates.u"><code class="xref py py-obj docutils literal notranslate"><span class="pre">u</span></code></a></p></td>
 <td><p>Single-qubit SU(2) gate.</p></td>
 </tr>
 </tbody>
@@ -498,7 +502,7 @@ through different calibration data.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-26.
+  Last updated on 2025-03-27.
   <br/>
 </p>
   </div>

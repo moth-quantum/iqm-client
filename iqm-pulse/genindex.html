@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; iqm.pulse 8.4 documentation</title>
+    <title>Index &#8212; iqm.pulse 8.6 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=5d27d24f"></script>
+    <script src="_static/documentation_options.js?v=9a5cf2f9"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,8 +50,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.4" />
-    <meta name="docbuild:last-update" content="2025-03-26"/>
+  <meta name="docsearch:version" content="8.6" />
+    <meta name="docbuild:last-update" content="2025-03-27"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.4 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.4 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.6 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.6 documentation - Home"/>
   
   
 </a></div>
@@ -197,6 +197,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.cz.html">cz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.enums.html">enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.measure.html">measure</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.move.html">move</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.prx.html">prx</a></li>
@@ -471,6 +472,8 @@
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._find_implementation_and_locus">_find_implementation_and_locus() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._finish_schedule">_finish_schedule() (iqm.pulse.builder.ScheduleBuilder method)</a>
+</li>
+      <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._fuse_long_distance_virtual_rzs">_fuse_long_distance_virtual_rzs() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._get_channel_for_component">_get_channel_for_component() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
@@ -894,8 +897,12 @@
 </li>
       <li><a href="api/iqm.pulse.gate_implementation.CompositeCache.html#iqm.pulse.gate_implementation.CompositeCache.flush">flush() (iqm.pulse.gate_implementation.CompositeCache method)</a>
 </li>
+      <li><a href="api/iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html#iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear">FluxMultiplexer_SampleLinear (class in iqm.pulse.gates.flux_multiplexer)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.playlist.instructions.FluxPulse.html#iqm.pulse.playlist.instructions.FluxPulse">FluxPulse (class in iqm.pulse.playlist.instructions)</a>
+</li>
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate.html#iqm.pulse.gates.cz.FluxPulseGate">FluxPulseGate (class in iqm.pulse.gates.cz)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF">FluxPulseGate_CRF_CRF (class in iqm.pulse.gates.cz)</a>
@@ -943,6 +950,8 @@
       <li><a href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation.get_custom_locus_mapping">get_custom_locus_mapping() (iqm.pulse.gate_implementation.GateImplementation class method)</a>
 
       <ul>
+        <li><a href="api/iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html#iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.get_custom_locus_mapping">(iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear class method)</a>
+</li>
         <li><a href="api/iqm.pulse.gates.reset.Reset_Wait.html#iqm.pulse.gates.reset.Reset_Wait.get_custom_locus_mapping">(iqm.pulse.gates.reset.Reset_Wait class method)</a>
 </li>
       </ul></li>
@@ -1124,6 +1133,13 @@
 
       <ul>
         <li><a href="api/iqm.pulse.gates.enums.html#module-iqm.pulse.gates.enums">module</a>
+</li>
+      </ul></li>
+      <li>
+    iqm.pulse.gates.flux_multiplexer
+
+      <ul>
+        <li><a href="api/iqm.pulse.gates.flux_multiplexer.html#module-iqm.pulse.gates.flux_multiplexer">module</a>
 </li>
       </ul></li>
       <li>
@@ -1352,6 +1368,8 @@
 </li>
         <li><a href="api/iqm.pulse.gates.enums.html#module-iqm.pulse.gates.enums">iqm.pulse.gates.enums</a>
 </li>
+        <li><a href="api/iqm.pulse.gates.flux_multiplexer.html#module-iqm.pulse.gates.flux_multiplexer">iqm.pulse.gates.flux_multiplexer</a>
+</li>
         <li><a href="api/iqm.pulse.gates.measure.html#module-iqm.pulse.gates.measure">iqm.pulse.gates.measure</a>
 </li>
         <li><a href="api/iqm.pulse.gates.move.html#module-iqm.pulse.gates.move">iqm.pulse.gates.move</a>
@@ -1495,6 +1513,8 @@
         <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.parameters">(iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF.parameters">(iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html#iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.parameters">(iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant.parameters">(iqm.pulse.gates.measure.Measure_Constant attribute)</a>
 </li>
@@ -1707,6 +1727,8 @@
 </li>
       <li><a href="api/iqm.pulse.gates.rz.RZ_Virtual.html#iqm.pulse.gates.rz.RZ_Virtual">RZ_Virtual (class in iqm.pulse.gates.rz)</a>
 </li>
+      <li><a href="api/iqm.pulse.playlist.instructions.FluxPulse.html#iqm.pulse.playlist.instructions.FluxPulse.rzs">rzs (iqm.pulse.playlist.instructions.FluxPulse attribute)</a>
+</li>
   </ul></td>
 </tr></table>
 
@@ -1831,10 +1853,10 @@
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.timebox_to_schedule">timebox_to_schedule() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.timeboxes_to_front_padded_playlist">timeboxes_to_front_padded_playlist() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.timeboxes_to_playlist">timeboxes_to_playlist() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.instructions.TimeTrace.html#iqm.pulse.playlist.instructions.TimeTrace">TimeTrace (class in iqm.pulse.playlist.instructions)</a>
@@ -1843,8 +1865,12 @@
 </li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.TOL">TOL (iqm.pulse.scheduler.SegmentPointer attribute)</a>
 </li>
-      <li><a href="api/iqm.pulse.playlist.schedule.TOLERANCE.html#iqm.pulse.playlist.schedule.TOLERANCE">TOLERANCE (in module iqm.pulse.playlist.schedule)</a>
+      <li><a href="api/iqm.pulse.gates.flux_multiplexer.TOLERANCE.html#iqm.pulse.gates.flux_multiplexer.TOLERANCE">TOLERANCE (in module iqm.pulse.gates.flux_multiplexer)</a>
+
+      <ul>
+        <li><a href="api/iqm.pulse.playlist.schedule.TOLERANCE.html#iqm.pulse.playlist.schedule.TOLERANCE">(in module iqm.pulse.playlist.schedule)</a>
 </li>
+      </ul></li>
       <li><a href="api/iqm.pulse.gates.enums.TWO_QUBIT_UNITARIES.html#iqm.pulse.gates.enums.TWO_QUBIT_UNITARIES">TWO_QUBIT_UNITARIES (in module iqm.pulse.gates.enums)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.enums.TwoQubitGate.html#iqm.pulse.gates.enums.TwoQubitGate">TwoQubitGate (class in iqm.pulse.gates.enums)</a>
@@ -2017,7 +2043,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-26.
+  Last updated on 2025-03-27.
   <br/>
 </p>
   </div>

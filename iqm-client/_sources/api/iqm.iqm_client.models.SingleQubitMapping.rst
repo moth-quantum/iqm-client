@@ -13,7 +13,9 @@ iqm.iqm\_client.models.SingleQubitMapping
 
    .. autosummary::
    
+      ~SingleQubitMapping.model_computed_fields
       ~SingleQubitMapping.model_config
+      ~SingleQubitMapping.model_fields
       ~SingleQubitMapping.logical_name
       ~SingleQubitMapping.physical_name
    
