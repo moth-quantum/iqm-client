@@ -21,6 +21,7 @@ It can be represented by the unitary matrix
 
 from __future__ import annotations
 
+from dataclasses import replace
 from typing import TYPE_CHECKING, Optional
 
 import numpy as np
@@ -28,7 +29,7 @@ import numpy as np
 from exa.common.data.parameter import Parameter, Setting
 from exa.common.qcm_data.chip_topology import DEFAULT_2QB_MAPPING
 from iqm.pulse.gate_implementation import GateImplementation, Locus, OILCalibrationData, get_waveform_parameters
-from iqm.pulse.playlist.instructions import Block, Instruction, IQPulse, RealPulse, VirtualRZ
+from iqm.pulse.playlist.instructions import Block, FluxPulse, Instruction, IQPulse, RealPulse, VirtualRZ
 from iqm.pulse.playlist.schedule import Schedule
 from iqm.pulse.playlist.waveforms import (
     CosineRiseFall,
@@ -38,6 +39,7 @@ from iqm.pulse.playlist.waveforms import (
     TruncatedGaussianSmoothedSquare,
     Waveform,
 )
+from iqm.pulse.timebox import TimeBox
 from iqm.pulse.utils import phase_transformation
 
 if TYPE_CHECKING:  # pragma: no cover
@@ -98,7 +100,6 @@ class FluxPulseGate(GateImplementation):
         builder: ScheduleBuilder,
     ):
         super().__init__(parent, name, locus, calibration_data, builder)
-
         duration = calibration_data["duration"]
         flux_pulses = {}
 
@@ -115,7 +116,7 @@ class FluxPulseGate(GateImplementation):
             n_samples = builder.channels[flux_channel].duration_to_int_samples(duration) if duration > 0 else 0
             params["n_samples"] = n_samples
             amplitude = params.pop("amplitude")
-            flux_pulses[flux_channel] = RealPulse(
+            flux_pulses[flux_channel] = FluxPulse(
                 duration=n_samples,
                 wave=waveform_class(**params),
                 scale=amplitude,
@@ -138,23 +139,26 @@ class FluxPulseGate(GateImplementation):
                 raise ValueError(
                     f"{parent.name}.{name}: {locus}: Calibration is missing an RZ angle for locus component {c}."
                 )
-        rz = {builder.get_drive_channel(c): angle for c, angle in rz.items()}
-
+        rz_locus = {builder.get_drive_channel(c): angle for c, angle in rz.items() if c in locus}
+        rz_not_locus = tuple((builder.get_drive_channel(c), angle) for c, angle in rz.items() if c not in locus)
         # No driving must happen on any of the affected components during the flux pulses,
         # hence the virtual z rotations must use up their entire duration.
         T = max(pulse.duration for pulse in flux_pulses.values())
         # The gate takes no parameters, so we may build and cache the entire Schedule here.
         schedule: dict[str, list[Instruction]] = {}
-        for channel, angle in rz.items():
+        for channel, angle in rz_locus.items():
             # the virtual rz technique requires decrementing the drive phase by the rz angle
             schedule[channel] = [VirtualRZ(duration=T, phase_increment=-angle)]
-
+        vzs_inserted = False  # insert the long-distance Vzs to the first flux pulse (whatever that is)
         for channel, flux_pulse in flux_pulses.items():
-            schedule[channel] = [flux_pulse]
+            if rz_not_locus and not vzs_inserted:
+                schedule[channel] = [replace(flux_pulse, rzs=rz_not_locus)]
+                vzs_inserted = True
+            else:
+                schedule[channel] = [flux_pulse]
         affected_components = set(locus)
         affected_components.add(builder.chip_topology.get_coupler_for(*locus))
         self._affected_components = affected_components
-
         self._schedule = Schedule(schedule if T > 0 else {c: [Block(0)] for c in schedule}, duration=T)
 
     def __init_subclass__(

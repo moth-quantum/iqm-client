@@ -44,6 +44,7 @@ src/iqm/pulse/gates/conditional.py
 src/iqm/pulse/gates/cz.py
 src/iqm/pulse/gates/delay.py
 src/iqm/pulse/gates/enums.py
+src/iqm/pulse/gates/flux_multiplexer.py
 src/iqm/pulse/gates/measure.py
 src/iqm/pulse/gates/move.py
 src/iqm/pulse/gates/prx.py

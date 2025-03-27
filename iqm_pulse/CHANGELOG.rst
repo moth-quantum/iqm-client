@@ -2,6 +2,25 @@
 Changelog
 =========
 
+Version 8.6 (2025-03-26)
+========================
+
+Features
+--------
+
+- A "gate implementation" ``FluxMultiplexer_SampleLinear`` which can be used to multiplex several flux pulse gate
+  ``TimeBoxe``s together to cancel flux crosstalk.
+- Handle out of locus long-distance VirtualZ corrections in CZ gates better (scheduling fuses the VirtualZ corrections
+  to the right ``IQPulse``).
+
+Version 8.5 (2025-03-26)
+========================
+
+Bug fix
+-------
+
+- Fix that injecting a new calibration of an array-valued pulse parameter didn't work.
+
 Version 8.4 (2025-03-21)
 ========================
 

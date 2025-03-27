@@ -17,6 +17,7 @@ from iqm.pulse.playlist.instructions import (
     AcquisitionMethod,
     ComplexIntegration,
     ConditionalInstruction,
+    FluxPulse,
     Instruction,
     IQPulse,
     MultiplexedIQPulse,
