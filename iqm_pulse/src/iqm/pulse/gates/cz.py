@@ -29,7 +29,7 @@ import numpy as np
 from exa.common.data.parameter import Parameter, Setting
 from exa.common.qcm_data.chip_topology import DEFAULT_2QB_MAPPING
 from iqm.pulse.gate_implementation import GateImplementation, Locus, OILCalibrationData, get_waveform_parameters
-from iqm.pulse.playlist.instructions import Block, FluxPulse, Instruction, IQPulse, RealPulse, VirtualRZ
+from iqm.pulse.playlist.instructions import Block, FluxPulse, Instruction, IQPulse, VirtualRZ
 from iqm.pulse.playlist.schedule import Schedule
 from iqm.pulse.playlist.waveforms import (
     CosineRiseFall,
@@ -303,7 +303,7 @@ class CouplerFluxPulseQubitACStarkPulseGate(GateImplementation):
             n_samples = builder.channels[flux_channel].duration_to_int_samples(duration) if duration > 0 else 0
             params["n_samples"] = n_samples
             amplitude = params.pop("amplitude")
-            flux_pulses[flux_channel] = RealPulse(
+            flux_pulses[flux_channel] = FluxPulse(
                 duration=n_samples,
                 wave=waveform_class(**params),
                 scale=amplitude,
@@ -336,8 +336,12 @@ class CouplerFluxPulseQubitACStarkPulseGate(GateImplementation):
 
         for channel, qubit_drive_pulse in qubit_drive_pulses.items():
             schedule[channel] = [qubit_drive_pulse]
-        for channel, flux_pulse in flux_pulses.items():
-            schedule[channel] = [flux_pulse]
+        rz_not_locus = tuple((builder.get_drive_channel(c), angle) for c, angle in rz.items() if c not in locus)
+        for channel, flux_pulse in flux_pulses.items():  # just one flux pulse here
+            if rz_not_locus:
+                schedule[channel] = [replace(flux_pulse, rzs=rz_not_locus)]
+            else:
+                schedule[channel] = [flux_pulse]
 
         affected_components = set(locus)
         affected_components.add(builder.chip_topology.get_coupler_for(*locus))

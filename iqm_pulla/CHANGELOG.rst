@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 6.14 (2025-03-27)
+=========================
+
+Features
+--------
+
+- Update dependency on iqm-pulse
+
 Version 6.13 (2025-03-26)
 =========================
 
