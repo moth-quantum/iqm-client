@@ -1,5 +1,5 @@
 <map id="inheritance11ebdc23ad" name="inheritance11ebdc23ad">
-<area shape="rect" id="node1" title="Usage docs: https://docs.pydantic.dev/2.10/concepts/models/" alt="" coords="5,104,100,129"/>
+<area shape="rect" id="node1" title="!!! abstract &quot;Usage Documentation&quot;" alt="" coords="5,104,100,129"/>
 <area shape="rect" id="node3" href="exa.common.qcm_data.immutable_base_model.ImmutableBaseModel.html#exa.common.qcm_data.immutable_base_model.ImmutableBaseModel" target="_top" title="ImmutableBaseModel" alt="" coords="148,104,313,129"/>
 <area shape="rect" id="node2" href="exa.common.qcm_data.chad_model.CHAD.html#exa.common.qcm_data.chad_model.CHAD" target="_top" title="CHAD" alt="" coords="377,55,449,80"/>
 <area shape="rect" id="node4" href="exa.common.qcm_data.chad_model.Component.html#exa.common.qcm_data.chad_model.Component" target="_top" title="Component" alt="" coords="365,104,462,129"/>

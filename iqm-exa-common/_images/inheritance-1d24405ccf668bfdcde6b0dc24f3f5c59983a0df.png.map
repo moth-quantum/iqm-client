@@ -1,5 +1,5 @@
 <map id="inheritance96aeb1f401" name="inheritance96aeb1f401">
-<area shape="rect" id="node1" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" target="_top" title="Usage docs: https://docs.pydantic.dev/2.10/concepts/models/" alt="" coords="5,117,100,143"/>
+<area shape="rect" id="node1" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" target="_top" title="!!! abstract &quot;Usage Documentation&quot;" alt="" coords="5,117,100,143"/>
 <area shape="rect" id="node7" href="exa.common.data.parameter.Parameter.html#exa.common.data.parameter.Parameter" target="_top" title="A basic data structure that represents a single variable." alt="" coords="148,80,237,105"/>
 <area shape="rect" id="node8" href="exa.common.data.parameter.Setting.html#exa.common.data.parameter.Setting" target="_top" title="Physical quantity represented as a Parameter attached to a numerical value." alt="" coords="157,129,229,155"/>
 <area shape="rect" id="node2" href="exa.common.data.parameter.CollectionType.html#exa.common.data.parameter.CollectionType" target="_top" title="Parameter collection type." alt="" coords="409,5,527,31"/>
