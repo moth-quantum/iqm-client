@@ -13,9 +13,7 @@ iqm.iqm\_client.models.QualityMetricSet
 
    .. autosummary::
    
-      ~QualityMetricSet.model_computed_fields
       ~QualityMetricSet.model_config
-      ~QualityMetricSet.model_fields
       ~QualityMetricSet.calibration_set_id
       ~QualityMetricSet.calibration_set_dut_label
       ~QualityMetricSet.calibration_set_number_of_observations

@@ -17,9 +17,7 @@ iqm.iqm\_client.models.Metadata
       ~Metadata.dd_mode
       ~Metadata.dd_strategy
       ~Metadata.heralding_mode
-      ~Metadata.model_computed_fields
       ~Metadata.model_config
-      ~Metadata.model_fields
       ~Metadata.shots
       ~Metadata.calibration_set_id
       ~Metadata.request

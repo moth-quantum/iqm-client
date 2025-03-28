@@ -478,14 +478,22 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-<div class="graphviz"><img src="../_images/inheritance-76c611f667e105a8fcf5bb78a5f23e59eceb09a8.png" alt="Inheritance diagram of iqm.benchmarks.entanglement.ghz" usemap="#inheritance4c6a0b66cd" class="inheritance graphviz" /></div>
-<map id="inheritance4c6a0b66cd" name="inheritance4c6a0b66cd">
-<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="17,55,89,80"/>
-<area shape="rect" id="node3" href="iqm.benchmarks.benchmark_definition.Benchmark.html#iqm.benchmarks.benchmark_definition.Benchmark" target="_top" title="A base class for running cortex&#45;based Benchmark experiments." alt="" coords="207,55,303,80"/>
-<area shape="rect" id="node4" href="iqm.benchmarks.benchmark.BenchmarkConfigurationBase.html#iqm.benchmarks.benchmark.BenchmarkConfigurationBase" target="_top" title="Benchmark configuration base." alt="" coords="148,5,363,31"/>
-<area shape="rect" id="node5" href="iqm.benchmarks.entanglement.ghz.GHZBenchmark.html#iqm.benchmarks.entanglement.ghz.GHZBenchmark" target="_top" title="The GHZ Benchmark estimates the quality of generated Greenberger–Horne–Zeilinger states" alt="" coords="417,55,543,80"/>
-<area shape="rect" id="node6" href="iqm.benchmarks.entanglement.ghz.GHZConfiguration.html#iqm.benchmarks.entanglement.ghz.GHZConfiguration" target="_top" title="GHZ state configuration" alt="" coords="411,5,549,31"/>
-</map></section>
+digraph inheritance4c6a0b66cd {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
+  &quot;BaseModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
+  &quot;Benchmark&quot; [URL=&quot;iqm.benchmarks.benchmark_definition.Benchmark.html#iqm.benchmarks.benchmark_definition.Benchmark&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;A base class for running cortex-based Benchmark experiments.&quot;];
+  &quot;ABC&quot; -&gt; &quot;Benchmark&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;BenchmarkConfigurationBase&quot; [URL=&quot;iqm.benchmarks.benchmark.BenchmarkConfigurationBase.html#iqm.benchmarks.benchmark.BenchmarkConfigurationBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Benchmark configuration base.&quot;];
+  &quot;BaseModel&quot; -&gt; &quot;BenchmarkConfigurationBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;GHZBenchmark&quot; [URL=&quot;iqm.benchmarks.entanglement.ghz.GHZBenchmark.html#iqm.benchmarks.entanglement.ghz.GHZBenchmark&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;The GHZ Benchmark estimates the quality of generated Greenberger–Horne–Zeilinger states&quot;];
+  &quot;Benchmark&quot; -&gt; &quot;GHZBenchmark&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;GHZConfiguration&quot; [URL=&quot;iqm.benchmarks.entanglement.ghz.GHZConfiguration.html#iqm.benchmarks.entanglement.ghz.GHZConfiguration&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;GHZ state configuration&quot;];
+  &quot;BenchmarkConfigurationBase&quot; -&gt; &quot;GHZConfiguration&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+</section>
 
 
                 </article>

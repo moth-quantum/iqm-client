@@ -406,18 +406,29 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-<div class="graphviz"><img src="../_images/inheritance-b8059b22c5a92c127d3ab9aefacc68df333495ae.png" alt="Inheritance diagram of iqm.pulse.gates.rz" usemap="#inheritance67b093b5be" class="inheritance graphviz" /></div>
-<map id="inheritance67b093b5be" name="inheritance67b093b5be">
-<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="3,30,42,44"/>
-<area shape="rect" id="node5" href="iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" target="_top" title="ABC for implementing quantum gates and other quantum operations using instruction schedules." alt="" coords="68,30,154,44"/>
-<area shape="rect" id="node2" href="iqm.pulse.gates.prx.ABC_Constant_smooth.html#iqm.pulse.gates.prx.ABC_Constant_smooth" target="_top" title="ABC class for creating gates with an arbitrarily long Constant pulses with smooth rise and fall." alt="" coords="327,3,420,17"/>
-<area shape="rect" id="node4" href="iqm.pulse.gates.prx.Constant_PRX_with_smooth_rise_fall.html#iqm.pulse.gates.prx.Constant_PRX_with_smooth_rise_fall" target="_top" title="Constant PRX pulse with cosine rise and fall padding." alt="" coords="463,3,606,17"/>
-<area shape="rect" id="node3" href="iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation" target="_top" title="ABC for different implementations of the PRX gate." alt="" coords="181,3,285,17"/>
-<area shape="rect" id="node8" href="iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant.html#iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant" target="_top" title="Constant AC stark pulse with cosine rise and fall padding." alt="" coords="632,3,765,17"/>
-<area shape="rect" id="node6" href="iqm.pulse.gates.rz.RZ_ACStarkShift.html#iqm.pulse.gates.rz.RZ_ACStarkShift" target="_top" title="Implementation of the RZ gate using an AC Stark pulse." alt="" coords="198,30,268,44"/>
-<area shape="rect" id="node9" href="iqm.pulse.gates.rz.RZ_Virtual.html#iqm.pulse.gates.rz.RZ_Virtual" target="_top" title="Implementation of the RZ gate using the virtual z rotation technique." alt="" coords="208,57,258,71"/>
-<area shape="rect" id="node7" href="iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall.html#iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall" target="_top" title="AC stark pulse implemented as a modulated cosine rise fall pulse." alt="" coords="311,30,436,44"/>
-</map></section>
+digraph inheritance67b093b5be {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
+  &quot;ABC_Constant_smooth&quot; [URL=&quot;iqm.pulse.gates.prx.ABC_Constant_smooth.html#iqm.pulse.gates.prx.ABC_Constant_smooth&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC class for creating gates with an arbitrarily long Constant pulses with smooth rise and fall.&quot;];
+  &quot;PRX_GateImplementation&quot; -&gt; &quot;ABC_Constant_smooth&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;Constant_PRX_with_smooth_rise_fall&quot; [URL=&quot;iqm.pulse.gates.prx.Constant_PRX_with_smooth_rise_fall.html#iqm.pulse.gates.prx.Constant_PRX_with_smooth_rise_fall&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Constant PRX pulse with cosine rise and fall padding.&quot;];
+  &quot;ABC_Constant_smooth&quot; -&gt; &quot;Constant_PRX_with_smooth_rise_fall&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;GateImplementation&quot; [URL=&quot;iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for implementing quantum gates and other quantum operations using instruction schedules.&quot;];
+  &quot;ABC&quot; -&gt; &quot;GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;PRX_GateImplementation&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for different implementations of the PRX gate.&quot;];
+  &quot;GateImplementation&quot; -&gt; &quot;PRX_GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RZ_ACStarkShift&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_ACStarkShift.html#iqm.pulse.gates.rz.RZ_ACStarkShift&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Implementation of the RZ gate using an AC Stark pulse.&quot;];
+  &quot;GateImplementation&quot; -&gt; &quot;RZ_ACStarkShift&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RZ_ACStarkShift_CosineRiseFall&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall.html#iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;AC stark pulse implemented as a modulated cosine rise fall pulse.&quot;];
+  &quot;RZ_ACStarkShift&quot; -&gt; &quot;RZ_ACStarkShift_CosineRiseFall&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RZ_ACStarkShift_smoothConstant&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant.html#iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Constant AC stark pulse with cosine rise and fall padding.&quot;];
+  &quot;Constant_PRX_with_smooth_rise_fall&quot; -&gt; &quot;RZ_ACStarkShift_smoothConstant&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;RZ_Virtual&quot; [URL=&quot;iqm.pulse.gates.rz.RZ_Virtual.html#iqm.pulse.gates.rz.RZ_Virtual&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Implementation of the RZ gate using the virtual z rotation technique.&quot;];
+  &quot;GateImplementation&quot; -&gt; &quot;RZ_Virtual&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+</section>
 
 
                 </article>

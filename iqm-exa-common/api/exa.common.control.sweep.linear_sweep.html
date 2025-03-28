@@ -313,12 +313,19 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-<div class="graphviz"><img src="../_images/inheritance-02e9059b0783dcffefc155bc2f967d703b2191b9.png" alt="Inheritance diagram of exa.common.control.sweep.linear_sweep" usemap="#inheritance2d4d086bfc" class="inheritance graphviz" /></div>
-<map id="inheritance2d4d086bfc" name="inheritance2d4d086bfc">
-<area shape="rect" id="node1" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" target="_top" title="!!! abstract &quot;Usage Documentation&quot;" alt="" coords="5,29,100,55"/>
-<area shape="rect" id="node3" href="exa.common.control.sweep.sweep.Sweep.html#exa.common.control.sweep.sweep.Sweep" target="_top" title="Base immutable class for sweeps." alt="" coords="148,29,220,55"/>
-<area shape="rect" id="node2" href="exa.common.control.sweep.linear_sweep.LinearSweep.html#exa.common.control.sweep.linear_sweep.LinearSweep" target="_top" title="Generates evenly spaced parameter values based on `options`." alt="" coords="268,29,373,55"/>
-</map></section>
+digraph inheritance2d4d086bfc {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;BaseModel&quot; [URL=&quot;exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Pydantic base model to change the behaviour of pydantic globally.&quot;];
+  &quot;BaseModel&quot; -&gt; &quot;BaseModel&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;BaseModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
+  &quot;LinearSweep&quot; [URL=&quot;exa.common.control.sweep.linear_sweep.LinearSweep.html#exa.common.control.sweep.linear_sweep.LinearSweep&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Generates evenly spaced parameter values based on `options`.&quot;];
+  &quot;Sweep&quot; -&gt; &quot;LinearSweep&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;Sweep&quot; [URL=&quot;exa.common.control.sweep.sweep.Sweep.html#exa.common.control.sweep.sweep.Sweep&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Base immutable class for sweeps.&quot;];
+  &quot;BaseModel&quot; -&gt; &quot;Sweep&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+</section>
 
 
                 </article>
