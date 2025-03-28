@@ -2,6 +2,14 @@
 Changelog
 =========
 
+Version 8.7 (2025-03-27)
+========================
+
+Features
+--------
+
+- :class:`.CouplerFluxPulseQubitACStarkPulseGate` also now supports off-locus RZ corrections.
+
 Version 8.6 (2025-03-26)
 ========================
 
