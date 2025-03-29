@@ -13,7 +13,9 @@ iqm.benchmarks.quantum\_volume.quantum\_volume.QuantumVolumeConfiguration
 
    .. autosummary::
    
+      ~QuantumVolumeConfiguration.model_computed_fields
       ~QuantumVolumeConfiguration.model_config
+      ~QuantumVolumeConfiguration.model_fields
       ~QuantumVolumeConfiguration.benchmark
       ~QuantumVolumeConfiguration.num_circuits
       ~QuantumVolumeConfiguration.num_sigmas

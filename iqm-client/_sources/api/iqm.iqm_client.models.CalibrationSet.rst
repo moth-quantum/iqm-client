@@ -13,7 +13,9 @@ iqm.iqm\_client.models.CalibrationSet
 
    .. autosummary::
    
+      ~CalibrationSet.model_computed_fields
       ~CalibrationSet.model_config
+      ~CalibrationSet.model_fields
       ~CalibrationSet.calibration_set_id
       ~CalibrationSet.calibration_set_dut_label
       ~CalibrationSet.calibration_set_is_invalid

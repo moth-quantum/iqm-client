@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>measure &#8212; iqm.pulse 8.8 documentation</title>
+    <title>measure &#8212; iqm.pulse 8.9 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=a3ae1b38"></script>
+    <script src="../_static/documentation_options.js?v=c0138b63"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="FluxMultiplexer_SampleLinear" href="iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.8" />
-    <meta name="docbuild:last-update" content="2025-03-28"/>
+  <meta name="docsearch:version" content="8.9" />
+    <meta name="docbuild:last-update" content="2025-03-29"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.8 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.8 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.9 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.9 documentation - Home"/>
   
   
 </a></div>
@@ -154,6 +154,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="iqm.pulse.html">pulse</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.base_utils.html">base_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.base_utils.merge_dicts.html">iqm.pulse.base_utils.merge_dicts</a></li>
+</ul>
+</details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
@@ -196,6 +200,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.default_gates.html">default_gates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
@@ -244,7 +249,6 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.utils.html">utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.load_yaml.html">iqm.pulse.utils.load_yaml</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.map_waveform_param_types.html">iqm.pulse.utils.map_waveform_param_types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.merge_dicts.html">iqm.pulse.utils.merge_dicts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.normalize_angle.html">iqm.pulse.utils.normalize_angle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.phase_transformation.html">iqm.pulse.utils.phase_transformation</a></li>
 </ul>
@@ -378,33 +382,29 @@
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant" title="iqm.pulse.gates.measure.Measure_Constant"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Measure_Constant</span></code></a></p></td>
 <td><p>Implementation of a single-qubit projective, dispersive measurement in the Z basis.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms" title="iqm.pulse.gates.measure.Measure_CustomWaveforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Measure_CustomWaveforms</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd" title="iqm.pulse.gates.measure.Measure_Constant_Qnd"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Measure_Constant_Qnd</span></code></a></p></td>
+<td><p>Implementation of a single-qubit projective, non quantum demolition, dispersive measurements in the Z basis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms" title="iqm.pulse.gates.measure.Measure_CustomWaveforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Measure_CustomWaveforms</span></code></a></p></td>
 <td><p>Base class for implementing dispersive measurement operations with custom probe pulse waveforms.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.html#iqm.pulse.gates.measure.ProbePulse_CustomWaveforms" title="iqm.pulse.gates.measure.ProbePulse_CustomWaveforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProbePulse_CustomWaveforms</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.html#iqm.pulse.gates.measure.ProbePulse_CustomWaveforms" title="iqm.pulse.gates.measure.ProbePulse_CustomWaveforms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ProbePulse_CustomWaveforms</span></code></a></p></td>
 <td><p>Base class for implementing a probe line measurement pulse with custom waveforms in the I and Q channels.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritanceff73b576d5 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
-  &quot;CustomIQWaveforms&quot; [URL=&quot;iqm.pulse.gate_implementation.CustomIQWaveforms.html#iqm.pulse.gate_implementation.CustomIQWaveforms&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Base class for GateImplementations using custom waveform definition with IQPulses.&quot;];
-  &quot;GateImplementation&quot; -&gt; &quot;CustomIQWaveforms&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;GateImplementation&quot; [URL=&quot;iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for implementing quantum gates and other quantum operations using instruction schedules.&quot;];
-  &quot;ABC&quot; -&gt; &quot;GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Measure_Constant&quot; [URL=&quot;iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Implementation of a single-qubit projective, dispersive measurement in the Z basis.&quot;];
-  &quot;Measure_CustomWaveforms&quot; -&gt; &quot;Measure_Constant&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Measure_CustomWaveforms&quot; [URL=&quot;iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Base class for implementing dispersive measurement operations with custom probe pulse waveforms.&quot;];
-  &quot;CustomIQWaveforms&quot; -&gt; &quot;Measure_CustomWaveforms&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ProbePulse_CustomWaveforms&quot; [URL=&quot;iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.html#iqm.pulse.gates.measure.ProbePulse_CustomWaveforms&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Base class for implementing a probe line measurement pulse with custom waveforms in the I and Q channels.&quot;];
-  &quot;CustomIQWaveforms&quot; -&gt; &quot;ProbePulse_CustomWaveforms&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-b50a3af031f1d254015495c853808e1970e6ef47.png" alt="Inheritance diagram of iqm.pulse.gates.measure" usemap="#inheritanceff73b576d5" class="inheritance graphviz" /></div>
+<map id="inheritanceff73b576d5" name="inheritanceff73b576d5">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="4,42,60,62"/>
+<area shape="rect" id="node3" href="iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" target="_top" title="ABC for implementing quantum gates and other quantum operations using instruction schedules." alt="" coords="97,42,219,62"/>
+<area shape="rect" id="node2" href="iqm.pulse.gate_implementation.CustomIQWaveforms.html#iqm.pulse.gate_implementation.CustomIQWaveforms" target="_top" title="Base class for GateImplementations using custom waveform definition with IQPulses." alt="" coords="256,42,379,62"/>
+<area shape="rect" id="node5" href="iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms" target="_top" title="Base class for implementing dispersive measurement operations with custom probe pulse waveforms." alt="" coords="423,23,585,42"/>
+<area shape="rect" id="node7" href="iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.html#iqm.pulse.gates.measure.ProbePulse_CustomWaveforms" target="_top" title="Base class for implementing a probe line measurement pulse with custom waveforms in the I and Q channels." alt="" coords="416,61,591,80"/>
+<area shape="rect" id="node4" href="iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant" target="_top" title="Implementation of a single&#45;qubit projective, dispersive measurement in the Z basis." alt="" coords="641,4,751,24"/>
+<area shape="rect" id="node6" href="iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd" target="_top" title="Implementation of a single&#45;qubit projective, non quantum demolition, dispersive" alt="" coords="628,42,764,62"/>
+</map></section>
 
 
                 </article>
@@ -466,7 +466,7 @@ size=&quot;8.0, 12.0&quot;;
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-28.
+  Last updated on 2025-03-29.
   <br/>
 </p>
   </div>

@@ -54,7 +54,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="3.8" />
-    <meta name="docbuild:last-update" content="2025-03-28"/>
+    <meta name="docbuild:last-update" content="2025-03-29"/>
   </head>
   
   
@@ -336,26 +336,15 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance2e3645a4ed {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;BaseModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
-  &quot;ObservationBase&quot; [URL=&quot;iqm.station_control.interface.models.observation.ObservationBase.html#iqm.station_control.interface.models.observation.ObservationBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Abstract base class of the observation models.&quot;];
-  &quot;PydanticBase&quot; -&gt; &quot;ObservationBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ObservationData&quot; [URL=&quot;iqm.station_control.interface.models.observation.ObservationData.html#iqm.station_control.interface.models.observation.ObservationData&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;The content of the observation stored in the database.&quot;];
-  &quot;ObservationLite&quot; -&gt; &quot;ObservationData&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ObservationDefinition&quot; -&gt; &quot;ObservationData&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ObservationDefinition&quot; [URL=&quot;iqm.station_control.interface.models.observation.ObservationDefinition.html#iqm.station_control.interface.models.observation.ObservationDefinition&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;The content of the observation definition.&quot;];
-  &quot;ObservationBase&quot; -&gt; &quot;ObservationDefinition&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ObservationLite&quot; [URL=&quot;iqm.station_control.interface.models.observation.ObservationLite.html#iqm.station_control.interface.models.observation.ObservationLite&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;The lightweight version of the observation data.&quot;];
-  &quot;ObservationBase&quot; -&gt; &quot;ObservationLite&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ObservationUpdate&quot; [URL=&quot;iqm.station_control.interface.models.observation.ObservationUpdate.html#iqm.station_control.interface.models.observation.ObservationUpdate&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;The observation data to be updated in the database.&quot;];
-  &quot;PydanticBase&quot; -&gt; &quot;ObservationUpdate&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;PydanticBase&quot; [URL=&quot;iqm.station_control.interface.pydantic_base.PydanticBase.html#iqm.station_control.interface.pydantic_base.PydanticBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Pydantic base model to change the behaviour of pydantic globally.&quot;];
-  &quot;BaseModel&quot; -&gt; &quot;PydanticBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-2289464a4de67fe8f963ab3335795cc5f56d344f.png" alt="Inheritance diagram of iqm.station_control.interface.models.observation" usemap="#inheritance2e3645a4ed" class="inheritance graphviz" /></div>
+<map id="inheritance2e3645a4ed" name="inheritance2e3645a4ed">
+<area shape="rect" id="node3" href="iqm.station_control.interface.pydantic_base.PydanticBase.html#iqm.station_control.interface.pydantic_base.PydanticBase" target="_top" title="Pydantic base model to change the behaviour of pydantic globally." alt="" coords="133,49,233,72"/>
+<area shape="rect" id="node2" href="iqm.station_control.interface.models.observation.ObservationBase.html#iqm.station_control.interface.models.observation.ObservationBase" target="_top" title="Abstract base class of the observation models." alt="" coords="283,26,403,49"/>
+<area shape="rect" id="node5" href="iqm.station_control.interface.models.observation.ObservationLite.html#iqm.station_control.interface.models.observation.ObservationLite" target="_top" title="The lightweight version of the observation data." alt="" coords="471,5,584,28"/>
+<area shape="rect" id="node6" href="iqm.station_control.interface.models.observation.ObservationDefinition.html#iqm.station_control.interface.models.observation.ObservationDefinition" target="_top" title="The content of the observation definition." alt="" coords="453,49,601,72"/>
+<area shape="rect" id="node7" href="iqm.station_control.interface.models.observation.ObservationUpdate.html#iqm.station_control.interface.models.observation.ObservationUpdate" target="_top" title="The observation data to be updated in the database." alt="" coords="276,71,410,94"/>
+<area shape="rect" id="node4" href="iqm.station_control.interface.models.observation.ObservationData.html#iqm.station_control.interface.models.observation.ObservationData" target="_top" title="The content of the observation stored in the database." alt="" coords="644,28,763,50"/>
+</map></section>
 
 
                 </article>
@@ -417,7 +406,7 @@ size=&quot;8.0, 12.0&quot;;
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-28.
+  Last updated on 2025-03-29.
   <br/>
 </p>
   </div>

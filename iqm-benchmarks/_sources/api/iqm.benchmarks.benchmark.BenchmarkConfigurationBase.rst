@@ -13,7 +13,9 @@ iqm.benchmarks.benchmark.BenchmarkConfigurationBase
 
    .. autosummary::
    
+      ~BenchmarkConfigurationBase.model_computed_fields
       ~BenchmarkConfigurationBase.model_config
+      ~BenchmarkConfigurationBase.model_fields
       ~BenchmarkConfigurationBase.benchmark
       ~BenchmarkConfigurationBase.shots
       ~BenchmarkConfigurationBase.max_gates_per_batch

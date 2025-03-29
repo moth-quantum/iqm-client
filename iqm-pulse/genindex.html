@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; iqm.pulse 8.8 documentation</title>
+    <title>Index &#8212; iqm.pulse 8.9 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=a3ae1b38"></script>
+    <script src="_static/documentation_options.js?v=c0138b63"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,8 +50,8 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.8" />
-    <meta name="docbuild:last-update" content="2025-03-28"/>
+  <meta name="docsearch:version" content="8.9" />
+    <meta name="docbuild:last-update" content="2025-03-29"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.8 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.8 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.9 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.9 documentation - Home"/>
   
   
 </a></div>
@@ -153,6 +153,10 @@
 <li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="API.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.pulse.html">pulse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.base_utils.html">base_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.base_utils.merge_dicts.html">iqm.pulse.base_utils.merge_dicts</a></li>
+</ul>
+</details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
@@ -195,6 +199,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.barrier.html">barrier</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.conditional.html">conditional</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.default_gates.html">default_gates</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.delay.html">delay</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.enums.html">enums</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
@@ -243,7 +248,6 @@
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.utils.html">utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.load_yaml.html">iqm.pulse.utils.load_yaml</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.map_waveform_param_types.html">iqm.pulse.utils.map_waveform_param_types</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.merge_dicts.html">iqm.pulse.utils.merge_dicts</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.normalize_angle.html">iqm.pulse.utils.normalize_angle</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.phase_transformation.html">iqm.pulse.utils.phase_transformation</a></li>
 </ul>
@@ -776,6 +780,8 @@
       <ul>
         <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant.dependent_waves">(iqm.pulse.gates.measure.Measure_Constant attribute)</a>
 </li>
+        <li><a href="api/iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd.dependent_waves">(iqm.pulse.gates.measure.Measure_Constant_Qnd attribute)</a>
+</li>
         <li><a href="api/iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms.dependent_waves">(iqm.pulse.gates.measure.Measure_CustomWaveforms attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.html#iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.dependent_waves">(iqm.pulse.gates.measure.ProbePulse_CustomWaveforms attribute)</a>
@@ -1073,6 +1079,13 @@
 </li>
       </ul></li>
       <li>
+    iqm.pulse.base_utils
+
+      <ul>
+        <li><a href="api/iqm.pulse.base_utils.html#module-iqm.pulse.base_utils">module</a>
+</li>
+      </ul></li>
+      <li>
     iqm.pulse.builder
 
       <ul>
@@ -1122,6 +1135,13 @@
 </li>
       </ul></li>
       <li>
+    iqm.pulse.gates.default_gates
+
+      <ul>
+        <li><a href="api/iqm.pulse.gates.default_gates.html#module-iqm.pulse.gates.default_gates">module</a>
+</li>
+      </ul></li>
+      <li>
     iqm.pulse.gates.delay
 
       <ul>
@@ -1156,6 +1176,8 @@
         <li><a href="api/iqm.pulse.gates.move.html#module-iqm.pulse.gates.move">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.pulse.gates.prx
 
@@ -1163,8 +1185,6 @@
         <li><a href="api/iqm.pulse.gates.prx.html#module-iqm.pulse.gates.prx">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.pulse.gates.reset
 
@@ -1336,9 +1356,11 @@
 </li>
       <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant">Measure_Constant (class in iqm.pulse.gates.measure)</a>
 </li>
+      <li><a href="api/iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd">Measure_Constant_Qnd (class in iqm.pulse.gates.measure)</a>
+</li>
       <li><a href="api/iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms">Measure_CustomWaveforms (class in iqm.pulse.gates.measure)</a>
 </li>
-      <li><a href="api/iqm.pulse.utils.merge_dicts.html#iqm.pulse.utils.merge_dicts">merge_dicts() (in module iqm.pulse.utils)</a>
+      <li><a href="api/iqm.pulse.base_utils.merge_dicts.html#iqm.pulse.base_utils.merge_dicts">merge_dicts() (in module iqm.pulse.base_utils)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall.html#iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall">ModulatedCosineRiseFall (class in iqm.pulse.playlist.waveforms)</a>
 </li>
@@ -1349,6 +1371,8 @@
 
       <ul>
         <li><a href="api/iqm.pulse.html#module-iqm.pulse">iqm.pulse</a>
+</li>
+        <li><a href="api/iqm.pulse.base_utils.html#module-iqm.pulse.base_utils">iqm.pulse.base_utils</a>
 </li>
         <li><a href="api/iqm.pulse.builder.html#module-iqm.pulse.builder">iqm.pulse.builder</a>
 </li>
@@ -1363,6 +1387,8 @@
         <li><a href="api/iqm.pulse.gates.conditional.html#module-iqm.pulse.gates.conditional">iqm.pulse.gates.conditional</a>
 </li>
         <li><a href="api/iqm.pulse.gates.cz.html#module-iqm.pulse.gates.cz">iqm.pulse.gates.cz</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.default_gates.html#module-iqm.pulse.gates.default_gates">iqm.pulse.gates.default_gates</a>
 </li>
         <li><a href="api/iqm.pulse.gates.delay.html#module-iqm.pulse.gates.delay">iqm.pulse.gates.delay</a>
 </li>
@@ -1517,6 +1543,8 @@
         <li><a href="api/iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html#iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.parameters">(iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant.parameters">(iqm.pulse.gates.measure.Measure_Constant attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd.parameters">(iqm.pulse.gates.measure.Measure_Constant_Qnd attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.move.MOVE_CRF_CRF.html#iqm.pulse.gates.move.MOVE_CRF_CRF.parameters">(iqm.pulse.gates.move.MOVE_CRF_CRF attribute)</a>
 </li>
@@ -1954,6 +1982,8 @@
       <ul>
         <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant.wave_i">(iqm.pulse.gates.measure.Measure_Constant attribute)</a>
 </li>
+        <li><a href="api/iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd.wave_i">(iqm.pulse.gates.measure.Measure_Constant_Qnd attribute)</a>
+</li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGCosineRiseFall.html#iqm.pulse.gates.prx.PRX_DRAGCosineRiseFall.wave_i">(iqm.pulse.gates.prx.PRX_DRAGCosineRiseFall attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGCosineRiseFallSX.html#iqm.pulse.gates.prx.PRX_DRAGCosineRiseFallSX.wave_i">(iqm.pulse.gates.prx.PRX_DRAGCosineRiseFallSX attribute)</a>
@@ -1971,6 +2001,8 @@
 
       <ul>
         <li><a href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant.wave_q">(iqm.pulse.gates.measure.Measure_Constant attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.measure.Measure_Constant_Qnd.html#iqm.pulse.gates.measure.Measure_Constant_Qnd.wave_q">(iqm.pulse.gates.measure.Measure_Constant_Qnd attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGCosineRiseFall.html#iqm.pulse.gates.prx.PRX_DRAGCosineRiseFall.wave_q">(iqm.pulse.gates.prx.PRX_DRAGCosineRiseFall attribute)</a>
 </li>
@@ -2043,7 +2075,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-28.
+  Last updated on 2025-03-29.
   <br/>
 </p>
   </div>

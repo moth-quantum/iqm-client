@@ -13,7 +13,9 @@ iqm.iqm\_client.models.RunRequest
 
    .. autosummary::
    
+      ~RunRequest.model_computed_fields
       ~RunRequest.model_config
+      ~RunRequest.model_fields
       ~RunRequest.circuits
       ~RunRequest.custom_settings
       ~RunRequest.calibration_set_id

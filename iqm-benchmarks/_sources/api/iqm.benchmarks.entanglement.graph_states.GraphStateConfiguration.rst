@@ -13,7 +13,9 @@ iqm.benchmarks.entanglement.graph\_states.GraphStateConfiguration
 
    .. autosummary::
    
+      ~GraphStateConfiguration.model_computed_fields
       ~GraphStateConfiguration.model_config
+      ~GraphStateConfiguration.model_fields
       ~GraphStateConfiguration.benchmark
       ~GraphStateConfiguration.qubits
       ~GraphStateConfiguration.tomography

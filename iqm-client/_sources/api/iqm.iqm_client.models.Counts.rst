@@ -13,7 +13,9 @@ iqm.iqm\_client.models.Counts
 
    .. autosummary::
    
+      ~Counts.model_computed_fields
       ~Counts.model_config
+      ~Counts.model_fields
       ~Counts.measurement_keys
       ~Counts.counts
    

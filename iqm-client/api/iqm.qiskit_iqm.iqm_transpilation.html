@@ -53,7 +53,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="22.11" />
-    <meta name="docbuild:last-update" content="2025-03-28"/>
+    <meta name="docbuild:last-update" content="2025-03-29"/>
   </head>
   
   
@@ -501,26 +501,12 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance62f4a37e08 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
-  &quot;BasePass&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Base class for transpiler passes.&quot;];
-  &quot;GenericPass&quot; -&gt; &quot;BasePass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;GenericPass&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Base class of a single pass manager task.&quot;];
-  &quot;Task&quot; -&gt; &quot;GenericPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ABC&quot; -&gt; &quot;GenericPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;IQMOptimizeSingleQubitGates&quot; [URL=&quot;iqm.qiskit_iqm.iqm_transpilation.IQMOptimizeSingleQubitGates.html#iqm.qiskit_iqm.iqm_transpilation.IQMOptimizeSingleQubitGates&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Optimize the decomposition of single-qubit gates for the IQM gate set.&quot;];
-  &quot;TransformationPass&quot; -&gt; &quot;IQMOptimizeSingleQubitGates&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;IQMReplaceGateWithUnitaryPass&quot; [URL=&quot;iqm.qiskit_iqm.iqm_transpilation.IQMReplaceGateWithUnitaryPass.html#iqm.qiskit_iqm.iqm_transpilation.IQMReplaceGateWithUnitaryPass&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Transpiler pass that replaces all gates with given name in a circuit with a UnitaryGate.&quot;];
-  &quot;TransformationPass&quot; -&gt; &quot;IQMReplaceGateWithUnitaryPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Task&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;An interface of the pass manager task.&quot;];
-  &quot;ABC&quot; -&gt; &quot;Task&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;TransformationPass&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;A transformation pass: change DAG, not property set.&quot;];
-  &quot;BasePass&quot; -&gt; &quot;TransformationPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-f4c1fe658e77c9a3fdaa6e16e6346ce62a6d75f4.png" alt="Inheritance diagram of iqm.qiskit_iqm.iqm_transpilation" usemap="#inheritance62f4a37e08" class="inheritance graphviz" /></div>
+<map id="inheritance62f4a37e08" name="inheritance62f4a37e08">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="4,24,61,44"/>
+<area shape="rect" id="node5" href="iqm.qiskit_iqm.iqm_transpilation.IQMOptimizeSingleQubitGates.html#iqm.qiskit_iqm.iqm_transpilation.IQMOptimizeSingleQubitGates" target="_top" title="Optimize the decomposition of single&#45;qubit gates for the IQM gate set." alt="" coords="582,4,756,24"/>
+<area shape="rect" id="node7" href="iqm.qiskit_iqm.iqm_transpilation.IQMReplaceGateWithUnitaryPass.html#iqm.qiskit_iqm.iqm_transpilation.IQMReplaceGateWithUnitaryPass" target="_top" title="Transpiler pass that replaces all gates with given name in a circuit with a UnitaryGate." alt="" coords="574,43,764,64"/>
+</map></section>
 
 
                 </article>
@@ -586,7 +572,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-28.
+  Last updated on 2025-03-29.
   <br/>
 </p>
   </div>

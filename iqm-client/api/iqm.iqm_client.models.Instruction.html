@@ -55,7 +55,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="22.11" />
-    <meta name="docbuild:last-update" content="2025-03-28"/>
+    <meta name="docbuild:last-update" content="2025-03-29"/>
   </head>
   
   
@@ -485,7 +485,9 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.implementation_validator"><code class="docutils literal notranslate"><span class="pre">Instruction.implementation_validator()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.qubits_validator"><code class="docutils literal notranslate"><span class="pre">Instruction.qubits_validator()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.args_validator"><code class="docutils literal notranslate"><span class="pre">Instruction.args_validator()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Instruction.model_computed_fields</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.model_config"><code class="docutils literal notranslate"><span class="pre">Instruction.model_config</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.model_fields"><code class="docutils literal notranslate"><span class="pre">Instruction.model_fields</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -503,7 +505,7 @@
 <h1>iqm.iqm_client.models.Instruction<a class="headerlink" href="#iqm-iqm-client-models-instruction" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="iqm.iqm_client.models.Instruction">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.iqm_client.models.</span></span><span class="sig-name descname"><span class="pre">Instruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">*,</span> <span class="pre">name:</span> <span class="pre">str,</span> <span class="pre">implementation:</span> <span class="pre">str</span> <span class="pre">|</span> <span class="pre">None</span> <span class="pre">=</span> <span class="pre">None,</span> <span class="pre">qubits:</span> <span class="pre">tuple[str,</span> <span class="pre">...],</span> <span class="pre">args:</span> <span class="pre">dict[str,</span> <span class="pre">~typing.Any]</span> <span class="pre">=</span> <span class="pre">&lt;factory&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.iqm_client.models.Instruction" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.iqm_client.models.</span></span><span class="sig-name descname"><span class="pre">Instruction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">implementation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubits</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">args</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.iqm_client.models.Instruction" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></p>
 <p>Native quantum operation instance with particular arguments and locus.</p>
 <p>This class represents a native quantum operation
@@ -718,8 +720,14 @@ hardware granularity, even though only 1 ns was requested for <cite>alice</cite>
 <p class="rubric">Attributes</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Instruction.model_config" title="iqm.iqm_client.models.Instruction.model_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_config</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Instruction.model_computed_fields" title="iqm.iqm_client.models.Instruction.model_computed_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_computed_fields</span></code></a></p></td>
+<td><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Instruction.model_config" title="iqm.iqm_client.models.Instruction.model_config"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_config</span></code></a></p></td>
 <td><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Instruction.model_fields" title="iqm.iqm_client.models.Instruction.model_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_fields</span></code></a></p></td>
+<td><p>Metadata about the fields defined on the model, mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.iqm_client.models.Instruction.name" title="iqm.iqm_client.models.Instruction.name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">name</span></code></a></p></td>
 <td><p>name of the quantum operation</p></td>
@@ -813,9 +821,23 @@ hardware granularity, even though only 1 ns was requested for <cite>alice</cite>
 </dd></dl>
 
 <dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Instruction.model_computed_fields">
+<span class="sig-name descname"><span class="pre">model_computed_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">ComputedFieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#iqm.iqm_client.models.Instruction.model_computed_fields" title="Link to this definition">#</a></dt>
+<dd><p>A dictionary of computed field names and their corresponding <cite>ComputedFieldInfo</cite> objects.</p>
+</dd></dl>
+
+<dl class="py attribute">
 <dt class="sig sig-object py" id="iqm.iqm_client.models.Instruction.model_config">
 <span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{}</span></em><a class="headerlink" href="#iqm.iqm_client.models.Instruction.model_config" title="Link to this definition">#</a></dt>
 <dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="iqm.iqm_client.models.Instruction.model_fields">
+<span class="sig-name descname"><span class="pre">model_fields</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">FieldInfo</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'args':</span> <span class="pre">FieldInfo(annotation=dict[str,</span> <span class="pre">Any],</span> <span class="pre">required=False,</span> <span class="pre">default_factory=dict,</span> <span class="pre">examples=[{'key':</span> <span class="pre">'m'}]),</span> <span class="pre">'implementation':</span> <span class="pre">FieldInfo(annotation=Union[Annotated[str,</span> <span class="pre">Strict(strict=True)],</span> <span class="pre">NoneType],</span> <span class="pre">required=False,</span> <span class="pre">default=None),</span> <span class="pre">'name':</span> <span class="pre">FieldInfo(annotation=str,</span> <span class="pre">required=True,</span> <span class="pre">examples=['measure']),</span> <span class="pre">'qubits':</span> <span class="pre">FieldInfo(annotation=tuple[Annotated[str,</span> <span class="pre">Strict(strict=True)],</span> <span class="pre">...],</span> <span class="pre">required=True,</span> <span class="pre">examples=[('alice',)])}</span></em><a class="headerlink" href="#iqm.iqm_client.models.Instruction.model_fields" title="Link to this definition">#</a></dt>
+<dd><p>Metadata about the fields defined on the model,
+mapping of field names to [<cite>FieldInfo</cite>][pydantic.fields.FieldInfo] objects.</p>
+<p>This replaces <cite>Model.__fields__</cite> from Pydantic V1.</p>
 </dd></dl>
 
 </section>
@@ -888,7 +910,9 @@ hardware granularity, even though only 1 ns was requested for <cite>alice</cite>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.implementation_validator"><code class="docutils literal notranslate"><span class="pre">Instruction.implementation_validator()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.qubits_validator"><code class="docutils literal notranslate"><span class="pre">Instruction.qubits_validator()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.args_validator"><code class="docutils literal notranslate"><span class="pre">Instruction.args_validator()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.model_computed_fields"><code class="docutils literal notranslate"><span class="pre">Instruction.model_computed_fields</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.model_config"><code class="docutils literal notranslate"><span class="pre">Instruction.model_config</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.iqm_client.models.Instruction.model_fields"><code class="docutils literal notranslate"><span class="pre">Instruction.model_fields</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -924,7 +948,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-28.
+  Last updated on 2025-03-29.
   <br/>
 </p>
   </div>
