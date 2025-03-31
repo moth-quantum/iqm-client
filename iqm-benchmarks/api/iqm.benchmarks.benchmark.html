@@ -439,12 +439,18 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-<div class="graphviz"><img src="../_images/inheritance-5f680c640cd391583ad04d1df66e28d33b4b1c4d.png" alt="Inheritance diagram of iqm.benchmarks.benchmark" usemap="#inheritance837d144a5f" class="inheritance graphviz" /></div>
-<map id="inheritance837d144a5f" name="inheritance837d144a5f">
-<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="17,55,89,80"/>
-<area shape="rect" id="node3" href="iqm.benchmarks.benchmark.BenchmarkBase.html#iqm.benchmarks.benchmark.BenchmarkBase" target="_top" title="The base implementation of all benchmarks, from which they inherit." alt="" coords="191,55,319,80"/>
-<area shape="rect" id="node4" href="iqm.benchmarks.benchmark.BenchmarkConfigurationBase.html#iqm.benchmarks.benchmark.BenchmarkConfigurationBase" target="_top" title="Benchmark configuration base." alt="" coords="148,5,363,31"/>
-</map></section>
+digraph inheritance837d144a5f {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
+  &quot;BaseModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
+  &quot;BenchmarkBase&quot; [URL=&quot;iqm.benchmarks.benchmark.BenchmarkBase.html#iqm.benchmarks.benchmark.BenchmarkBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;The base implementation of all benchmarks, from which they inherit.&quot;];
+  &quot;ABC&quot; -&gt; &quot;BenchmarkBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;BenchmarkConfigurationBase&quot; [URL=&quot;iqm.benchmarks.benchmark.BenchmarkConfigurationBase.html#iqm.benchmarks.benchmark.BenchmarkConfigurationBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Benchmark configuration base.&quot;];
+  &quot;BaseModel&quot; -&gt; &quot;BenchmarkConfigurationBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+</section>
 
 
                 </article>

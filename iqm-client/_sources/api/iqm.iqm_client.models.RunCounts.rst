@@ -13,9 +13,7 @@ iqm.iqm\_client.models.RunCounts
 
    .. autosummary::
    
-      ~RunCounts.model_computed_fields
       ~RunCounts.model_config
-      ~RunCounts.model_fields
       ~RunCounts.status
       ~RunCounts.counts_batch
    

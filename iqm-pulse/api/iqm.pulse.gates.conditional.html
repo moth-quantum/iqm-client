@@ -392,15 +392,23 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-<div class="graphviz"><img src="../_images/inheritance-8938183e8290010970bb54739ef498c80423c8d5.png" alt="Inheritance diagram of iqm.pulse.gates.conditional" usemap="#inheritance9017ea5e43" class="inheritance graphviz" /></div>
-<map id="inheritance9017ea5e43" name="inheritance9017ea5e43">
-<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="4,24,61,44"/>
-<area shape="rect" id="node6" href="iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" target="_top" title="ABC for implementing quantum gates and other quantum operations using instruction schedules." alt="" coords="98,24,222,44"/>
-<area shape="rect" id="node2" href="iqm.pulse.gates.conditional.CCPRX_Composite.html#iqm.pulse.gates.conditional.CCPRX_Composite" target="_top" title="Classically controlled PRX gate." alt="" coords="393,24,505,44"/>
-<area shape="rect" id="node4" href="iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall.html#iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall" target="_top" title="Conditional drag_crf pulse." alt="" coords="542,4,764,24"/>
-<area shape="rect" id="node5" href="iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian.html#iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian" target="_top" title="Conditional drag_gaussian pulse." alt="" coords="556,43,750,63"/>
-<area shape="rect" id="node3" href="iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate" target="_top" title="Utility base class for creating gate implementations that are defined in terms of other gate implementations." alt="" coords="259,24,355,44"/>
-</map></section>
+digraph inheritance9017ea5e43 {
+bgcolor=transparent;
+rankdir=LR;
+size=&quot;8.0, 12.0&quot;;
+  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
+  &quot;CCPRX_Composite&quot; [URL=&quot;iqm.pulse.gates.conditional.CCPRX_Composite.html#iqm.pulse.gates.conditional.CCPRX_Composite&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Classically controlled PRX gate.&quot;];
+  &quot;CompositeGate&quot; -&gt; &quot;CCPRX_Composite&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;CCPRX_Composite_DRAGCosineRiseFall&quot; [URL=&quot;iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall.html#iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Conditional drag_crf pulse.&quot;];
+  &quot;CCPRX_Composite&quot; -&gt; &quot;CCPRX_Composite_DRAGCosineRiseFall&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;CCPRX_Composite_DRAGGaussian&quot; [URL=&quot;iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian.html#iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Conditional drag_gaussian pulse.&quot;];
+  &quot;CCPRX_Composite&quot; -&gt; &quot;CCPRX_Composite_DRAGGaussian&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;CompositeGate&quot; [URL=&quot;iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Utility base class for creating gate implementations that are defined in terms of other gate implementations.&quot;];
+  &quot;GateImplementation&quot; -&gt; &quot;CompositeGate&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;GateImplementation&quot; [URL=&quot;iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for implementing quantum gates and other quantum operations using instruction schedules.&quot;];
+  &quot;ABC&quot; -&gt; &quot;GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+}
+</section>
 
 
                 </article>
