@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile &#8212; IQM client 22.11 documentation</title>
+    <title>iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile &#8212; IQM client 22.12 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=9589c5e2"></script>
+    <script src="../_static/documentation_options.js?v=82fd4584"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -54,8 +54,8 @@
     <link rel="prev" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend" href="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.11" />
-    <meta name="docbuild:last-update" content="2025-03-31"/>
+  <meta name="docsearch:version" content="22.12" />
+    <meta name="docbuild:last-update" content="2025-04-01"/>
   </head>
   
   
@@ -134,8 +134,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.12 documentation - Home"/>
   
   
 </a></div>
@@ -216,6 +216,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.RunResult.html">iqm.iqm_client.models.RunResult</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.RunStatus.html">iqm.iqm_client.models.RunStatus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.SingleQubitMapping.html">iqm.iqm_client.models.SingleQubitMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.StaticQuantumArchitecture.html">iqm.iqm_client.models.StaticQuantumArchitecture</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.Status.html">iqm.iqm_client.models.Status</a></li>
 </ul>
 </details></li>
@@ -476,7 +477,10 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><code class="docutils literal notranslate"><span class="pre">IQMErrorProfile</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><code class="docutils literal notranslate"><span class="pre">IQMErrorProfile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.thermal_relaxation"><code class="docutils literal notranslate"><span class="pre">IQMErrorProfile.thermal_relaxation()</span></code></a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -494,13 +498,14 @@
 <dt class="sig sig-object py" id="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.qiskit_iqm.fake_backends.iqm_fake_backend.</span></span><span class="sig-name descname"><span class="pre">IQMErrorProfile</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t1s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">t2s</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_qubit_gate_depolarizing_error_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_qubit_gate_depolarizing_error_parameters</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#tuple" title="(in Python v3.11)"><span class="pre">tuple</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">single_qubit_gate_durations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">two_qubit_gate_durations</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">readout_errors</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#object" title="(in Python v3.11)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
-<p>Properties of an IQM QPU specimen, used for constructing an error model.</p>
-<p>All the attributes of this class refer to the qubits of the QPU using their physical names.</p>
+<p>Characteristics of an IQM QPU specimen, used for constructing an error model.</p>
+<p>All the attributes of this class refer to the components of the QPU using their physical names.
+There are two types of QPU components, qubits and computational resonators.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>t1s</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em>]</em>) – maps qubits to their <span class="math notranslate nohighlight">\(T_1\)</span> times (in ns)</p></li>
-<li><p><strong>t2s</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em>]</em>) – maps qubits to the <span class="math notranslate nohighlight">\(T_2\)</span> times (in ns)</p></li>
+<li><p><strong>t1s</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em>]</em>) – maps components to their <span class="math notranslate nohighlight">\(T_1\)</span> times (in ns)</p></li>
+<li><p><strong>t2s</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em>]</em>) – maps components to their <span class="math notranslate nohighlight">\(T_2\)</span> times (in ns)</p></li>
 <li><p><strong>single_qubit_gate_depolarizing_error_parameters</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em>]</em><em>]</em>) – Depolarizing error parameters for single-qubit gates.
 Maps single-qubit gate names to a mapping of qubits (on which the gate acts) to a depolarizing error.
 The error, used in a one-qubit depolarizing channel, concatenated with a thermal relaxation channel,
@@ -522,9 +527,9 @@ of observing the state <span class="math notranslate nohighlight">\(\ket{\neg x}
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">IQMErrorProfile</span><span class="p">(</span>
     <span class="n">t1s</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;QB1&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span> <span class="s2">&quot;QB2&quot;</span><span class="p">:</span> <span class="mf">12000.0</span><span class="p">,</span> <span class="s2">&quot;QB3&quot;</span><span class="p">:</span> <span class="mf">14000.0</span><span class="p">},</span>
     <span class="n">t2s</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;QB1&quot;</span><span class="p">:</span> <span class="mf">10000.0</span><span class="p">,</span> <span class="s2">&quot;QB2&quot;</span><span class="p">:</span> <span class="mf">12000.0</span><span class="p">,</span> <span class="s2">&quot;QB3&quot;</span><span class="p">:</span> <span class="mf">13000.0</span><span class="p">},</span>
-    <span class="n">single_qubit_gate_depolarizing_error_parameters</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;r&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;QB1&quot;</span><span class="p">:</span> <span class="mf">0.0005</span><span class="p">,</span> <span class="s2">&quot;QB2&quot;</span><span class="p">:</span> <span class="mf">0.0004</span><span class="p">,</span> <span class="s2">&quot;QB3&quot;</span><span class="p">:</span> <span class="mf">0.0010</span><span class="p">}},</span>
+    <span class="n">single_qubit_gate_depolarizing_error_parameters</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;prx&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;QB1&quot;</span><span class="p">:</span> <span class="mf">0.0005</span><span class="p">,</span> <span class="s2">&quot;QB2&quot;</span><span class="p">:</span> <span class="mf">0.0004</span><span class="p">,</span> <span class="s2">&quot;QB3&quot;</span><span class="p">:</span> <span class="mf">0.0010</span><span class="p">}},</span>
     <span class="n">two_qubit_gate_depolarizing_error_parameters</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;cz&quot;</span><span class="p">:</span> <span class="p">{(</span><span class="s2">&quot;QB1&quot;</span><span class="p">,</span> <span class="s2">&quot;QB2&quot;</span><span class="p">):</span> <span class="mf">0.08</span><span class="p">,</span> <span class="p">(</span><span class="s2">&quot;QB2&quot;</span><span class="p">,</span> <span class="s2">&quot;QB3&quot;</span><span class="p">):</span> <span class="mf">0.03</span><span class="p">}},</span>
-    <span class="n">single_qubit_gate_durations</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;r&quot;</span><span class="p">:</span> <span class="mf">50.</span><span class="p">},</span>
+    <span class="n">single_qubit_gate_durations</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;prx&quot;</span><span class="p">:</span> <span class="mf">50.</span><span class="p">},</span>
     <span class="n">two_qubit_gate_durations</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;cz&quot;</span><span class="p">:</span> <span class="mf">100.</span><span class="p">},</span>
     <span class="n">readout_errors</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;QB1&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">},</span>
                     <span class="s2">&quot;QB2&quot;</span><span class="p">:</span> <span class="p">{</span><span class="s2">&quot;0&quot;</span><span class="p">:</span> <span class="mf">0.02</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">:</span> <span class="mf">0.03</span><span class="p">},</span>
@@ -572,9 +577,29 @@ of observing the state <span class="math notranslate nohighlight">\(\ket{\neg x}
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__repr__</span></code>()</p></td>
 <td><p>Return repr(self).</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.thermal_relaxation" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.thermal_relaxation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">thermal_relaxation</span></code></a>(component, duration)</p></td>
+<td><p>One-qubit relaxation error channel.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
+<dl class="py method">
+<dt class="sig sig-object py" id="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.thermal_relaxation">
+<span class="sig-name descname"><span class="pre">thermal_relaxation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">component</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">duration</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><span class="pre">float</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">QuantumError</span></span></span><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.thermal_relaxation" title="Link to this definition">#</a></dt>
+<dd><p>One-qubit relaxation error channel.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>component</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – </p></li>
+<li><p><strong>duration</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>QuantumError</em></p>
+</dd>
+</dl>
+</dd></dl>
+
 </dd></dl>
 
 </section>
@@ -625,7 +650,10 @@ of observing the state <span class="math notranslate nohighlight">\(\ket{\neg x}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><code class="docutils literal notranslate"><span class="pre">IQMErrorProfile</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><code class="docutils literal notranslate"><span class="pre">IQMErrorProfile</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.thermal_relaxation"><code class="docutils literal notranslate"><span class="pre">IQMErrorProfile.thermal_relaxation()</span></code></a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 
@@ -659,7 +687,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-31.
+  Last updated on 2025-04-01.
   <br/>
 </p>
   </div>

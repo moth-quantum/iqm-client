@@ -65,6 +65,7 @@ iqm.iqm\_client.models
       RunResult
       RunStatus
       SingleQubitMapping
+      StaticQuantumArchitecture
       Status
    
    

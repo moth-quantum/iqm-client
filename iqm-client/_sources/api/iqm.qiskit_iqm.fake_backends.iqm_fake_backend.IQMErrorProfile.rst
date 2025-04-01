@@ -33,5 +33,6 @@ iqm.qiskit\_iqm.fake\_backends.iqm\_fake\_backend.IQMErrorProfile
    
       ~IQMErrorProfile.__eq__
       ~IQMErrorProfile.__repr__
+      ~IQMErrorProfile.thermal_relaxation
    
    

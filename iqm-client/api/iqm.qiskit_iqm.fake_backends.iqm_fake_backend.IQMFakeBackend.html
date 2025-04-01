@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend &#8212; IQM client 22.11 documentation</title>
+    <title>iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend &#8212; IQM client 22.12 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=9589c5e2"></script>
+    <script src="../_static/documentation_options.js?v=82fd4584"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -54,8 +54,8 @@
     <link rel="prev" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile" href="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.11" />
-    <meta name="docbuild:last-update" content="2025-03-31"/>
+  <meta name="docsearch:version" content="22.12" />
+    <meta name="docbuild:last-update" content="2025-04-01"/>
   </head>
   
   
@@ -134,8 +134,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.12 documentation - Home"/>
   
   
 </a></div>
@@ -216,6 +216,7 @@
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.RunResult.html">iqm.iqm_client.models.RunResult</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.RunStatus.html">iqm.iqm_client.models.RunStatus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.SingleQubitMapping.html">iqm.iqm_client.models.SingleQubitMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.StaticQuantumArchitecture.html">iqm.iqm_client.models.StaticQuantumArchitecture</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.iqm_client.models.Status.html">iqm.iqm_client.models.Status</a></li>
 </ul>
 </details></li>
@@ -499,17 +500,17 @@
 <h1>iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend<a class="headerlink" href="#iqm-qiskit-iqm-fake-backends-iqm-fake-backend-iqmfakebackend" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.qiskit_iqm.fake_backends.iqm_fake_backend.</span></span><span class="sig-name descname"><span class="pre">IQMFakeBackend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.QuantumArchitectureSpecification.html#iqm.iqm_client.models.QuantumArchitectureSpecification" title="iqm.iqm_client.models.QuantumArchitectureSpecification"><span class="pre">QuantumArchitectureSpecification</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.html#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><span class="pre">IQMErrorProfile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'IQMFakeBackend'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.qiskit_iqm.fake_backends.iqm_fake_backend.</span></span><span class="sig-name descname"><span class="pre">IQMFakeBackend</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.StaticQuantumArchitecture.html#iqm.iqm_client.models.StaticQuantumArchitecture" title="iqm.iqm_client.models.StaticQuantumArchitecture"><span class="pre">StaticQuantumArchitecture</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_profile</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.html#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><span class="pre">IQMErrorProfile</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">'IQMFakeBackend'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="iqm.qiskit_iqm.iqm_backend.IQMBackendBase.html#iqm.qiskit_iqm.iqm_backend.IQMBackendBase" title="iqm.qiskit_iqm.iqm_backend.IQMBackendBase"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQMBackendBase</span></code></a></p>
 <p>Simulated backend that mimics the behaviour of IQM quantum computers.</p>
 <p>Can be used to perform noisy gate-level simulations of quantum circuit execution on IQM hardware.</p>
-<p>A fake backend contains information about a specific IQM system, such as the quantum architecture (number of qubits,
-connectivity), the native gate set, and a noise model based on system parameters such as relaxation (<span class="math notranslate nohighlight">\(T_1\)</span>)
+<p>A fake backend contains information about a specific IQM system, such as the static quantum architecture
+(number of qubits, connectivity), and a noise model based on system parameters such as relaxation (<span class="math notranslate nohighlight">\(T_1\)</span>)
 and dephasing (<span class="math notranslate nohighlight">\(T_2\)</span>) times, gate infidelities, and readout errors.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>architecture</strong> (<a class="reference internal" href="iqm.iqm_client.models.QuantumArchitectureSpecification.html#iqm.iqm_client.models.QuantumArchitectureSpecification" title="iqm.iqm_client.models.QuantumArchitectureSpecification"><em>QuantumArchitectureSpecification</em></a>) – Quantum architecture associated with the backend instance.</p></li>
+<li><p><strong>architecture</strong> (<a class="reference internal" href="iqm.iqm_client.models.StaticQuantumArchitecture.html#iqm.iqm_client.models.StaticQuantumArchitecture" title="iqm.iqm_client.models.StaticQuantumArchitecture"><em>StaticQuantumArchitecture</em></a>) – Static quantum architecture associated with the backend instance.</p></li>
 <li><p><strong>error_profile</strong> (<a class="reference internal" href="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.html#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><em>IQMErrorProfile</em></a>) – Characteristics of a particular QPU specimen.</p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – </p></li>
 </ul>
@@ -519,7 +520,7 @@ and dephasing (<span class="math notranslate nohighlight">\(T_2\)</span>) times,
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.error_profile" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.error_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">error_profile</span></code></a></p></td>
-<td><p>Error profile of this instance of IQM fake backend</p></td>
+<td><p>Error profile of this IQM fake backend instance.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.max_circuits" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.max_circuits"><code class="xref py py-obj docutils literal notranslate"><span class="pre">max_circuits</span></code></a></p></td>
 <td><p>The maximum number of circuits (or Pulse schedules) that can be run in a single job.</p></td>
@@ -545,14 +546,14 @@ and dephasing (<span class="math notranslate nohighlight">\(T_2\)</span>) times,
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_noise_model</span></code>(architecture, error_profile)</p></td>
-<td><p>Builds a noise model from the attributes.</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_create_noise_model</span></code>()</p></td>
+<td><p>Build a noise model from the attributes.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_default_options</span></code>()</p></td>
 <td><p>Return the default options</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_validate_architecture_and_error_profile</span></code>(...)</p></td>
-<td><p>Verifies that the parameters of the QPU error profile match the constraints of its quantum architecture.</p></td>
+<td><p>Verify that the parameters of the QPU error profile match the constraints of its quantum architecture.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.copy_with_error_profile" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.copy_with_error_profile"><code class="xref py py-obj docutils literal notranslate"><span class="pre">copy_with_error_profile</span></code></a>(new_error_profile)</p></td>
 <td><p>Return another instance of IQMFakeBackend, which has the same quantum architecture but a different error profile.</p></td>
@@ -561,7 +562,7 @@ and dephasing (<span class="math notranslate nohighlight">\(T_2\)</span>) times,
 <td><p>Run quantum circuits on the fake backend (by simulating them).</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.validate_compatible_architecture" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.validate_compatible_architecture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_compatible_architecture</span></code></a>(architecture)</p></td>
-<td><p>Compare a dynamic quantum architecture to the static architecture of the fake backend.</p></td>
+<td><p>Compare a static quantum architecture to the static architecture of the fake backend.</p></td>
 </tr>
 </tbody>
 </table>
@@ -569,7 +570,7 @@ and dephasing (<span class="math notranslate nohighlight">\(T_2\)</span>) times,
 <dl class="py property">
 <dt class="sig sig-object py" id="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.error_profile">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">error_profile</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile.html#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile" title="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMErrorProfile"><span class="pre">IQMErrorProfile</span></a></em><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.error_profile" title="Link to this definition">#</a></dt>
-<dd><p>Error profile of this instance of IQM fake backend</p>
+<dd><p>Error profile of this IQM fake backend instance.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -622,15 +623,15 @@ Validity of the circuits is also checked.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.validate_compatible_architecture">
-<span class="sig-name descname"><span class="pre">validate_compatible_architecture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.DynamicQuantumArchitecture.html#iqm.iqm_client.models.DynamicQuantumArchitecture" title="iqm.iqm_client.models.DynamicQuantumArchitecture"><span class="pre">DynamicQuantumArchitecture</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.validate_compatible_architecture" title="Link to this definition">#</a></dt>
-<dd><p>Compare a dynamic quantum architecture to the static architecture of the fake backend.</p>
+<span class="sig-name descname"><span class="pre">validate_compatible_architecture</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">architecture</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="iqm.iqm_client.models.StaticQuantumArchitecture.html#iqm.iqm_client.models.StaticQuantumArchitecture" title="iqm.iqm_client.models.StaticQuantumArchitecture"><span class="pre">StaticQuantumArchitecture</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><span class="pre">bool</span></a></span></span><a class="headerlink" href="#iqm.qiskit_iqm.fake_backends.iqm_fake_backend.IQMFakeBackend.validate_compatible_architecture" title="Link to this definition">#</a></dt>
+<dd><p>Compare a static quantum architecture to the static architecture of the fake backend.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>architecture</strong> (<a class="reference internal" href="iqm.iqm_client.models.DynamicQuantumArchitecture.html#iqm.iqm_client.models.DynamicQuantumArchitecture" title="iqm.iqm_client.models.DynamicQuantumArchitecture"><em>DynamicQuantumArchitecture</em></a>) – dynamic quantum architecture to compare to</p>
+<dd class="field-odd"><p><strong>architecture</strong> (<a class="reference internal" href="iqm.iqm_client.models.StaticQuantumArchitecture.html#iqm.iqm_client.models.StaticQuantumArchitecture" title="iqm.iqm_client.models.StaticQuantumArchitecture"><em>StaticQuantumArchitecture</em></a>) – static quantum architecture to compare to</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>True iff the number and names of the locus components, the component connectivity,
-and the available operations in the DQA match the static architecture of this backend.</p>
+<dd class="field-even"><p>True iff the locus components and the component connectivity
+in the IQMFakeBackend SQA match <code class="docutils literal notranslate"><span class="pre">architecture</span></code>.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)">bool</a></p>
@@ -729,7 +730,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-31.
+  Last updated on 2025-04-01.
   <br/>
 </p>
   </div>

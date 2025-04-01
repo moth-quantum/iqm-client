@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Changelog &#8212; IQM client 22.11 documentation</title>
+    <title>Changelog &#8212; IQM client 22.12 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=9589c5e2"></script>
+    <script src="_static/documentation_options.js?v=82fd4584"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -51,8 +51,8 @@
     <link rel="prev" title="Contributors" href="authors.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.11" />
-    <meta name="docbuild:last-update" content="2025-03-31"/>
+  <meta name="docsearch:version" content="22.12" />
+    <meta name="docbuild:last-update" content="2025-04-01"/>
   </head>
   
   
@@ -131,8 +131,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="IQM client 22.11 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.11 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="IQM client 22.12 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.12 documentation - Home"/>
   
   
 </a></div>
@@ -213,6 +213,7 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.models.RunResult.html">iqm.iqm_client.models.RunResult</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.models.RunStatus.html">iqm.iqm_client.models.RunStatus</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.models.SingleQubitMapping.html">iqm.iqm_client.models.SingleQubitMapping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.models.StaticQuantumArchitecture.html">iqm.iqm_client.models.StaticQuantumArchitecture</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.models.Status.html">iqm.iqm_client.models.Status</a></li>
 </ul>
 </details></li>
@@ -473,33 +474,37 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-11-2025-03-25">Version 22.11 (2025-03-25)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-12-2025-03-31">Version 22.12 (2025-03-31)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-10-2025-03-24">Version 22.10 (2025-03-24)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Features</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-9-2025-03-17">Version 22.9 (2025-03-17)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Features</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-8-2025-03-10">Version 22.8 (2025-03-10)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-11-2025-03-25">Version 22.11 (2025-03-25)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Features</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-7-2025-03-07">Version 22.7 (2025-03-07)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-10-2025-03-24">Version 22.10 (2025-03-24)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-9-2025-03-17">Version 22.9 (2025-03-17)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-8-2025-03-10">Version 22.8 (2025-03-10)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-7-2025-03-07">Version 22.7 (2025-03-07)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Features</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixes">Bug fixes</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-6-2025-03-07">Version 22.6 (2025-03-07)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Features</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-5-2025-03-05">Version 22.5 (2025-03-05)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Features</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-4-2025-02-25">Version 22.4 (2025-02-25)</a></li>
@@ -624,7 +629,7 @@
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-5-2021-11-23">Version 1.5 (2021-11-23)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-4-2021-11-05">Version 1.4 (2021-11-05)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-3-2021-10-20">Version 1.3 (2021-10-20)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id166">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id171">Features</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-2-2021-10-19">Version 1.2 (2021-10-19)</a><ul class="nav section-nav flex-column">
@@ -632,11 +637,11 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-1-2021-10-08">Version 1.1 (2021-10-08)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id169">Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id174">Fixes</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-0-2021-08-27">Version 1.0 (2021-08-27)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id171">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id176">Features</a></li>
 </ul>
 </li>
 </ul>
@@ -652,10 +657,20 @@
                   
   <section id="changelog">
 <span id="changes"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Link to this heading">#</a></h1>
-<section id="version-22-11-2025-03-25">
-<h2>Version 22.11 (2025-03-25)<a class="headerlink" href="#version-22-11-2025-03-25" title="Link to this heading">#</a></h2>
+<section id="version-22-12-2025-03-31">
+<h2>Version 22.12 (2025-03-31)<a class="headerlink" href="#version-22-12-2025-03-31" title="Link to this heading">#</a></h2>
 <section id="features">
 <h3>Features<a class="headerlink" href="#features" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">IQMClient.get_static_quantum_architecture()</span></code> added. <a href="#id1"><span class="problematic" id="id2">:issue:`SW-706`</span></a></p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">iqm.qiskit_iqm.fake_backends.IQMFakeBackend</span></code> uses the static quantum architecture. <a href="#id3"><span class="problematic" id="id4">:issue:`SW-706`</span></a></p></li>
+</ul>
+</section>
+</section>
+<section id="version-22-11-2025-03-25">
+<h2>Version 22.11 (2025-03-25)<a class="headerlink" href="#version-22-11-2025-03-25" title="Link to this heading">#</a></h2>
+<section id="id5">
+<h3>Features<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Improve <code class="docutils literal notranslate"><span class="pre">qiskit_iqm</span></code> installation instructions and update links to <code class="docutils literal notranslate"><span class="pre">qiskit_iqm</span></code> documentation.</p></li>
 </ul>
@@ -663,17 +678,17 @@
 </section>
 <section id="version-22-10-2025-03-24">
 <h2>Version 22.10 (2025-03-24)<a class="headerlink" href="#version-22-10-2025-03-24" title="Link to this heading">#</a></h2>
-<section id="id1">
-<h3>Features<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<section id="id6">
+<h3>Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add <code class="docutils literal notranslate"><span class="pre">qiskit_iqm</span></code> to <code class="docutils literal notranslate"><span class="pre">iqm-client</span></code> distribution package as an optional feature. <a href="#id2"><span class="problematic" id="id3">:issue:`SW-1146`</span></a></p></li>
+<li><p>Add <code class="docutils literal notranslate"><span class="pre">qiskit_iqm</span></code> to <code class="docutils literal notranslate"><span class="pre">iqm-client</span></code> distribution package as an optional feature. <a href="#id7"><span class="problematic" id="id8">:issue:`SW-1146`</span></a></p></li>
 </ul>
 </section>
 </section>
 <section id="version-22-9-2025-03-17">
 <h2>Version 22.9 (2025-03-17)<a class="headerlink" href="#version-22-9-2025-03-17" title="Link to this heading">#</a></h2>
-<section id="id4">
-<h3>Features<a class="headerlink" href="#id4" title="Link to this heading">#</a></h3>
+<section id="id9">
+<h3>Features<a class="headerlink" href="#id9" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Restore Python 3.10 support</p></li>
 </ul>
@@ -681,8 +696,8 @@
 </section>
 <section id="version-22-8-2025-03-10">
 <h2>Version 22.8 (2025-03-10)<a class="headerlink" href="#version-22-8-2025-03-10" title="Link to this heading">#</a></h2>
-<section id="id5">
-<h3>Features<a class="headerlink" href="#id5" title="Link to this heading">#</a></h3>
+<section id="id10">
+<h3>Features<a class="headerlink" href="#id10" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>IQMClient tolerates unrecognized job statuses from the server to ensure forward compatibility.</p></li>
 </ul>
@@ -690,23 +705,23 @@
 </section>
 <section id="version-22-7-2025-03-07">
 <h2>Version 22.7 (2025-03-07)<a class="headerlink" href="#version-22-7-2025-03-07" title="Link to this heading">#</a></h2>
-<section id="id6">
-<h3>Features<a class="headerlink" href="#id6" title="Link to this heading">#</a></h3>
+<section id="id11">
+<h3>Features<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">Instruction.args</span></code> now has a default value (an empty dict) for convenience. <a href="#id7"><span class="problematic" id="id8">:issue:`SW-1289`</span></a></p></li>
+<li><p><code class="xref py py-attr docutils literal notranslate"><span class="pre">Instruction.args</span></code> now has a default value (an empty dict) for convenience. <a href="#id12"><span class="problematic" id="id13">:issue:`SW-1289`</span></a></p></li>
 </ul>
 </section>
 <section id="bug-fixes">
 <h3>Bug fixes<a class="headerlink" href="#bug-fixes" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">transpile_insert_moves()</span></code> now handles <code class="docutils literal notranslate"><span class="pre">barrier</span></code> instructions properly. <a href="#id9"><span class="problematic" id="id10">:issue:`SW-1289`</span></a></p></li>
+<li><p><code class="xref py py-func docutils literal notranslate"><span class="pre">transpile_insert_moves()</span></code> now handles <code class="docutils literal notranslate"><span class="pre">barrier</span></code> instructions properly. <a href="#id14"><span class="problematic" id="id15">:issue:`SW-1289`</span></a></p></li>
 </ul>
 </section>
 </section>
 <section id="version-22-6-2025-03-07">
 <h2>Version 22.6 (2025-03-07)<a class="headerlink" href="#version-22-6-2025-03-07" title="Link to this heading">#</a></h2>
-<section id="id11">
-<h3>Features<a class="headerlink" href="#id11" title="Link to this heading">#</a></h3>
+<section id="id16">
+<h3>Features<a class="headerlink" href="#id16" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Improve docstrings.</p></li>
 <li><p>Remove boilerplate code in <code class="xref py py-class docutils literal notranslate"><span class="pre">IQMClient</span></code> endpoint requests, make the error behavior more uniform.</p></li>
@@ -716,10 +731,10 @@
 </section>
 <section id="version-22-5-2025-03-05">
 <h2>Version 22.5 (2025-03-05)<a class="headerlink" href="#version-22-5-2025-03-05" title="Link to this heading">#</a></h2>
-<section id="id12">
-<h3>Features<a class="headerlink" href="#id12" title="Link to this heading">#</a></h3>
+<section id="id17">
+<h3>Features<a class="headerlink" href="#id17" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Bump version for an updated repo organization. No functional changes. <a href="#id13"><span class="problematic" id="id14">:issue:`SW-1015`</span></a></p></li>
+<li><p>Bump version for an updated repo organization. No functional changes. <a href="#id18"><span class="problematic" id="id19">:issue:`SW-1015`</span></a></p></li>
 <li><p>Drop support for Python 3.10.</p></li>
 </ul>
 </section>
@@ -1512,8 +1527,8 @@ but still supported). <a class="reference external" href="https://github.com/iqm
 </section>
 <section id="version-1-3-2021-10-20">
 <h2>Version 1.3 (2021-10-20)<a class="headerlink" href="#version-1-3-2021-10-20" title="Link to this heading">#</a></h2>
-<section id="id166">
-<h3>Features<a class="headerlink" href="#id166" title="Link to this heading">#</a></h3>
+<section id="id171">
+<h3>Features<a class="headerlink" href="#id171" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Document the native instruction types. <a class="reference external" href="https://github.com/iqm-finland/iqm-client/pull/5">#5</a></p></li>
 </ul>
@@ -1530,8 +1545,8 @@ but still supported). <a class="reference external" href="https://github.com/iqm
 </section>
 <section id="version-1-1-2021-10-08">
 <h2>Version 1.1 (2021-10-08)<a class="headerlink" href="#version-1-1-2021-10-08" title="Link to this heading">#</a></h2>
-<section id="id169">
-<h3>Fixes<a class="headerlink" href="#id169" title="Link to this heading">#</a></h3>
+<section id="id174">
+<h3>Fixes<a class="headerlink" href="#id174" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Changed example instruction phased_rx to measurement. <a class="reference external" href="https://github.com/iqm-finland/iqm-client/pull/2">#2</a></p></li>
 </ul>
@@ -1539,8 +1554,8 @@ but still supported). <a class="reference external" href="https://github.com/iqm
 </section>
 <section id="version-1-0-2021-08-27">
 <h2>Version 1.0 (2021-08-27)<a class="headerlink" href="#version-1-0-2021-08-27" title="Link to this heading">#</a></h2>
-<section id="id171">
-<h3>Features<a class="headerlink" href="#id171" title="Link to this heading">#</a></h3>
+<section id="id176">
+<h3>Features<a class="headerlink" href="#id176" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Split IQM client from the Cirq on IQM library</p></li>
 </ul>
@@ -1585,33 +1600,37 @@ but still supported). <a class="reference external" href="https://github.com/iqm
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-11-2025-03-25">Version 22.11 (2025-03-25)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-12-2025-03-31">Version 22.12 (2025-03-31)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-10-2025-03-24">Version 22.10 (2025-03-24)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Features</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-9-2025-03-17">Version 22.9 (2025-03-17)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">Features</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-8-2025-03-10">Version 22.8 (2025-03-10)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-11-2025-03-25">Version 22.11 (2025-03-25)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Features</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-7-2025-03-07">Version 22.7 (2025-03-07)</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-10-2025-03-24">Version 22.10 (2025-03-24)</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-9-2025-03-17">Version 22.9 (2025-03-17)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-8-2025-03-10">Version 22.8 (2025-03-10)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">Features</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-7-2025-03-07">Version 22.7 (2025-03-07)</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Features</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#bug-fixes">Bug fixes</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-6-2025-03-07">Version 22.6 (2025-03-07)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">Features</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-5-2025-03-05">Version 22.5 (2025-03-05)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">Features</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-22-4-2025-02-25">Version 22.4 (2025-02-25)</a></li>
@@ -1736,7 +1755,7 @@ but still supported). <a class="reference external" href="https://github.com/iqm
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-5-2021-11-23">Version 1.5 (2021-11-23)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-4-2021-11-05">Version 1.4 (2021-11-05)</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-3-2021-10-20">Version 1.3 (2021-10-20)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id166">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id171">Features</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-2-2021-10-19">Version 1.2 (2021-10-19)</a><ul class="nav section-nav flex-column">
@@ -1744,11 +1763,11 @@ but still supported). <a class="reference external" href="https://github.com/iqm
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-1-2021-10-08">Version 1.1 (2021-10-08)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id169">Fixes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id174">Fixes</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#version-1-0-2021-08-27">Version 1.0 (2021-08-27)</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id171">Features</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id176">Features</a></li>
 </ul>
 </li>
 </ul>
@@ -1784,7 +1803,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-03-31.
+  Last updated on 2025-04-01.
   <br/>
 </p>
   </div>
