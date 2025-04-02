@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Slepian &#8212; iqm.pulse 8.9 documentation</title>
+    <title>Slepian &#8212; iqm.pulse 8.11 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=c0138b63"></script>
+    <script src="../_static/documentation_options.js?v=9469868b"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,7 +55,7 @@
     <link rel="prev" title="ModulatedCosineRiseFall" href="iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.9" />
+  <meta name="docsearch:version" content="8.11" />
     <meta name="docbuild:last-update" content="2025-04-02"/>
   </head>
   
@@ -135,8 +135,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.9 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.9 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.11 documentation - Home"/>
   
   
 </a></div>
@@ -217,6 +217,8 @@
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="iqm.pulse.playlist.html">playlist</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.channel.html">channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.fast_drag.html">fast_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.hd_drag.html">hd_drag</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.instructions.html">instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.playlist.html">playlist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.schedule.html">schedule</a></li>
@@ -409,7 +411,7 @@ waveform with the following steps:</p>
 <li><p>Calculate <span class="math notranslate nohighlight">\(V(t)\)</span> (Slepian in the lab frame and in voltage space)</p></li>
 </ol>
 <p>Since the waveform is normalized, any voltage pre-factor should go into the pulse amplitude.</p>
-<p>The user is advised to look up <span id="id1">[<a class="reference internal" href="../references.html#id4" title="John M. Martinis and Michael R. Geller. Fast adiabatic qubit gates using only $\sigma _z$ control. Phys. Rev. A, 90:022307, Aug 2014. arXiv:1402.5467, doi:10.1103/PhysRevA.90.022307.">1</a>]</span> for further details, since the derivation is mathematically
+<p>The user is advised to look up <span id="id1">[<a class="reference internal" href="../references.html#id4" title="John M. Martinis and Michael R. Geller. Fast adiabatic qubit gates using only $\sigma _z$ control. Phys. Rev. A, 90:022307, Aug 2014. arXiv:1402.5467, doi:10.1103/PhysRevA.90.022307.">2</a>]</span> for further details, since the derivation is mathematically
 heavy.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -552,7 +554,7 @@ integrate the expression numerically with <a class="reference external" href="ht
 <span class="sig-name descname"><span class="pre">_theta_tau</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">tau</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.playlist.waveforms.Slepian._theta_tau" title="Link to this definition">#</a></dt>
 <dd><p>Parametrization of the Slepian waveform in the accelerated frame.</p>
 <p>The Slepian waveform is parametrized using Fourier base functions, where we only take the cosine terms into
-account (<span id="id2">[<a class="reference internal" href="../references.html#id4" title="John M. Martinis and Michael R. Geller. Fast adiabatic qubit gates using only $\sigma _z$ control. Phys. Rev. A, 90:022307, Aug 2014. arXiv:1402.5467, doi:10.1103/PhysRevA.90.022307.">1</a>]</span> has shown that this is a reasonable assumption).
+account (<span id="id2">[<a class="reference internal" href="../references.html#id4" title="John M. Martinis and Michael R. Geller. Fast adiabatic qubit gates using only $\sigma _z$ control. Phys. Rev. A, 90:022307, Aug 2014. arXiv:1402.5467, doi:10.1103/PhysRevA.90.022307.">2</a>]</span> has shown that this is a reasonable assumption).
 Here, <span class="math notranslate nohighlight">\(\lambda_n\)</span> is the amplitude of the <span class="math notranslate nohighlight">\(n\)</span>-th term of the Fourier base function.
 It is usually sufficient to take only up to second order terms into account, i.e. only <span class="math notranslate nohighlight">\(\lambda_1\)</span> and
 <span class="math notranslate nohighlight">\(\lambda_2\)</span> are non-zero.</p>
@@ -647,7 +649,7 @@ It is usually sufficient to take only up to second order terms into account, i.e
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy.
+      © Copyright 2019-2025, IQM Finland Oy, Release 8.11.
       <br/>
     
   </p>

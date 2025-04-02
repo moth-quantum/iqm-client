@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index &#8212; iqm.pulse 8.9 documentation</title>
+    <title>Index &#8212; iqm.pulse 8.11 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=c0138b63"></script>
+    <script src="_static/documentation_options.js?v=9469868b"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -50,7 +50,7 @@
     <link rel="search" title="Search" href="search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.9" />
+  <meta name="docsearch:version" content="8.11" />
     <meta name="docbuild:last-update" content="2025-04-02"/>
   </head>
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.9 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.9 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.11 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.11 documentation - Home"/>
   
   
 </a></div>
@@ -214,6 +214,8 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.playlist.html">playlist</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.channel.html">channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.fast_drag.html">fast_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.hd_drag.html">hd_drag</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.instructions.html">instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.playlist.html">playlist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.schedule.html">schedule</a></li>
@@ -471,14 +473,14 @@
 </li>
       <li><a href="api/iqm.pulse.gates.prx.ABC_Constant_smooth.html#iqm.pulse.gates.prx.ABC_Constant_smooth._fall_pulse">_fall_pulse() (iqm.pulse.gates.prx.ABC_Constant_smooth class method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._find_implementation_and_locus">_find_implementation_and_locus() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._finish_schedule">_finish_schedule() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._fuse_long_distance_virtual_rzs">_fuse_long_distance_virtual_rzs() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._get_channel_for_component">_get_channel_for_component() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._get_implementation">_get_implementation() (iqm.pulse.builder.ScheduleBuilder method)</a>
@@ -505,6 +507,8 @@
 </li>
       <li><a href="api/iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms._multiplexed_timeboxes">_multiplexed_timeboxes (iqm.pulse.gates.measure.Measure_CustomWaveforms attribute)</a>
 </li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.SuppressedPulse.html#iqm.pulse.playlist.fast_drag.SuppressedPulse._normalize">_normalize() (iqm.pulse.playlist.fast_drag.SuppressedPulse static method)</a>
+</li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._require_scheduling_in_seconds">_require_scheduling_in_seconds (iqm.pulse.builder.ScheduleBuilder attribute)</a>
 </li>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder._resolve_timebox_hard_boundary">_resolve_timebox_hard_boundary() (iqm.pulse.builder.ScheduleBuilder method)</a>
@@ -513,9 +517,17 @@
 </li>
       <li><a href="api/iqm.pulse.gates.prx.ABC_Constant_smooth.html#iqm.pulse.gates.prx.ABC_Constant_smooth._rise_pulse">_rise_pulse() (iqm.pulse.gates.prx.ABC_Constant_smooth class method)</a>
 </li>
-      <li><a href="api/iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp._sample">_sample() (iqm.pulse.playlist.waveforms.Chirp method)</a>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.FastDragI.html#iqm.pulse.playlist.fast_drag.FastDragI._sample">_sample() (iqm.pulse.playlist.fast_drag.FastDragI method)</a>
 
       <ul>
+        <li><a href="api/iqm.pulse.playlist.fast_drag.FastDragQ.html#iqm.pulse.playlist.fast_drag.FastDragQ._sample">(iqm.pulse.playlist.fast_drag.FastDragQ method)</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.hd_drag.HdDragI.html#iqm.pulse.playlist.hd_drag.HdDragI._sample">(iqm.pulse.playlist.hd_drag.HdDragI method)</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.hd_drag.HdDragQ.html#iqm.pulse.playlist.hd_drag.HdDragQ._sample">(iqm.pulse.playlist.hd_drag.HdDragQ method)</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp._sample">(iqm.pulse.playlist.waveforms.Chirp method)</a>
+</li>
         <li><a href="api/iqm.pulse.playlist.waveforms.Cosine.html#iqm.pulse.playlist.waveforms.Cosine._sample">(iqm.pulse.playlist.waveforms.Cosine method)</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.waveforms.CosineFall.html#iqm.pulse.playlist.waveforms.CosineFall._sample">(iqm.pulse.playlist.waveforms.CosineFall method)</a>
@@ -669,6 +681,8 @@
 </li>
       <li><a href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate">CompositeGate (class in iqm.pulse.gate_implementation)</a>
 </li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.compute_matrix_of_summed_fourier_transform_inner_products.html#iqm.pulse.playlist.fast_drag.compute_matrix_of_summed_fourier_transform_inner_products">compute_matrix_of_summed_fourier_transform_inner_products() (in module iqm.pulse.playlist.fast_drag)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.instructions.ConditionalInstruction.html#iqm.pulse.playlist.instructions.ConditionalInstruction.condition">condition (iqm.pulse.playlist.instructions.ConditionalInstruction attribute)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.instructions.ConditionalInstruction.html#iqm.pulse.playlist.instructions.ConditionalInstruction">ConditionalInstruction (class in iqm.pulse.playlist.instructions)</a>
@@ -690,6 +704,8 @@
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.playlist.waveforms.Cosine.html#iqm.pulse.playlist.waveforms.Cosine">Cosine (class in iqm.pulse.playlist.waveforms)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.COSINE_COEFFICIENTS_DICT.html#iqm.pulse.playlist.hd_drag.COSINE_COEFFICIENTS_DICT">COSINE_COEFFICIENTS_DICT (in module iqm.pulse.playlist.hd_drag)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.waveforms.CosineFall.html#iqm.pulse.playlist.waveforms.CosineFall">CosineFall (class in iqm.pulse.playlist.waveforms)</a>
 </li>
@@ -798,6 +814,14 @@
 </li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX.dependent_waves">(iqm.pulse.gates.prx.PRX_DRAGGaussianSX attribute)</a>
 </li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag.dependent_waves">(iqm.pulse.gates.prx.PRX_FastDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX.dependent_waves">(iqm.pulse.gates.prx.PRX_FastDragSX attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag.dependent_waves">(iqm.pulse.gates.prx.PRX_HdDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX.dependent_waves">(iqm.pulse.gates.prx.PRX_HdDragSX attribute)</a>
+</li>
       </ul></li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
@@ -851,6 +875,16 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.playlist.instructions.MultiplexedIQPulse.html#iqm.pulse.playlist.instructions.MultiplexedIQPulse.entries">entries (iqm.pulse.playlist.instructions.MultiplexedIQPulse attribute)</a>
 </li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.evaluate_fast_drag_i_envelope.html#iqm.pulse.playlist.fast_drag.evaluate_fast_drag_i_envelope">evaluate_fast_drag_i_envelope() (in module iqm.pulse.playlist.fast_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.evaluate_fast_drag_q_envelope.html#iqm.pulse.playlist.fast_drag.evaluate_fast_drag_q_envelope">evaluate_fast_drag_q_envelope() (in module iqm.pulse.playlist.fast_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.evaluate_hd_drag_i_envelope.html#iqm.pulse.playlist.hd_drag.evaluate_hd_drag_i_envelope">evaluate_hd_drag_i_envelope() (in module iqm.pulse.playlist.hd_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.evaluate_hd_drag_q_envelope.html#iqm.pulse.playlist.hd_drag.evaluate_hd_drag_q_envelope">evaluate_hd_drag_q_envelope() (in module iqm.pulse.playlist.hd_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.evaluate_nth_derivative_of_basis_envelope.html#iqm.pulse.playlist.hd_drag.evaluate_nth_derivative_of_basis_envelope">evaluate_nth_derivative_of_basis_envelope() (in module iqm.pulse.playlist.hd_drag)</a>
+</li>
       <li><a href="api/iqm.pulse.gate_implementation.CustomIQWaveforms.html#iqm.pulse.gate_implementation.CustomIQWaveforms.excluded_parameters">excluded_parameters (iqm.pulse.gate_implementation.CustomIQWaveforms attribute)</a>
 
       <ul>
@@ -895,6 +929,12 @@
         <li><a href="api/iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant.html#iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant.fall_waveform">(iqm.pulse.gates.rz.RZ_ACStarkShift_smoothConstant attribute)</a>
 </li>
       </ul></li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.FastDrag.html#iqm.pulse.playlist.fast_drag.FastDrag">FastDrag (class in iqm.pulse.playlist.fast_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.FastDragI.html#iqm.pulse.playlist.fast_drag.FastDragI">FastDragI (class in iqm.pulse.playlist.fast_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.FastDragQ.html#iqm.pulse.playlist.fast_drag.FastDragQ">FastDragQ (class in iqm.pulse.playlist.fast_drag)</a>
+</li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.fastforward">fastforward() (iqm.pulse.scheduler.SegmentPointer method)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.instructions.ThresholdStateDiscrimination.html#iqm.pulse.playlist.instructions.ThresholdStateDiscrimination.feedback_signal_label">feedback_signal_label (iqm.pulse.playlist.instructions.ThresholdStateDiscrimination attribute)</a>
@@ -903,10 +943,10 @@
 </li>
       <li><a href="api/iqm.pulse.gate_implementation.CompositeCache.html#iqm.pulse.gate_implementation.CompositeCache.flush">flush() (iqm.pulse.gate_implementation.CompositeCache method)</a>
 </li>
-      <li><a href="api/iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html#iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear">FluxMultiplexer_SampleLinear (class in iqm.pulse.gates.flux_multiplexer)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear.html#iqm.pulse.gates.flux_multiplexer.FluxMultiplexer_SampleLinear">FluxMultiplexer_SampleLinear (class in iqm.pulse.gates.flux_multiplexer)</a>
+</li>
       <li><a href="api/iqm.pulse.playlist.instructions.FluxPulse.html#iqm.pulse.playlist.instructions.FluxPulse">FluxPulse (class in iqm.pulse.playlist.instructions)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate.html#iqm.pulse.gates.cz.FluxPulseGate">FluxPulseGate (class in iqm.pulse.gates.cz)</a>
@@ -914,6 +954,8 @@
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_CRF_CRF">FluxPulseGate_CRF_CRF (class in iqm.pulse.gates.cz)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF.html#iqm.pulse.gates.cz.FluxPulseGate_TGSS_CRF">FluxPulseGate_TGSS_CRF (class in iqm.pulse.gates.cz)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.fourier_transform_of_cos_basis_functions_as_tensor.html#iqm.pulse.playlist.fast_drag.fourier_transform_of_cos_basis_functions_as_tensor">fourier_transform_of_cos_basis_functions_as_tensor() (in module iqm.pulse.playlist.fast_drag)</a>
 </li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.frac">frac (iqm.pulse.scheduler.SegmentPointer attribute)</a>
 </li>
@@ -1033,11 +1075,17 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.timebox.SchedulingAlgorithm.html#iqm.pulse.timebox.SchedulingAlgorithm.HARD_BOUNDARY">HARD_BOUNDARY (iqm.pulse.timebox.SchedulingAlgorithm attribute)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.has_calibration">has_calibration() (iqm.pulse.builder.ScheduleBuilder method)</a>
 </li>
       <li><a href="api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule.has_content_in">has_content_in() (iqm.pulse.playlist.schedule.Schedule method)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.HdDrag.html#iqm.pulse.playlist.hd_drag.HdDrag">HdDrag (class in iqm.pulse.playlist.hd_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.HdDragI.html#iqm.pulse.playlist.hd_drag.HdDragI">HdDragI (class in iqm.pulse.playlist.hd_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.HdDragQ.html#iqm.pulse.playlist.hd_drag.HdDragQ">HdDragQ (class in iqm.pulse.playlist.hd_drag)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -1176,8 +1224,6 @@
         <li><a href="api/iqm.pulse.gates.move.html#module-iqm.pulse.gates.move">module</a>
 </li>
       </ul></li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.pulse.gates.prx
 
@@ -1185,6 +1231,8 @@
         <li><a href="api/iqm.pulse.gates.prx.html#module-iqm.pulse.gates.prx">module</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li>
     iqm.pulse.gates.reset
 
@@ -1225,6 +1273,20 @@
 
       <ul>
         <li><a href="api/iqm.pulse.playlist.channel.html#module-iqm.pulse.playlist.channel">module</a>
+</li>
+      </ul></li>
+      <li>
+    iqm.pulse.playlist.fast_drag
+
+      <ul>
+        <li><a href="api/iqm.pulse.playlist.fast_drag.html#module-iqm.pulse.playlist.fast_drag">module</a>
+</li>
+      </ul></li>
+      <li>
+    iqm.pulse.playlist.hd_drag
+
+      <ul>
+        <li><a href="api/iqm.pulse.playlist.hd_drag.html#module-iqm.pulse.playlist.hd_drag">module</a>
 </li>
       </ul></li>
       <li>
@@ -1414,6 +1476,10 @@
 </li>
         <li><a href="api/iqm.pulse.playlist.channel.html#module-iqm.pulse.playlist.channel">iqm.pulse.playlist.channel</a>
 </li>
+        <li><a href="api/iqm.pulse.playlist.fast_drag.html#module-iqm.pulse.playlist.fast_drag">iqm.pulse.playlist.fast_drag</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.hd_drag.html#module-iqm.pulse.playlist.hd_drag">iqm.pulse.playlist.hd_drag</a>
+</li>
         <li><a href="api/iqm.pulse.playlist.instructions.html#module-iqm.pulse.playlist.instructions">iqm.pulse.playlist.instructions</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.playlist.html#module-iqm.pulse.playlist.playlist">iqm.pulse.playlist.playlist</a>
@@ -1471,11 +1537,13 @@
 </li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.next">next() (iqm.pulse.scheduler.SegmentPointer method)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
-      <li><a href="api/iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp.non_timelike_attributes">non_timelike_attributes() (iqm.pulse.playlist.waveforms.Chirp static method)</a>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.FastDrag.html#iqm.pulse.playlist.fast_drag.FastDrag.non_timelike_attributes">non_timelike_attributes() (iqm.pulse.playlist.fast_drag.FastDrag static method)</a>
 
       <ul>
+        <li><a href="api/iqm.pulse.playlist.hd_drag.HdDrag.html#iqm.pulse.playlist.hd_drag.HdDrag.non_timelike_attributes">(iqm.pulse.playlist.hd_drag.HdDrag static method)</a>
+</li>
+        <li><a href="api/iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp.non_timelike_attributes">(iqm.pulse.playlist.waveforms.Chirp static method)</a>
+</li>
         <li><a href="api/iqm.pulse.playlist.waveforms.Cosine.html#iqm.pulse.playlist.waveforms.Cosine.non_timelike_attributes">(iqm.pulse.playlist.waveforms.Cosine static method)</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall.html#iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall.non_timelike_attributes">(iqm.pulse.playlist.waveforms.ModulatedCosineRiseFall static method)</a>
@@ -1483,6 +1551,8 @@
         <li><a href="api/iqm.pulse.playlist.waveforms.Slepian.html#iqm.pulse.playlist.waveforms.Slepian.non_timelike_attributes">(iqm.pulse.playlist.waveforms.Slepian static method)</a>
 </li>
       </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="api/iqm.pulse.scheduler.NONSOLID.html#iqm.pulse.scheduler.NONSOLID">NONSOLID (in module iqm.pulse.scheduler)</a>
 </li>
       <li><a href="api/iqm.pulse.utils.normalize_angle.html#iqm.pulse.utils.normalize_angle">normalize_angle() (in module iqm.pulse.utils)</a>
@@ -1562,6 +1632,14 @@
 </li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX.parameters">(iqm.pulse.gates.prx.PRX_DRAGGaussianSX attribute)</a>
 </li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag.parameters">(iqm.pulse.gates.prx.PRX_FastDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX.parameters">(iqm.pulse.gates.prx.PRX_FastDragSX attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag.parameters">(iqm.pulse.gates.prx.PRX_HdDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX.parameters">(iqm.pulse.gates.prx.PRX_HdDragSX attribute)</a>
+</li>
         <li><a href="api/iqm.pulse.gates.reset.Reset_Wait.html#iqm.pulse.gates.reset.Reset_Wait.parameters">(iqm.pulse.gates.reset.Reset_Wait attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall.html#iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall.parameters">(iqm.pulse.gates.rz.RZ_ACStarkShift_CosineRiseFall attribute)</a>
@@ -1621,7 +1699,15 @@
 </li>
       <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX">PRX_DRAGGaussianSX (class in iqm.pulse.gates.prx)</a>
 </li>
+      <li><a href="api/iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag">PRX_FastDrag (class in iqm.pulse.gates.prx)</a>
+</li>
+      <li><a href="api/iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX">PRX_FastDragSX (class in iqm.pulse.gates.prx)</a>
+</li>
       <li><a href="api/iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation">PRX_GateImplementation (class in iqm.pulse.gates.prx)</a>
+</li>
+      <li><a href="api/iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag">PRX_HdDrag (class in iqm.pulse.gates.prx)</a>
+</li>
+      <li><a href="api/iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX">PRX_HdDragSX (class in iqm.pulse.gates.prx)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation.html#iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation">PRX_SinglePulse_GateImplementation (class in iqm.pulse.gates.prx)</a>
 </li>
@@ -1811,13 +1897,21 @@
 </li>
       <li><a href="api/iqm.pulse.playlist.waveforms.Slepian.html#iqm.pulse.playlist.waveforms.Slepian">Slepian (class in iqm.pulse.playlist.waveforms)</a>
 </li>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.solve_cosine_coefs_for_hd_drag.html#iqm.pulse.playlist.hd_drag.solve_cosine_coefs_for_hd_drag">solve_cosine_coefs_for_hd_drag() (in module iqm.pulse.playlist.hd_drag)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.solve_fast_coefficients_for_given_weights_and_ranges.html#iqm.pulse.playlist.fast_drag.solve_fast_coefficients_for_given_weights_and_ranges">solve_fast_coefficients_for_given_weights_and_ranges() (in module iqm.pulse.playlist.fast_drag)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/iqm.pulse.playlist.hd_drag.solve_hd_drag_coefficients_from_suppressed_frequencies.html#iqm.pulse.playlist.hd_drag.solve_hd_drag_coefficients_from_suppressed_frequencies">solve_hd_drag_coefficients_from_suppressed_frequencies() (in module iqm.pulse.playlist.hd_drag)</a>
+</li>
       <li><a href="api/iqm.pulse.scheduler.SegmentPointer.html#iqm.pulse.scheduler.SegmentPointer.source">source (iqm.pulse.scheduler.SegmentPointer attribute)</a>
 </li>
       <li><a href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation.special_implementation">special_implementation (iqm.pulse.gate_implementation.GateImplementation attribute)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.enums.TwoQubitGate.html#iqm.pulse.gates.enums.TwoQubitGate.SQRT_ISWAP">SQRT_ISWAP (iqm.pulse.gates.enums.TwoQubitGate attribute)</a>
+</li>
+      <li><a href="api/iqm.pulse.playlist.fast_drag.SuppressedPulse.html#iqm.pulse.playlist.fast_drag.SuppressedPulse">SuppressedPulse (class in iqm.pulse.playlist.fast_drag)</a>
 </li>
       <li><a href="api/iqm.pulse.gates.sx.SXGate.html#iqm.pulse.gates.sx.SXGate">SXGate (class in iqm.pulse.gates.sx)</a>
 </li>
@@ -1992,6 +2086,14 @@
 </li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX.wave_i">(iqm.pulse.gates.prx.PRX_DRAGGaussianSX attribute)</a>
 </li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag.wave_i">(iqm.pulse.gates.prx.PRX_FastDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX.wave_i">(iqm.pulse.gates.prx.PRX_FastDragSX attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag.wave_i">(iqm.pulse.gates.prx.PRX_HdDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX.wave_i">(iqm.pulse.gates.prx.PRX_HdDragSX attribute)</a>
+</li>
         <li><a href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse.wave_i">(iqm.pulse.playlist.instructions.IQPulse attribute)</a>
 </li>
       </ul></li>
@@ -2011,6 +2113,14 @@
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGGaussian.html#iqm.pulse.gates.prx.PRX_DRAGGaussian.wave_q">(iqm.pulse.gates.prx.PRX_DRAGGaussian attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX.wave_q">(iqm.pulse.gates.prx.PRX_DRAGGaussianSX attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag.wave_q">(iqm.pulse.gates.prx.PRX_FastDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX.wave_q">(iqm.pulse.gates.prx.PRX_FastDragSX attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag.wave_q">(iqm.pulse.gates.prx.PRX_HdDrag attribute)</a>
+</li>
+        <li><a href="api/iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX.wave_q">(iqm.pulse.gates.prx.PRX_HdDragSX attribute)</a>
 </li>
         <li><a href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse.wave_q">(iqm.pulse.playlist.instructions.IQPulse attribute)</a>
 </li>
@@ -2066,7 +2176,7 @@
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy.
+      © Copyright 2019-2025, IQM Finland Oy, Release 8.11.
       <br/>
     
   </p>

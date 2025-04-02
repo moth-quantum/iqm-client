@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>prx &#8212; iqm.pulse 8.9 documentation</title>
+    <title>prx &#8212; iqm.pulse 8.11 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=c0138b63"></script>
+    <script src="../_static/documentation_options.js?v=9469868b"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -55,7 +55,7 @@
     <link rel="prev" title="MoveMarker" href="iqm.pulse.gates.move.MoveMarker.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="8.9" />
+  <meta name="docsearch:version" content="8.11" />
     <meta name="docbuild:last-update" content="2025-04-02"/>
   </head>
   
@@ -135,8 +135,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.9 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.9 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 8.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 8.11 documentation - Home"/>
   
   
 </a></div>
@@ -217,6 +217,8 @@
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.playlist.html">playlist</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.channel.html">channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.fast_drag.html">fast_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.hd_drag.html">hd_drag</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.instructions.html">instructions</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.playlist.html">playlist</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.schedule.html">schedule</a></li>
@@ -420,8 +422,20 @@
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX" title="iqm.pulse.gates.prx.PRX_DRAGGaussianSX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_DRAGGaussianSX</span></code></a></p></td>
 <td><p>PRX gate, DRAG / Gaussian IQ pulse with VZ implementation.</p></td>
 </tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag" title="iqm.pulse.gates.prx.PRX_FastDrag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_FastDrag</span></code></a></p></td>
+<td><p>PRX gate, FAST DRAG IQ pulse based on amplitude scaling.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX" title="iqm.pulse.gates.prx.PRX_FastDragSX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_FastDragSX</span></code></a></p></td>
+<td><p>PRX gate, FAST DRAG IQ pulse with VZ-based SX-implementation.</p></td>
+</tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation" title="iqm.pulse.gates.prx.PRX_GateImplementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_GateImplementation</span></code></a></p></td>
 <td><p>ABC for different implementations of the PRX gate.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag" title="iqm.pulse.gates.prx.PRX_HdDrag"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_HdDrag</span></code></a></p></td>
+<td><p>PRX gate, HD DRAG IQ pulse based on amplitude scaling</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX" title="iqm.pulse.gates.prx.PRX_HdDragSX"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_HdDragSX</span></code></a></p></td>
+<td><p>PRX gate, HD DRAG IQ pulse with VZ-based SX-implementation.</p></td>
 </tr>
 <tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation.html#iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation" title="iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">PRX_SinglePulse_GateImplementation</span></code></a></p></td>
 <td><p>ABC for PRX gates implemented using a single IQ pulse.</p></td>
@@ -457,8 +471,16 @@ size=&quot;8.0, 12.0&quot;;
   &quot;PRX_CustomWaveforms&quot; -&gt; &quot;PRX_DRAGGaussian&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
   &quot;PRX_DRAGGaussianSX&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_DRAGGaussianSX.html#iqm.pulse.gates.prx.PRX_DRAGGaussianSX&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;PRX gate, DRAG / Gaussian IQ pulse with VZ implementation.&quot;];
   &quot;PRX_CustomWaveformsSX&quot; -&gt; &quot;PRX_DRAGGaussianSX&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;PRX_FastDrag&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_FastDrag.html#iqm.pulse.gates.prx.PRX_FastDrag&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;PRX gate, FAST DRAG IQ pulse based on amplitude scaling.&quot;];
+  &quot;PRX_CustomWaveforms&quot; -&gt; &quot;PRX_FastDrag&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;PRX_FastDragSX&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_FastDragSX.html#iqm.pulse.gates.prx.PRX_FastDragSX&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;PRX gate, FAST DRAG IQ pulse with VZ-based SX-implementation.&quot;];
+  &quot;PRX_CustomWaveformsSX&quot; -&gt; &quot;PRX_FastDragSX&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
   &quot;PRX_GateImplementation&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for different implementations of the PRX gate.&quot;];
   &quot;GateImplementation&quot; -&gt; &quot;PRX_GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;PRX_HdDrag&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_HdDrag.html#iqm.pulse.gates.prx.PRX_HdDrag&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;PRX gate, HD DRAG IQ pulse based on amplitude scaling&quot;];
+  &quot;PRX_CustomWaveforms&quot; -&gt; &quot;PRX_HdDrag&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
+  &quot;PRX_HdDragSX&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_HdDragSX.html#iqm.pulse.gates.prx.PRX_HdDragSX&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;PRX gate, HD DRAG IQ pulse with VZ-based SX-implementation.&quot;];
+  &quot;PRX_CustomWaveformsSX&quot; -&gt; &quot;PRX_HdDragSX&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
   &quot;PRX_SinglePulse_GateImplementation&quot; [URL=&quot;iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation.html#iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;ABC for PRX gates implemented using a single IQ pulse.&quot;];
   &quot;SinglePulseGate&quot; -&gt; &quot;PRX_SinglePulse_GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
   &quot;PRX_GateImplementation&quot; -&gt; &quot;PRX_SinglePulse_GateImplementation&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
@@ -518,7 +540,7 @@ size=&quot;8.0, 12.0&quot;;
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy.
+      © Copyright 2019-2025, IQM Finland Oy, Release 8.11.
       <br/>
     
   </p>
