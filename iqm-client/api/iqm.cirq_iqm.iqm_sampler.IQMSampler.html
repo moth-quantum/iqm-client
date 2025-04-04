@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.cirq_iqm.iqm_sampler.IQMSampler &#8212; IQM client 22.14 documentation</title>
+    <title>iqm.cirq_iqm.iqm_sampler.IQMSampler &#8212; IQM client 22.16 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=ac144548"></script>
+    <script src="../_static/documentation_options.js?v=009c4733"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -52,8 +52,8 @@
     <link rel="prev" title="iqm.cirq_iqm.iqm_sampler.IQMResult" href="iqm.cirq_iqm.iqm_sampler.IQMResult.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.14" />
-    <meta name="docbuild:last-update" content="2025-04-03"/>
+  <meta name="docsearch:version" content="22.16" />
+    <meta name="docbuild:last-update" content="2025-04-04"/>
   </head>
   
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.14 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.14 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM client 22.16 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.16 documentation - Home"/>
   
   
 </a></div>
@@ -554,12 +554,12 @@ through to <a class="reference internal" href="iqm.iqm_client.iqm_client.IQMClie
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>url</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – URL of the IQM server. Has to start with http or https.</p></li>
-<li><p><strong>device</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="iqm.cirq_iqm.devices.iqm_device.IQMDevice.html#iqm.cirq_iqm.devices.iqm_device.IQMDevice" title="iqm.cirq_iqm.devices.iqm_device.IQMDevice"><em>IQMDevice</em></a><em>]</em>) – Device to execute the circuits on. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the device will be created based
+<li><p><strong>device</strong> (<a class="reference internal" href="iqm.cirq_iqm.devices.iqm_device.IQMDevice.html#iqm.cirq_iqm.devices.iqm_device.IQMDevice" title="iqm.cirq_iqm.devices.iqm_device.IQMDevice"><em>IQMDevice</em></a><em> | </em><em>None</em>) – Device to execute the circuits on. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, the device will be created based
 on the calibration-specific dynamic quantum architecture obtained from
 <a class="reference internal" href="iqm.iqm_client.iqm_client.IQMClient.html#iqm.iqm_client.iqm_client.IQMClient" title="iqm.iqm_client.iqm_client.IQMClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQMClient</span></code></a>.</p></li>
-<li><p><strong>calibration_set_id</strong> (<em>Optional</em><em>[</em><em>UUID</em><em>]</em>) – ID of the calibration set to use. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use the default one.</p></li>
-<li><p><strong>run_sweep_timeout</strong> (<em>Optional</em><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em>]</em>) – Timeout for polling sweep results, in seconds. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use the client default value.</p></li>
-<li><p><strong>compiler_options</strong> (<em>Optional</em><em>[</em><a class="reference internal" href="iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions" title="iqm.iqm_client.models.CircuitCompilationOptions"><em>CircuitCompilationOptions</em></a><em>]</em>) – The compilation options to use for the circuits, as defined by IQM Client.</p></li>
+<li><p><strong>calibration_set_id</strong> (<em>UUID</em><em> | </em><em>None</em>) – ID of the calibration set to use. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use the default one.</p></li>
+<li><p><strong>run_sweep_timeout</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><em>None</em>) – Timeout for polling sweep results, in seconds. If <code class="docutils literal notranslate"><span class="pre">None</span></code>, use the client default value.</p></li>
+<li><p><strong>compiler_options</strong> (<a class="reference internal" href="iqm.iqm_client.models.CircuitCompilationOptions.html#iqm.iqm_client.models.CircuitCompilationOptions" title="iqm.iqm_client.models.CircuitCompilationOptions"><em>CircuitCompilationOptions</em></a><em> | </em><em>None</em>) – The compilation options to use for the circuits, as defined by IQM Client.</p></li>
 </ul>
 </dd>
 </dl>
@@ -799,7 +799,7 @@ By IQM client developers
 
   <p class="copyright">
     
-      © Copyright 2021-2025, IQM Finland Oy, Release 22.14.
+      © Copyright 2021-2025, IQM Finland Oy, Release 22.16.
       <br/>
     
   </p>
@@ -808,7 +808,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-03.
+  Last updated on 2025-04-04.
   <br/>
 </p>
   </div>

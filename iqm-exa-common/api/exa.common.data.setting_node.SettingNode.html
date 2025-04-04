@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SettingNode &#8212; exa-common 26.8 documentation</title>
+    <title>SettingNode &#8212; exa-common 26.9 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=efee2b45"></script>
+    <script src="../_static/documentation_options.js?v=8c53bb1e"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="setting_node" href="exa.common.data.setting_node.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.8" />
-    <meta name="docbuild:last-update" content="2025-04-03"/>
+  <meta name="docsearch:version" content="26.9" />
+    <meta name="docbuild:last-update" content="2025-04-04"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.8 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.8 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.9 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.9 documentation - Home"/>
   
   
 </a></div>
@@ -150,10 +150,7 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="exa.common.html">common</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.api.html">api</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="exa.common.api.proto_serialization.html">proto_serialization</a></li>
-</ul>
-</details></li>
+<li class="toctree-l3"><a class="reference internal" href="exa.common.api.html">api</a></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.control.html">control</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.control.sweep.html">sweep</a></li>
 </ul>
@@ -788,7 +785,7 @@ which determines whether their names will align with their paths.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>nodes</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference internal" href="exa.common.data.parameter.Setting.html#exa.common.data.parameter.Setting" title="exa.common.data.parameter.Setting"><em>Setting</em></a><em> | </em><a class="reference internal" href="exa.common.data.parameter.Parameter.html#exa.common.data.parameter.Parameter" title="exa.common.data.parameter.Parameter"><em>Parameter</em></a><em> | </em><a class="reference internal" href="#exa.common.data.setting_node.SettingNode" title="exa.common.data.setting_node.SettingNode"><em>SettingNode</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference internal" href="exa.common.data.parameter.Setting.html#exa.common.data.parameter.Setting" title="exa.common.data.parameter.Setting"><em>Setting</em></a><em> | </em><a class="reference internal" href="exa.common.data.parameter.Parameter.html#exa.common.data.parameter.Parameter" title="exa.common.data.parameter.Parameter"><em>Parameter</em></a><em> | </em><a class="reference internal" href="#exa.common.data.setting_node.SettingNode" title="exa.common.data.setting_node.SettingNode"><em>SettingNode</em></a><em>]</em>) – Nodes to add as new leaves/branches of <code class="docutils literal notranslate"><span class="pre">path</span></code>. If of type <code class="docutils literal notranslate"><span class="pre">dict</span></code>, maps the keys used in
+<li><p><strong>nodes</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference internal" href="exa.common.data.parameter.Setting.html#exa.common.data.parameter.Setting" title="exa.common.data.parameter.Setting"><em>Setting</em></a><em> | </em><a class="reference internal" href="exa.common.data.parameter.Parameter.html#exa.common.data.parameter.Parameter" title="exa.common.data.parameter.Parameter"><em>Parameter</em></a><em> | </em><a class="reference internal" href="#exa.common.data.setting_node.SettingNode" title="exa.common.data.setting_node.SettingNode"><em>SettingNode</em></a><em>] </em><em>| </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference internal" href="exa.common.data.parameter.Setting.html#exa.common.data.parameter.Setting" title="exa.common.data.parameter.Setting"><em>Setting</em></a><em> | </em><a class="reference internal" href="exa.common.data.parameter.Parameter.html#exa.common.data.parameter.Parameter" title="exa.common.data.parameter.Parameter"><em>Parameter</em></a><em> | </em><a class="reference internal" href="#exa.common.data.setting_node.SettingNode" title="exa.common.data.setting_node.SettingNode"><em>SettingNode</em></a><em>]</em>) – Nodes to add as new leaves/branches of <code class="docutils literal notranslate"><span class="pre">path</span></code>. If of type <code class="docutils literal notranslate"><span class="pre">dict</span></code>, maps the keys used in
 <code class="docutils literal notranslate"><span class="pre">self.settings</span></code> or <code class="docutils literal notranslate"><span class="pre">self.subtrees</span></code> to the nodes themselves. If <code class="docutils literal notranslate"><span class="pre">align_name=False</span></code>, the key and
 the node name can differ, but otherwise the names will be replaced by the path anyways).</p></li>
 <li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Path in <code class="docutils literal notranslate"><span class="pre">self</span></code> to which <code class="docutils literal notranslate"><span class="pre">nodes</span></code> will be added. If the path or any part (suffix) of it is not
@@ -814,7 +811,7 @@ the symmetry properties of the gate.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gate</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The name of the gate.</p></li>
-<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Individual qubits, couplers, or combinations.</p></li>
+<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Individual qubits, couplers, or combinations.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -835,7 +832,7 @@ the symmetry properties of the gate.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gate</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The gate to retrieve the settings for.</p></li>
-<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Individual qubits, couplers, or combinations.</p></li>
+<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Individual qubits, couplers, or combinations.</p></li>
 <li><p><strong>implementation</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – Using a custom rather than the default gate implementation.</p></li>
 </ul>
 </dd>
@@ -878,7 +875,7 @@ the symmetry properties of the gate.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gate</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – The gate to retrieve the settings for.</p></li>
-<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Individual qubits, couplers, or combinations.</p></li>
+<li><p><strong>locus</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable" title="(in Python v3.11)"><em>Iterable</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Individual qubits, couplers, or combinations.</p></li>
 <li><p><strong>implementation</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><em>None</em>) – Using a custom rather than the default gate implementation.</p></li>
 </ul>
 </dd>
@@ -996,7 +993,7 @@ the symmetry properties of the gate.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.8.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.9.
       <br/>
     
   </p>
@@ -1005,7 +1002,7 @@ the symmetry properties of the gate.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-03.
+  Last updated on 2025-04-04.
   <br/>
 </p>
   </div>

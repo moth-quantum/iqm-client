@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>StationControlClient &#8212; station-control-client 3.9 documentation</title>
+    <title>StationControlClient &#8212; station-control-client 3.11 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=aaf6a17f"></script>
+    <script src="../_static/documentation_options.js?v=80023fee"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="station_control" href="iqm.station_control.client.station_control.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="3.9" />
-    <meta name="docbuild:last-update" content="2025-04-03"/>
+  <meta name="docsearch:version" content="3.11" />
+    <meta name="docbuild:last-update" content="2025-04-04"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 3.9 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 3.9 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 3.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 3.11 documentation - Home"/>
   
   
 </a></div>
@@ -309,6 +309,7 @@
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient"><code class="docutils literal notranslate"><span class="pre">StationControlClient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.version"><code class="docutils literal notranslate"><span class="pre">StationControlClient.version</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_about"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_about()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_configuration()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_exa_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_exa_configuration()</span></code></a></li>
@@ -437,6 +438,15 @@ Check query methods own documentation for details about currently supported quer
 which contains metadata, like pagination details. The client can ignore this data,
 or use it to implement pagination logic for example to fetch all results available.</p>
 <p>Module: <a class="reference internal" href="iqm.station_control.client.station_control.html#module-iqm.station_control.client.station_control" title="iqm.station_control.client.station_control"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.station_control.client.station_control</span></code></a></p>
+<p class="rubric">Attributes</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.version" title="iqm.station_control.client.station_control.StationControlClient.version"><code class="xref py py-obj docutils literal notranslate"><span class="pre">version</span></code></a></p></td>
+<td><p>Return the version of the station control API this client is using.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
@@ -539,6 +549,12 @@ or use it to implement pagination logic for example to fetch all results availab
 </tbody>
 </table>
 </div>
+<dl class="py property">
+<dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.version">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.version" title="Link to this definition">#</a></dt>
+<dd><p>Return the version of the station control API this client is using.</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.get_about">
 <span class="sig-name descname"><span class="pre">get_about</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.get_about" title="Link to this definition">#</a></dt>
@@ -1181,6 +1197,7 @@ but it’s updated on each subsequent call.</p>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient"><code class="docutils literal notranslate"><span class="pre">StationControlClient</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.version"><code class="docutils literal notranslate"><span class="pre">StationControlClient.version</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_about"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_about()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_configuration()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_exa_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_exa_configuration()</span></code></a></li>
@@ -1235,7 +1252,7 @@ but it’s updated on each subsequent call.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 3.9.
+      © Copyright 2019-2025, IQM Finland Oy, Release 3.11.
       <br/>
     
   </p>
@@ -1244,7 +1261,7 @@ but it’s updated on each subsequent call.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-03.
+  Last updated on 2025-04-04.
   <br/>
 </p>
   </div>

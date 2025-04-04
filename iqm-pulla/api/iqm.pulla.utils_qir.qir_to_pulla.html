@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>iqm.pulla.utils_qir.qir_to_pulla &#8212; IQM Pulla 6.17 documentation</title>
+    <title>iqm.pulla.utils_qir.qir_to_pulla &#8212; IQM Pulla 6.19 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=3485ab29"></script>
+    <script src="../_static/documentation_options.js?v=c5dfa8ca"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="iqm.pulla.utils_qir" href="iqm.pulla.utils_qir.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="6.17" />
-    <meta name="docbuild:last-update" content="2025-04-03"/>
+  <meta name="docsearch:version" content="6.19" />
+    <meta name="docbuild:last-update" content="2025-04-04"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 6.17 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 6.17 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM Pulla 6.19 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM Pulla 6.19 documentation - Home"/>
   
   
 </a></div>
@@ -419,13 +419,15 @@
 <h1>iqm.pulla.utils_qir.qir_to_pulla<a class="headerlink" href="#iqm-pulla-utils-qir-qir-to-pulla" title="Link to this heading">#</a></h1>
 <dl class="py function">
 <dt class="sig sig-object py" id="iqm.pulla.utils_qir.qir_to_pulla">
-<span class="sig-prename descclassname"><span class="pre">iqm.pulla.utils_qir.</span></span><span class="sig-name descname"><span class="pre">qir_to_pulla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pulla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qir</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulla.utils_qir.qir_to_pulla" title="Link to this definition">#</a></dt>
+<span class="sig-prename descclassname"><span class="pre">iqm.pulla.utils_qir.</span></span><span class="sig-name descname"><span class="pre">qir_to_pulla</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">pulla</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qubit_mapping</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulla.utils_qir.qir_to_pulla" title="Link to this definition">#</a></dt>
 <dd><p>Convert a QIR module to a CPC circuit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
+<li><p><strong>pulla</strong> (<a class="reference internal" href="iqm.pulla.pulla.Pulla.html#iqm.pulla.pulla.Pulla" title="iqm.pulla.pulla.Pulla"><em>Pulla</em></a>) – The Pulla instance to get compiler from.</p></li>
 <li><p><strong>qir</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#bytes" title="(in Python v3.11)"><em>bytes</em></a>) – The QIR source or bitcode to convert to a circuit.</p></li>
-<li><p><strong>pulla</strong> (<a class="reference internal" href="iqm.pulla.pulla.Pulla.html#iqm.pulla.pulla.Pulla" title="iqm.pulla.pulla.Pulla"><em>Pulla</em></a>) – </p></li>
+<li><p><strong>qubit_mapping</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#slice" title="(in Python v3.11)"><em>slice</em></a><em>(</em><em>&lt;class 'int'&gt;</em><em>, </em><em>&lt;class 'str'&gt;</em><em>, </em><em>None</em><em>)</em><em>] </em><em>| </em><em>None</em>) – A dictionary mapping QIR qubit indexes to physical qubit names,
+None will assume opaque pointers match physical names.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -514,7 +516,7 @@ By IQM Pulla developers
 
   <p class="copyright">
     
-      © Copyright 2024-2025, IQM Finland Oy, Release 6.17.
+      © Copyright 2024-2025, IQM Finland Oy, Release 6.19.
       <br/>
     
   </p>
@@ -523,7 +525,7 @@ By IQM Pulla developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-03.
+  Last updated on 2025-04-04.
   <br/>
 </p>
   </div>

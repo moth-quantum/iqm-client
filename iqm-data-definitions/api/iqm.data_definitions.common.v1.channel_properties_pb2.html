@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>channel_properties_pb2 &#8212; IQM data definitions 2.10 documentation</title>
+    <title>channel_properties_pb2 &#8212; IQM data definitions 2.12 documentation</title>
   
   
   
@@ -39,7 +39,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=6902f2a3"></script>
+    <script src="../_static/documentation_options.js?v=c58af0d8"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -51,8 +51,8 @@
     <link rel="prev" title="v1" href="iqm.data_definitions.common.v1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="2.10" />
-    <meta name="docbuild:last-update" content="2025-04-03"/>
+  <meta name="docsearch:version" content="2.12" />
+    <meta name="docbuild:last-update" content="2025-04-04"/>
   </head>
   
   
@@ -131,8 +131,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM data definitions 2.10 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM data definitions 2.10 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="IQM data definitions 2.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM data definitions 2.12 documentation - Home"/>
   
   
 </a></div>
@@ -366,14 +366,19 @@
 <span class="p">}</span>
 
 <span class="kd">message</span><span class="w"> </span><span class="nc">ChannelProperties</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="na">sampling_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// sample rate of the instrument responsible for the channel (in Hz)</span>
+<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="na">sampling_rate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Unused</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="na">instruction_duration_granularity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// all instruction durations on this channel must be multiples of this granularity (in samples) </span>
+<span class="w">    </span><span class="c1">// Unused</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="na">instruction_duration_min</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// all instruction durations on this channel must at least this long (in samples)</span>
-<span class="w">    </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">compatible_instructions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">// instruction types that are allowed on this channel</span>
+<span class="w">    </span><span class="k">repeated</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="na">compatible_instructions</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// all instruction durations on this channel must be multiples of this granularity (in samples) </span>
+<span class="w">    </span><span class="kt">uint64</span><span class="w"> </span><span class="na">instruction_duration_granularity_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// all instruction durations on this channel must at least this long (in samples)</span>
+<span class="w">    </span><span class="kt">uint64</span><span class="w"> </span><span class="na">instruction_duration_min_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
 <span class="p">}</span>
 
 
@@ -393,10 +398,14 @@
 
 <span class="kd">message</span><span class="w"> </span><span class="nc">ReadoutProperties</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="n">ChannelProperties</span><span class="w"> </span><span class="na">channel_properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// Dead time samples before integration </span>
+<span class="w">    </span><span class="c1">// Unused.</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="na">integration_start_dead_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="p">;</span>
-<span class="w">    </span><span class="c1">// Dead time samples after integration.</span>
+<span class="w">    </span><span class="c1">// Unused.</span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="na">integration_stop_dead_time</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+<span class="w">     </span><span class="c1">// Dead time samples before integration </span>
+<span class="w">    </span><span class="kt">uint64</span><span class="w"> </span><span class="na">integration_start_dead_time_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">6</span><span class="p">;</span>
+<span class="w">    </span><span class="c1">// Dead time samples after integration.</span>
+<span class="w">    </span><span class="kt">uint64</span><span class="w"> </span><span class="na">integration_stop_dead_time_samples</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">7</span><span class="p">;</span>
 <span class="p">}</span>
 </pre></div>
 </div>
@@ -488,7 +497,7 @@ By IQM
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-03.
+  Last updated on 2025-04-04.
   <br/>
 </p>
   </div>
