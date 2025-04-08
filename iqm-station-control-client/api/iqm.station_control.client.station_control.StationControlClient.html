@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>StationControlClient &#8212; station-control-client 3.12 documentation</title>
+    <title>StationControlClient &#8212; station-control-client 3.13 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=24c48f03"></script>
+    <script src="../_static/documentation_options.js?v=47791f58"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="station_control" href="iqm.station_control.client.station_control.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="3.12" />
-    <meta name="docbuild:last-update" content="2025-04-07"/>
+  <meta name="docsearch:version" content="3.13" />
+    <meta name="docbuild:last-update" content="2025-04-08"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 3.12 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 3.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="station-control-client 3.13 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="station-control-client 3.13 documentation - Home"/>
   
   
 </a></div>
@@ -150,6 +150,15 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2 current active has-children"><a class="reference internal" href="iqm.station_control.client.html">client</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.station_control.client.iqm_server.html">iqm_server</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.iqm_server.error.html">error</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.iqm_server.grpc_utils.html">grpc_utils</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.iqm_server.iqm_server_client.html">iqm_server_client</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.iqm_server.meta_class.html">meta_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.iqm_server.proto.html">proto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.iqm_server.testing.html">testing</a></li>
+</ul>
+</details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.station_control.client.list_models.html">list_models</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.list_models.DutFieldDataList.html">DutFieldDataList</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.list_models.DutList.html">DutList</a></li>
@@ -180,6 +189,7 @@
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="iqm.station_control.client.utils.html">utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.utils.calset_from_observations.html">iqm.station_control.client.utils.calset_from_observations</a></li>
 <li class="toctree-l4"><a class="reference internal" href="iqm.station_control.client.utils.get_progress_bar_callback.html">iqm.station_control.client.utils.get_progress_bar_callback</a></li>
 </ul>
 </details></li>
@@ -310,6 +320,7 @@
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient"><code class="docutils literal notranslate"><span class="pre">StationControlClient</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.version"><code class="docutils literal notranslate"><span class="pre">StationControlClient.version</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.init"><code class="docutils literal notranslate"><span class="pre">StationControlClient.init()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_about"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_about()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_configuration()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_exa_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_exa_configuration()</span></code></a></li>
@@ -335,6 +346,8 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.update_observation_set"><code class="docutils literal notranslate"><span class="pre">StationControlClient.update_observation_set()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.finalize_observation_set"><code class="docutils literal notranslate"><span class="pre">StationControlClient.finalize_observation_set()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_observation_set_observations"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_observation_set_observations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_calibration_set_values"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_calibration_set_values()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_latest_calibration_set_id"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_latest_calibration_set_id()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_duts"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_duts()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_dut_fields"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_dut_fields()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.query_sequence_metadatas"><code class="docutils literal notranslate"><span class="pre">StationControlClient.query_sequence_metadatas()</span></code></a></li>
@@ -368,7 +381,7 @@ that is controlling the station control instance.</p>
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>root_url</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Remote station control service URL.</p></li>
-<li><p><strong>get_token_callback</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.11)"><em>Callable</em></a><em>[</em><em>[</em><em>]</em><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – A callback function that returns a token (str) which will be passed in Authorization header
+<li><p><strong>get_token_callback</strong> (<em>Callable</em><em>[</em><em>[</em><em>]</em><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – A callback function that returns a token (str) which will be passed in Authorization header
 in all requests.</p></li>
 </ul>
 </dd>
@@ -468,23 +481,29 @@ or use it to implement pagination logic for example to fetch all results availab
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_about" title="iqm.station_control.client.station_control.StationControlClient.get_about"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_about</span></code></a></p></td>
 <td><p>Return information about the station control.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_channel_properties" title="iqm.station_control.client.station_control.StationControlClient.get_channel_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_properties</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_calibration_set_values" title="iqm.station_control.client.station_control.StationControlClient.get_calibration_set_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_calibration_set_values</span></code></a></p></td>
+<td><p>Get saved calibration set observations by UUID</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_channel_properties" title="iqm.station_control.client.station_control.StationControlClient.get_channel_properties"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_channel_properties</span></code></a></p></td>
 <td><p>Get channel properties from the station.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_chip_design_record" title="iqm.station_control.client.station_control.StationControlClient.get_chip_design_record"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_chip_design_record</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_chip_design_record" title="iqm.station_control.client.station_control.StationControlClient.get_chip_design_record"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_chip_design_record</span></code></a></p></td>
 <td><p>Get a raw chip design record matching the given chip label.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_configuration" title="iqm.station_control.client.station_control.StationControlClient.get_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_configuration</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_configuration" title="iqm.station_control.client.station_control.StationControlClient.get_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_configuration</span></code></a></p></td>
 <td><p>Return the configuration of the station control.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_dut_fields" title="iqm.station_control.client.station_control.StationControlClient.get_dut_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dut_fields</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_dut_fields" title="iqm.station_control.client.station_control.StationControlClient.get_dut_fields"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_dut_fields</span></code></a></p></td>
 <td><p>Get DUT fields for the specified DUT label from the database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_duts" title="iqm.station_control.client.station_control.StationControlClient.get_duts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_duts</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_duts" title="iqm.station_control.client.station_control.StationControlClient.get_duts"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_duts</span></code></a></p></td>
 <td><p>Get DUTs of the station control.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_exa_configuration" title="iqm.station_control.client.station_control.StationControlClient.get_exa_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_exa_configuration</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_exa_configuration" title="iqm.station_control.client.station_control.StationControlClient.get_exa_configuration"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_exa_configuration</span></code></a></p></td>
 <td><p>Return the recommended EXA configuration from the server.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_latest_calibration_set_id" title="iqm.station_control.client.station_control.StationControlClient.get_latest_calibration_set_id"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_latest_calibration_set_id</span></code></a></p></td>
+<td><p>Get UUID of the latest saved calibration set for the given dut_label.</p></td>
 </tr>
 <tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_observation_set" title="iqm.station_control.client.station_control.StationControlClient.get_observation_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_observation_set</span></code></a></p></td>
 <td><p>Get an observation set from the database.</p></td>
@@ -516,34 +535,37 @@ or use it to implement pagination logic for example to fetch all results availab
 <tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.get_task" title="iqm.station_control.client.station_control.StationControlClient.get_task"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_task</span></code></a></p></td>
 <td><p>Get task data.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_observation_sets" title="iqm.station_control.client.station_control.StationControlClient.query_observation_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_observation_sets</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.init" title="iqm.station_control.client.station_control.StationControlClient.init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">init</span></code></a></p></td>
+<td><p>Initialize a new station control client instance connected to the given remote.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_observation_sets" title="iqm.station_control.client.station_control.StationControlClient.query_observation_sets"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_observation_sets</span></code></a></p></td>
 <td><p>Query observation sets from the database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_observations" title="iqm.station_control.client.station_control.StationControlClient.query_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_observations</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_observations" title="iqm.station_control.client.station_control.StationControlClient.query_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_observations</span></code></a></p></td>
 <td><p>Query observations from the database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_runs" title="iqm.station_control.client.station_control.StationControlClient.query_runs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_runs</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_runs" title="iqm.station_control.client.station_control.StationControlClient.query_runs"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_runs</span></code></a></p></td>
 <td><p>Query runs from the database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_sequence_metadatas" title="iqm.station_control.client.station_control.StationControlClient.query_sequence_metadatas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_sequence_metadatas</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.query_sequence_metadatas" title="iqm.station_control.client.station_control.StationControlClient.query_sequence_metadatas"><code class="xref py py-obj docutils literal notranslate"><span class="pre">query_sequence_metadatas</span></code></a></p></td>
 <td><p>Query sequence metadatas from the database.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.revoke_sweep" title="iqm.station_control.client.station_control.StationControlClient.revoke_sweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revoke_sweep</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.revoke_sweep" title="iqm.station_control.client.station_control.StationControlClient.revoke_sweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">revoke_sweep</span></code></a></p></td>
 <td><p>Either remove a sweep task from the queue, or abort it gracefully if it's already executing.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.run" title="iqm.station_control.client.station_control.StationControlClient.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.run" title="iqm.station_control.client.station_control.StationControlClient.run"><code class="xref py py-obj docutils literal notranslate"><span class="pre">run</span></code></a></p></td>
 <td><p>Execute an N-dimensional sweep of selected variables and save run, sweep and results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.save_sequence_result" title="iqm.station_control.client.station_control.StationControlClient.save_sequence_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_sequence_result</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.save_sequence_result" title="iqm.station_control.client.station_control.StationControlClient.save_sequence_result"><code class="xref py py-obj docutils literal notranslate"><span class="pre">save_sequence_result</span></code></a></p></td>
 <td><p>Save sequence result in the database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.sweep" title="iqm.station_control.client.station_control.StationControlClient.sweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweep</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.sweep" title="iqm.station_control.client.station_control.StationControlClient.sweep"><code class="xref py py-obj docutils literal notranslate"><span class="pre">sweep</span></code></a></p></td>
 <td><p>Execute an N-dimensional sweep of selected variables and save sweep and results.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.update_observation_set" title="iqm.station_control.client.station_control.StationControlClient.update_observation_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_observation_set</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.update_observation_set" title="iqm.station_control.client.station_control.StationControlClient.update_observation_set"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_observation_set</span></code></a></p></td>
 <td><p>Update an observation set in the database.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.update_observations" title="iqm.station_control.client.station_control.StationControlClient.update_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_observations</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient.update_observations" title="iqm.station_control.client.station_control.StationControlClient.update_observations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_observations</span></code></a></p></td>
 <td><p>Update observations in the database.</p></td>
 </tr>
 </tbody>
@@ -553,6 +575,29 @@ or use it to implement pagination logic for example to fetch all results availab
 <dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.version">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">version</span></span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.version" title="Link to this definition">#</a></dt>
 <dd><p>Return the version of the station control API this client is using.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.init">
+<em class="property"><span class="pre">static</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">get_token_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.init" title="Link to this definition">#</a></dt>
+<dd><p>Initialize a new station control client instance connected to the given remote.</p>
+<p>Client implementation is selected automatically based on the remote station: if the remote station
+is running the IQM Server software stack, then the IQM Server client implementation (with a limited
+feature set) is chosen. If the remote station is running the SC software stack, then the Station
+Control client implementation (with the full feature set) is chosen.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>root_url</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Remote station control service URL. For IQM Server remotes, this is the “Quantum Computer URL”
+value from the web dashboard.</p></li>
+<li><p><strong>get_token_callback</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Callable" title="(in Python v3.11)"><em>Callable</em></a><em>[</em><em>[</em><em>]</em><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>] </em><em>| </em><em>None</em>) – A callback function that returns a token (str) which will be passed in Authorization
+header in all requests.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference internal" href="#iqm.station_control.client.station_control.StationControlClient" title="iqm.station_control.client.station_control.StationControlClient"><em>StationControlClient</em></a></p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py method">
@@ -1039,6 +1084,40 @@ each containing the content of the observation which will be updated.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.get_calibration_set_values">
+<span class="sig-name descname"><span class="pre">get_calibration_set_values</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_set_id</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.get_calibration_set_values" title="Link to this definition">#</a></dt>
+<dd><p>Get saved calibration set observations by UUID</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>calibration_set_id</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a>) – UUID of the calibration set to retrieve.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Dictionary of observations belonging to the given calibration set.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>, <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a> | <a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a> | <a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)"><em>complex</em></a> | <em>ndarray</em>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.get_latest_calibration_set_id">
+<span class="sig-name descname"><span class="pre">get_latest_calibration_set_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dut_label</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.get_latest_calibration_set_id" title="Link to this definition">#</a></dt>
+<dd><p>Get UUID of the latest saved calibration set for the given dut_label.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>dut_label</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – Target DUT label</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>UUID of the latest saved calibration set.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.11/library/uuid.html#uuid.UUID" title="(in Python v3.11)"><em>UUID</em></a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="iqm.station_control.client.station_control.StationControlClient.get_duts">
 <span class="sig-name descname"><span class="pre">get_duts</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#iqm.station_control.client.station_control.StationControlClient.get_duts" title="Link to this definition">#</a></dt>
 <dd><p>Get DUTs of the station control.</p>
@@ -1198,6 +1277,7 @@ but it’s updated on each subsequent call.</p>
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient"><code class="docutils literal notranslate"><span class="pre">StationControlClient</span></code></a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.version"><code class="docutils literal notranslate"><span class="pre">StationControlClient.version</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.init"><code class="docutils literal notranslate"><span class="pre">StationControlClient.init()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_about"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_about()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_configuration()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_exa_configuration"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_exa_configuration()</span></code></a></li>
@@ -1223,6 +1303,8 @@ but it’s updated on each subsequent call.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.update_observation_set"><code class="docutils literal notranslate"><span class="pre">StationControlClient.update_observation_set()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.finalize_observation_set"><code class="docutils literal notranslate"><span class="pre">StationControlClient.finalize_observation_set()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_observation_set_observations"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_observation_set_observations()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_calibration_set_values"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_calibration_set_values()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_latest_calibration_set_id"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_latest_calibration_set_id()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_duts"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_duts()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.get_dut_fields"><code class="docutils literal notranslate"><span class="pre">StationControlClient.get_dut_fields()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.station_control.client.station_control.StationControlClient.query_sequence_metadatas"><code class="docutils literal notranslate"><span class="pre">StationControlClient.query_sequence_metadatas()</span></code></a></li>
@@ -1252,7 +1334,7 @@ but it’s updated on each subsequent call.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 3.12.
+      © Copyright 2019-2025, IQM Finland Oy, Release 3.13.
       <br/>
     
   </p>
@@ -1261,7 +1343,7 @@ but it’s updated on each subsequent call.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-07.
+  Last updated on 2025-04-08.
   <br/>
 </p>
   </div>
