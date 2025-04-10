@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>logger &#8212; exa-common 26.11 documentation</title>
+    <title>logger &#8212; exa-common 26.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=ba91cb3a"></script>
+    <script src="../_static/documentation_options.js?v=1e577bd7"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="logger" href="exa.common.logger.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.11" />
+  <meta name="docsearch:version" content="26.12" />
     <meta name="docbuild:last-update" content="2025-04-10"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.12 documentation - Home"/>
   
   
 </a></div>
@@ -173,6 +173,7 @@
 <li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.json_helper.html">json_helper</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.numpy_helper.html">numpy_helper</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.software_version_helper.html">software_version_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.yaml_helper.html">yaml_helper</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="exa.common.logger.html">logger</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
@@ -322,18 +323,13 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance10f66314e8 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ExtraFormatter&quot; [URL=&quot;exa.common.logger.logger.ExtraFormatter.html#exa.common.logger.logger.ExtraFormatter&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper formatter class to pass in arbitrary extra information to log messages.&quot;];
-  &quot;Formatter&quot; -&gt; &quot;ExtraFormatter&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Filter&quot; [URL=&quot;https://docs.python.org/3.11/library/logging.html#logging.Filter&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Filter instances are used to perform arbitrary filtering of LogRecords.&quot;];
-  &quot;Formatter&quot; [URL=&quot;https://docs.python.org/3.11/library/logging.html#logging.Formatter&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Formatter instances are used to convert a LogRecord to text.&quot;];
-  &quot;InfoFilter&quot; [URL=&quot;exa.common.logger.logger.InfoFilter.html#exa.common.logger.logger.InfoFilter&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class to filter log messages above INFO level.&quot;];
-  &quot;Filter&quot; -&gt; &quot;InfoFilter&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-a3159c5285ba4027b345e112206b3a2b64654ad4.png" alt="Inheritance diagram of exa.common.logger.logger" usemap="#inheritance10f66314e8" class="inheritance graphviz" /></div>
+<map id="inheritance10f66314e8" name="inheritance10f66314e8">
+<area shape="rect" id="node1" href="exa.common.logger.logger.ExtraFormatter.html#exa.common.logger.logger.ExtraFormatter" target="_top" title="Helper formatter class to pass in arbitrary extra information to log messages." alt="" coords="140,55,260,80"/>
+<area shape="rect" id="node2" href="https://docs.python.org/3.11/library/logging.html#logging.Formatter" target="_top" title="Formatter instances are used to convert a LogRecord to text." alt="" coords="5,55,92,80"/>
+<area shape="rect" id="node3" href="https://docs.python.org/3.11/library/logging.html#logging.Filter" target="_top" title="Filter instances are used to perform arbitrary filtering of LogRecords." alt="" coords="13,5,85,31"/>
+<area shape="rect" id="node4" href="exa.common.logger.logger.InfoFilter.html#exa.common.logger.logger.InfoFilter" target="_top" title="Helper class to filter log messages above INFO level." alt="" coords="160,5,240,31"/>
+</map></section>
 
 
                 </article>
@@ -386,7 +382,7 @@ size=&quot;8.0, 12.0&quot;;
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.11.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.12.
       <br/>
     
   </p>

@@ -466,34 +466,23 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance89c4d889c3 {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;Circuit&quot; [URL=&quot;iqm.cpc.interface.compiler.Circuit.html#iqm.cpc.interface.compiler.Circuit&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Quantum circuit to be executed.&quot;];
-  &quot;CircuitBoundaryMode&quot; [URL=&quot;iqm.cpc.interface.compiler.CircuitBoundaryMode.html#iqm.cpc.interface.compiler.CircuitBoundaryMode&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Circuit boundary mode for circuit compilation.&quot;];
-  &quot;StrEnum&quot; -&gt; &quot;CircuitBoundaryMode&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;CircuitCompilationResult&quot; [URL=&quot;iqm.cpc.interface.compiler.CircuitCompilationResult.html#iqm.cpc.interface.compiler.CircuitCompilationResult&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Compiled circuit and associated settings returned by CPC to Cocos.&quot;];
-  &quot;CircuitExecutionOptions&quot; [URL=&quot;iqm.cpc.interface.compiler.CircuitExecutionOptions.html#iqm.cpc.interface.compiler.CircuitExecutionOptions&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Various discrete options for quantum circuit execution.&quot;];
-  &quot;CircuitMetrics&quot; [URL=&quot;iqm.cpc.interface.compiler.CircuitMetrics.html#iqm.cpc.interface.compiler.CircuitMetrics&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Metrics describing a circuit and its compilation result.&quot;];
-  &quot;DDMode&quot; [URL=&quot;iqm.cpc.interface.compiler.DDMode.html#iqm.cpc.interface.compiler.DDMode&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Dynamical Decoupling (DD) mode for circuit execution.&quot;];
-  &quot;StrEnum&quot; -&gt; &quot;DDMode&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;DDStrategy&quot; [URL=&quot;iqm.cpc.interface.compiler.DDStrategy.html#iqm.cpc.interface.compiler.DDStrategy&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Describes a particular dynamical decoupling strategy.&quot;];
-  &quot;Enum&quot; [URL=&quot;https://docs.python.org/3.11/library/enum.html#enum.Enum&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Create a collection of name/value pairs.&quot;];
-  &quot;HeraldingMode&quot; [URL=&quot;iqm.cpc.interface.compiler.HeraldingMode.html#iqm.cpc.interface.compiler.HeraldingMode&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Heralding mode for circuit execution.&quot;];
-  &quot;StrEnum&quot; -&gt; &quot;HeraldingMode&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;MeasurementMode&quot; [URL=&quot;iqm.cpc.interface.compiler.MeasurementMode.html#iqm.cpc.interface.compiler.MeasurementMode&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Measurement mode for circuit execution.&quot;];
-  &quot;StrEnum&quot; -&gt; &quot;MeasurementMode&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;MoveGateFrameTrackingMode&quot; [URL=&quot;iqm.cpc.interface.compiler.MoveGateFrameTrackingMode.html#iqm.cpc.interface.compiler.MoveGateFrameTrackingMode&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;MOVE gate frame tracking mode for circuit compilation.&quot;];
-  &quot;StrEnum&quot; -&gt; &quot;MoveGateFrameTrackingMode&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;MoveGateValidationMode&quot; [URL=&quot;iqm.cpc.interface.compiler.MoveGateValidationMode.html#iqm.cpc.interface.compiler.MoveGateValidationMode&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;MOVE gate validation mode for circuit compilation.&quot;];
-  &quot;StrEnum&quot; -&gt; &quot;MoveGateValidationMode&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ReprEnum&quot; [URL=&quot;https://docs.python.org/3.11/library/enum.html#enum.ReprEnum&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Only changes the repr(), leaving str() and format() to the mixed-in type.&quot;];
-  &quot;Enum&quot; -&gt; &quot;ReprEnum&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;StrEnum&quot; [URL=&quot;https://docs.python.org/3.11/library/enum.html#enum.StrEnum&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Enum where members are also (and must be) strings&quot;];
-  &quot;ReprEnum&quot; -&gt; &quot;StrEnum&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-9a0b06dc4fdee317b7bc07d85f411b80db8955d8.png" alt="Inheritance diagram of iqm.cpc.interface.compiler" usemap="#inheritance89c4d889c3" class="inheritance graphviz" /></div>
+<map id="inheritance89c4d889c3" name="inheritance89c4d889c3">
+<area shape="rect" id="node1" href="iqm.cpc.interface.compiler.Circuit.html#iqm.cpc.interface.compiler.Circuit" target="_top" title="Quantum circuit to be executed." alt="" coords="61,252,133,277"/>
+<area shape="rect" id="node2" href="iqm.cpc.interface.compiler.CircuitBoundaryMode.html#iqm.cpc.interface.compiler.CircuitBoundaryMode" target="_top" title="Circuit boundary mode for circuit compilation." alt="" coords="529,79,691,104"/>
+<area shape="rect" id="node3" href="https://docs.python.org/3.11/library/enum.html#enum.StrEnum" target="_top" title="Enum where members are also (and must be) strings" alt="" coords="375,203,452,228"/>
+<area shape="rect" id="node7" href="iqm.cpc.interface.compiler.DDMode.html#iqm.cpc.interface.compiler.DDMode" target="_top" title="Dynamical Decoupling (DD) mode for circuit execution." alt="" coords="571,128,649,153"/>
+<area shape="rect" id="node10" href="iqm.cpc.interface.compiler.HeraldingMode.html#iqm.cpc.interface.compiler.HeraldingMode" target="_top" title="Heralding mode for circuit execution." alt="" coords="549,177,671,203"/>
+<area shape="rect" id="node11" href="iqm.cpc.interface.compiler.MeasurementMode.html#iqm.cpc.interface.compiler.MeasurementMode" target="_top" title="Measurement mode for circuit execution." alt="" coords="536,227,684,252"/>
+<area shape="rect" id="node12" href="iqm.cpc.interface.compiler.MoveGateFrameTrackingMode.html#iqm.cpc.interface.compiler.MoveGateFrameTrackingMode" target="_top" title="MOVE gate frame tracking mode for circuit compilation." alt="" coords="500,276,720,301"/>
+<area shape="rect" id="node13" href="iqm.cpc.interface.compiler.MoveGateValidationMode.html#iqm.cpc.interface.compiler.MoveGateValidationMode" target="_top" title="MOVE gate validation mode for circuit compilation." alt="" coords="515,325,705,351"/>
+<area shape="rect" id="node4" href="iqm.cpc.interface.compiler.CircuitCompilationResult.html#iqm.cpc.interface.compiler.CircuitCompilationResult" target="_top" title="Compiled circuit and associated settings returned by CPC to Cocos." alt="" coords="5,153,189,179"/>
+<area shape="rect" id="node5" href="iqm.cpc.interface.compiler.CircuitExecutionOptions.html#iqm.cpc.interface.compiler.CircuitExecutionOptions" target="_top" title="Various discrete options for quantum circuit execution." alt="" coords="9,104,186,129"/>
+<area shape="rect" id="node6" href="iqm.cpc.interface.compiler.CircuitMetrics.html#iqm.cpc.interface.compiler.CircuitMetrics" target="_top" title="Metrics describing a circuit and its compilation result." alt="" coords="41,55,153,80"/>
+<area shape="rect" id="node8" href="iqm.cpc.interface.compiler.DDStrategy.html#iqm.cpc.interface.compiler.DDStrategy" target="_top" title="Describes a particular dynamical decoupling strategy." alt="" coords="49,5,146,31"/>
+<area shape="rect" id="node9" href="https://docs.python.org/3.11/library/enum.html#enum.Enum" target="_top" title="Create a collection of name/value pairs." alt="" coords="61,203,133,228"/>
+<area shape="rect" id="node14" href="https://docs.python.org/3.11/library/enum.html#enum.ReprEnum" target="_top" title="Only changes the repr(), leaving str() and format() to the mixed&#45;in type." alt="" coords="237,203,327,228"/>
+</map></section>
 
 
                 </article>

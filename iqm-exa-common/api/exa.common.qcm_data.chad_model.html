@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>chad_model &#8212; exa-common 26.11 documentation</title>
+    <title>chad_model &#8212; exa-common 26.12 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=ba91cb3a"></script>
+    <script src="../_static/documentation_options.js?v=1e577bd7"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,7 +53,7 @@
     <link rel="prev" title="qcm_data" href="exa.common.qcm_data.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.11" />
+  <meta name="docsearch:version" content="26.12" />
     <meta name="docbuild:last-update" content="2025-04-10"/>
   </head>
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.11 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.11 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.12 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.12 documentation - Home"/>
   
   
 </a></div>
@@ -173,6 +173,7 @@
 <li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.json_helper.html">json_helper</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.numpy_helper.html">numpy_helper</a></li>
 <li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.software_version_helper.html">software_version_helper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="exa.common.helpers.yaml_helper.html">yaml_helper</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.logger.html">logger</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -332,31 +333,18 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance11ebdc23ad {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;BaseModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
-  &quot;CHAD&quot; [URL=&quot;exa.common.qcm_data.chad_model.CHAD.html#exa.common.qcm_data.chad_model.CHAD&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;ImmutableBaseModel&quot; -&gt; &quot;CHAD&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Component&quot; [URL=&quot;exa.common.qcm_data.chad_model.Component.html#exa.common.qcm_data.chad_model.Component&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;ImmutableBaseModel&quot; -&gt; &quot;Component&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Components&quot; [URL=&quot;exa.common.qcm_data.chad_model.Components.html#exa.common.qcm_data.chad_model.Components&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;ImmutableBaseModel&quot; -&gt; &quot;Components&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ComputationalResonator&quot; [URL=&quot;exa.common.qcm_data.chad_model.ComputationalResonator.html#exa.common.qcm_data.chad_model.ComputationalResonator&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Component&quot; -&gt; &quot;ComputationalResonator&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Coupler&quot; [URL=&quot;exa.common.qcm_data.chad_model.Coupler.html#exa.common.qcm_data.chad_model.Coupler&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Component&quot; -&gt; &quot;Coupler&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ImmutableBaseModel&quot; [URL=&quot;exa.common.qcm_data.immutable_base_model.ImmutableBaseModel.html#exa.common.qcm_data.immutable_base_model.ImmutableBaseModel&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;BaseModel&quot; -&gt; &quot;ImmutableBaseModel&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Launcher&quot; [URL=&quot;exa.common.qcm_data.chad_model.Launcher.html#exa.common.qcm_data.chad_model.Launcher&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Component&quot; -&gt; &quot;Launcher&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ProbeLine&quot; [URL=&quot;exa.common.qcm_data.chad_model.ProbeLine.html#exa.common.qcm_data.chad_model.ProbeLine&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Component&quot; -&gt; &quot;ProbeLine&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Qubit&quot; [URL=&quot;exa.common.qcm_data.chad_model.Qubit.html#exa.common.qcm_data.chad_model.Qubit&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Component&quot; -&gt; &quot;Qubit&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-948256ced8044ee31dd7efcd5d69cd1a7b55ac27.png" alt="Inheritance diagram of exa.common.qcm_data.chad_model" usemap="#inheritance11ebdc23ad" class="inheritance graphviz" /></div>
+<map id="inheritance11ebdc23ad" name="inheritance11ebdc23ad">
+<area shape="rect" id="node3" href="exa.common.qcm_data.immutable_base_model.ImmutableBaseModel.html#exa.common.qcm_data.immutable_base_model.ImmutableBaseModel" target="_top" title="ImmutableBaseModel" alt="" coords="148,104,313,129"/>
+<area shape="rect" id="node2" href="exa.common.qcm_data.chad_model.CHAD.html#exa.common.qcm_data.chad_model.CHAD" target="_top" title="CHAD" alt="" coords="377,55,449,80"/>
+<area shape="rect" id="node4" href="exa.common.qcm_data.chad_model.Component.html#exa.common.qcm_data.chad_model.Component" target="_top" title="Component" alt="" coords="365,104,462,129"/>
+<area shape="rect" id="node5" href="exa.common.qcm_data.chad_model.Components.html#exa.common.qcm_data.chad_model.Components" target="_top" title="Components" alt="" coords="361,153,465,179"/>
+<area shape="rect" id="node6" href="exa.common.qcm_data.chad_model.ComputationalResonator.html#exa.common.qcm_data.chad_model.ComputationalResonator" target="_top" title="ComputationalResonator" alt="" coords="513,5,697,31"/>
+<area shape="rect" id="node7" href="exa.common.qcm_data.chad_model.Coupler.html#exa.common.qcm_data.chad_model.Coupler" target="_top" title="Coupler" alt="" coords="569,55,641,80"/>
+<area shape="rect" id="node8" href="exa.common.qcm_data.chad_model.Launcher.html#exa.common.qcm_data.chad_model.Launcher" target="_top" title="Launcher" alt="" coords="565,104,646,129"/>
+<area shape="rect" id="node9" href="exa.common.qcm_data.chad_model.ProbeLine.html#exa.common.qcm_data.chad_model.ProbeLine" target="_top" title="ProbeLine" alt="" coords="562,153,649,179"/>
+<area shape="rect" id="node10" href="exa.common.qcm_data.chad_model.Qubit.html#exa.common.qcm_data.chad_model.Qubit" target="_top" title="Qubit" alt="" coords="569,203,641,228"/>
+</map></section>
 
 
                 </article>
@@ -409,7 +397,7 @@ size=&quot;8.0, 12.0&quot;;
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.11.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.12.
       <br/>
     
   </p>

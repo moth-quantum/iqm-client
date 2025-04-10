@@ -543,24 +543,11 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritance90fa3c7e7b {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
-  &quot;BasePass&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Base class for transpiler passes.&quot;];
-  &quot;GenericPass&quot; -&gt; &quot;BasePass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;GenericPass&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Base class of a single pass manager task.&quot;];
-  &quot;Task&quot; -&gt; &quot;GenericPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ABC&quot; -&gt; &quot;GenericPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;IQMNaiveResonatorMoving&quot; [URL=&quot;iqm.qiskit_iqm.iqm_naive_move_pass.IQMNaiveResonatorMoving.html#iqm.qiskit_iqm.iqm_naive_move_pass.IQMNaiveResonatorMoving&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Naive transpilation pass for resonator moving.&quot;];
-  &quot;TransformationPass&quot; -&gt; &quot;IQMNaiveResonatorMoving&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Task&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;An interface of the pass manager task.&quot;];
-  &quot;ABC&quot; -&gt; &quot;Task&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;TransformationPass&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;A transformation pass: change DAG, not property set.&quot;];
-  &quot;BasePass&quot; -&gt; &quot;TransformationPass&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-50e1debd6b366c1cec6556d410c98ded2674be7d.png" alt="Inheritance diagram of iqm.qiskit_iqm.iqm_naive_move_pass" usemap="#inheritance90fa3c7e7b" class="inheritance graphviz" /></div>
+<map id="inheritance90fa3c7e7b" name="inheritance90fa3c7e7b">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="4,4,64,25"/>
+<area shape="rect" id="node5" href="iqm.qiskit_iqm.iqm_naive_move_pass.IQMNaiveResonatorMoving.html#iqm.qiskit_iqm.iqm_naive_move_pass.IQMNaiveResonatorMoving" target="_top" title="Naive transpilation pass for resonator moving." alt="" coords="598,4,764,25"/>
+</map></section>
 
 
                 </article>

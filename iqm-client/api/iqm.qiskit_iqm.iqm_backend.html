@@ -537,33 +537,17 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritancea6b5e4ed6f {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;ABC&quot; [URL=&quot;https://docs.python.org/3.11/library/abc.html#abc.ABC&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Helper class that provides a standard way to create an ABC using&quot;];
-  &quot;Backend&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Base common type for all versioned Backend abstract classes.&quot;];
-  &quot;BackendV2&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;Abstract class for Backends&quot;];
-  &quot;Backend&quot; -&gt; &quot;BackendV2&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ABC&quot; -&gt; &quot;BackendV2&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Collection&quot; [URL=&quot;https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Collection&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Sized&quot; -&gt; &quot;Collection&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Iterable&quot; -&gt; &quot;Collection&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Container&quot; -&gt; &quot;Collection&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Container&quot; [URL=&quot;https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Container&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;IQMBackendBase&quot; [URL=&quot;iqm.qiskit_iqm.iqm_backend.IQMBackendBase.html#iqm.qiskit_iqm.iqm_backend.IQMBackendBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Abstract base class for various IQM-specific backends.&quot;];
-  &quot;BackendV2&quot; -&gt; &quot;IQMBackendBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ABC&quot; -&gt; &quot;IQMBackendBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;IQMTarget&quot; [URL=&quot;iqm.qiskit_iqm.iqm_backend.IQMTarget.html#iqm.qiskit_iqm.iqm_backend.IQMTarget&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Transpilation target for an IQM architecture.&quot;];
-  &quot;Target&quot; -&gt; &quot;IQMTarget&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Iterable&quot; [URL=&quot;https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Mapping&quot; [URL=&quot;https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Mapping&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;A Mapping is a generic container for associating key/value&quot;];
-  &quot;Collection&quot; -&gt; &quot;Mapping&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Sized&quot; [URL=&quot;https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Sized&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;];
-  &quot;Target&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;The intent of the ``Target`` object is to inform Qiskit's compiler about&quot;];
-  &quot;Mapping&quot; -&gt; &quot;Target&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-c8d715aecde27eb9d3d4786d2fd8d2aaeabeafb6.png" alt="Inheritance diagram of iqm.qiskit_iqm.iqm_backend" usemap="#inheritancea6b5e4ed6f" class="inheritance graphviz" /></div>
+<map id="inheritancea6b5e4ed6f" name="inheritancea6b5e4ed6f">
+<area shape="rect" id="node1" href="https://docs.python.org/3.11/library/abc.html#abc.ABC" target="_top" title="Helper class that provides a standard way to create an ABC using" alt="" coords="12,203,84,228"/>
+<area shape="rect" id="node8" href="iqm.qiskit_iqm.iqm_backend.IQMBackendBase.html#iqm.qiskit_iqm.iqm_backend.IQMBackendBase" target="_top" title="Abstract base class for various IQM&#45;specific backends." alt="" coords="281,179,416,204"/>
+<area shape="rect" id="node4" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Collection" target="_top" title="Collection" alt="" coords="143,55,229,80"/>
+<area shape="rect" id="node11" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Mapping" target="_top" title="A Mapping is a generic container for associating key/value" alt="" coords="309,55,388,80"/>
+<area shape="rect" id="node5" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Sized" target="_top" title="Sized" alt="" coords="12,5,84,31"/>
+<area shape="rect" id="node6" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Iterable" target="_top" title="Iterable" alt="" coords="12,55,84,80"/>
+<area shape="rect" id="node7" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Container" target="_top" title="Container" alt="" coords="5,104,91,129"/>
+<area shape="rect" id="node9" href="iqm.qiskit_iqm.iqm_backend.IQMTarget.html#iqm.qiskit_iqm.iqm_backend.IQMTarget" target="_top" title="Transpilation target for an IQM architecture." alt="" coords="584,55,672,80"/>
+</map></section>
 
 
                 </article>

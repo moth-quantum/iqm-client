@@ -391,42 +391,13 @@
 </table>
 </div>
 <p class="rubric">Inheritance</p>
-digraph inheritancec0535cc66e {
-bgcolor=transparent;
-rankdir=LR;
-size=&quot;8.0, 12.0&quot;;
-  &quot;BaseModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
-  &quot;Generic&quot; [URL=&quot;https://docs.python.org/3.11/library/typing.html#typing.Generic&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Abstract base class for generic types.&quot;];
-  &quot;ListModel&quot; [URL=&quot;iqm.station_control.client.list_models.ListModel.html#iqm.station_control.client.list_models.ListModel&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;A Pydantic `BaseModel` for a container model of a list of objects.&quot;];
-  &quot;RootModel&quot; -&gt; &quot;ListModel&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[DutData]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[DutData]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[DutFieldData]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[DutFieldData]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[ObservationData]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[ObservationData]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[ObservationDefinition]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[ObservationDefinition]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[ObservationLite]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[ObservationLite]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[ObservationSetData]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[ObservationSetData]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[ObservationUpdate]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[ObservationUpdate]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[RunLite]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[RunLite]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ListModel[list[SequenceMetadataData]]&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;];
-  &quot;ListModel&quot; -&gt; &quot;ListModel[list[SequenceMetadataData]]&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;PydanticBase&quot; [URL=&quot;iqm.station_control.interface.pydantic_base.PydanticBase.html#iqm.station_control.interface.pydantic_base.PydanticBase&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Pydantic base model to change the behaviour of pydantic globally.&quot;];
-  &quot;BaseModel&quot; -&gt; &quot;PydanticBase&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;ResponseWithMeta&quot; [URL=&quot;iqm.station_control.client.list_models.ResponseWithMeta.html#iqm.station_control.client.list_models.ResponseWithMeta&quot;,fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,target=&quot;_top&quot;,tooltip=&quot;Class used for query endpoints to return metadata in addition to the returned items.&quot;];
-  &quot;PydanticBase&quot; -&gt; &quot;ResponseWithMeta&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Generic&quot; -&gt; &quot;ResponseWithMeta&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;RootModel&quot; [fillcolor=white,fontname=&quot;Vera Sans, DejaVu Sans, Liberation Sans, Arial, Helvetica, sans&quot;,fontsize=10,height=0.25,shape=box,style=&quot;setlinewidth(0.5),filled&quot;,tooltip=&quot;!!! abstract \&quot;Usage Documentation\&quot;&quot;];
-  &quot;BaseModel&quot; -&gt; &quot;RootModel&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-  &quot;Generic&quot; -&gt; &quot;RootModel&quot; [arrowsize=0.5,style=&quot;setlinewidth(0.5)&quot;];
-}
-</section>
+<div class="graphviz"><img src="../_images/inheritance-99245c84c16f6aa5db2d3df1ad49d42b8df7e389.png" alt="Inheritance diagram of iqm.station_control.client.list_models" usemap="#inheritancec0535cc66e" class="inheritance graphviz" /></div>
+<map id="inheritancec0535cc66e" name="inheritancec0535cc66e">
+<area shape="rect" id="node14" href="iqm.station_control.interface.pydantic_base.PydanticBase.html#iqm.station_control.interface.pydantic_base.PydanticBase" target="_top" title="Pydantic base model to change the behaviour of pydantic globally." alt="" coords="144,149,252,174"/>
+<area shape="rect" id="node2" href="https://docs.python.org/3.11/library/typing.html#typing.Generic" target="_top" title="Abstract base class for generic types." alt="" coords="16,222,86,246"/>
+<area shape="rect" id="node15" href="iqm.station_control.client.list_models.ResponseWithMeta.html#iqm.station_control.client.list_models.ResponseWithMeta" target="_top" title="Class used for query endpoints to return metadata in addition to the returned items." alt="" coords="298,149,442,174"/>
+<area shape="rect" id="node3" href="iqm.station_control.client.list_models.ListModel.html#iqm.station_control.client.list_models.ListModel" target="_top" title="A Pydantic `BaseModel` for a container model of a list of objects." alt="" coords="329,197,412,222"/>
+</map></section>
 
 
                 </article>
