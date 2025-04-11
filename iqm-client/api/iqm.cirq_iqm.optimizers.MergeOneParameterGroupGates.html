@@ -53,7 +53,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="22.16" />
-    <meta name="docbuild:last-update" content="2025-04-10"/>
+    <meta name="docbuild:last-update" content="2025-04-11"/>
   </head>
   
   
@@ -538,7 +538,7 @@
 <h1>iqm.cirq_iqm.optimizers.MergeOneParameterGroupGates<a class="headerlink" href="#iqm-cirq-iqm-optimizers-mergeoneparametergroupgates" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="iqm.cirq_iqm.optimizers.MergeOneParameterGroupGates">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.cirq_iqm.optimizers.</span></span><span class="sig-name descname"><span class="pre">MergeOneParameterGroupGates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">post_clean_up:</span> <span class="pre">~typing.Callable[[~typing.Sequence[cirq.Operation]],</span> <span class="pre">cirq.OP_TREE]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">PointOptimizer.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.cirq_iqm.optimizers.MergeOneParameterGroupGates" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.cirq_iqm.optimizers.</span></span><span class="sig-name descname"><span class="pre">MergeOneParameterGroupGates</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">post_clean_up:</span> <span class="pre">Callable[[Sequence[cirq.Operation]],</span> <span class="pre">cirq.OP_TREE]</span> <span class="pre">=</span> <span class="pre">&lt;function</span> <span class="pre">PointOptimizer.&lt;lambda&gt;&gt;</span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.cirq_iqm.optimizers.MergeOneParameterGroupGates" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">PointOptimizer</span></code></p>
 <p>Merges adjacent gates belonging to the same parametrized gate family.</p>
 <p>The merged gates have to act on the same sequence of qubits.
@@ -573,7 +573,7 @@ This optimizer only works with gate families that are known to be one-parameter 
 </div>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>post_clean_up</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Callable" title="(in Python v3.11)"><em>Callable</em></a><em>[</em><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Sequence" title="(in Python v3.11)"><em>Sequence</em></a><em>[</em><em>cirq.Operation</em><em>]</em><em>]</em><em>, </em><em>cirq.OP_TREE</em><em>]</em>) – </p>
+<dd class="field-odd"><p><strong>post_clean_up</strong> (<em>Callable</em><em>[</em><em>[</em><em>Sequence</em><em>[</em><em>cirq.Operation</em><em>]</em><em>]</em><em>, </em><em>cirq.OP_TREE</em><em>]</em>) – </p>
 </dd>
 </dl>
 <dl class="py method">
@@ -685,7 +685,7 @@ By IQM client developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-10.
+  Last updated on 2025-04-11.
   <br/>
 </p>
   </div>

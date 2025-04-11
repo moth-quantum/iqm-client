@@ -53,7 +53,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="16.2" />
-    <meta name="docbuild:last-update" content="2025-04-10"/>
+    <meta name="docbuild:last-update" content="2025-04-11"/>
   </head>
   
   
@@ -407,22 +407,25 @@
 <tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__eq__</span></code>(other)</p></td>
 <td><p>Return self==value.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__getstate__</span></code>()</p></td>
+<td><p>Helper for pickle.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__hash__</span></code>()</p></td>
 <td><p>Return hash(self).</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code>(other)</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">__ne__</span></code>(other)</p></td>
 <td><p>Return self!=value.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_value_equality_values_</span></code>()</p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_value_equality_values_</span></code>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_value_equality_values_cls_</span></code>()</p></td>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">_value_equality_values_cls_</span></code>()</p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_architecture" title="iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_architecture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_architecture</span></code></a>(architecture)</p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_architecture" title="iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_architecture"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_architecture</span></code></a>(architecture)</p></td>
 <td><p>Returns device metadata object created based on dynamic quantum architecture</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_qubit_indices" title="iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_qubit_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_qubit_indices</span></code></a>(qubit_count, ...[, gateset])</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_qubit_indices" title="iqm.cirq_iqm.devices.iqm_device_metadata.IQMDeviceMetadata.from_qubit_indices"><code class="xref py py-obj docutils literal notranslate"><span class="pre">from_qubit_indices</span></code></a>(qubit_count, ...[, gateset])</p></td>
 <td><p>Returns device metadata object created based on connectivity specified using qubit indices only.</p></td>
 </tr>
 </tbody>
@@ -581,7 +584,7 @@ By Cirq on IQM developers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-10.
+  Last updated on 2025-04-11.
   <br/>
 </p>
   </div>

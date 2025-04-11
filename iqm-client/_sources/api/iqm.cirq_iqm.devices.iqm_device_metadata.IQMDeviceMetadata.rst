@@ -28,6 +28,7 @@ iqm.cirq\_iqm.devices.iqm\_device\_metadata.IQMDeviceMetadata
    .. autosummary::
    
       ~IQMDeviceMetadata.__eq__
+      ~IQMDeviceMetadata.__getstate__
       ~IQMDeviceMetadata.__hash__
       ~IQMDeviceMetadata.__ne__
       ~IQMDeviceMetadata._value_equality_values_
