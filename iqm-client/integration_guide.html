@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Integration Guide &#8212; IQM client 22.16 documentation</title>
+    <title>Integration Guide &#8212; IQM client 23.8 documentation</title>
   
   
   
@@ -40,7 +40,7 @@
   <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="_static/documentation_options.js?v=009c4733"></script>
+    <script src="_static/documentation_options.js?v=9e8da0d0"></script>
     <script src="_static/doctools.js?v=888ff710"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -48,11 +48,11 @@
     <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Qiskit on IQM User Guide" href="user_guide_qiskit.html" />
-    <link rel="prev" title="iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationPlugin" href="api/iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationPlugin.html" />
+    <link rel="next" title="IQM Client CLI User Guide" href="user_guide_cli.html" />
+    <link rel="prev" title="iqm.iqm_client.transpile.ExistingMoveHandlingOptions" href="api/iqm.iqm_client.transpile.ExistingMoveHandlingOptions.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="22.16" />
+  <meta name="docsearch:version" content="23.8" />
     <meta name="docbuild:last-update" content="2025-04-15"/>
   </head>
   
@@ -132,8 +132,8 @@
       
     
     
-    <img src="_static/logo.png" class="logo__image only-light" alt="IQM client 22.16 documentation - Home"/>
-    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 22.16 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-light" alt="IQM client 23.8 documentation - Home"/>
+    <img src="_static/logo.png" class="logo__image only-dark pst-js-only" alt="IQM client 23.8 documentation - Home"/>
   
   
 </a></div>
@@ -149,49 +149,6 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="readme.html">IQM Client</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="API.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.html">iqm.cirq_iqm</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.devices.html">iqm.cirq_iqm.devices</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.devices.adonis.html">iqm.cirq_iqm.devices.adonis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.devices.aphrodite.html">iqm.cirq_iqm.devices.aphrodite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.devices.apollo.html">iqm.cirq_iqm.devices.apollo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.devices.iqm_device.html">iqm.cirq_iqm.devices.iqm_device</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.devices.iqm_device_metadata.html">iqm.cirq_iqm.devices.iqm_device_metadata</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.extended_qasm_parser.html">iqm.cirq_iqm.extended_qasm_parser</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.extended_qasm_parser.circuit_from_qasm.html">iqm.cirq_iqm.extended_qasm_parser.circuit_from_qasm</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.iqm_gates.html">iqm.cirq_iqm.iqm_gates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.iqm_gates.IQMMoveGate.html">iqm.cirq_iqm.iqm_gates.IQMMoveGate</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.iqm_sampler.html">iqm.cirq_iqm.iqm_sampler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.iqm_sampler.IQMResult.html">iqm.cirq_iqm.iqm_sampler.IQMResult</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.iqm_sampler.IQMSampler.html">iqm.cirq_iqm.iqm_sampler.IQMSampler</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.iqm_sampler.ResultMetadata.html">iqm.cirq_iqm.iqm_sampler.ResultMetadata</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.optimizers.html">iqm.cirq_iqm.optimizers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.optimizers.simplify_circuit.html">iqm.cirq_iqm.optimizers.simplify_circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.optimizers.DropRZBeforeMeasurement.html">iqm.cirq_iqm.optimizers.DropRZBeforeMeasurement</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.optimizers.MergeOneParameterGroupGates.html">iqm.cirq_iqm.optimizers.MergeOneParameterGroupGates</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.serialize.html">iqm.cirq_iqm.serialize</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.serialize.deserialize_circuit.html">iqm.cirq_iqm.serialize.deserialize_circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.serialize.instruction_to_operation.html">iqm.cirq_iqm.serialize.instruction_to_operation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.serialize.map_operation.html">iqm.cirq_iqm.serialize.map_operation</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.serialize.serialize_circuit.html">iqm.cirq_iqm.serialize.serialize_circuit</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.serialize.OperationNotSupportedError.html">iqm.cirq_iqm.serialize.OperationNotSupportedError</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.cirq_iqm.transpiler.html">iqm.cirq_iqm.transpiler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit.html">iqm.cirq_iqm.transpiler.transpile_insert_moves_into_circuit</a></li>
-</ul>
-</details></li>
-</ul>
-</details></li>
 <li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.iqm_client.html">iqm.iqm_client</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.iqm_client.api.html">iqm.iqm_client.api</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.api.APIConfig.html">iqm.iqm_client.api.APIConfig</a></li>
@@ -205,6 +162,13 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.authentication.TokenManager.html">iqm.iqm_client.authentication.TokenManager</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.authentication.TokenProviderInterface.html">iqm.iqm_client.authentication.TokenProviderInterface</a></li>
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.authentication.TokensFileReader.html">iqm.iqm_client.authentication.TokensFileReader</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.iqm_client.cli.html">iqm.iqm_client.cli</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.cli.auth.html">iqm.iqm_client.cli.auth</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.cli.cli.html">iqm.iqm_client.cli.cli</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.cli.models.html">iqm.iqm_client.cli.models</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.cli.token_manager.html">iqm.iqm_client.cli.token_manager</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.iqm_client.errors.html">iqm.iqm_client.errors</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -269,104 +233,12 @@
 <li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.transpile.ExistingMoveHandlingOptions.html">iqm.iqm_client.transpile.ExistingMoveHandlingOptions</a></li>
 </ul>
 </details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.iqm_client.util.html">iqm.iqm_client.util</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.util.to_json_dict.html">iqm.iqm_client.util.to_json_dict</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.iqm_client.util.IQMJSONEncoder.html">iqm.iqm_client.util.IQMJSONEncoder</a></li>
-</ul>
-</details></li>
-</ul>
-</details></li>
-<li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.html">iqm.qiskit_iqm</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.examples.html">iqm.qiskit_iqm.examples</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.examples.bell_measure.html">iqm.qiskit_iqm.examples.bell_measure</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.examples.resonance_example.html">iqm.qiskit_iqm.examples.resonance_example</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.examples.transpile_example.html">iqm.qiskit_iqm.examples.transpile_example</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.html">iqm.qiskit_iqm.fake_backends</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.fake_adonis.html">iqm.qiskit_iqm.fake_backends.fake_adonis</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.fake_aphrodite.html">iqm.qiskit_iqm.fake_backends.fake_aphrodite</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.fake_apollo.html">iqm.qiskit_iqm.fake_backends.fake_apollo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.fake_deneb.html">iqm.qiskit_iqm.fake_backends.fake_deneb</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.fake_garnet.html">iqm.qiskit_iqm.fake_backends.fake_garnet</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.fake_backends.iqm_fake_backend.html">iqm.qiskit_iqm.fake_backends.iqm_fake_backend</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_backend.html">iqm.qiskit_iqm.iqm_backend</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_backend.IQMBackendBase.html">iqm.qiskit_iqm.iqm_backend.IQMBackendBase</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_backend.IQMTarget.html">iqm.qiskit_iqm.iqm_backend.IQMTarget</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_circuit.html">iqm.qiskit_iqm.iqm_circuit</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_circuit.IQMCircuit.html">iqm.qiskit_iqm.iqm_circuit.IQMCircuit</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_circuit_validation.html">iqm.qiskit_iqm.iqm_circuit_validation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_circuit_validation.validate_circuit.html">iqm.qiskit_iqm.iqm_circuit_validation.validate_circuit</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_job.html">iqm.qiskit_iqm.iqm_job</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_job.IQMJob.html">iqm.qiskit_iqm.iqm_job.IQMJob</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_move_layout.html">iqm.qiskit_iqm.iqm_move_layout</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_move_layout.generate_initial_layout.html">iqm.qiskit_iqm.iqm_move_layout.generate_initial_layout</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_move_layout.IQMMoveLayout.html">iqm.qiskit_iqm.iqm_move_layout.IQMMoveLayout</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_naive_move_pass.html">iqm.qiskit_iqm.iqm_naive_move_pass</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_naive_move_pass.transpile_to_IQM.html">iqm.qiskit_iqm.iqm_naive_move_pass.transpile_to_IQM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_naive_move_pass.IQMNaiveResonatorMoving.html">iqm.qiskit_iqm.iqm_naive_move_pass.IQMNaiveResonatorMoving</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_provider.html">iqm.qiskit_iqm.iqm_provider</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_provider.IQMBackend.html">iqm.qiskit_iqm.iqm_provider.IQMBackend</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_provider.IQMFacadeBackend.html">iqm.qiskit_iqm.iqm_provider.IQMFacadeBackend</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_provider.IQMProvider.html">iqm.qiskit_iqm.iqm_provider.IQMProvider</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_transpilation.html">iqm.qiskit_iqm.iqm_transpilation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_transpilation.optimize_single_qubit_gates.html">iqm.qiskit_iqm.iqm_transpilation.optimize_single_qubit_gates</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_transpilation.IQMOptimizeSingleQubitGates.html">iqm.qiskit_iqm.iqm_transpilation.IQMOptimizeSingleQubitGates</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.iqm_transpilation.IQMReplaceGateWithUnitaryPass.html">iqm.qiskit_iqm.iqm_transpilation.IQMReplaceGateWithUnitaryPass</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.move_gate.html">iqm.qiskit_iqm.move_gate</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.move_gate.MOVE_GATE_UNITARY.html">iqm.qiskit_iqm.move_gate.MOVE_GATE_UNITARY</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.move_gate.MoveGate.html">iqm.qiskit_iqm.move_gate.MoveGate</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.qiskit_to_iqm.html">iqm.qiskit_iqm.qiskit_to_iqm</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.qiskit_to_iqm.deserialize_instructions.html">iqm.qiskit_iqm.qiskit_to_iqm.deserialize_instructions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.qiskit_to_iqm.serialize_instructions.html">iqm.qiskit_iqm.qiskit_to_iqm.serialize_instructions</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.qiskit_to_iqm.MeasurementKey.html">iqm.qiskit_iqm.qiskit_to_iqm.MeasurementKey</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.qiskit_to_iqm.InstructionNotSupportedError.html">iqm.qiskit_iqm.qiskit_to_iqm.InstructionNotSupportedError</a></li>
-</ul>
-</details></li>
-<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.html">iqm.qiskit_iqm.transpiler_plugins</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.IQMDefaultSchedulingPlugin.html">iqm.qiskit_iqm.transpiler_plugins.IQMDefaultSchedulingPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.IQMSchedulingPlugin.html">iqm.qiskit_iqm.transpiler_plugins.IQMSchedulingPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingKeepExistingMovesPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingKeepExistingMovesPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyKeepExistingMovesPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyKeepExistingMovesPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyRemoveExistingMovesPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyRemoveExistingMovesPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyTrustExistingMovesPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingOnlyTrustExistingMovesPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingRemoveExistingMovesPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingRemoveExistingMovesPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingTrustExistingMovesPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingTrustExistingMovesPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingWithExactRZPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingWithExactRZPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingWithRZOptimizationIgnoreBarriersPlugin.html">iqm.qiskit_iqm.transpiler_plugins.MoveGateRoutingWithRZOptimizationIgnoreBarriersPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationExactIgnoreBarriersPlugin.html">iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationExactIgnoreBarriersPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationExactPlugin.html">iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationExactPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationIgnoreBarriersPlugin.html">iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationIgnoreBarriersPlugin</a></li>
-<li class="toctree-l4"><a class="reference internal" href="api/iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationPlugin.html">iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationPlugin</a></li>
-</ul>
-</details></li>
 </ul>
 </details></li>
 </ul>
 </details></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Integration Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="user_guide_cli.html">IQM Client CLI User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_guide_qiskit.html">Qiskit on IQM User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="user_guide_cirq.html">Cirq on IQM User Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
@@ -542,7 +414,7 @@
 <span id="id1"></span><h1>Integration Guide<a class="headerlink" href="#integration-guide" title="Link to this heading">#</a></h1>
 <p>IQM client is designed to be the Python adapter to IQM’s quantum computers for application-level
 quantum computing frameworks.  For example integrations maintained by IQM, please refer to the
-<a class="reference internal" href="user_guide_qiskit.html#user-guide-qiskit"><span class="std std-ref">Qiskit</span></a> and <a class="reference external" href="UserguideCirq">Cirq</a> packages.</p>
+<a class="reference internal" href="user_guide_qiskit.html#user-guide-qiskit"><span class="std std-ref">Qiskit</span></a> and <a class="reference internal" href="user_guide_cirq.html#user-guide-cirq"><span class="std std-ref">Cirq</span></a> packages.</p>
 <p>IQM client offers the functionality to submit quantum circuits to an IQM quantum computer, query a
 job or a job status, and retrieve the quantum architecture of the quantum computer.</p>
 <p>The following sections illustrate how to integrate IQM quantum computers into your quantum computing
@@ -583,7 +455,7 @@ The available native instructions are documented in the <a class="reference inte
 </div>
 <p>A dict containing arbitrary metadata can be attached to the circuit before submitting it for
 execution. The attached metadata should consist only of values of JSON serializable datatypes.
-A utility function <a class="reference internal" href="api/iqm.iqm_client.util.to_json_dict.html#iqm.iqm_client.util.to_json_dict" title="iqm.iqm_client.util.to_json_dict"><code class="xref py py-func docutils literal notranslate"><span class="pre">to_json_dict()</span></code></a> can be used to convert supported datatypes,
+A utility function <code class="xref py py-func docutils literal notranslate"><span class="pre">to_json_dict()</span></code> can be used to convert supported datatypes,
 e.g. <a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.2)"><code class="xref py py-class docutils literal notranslate"><span class="pre">numpy.ndarray</span></code></a>, to equivalent JSON serializable types.</p>
 <p>The progress of the job can be followed with <a class="reference internal" href="api/iqm.iqm_client.iqm_client.IQMClient.html#iqm.iqm_client.iqm_client.IQMClient.get_run_status" title="iqm.iqm_client.iqm_client.IQMClient.get_run_status"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IQMClient.get_run_status()</span></code></a>. Once the job is ready,
 the results can be read with <a class="reference internal" href="api/iqm.iqm_client.iqm_client.IQMClient.html#iqm.iqm_client.iqm_client.IQMClient.get_run" title="iqm.iqm_client.iqm_client.IQMClient.get_run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">IQMClient.get_run()</span></code></a>. Both of these actions are combined in
@@ -617,14 +489,14 @@ This step produces timestamps <code class="docutils literal notranslate"><span c
 Currently, there are three mutually exclusive ways of providing an authentication
 token to IQM client:</p>
 <ol class="arabic simple">
-<li><p>The recommended way is to use <a class="reference external" href="https://github.com/iqm-finland/cortex-cli">Cortex CLI</a>
+<li><p>The recommended way is to use <a class="reference internal" href="user_guide_cli.html#user-guide-cli"><span class="std std-ref">IQM Client CLI</span></a>
 to manage the authentication tokens and store them into a file. IQM client can then read
 the token from the file and use it for authentication. The file path can be provided to
 IQM client in environment variable <span class="target" id="index-0"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">IQM_TOKENS_FILE</span></code>.
 Alternatively, the tokens file path can be provided as argument <code class="docutils literal notranslate"><span class="pre">tokens_file</span></code> to
 <a class="reference internal" href="api/iqm.iqm_client.iqm_client.IQMClient.html#iqm.iqm_client.iqm_client.IQMClient" title="iqm.iqm_client.iqm_client.IQMClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQMClient</span></code></a> constructor.</p></li>
 <li><p>It is also possible to use plaintext token obtained from a server dashboard. These
-tokens may have longer lifespan than access tokens generated by Cortex CLI, and thus
+tokens may have longer lifespan than access tokens generated by IQM Client CLI, and thus
 IQM client won’t attempt to refresh them. The generated token can be provided to IQM
 client in environment variable <span class="target" id="index-1"></span><code class="xref std std-envvar docutils literal notranslate"><span class="pre">IQM_TOKEN</span></code>.
 Alternatively, the token can be provided as argument <code class="docutils literal notranslate"><span class="pre">token</span></code> to <a class="reference internal" href="api/iqm.iqm_client.iqm_client.IQMClient.html#iqm.iqm_client.iqm_client.IQMClient" title="iqm.iqm_client.iqm_client.IQMClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQMClient</span></code></a>
@@ -734,20 +606,20 @@ like to request access to that environment, please contact <a class="reference e
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="api/iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationPlugin.html"
+       href="api/iqm.iqm_client.transpile.ExistingMoveHandlingOptions.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">iqm.qiskit_iqm.transpiler_plugins.OnlyRZOptimizationPlugin</p>
+        <p class="prev-next-title">iqm.iqm_client.transpile.ExistingMoveHandlingOptions</p>
       </div>
     </a>
     <a class="right-next"
-       href="user_guide_qiskit.html"
+       href="user_guide_cli.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Qiskit on IQM User Guide</p>
+        <p class="prev-next-title">IQM Client CLI User Guide</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -800,7 +672,7 @@ By IQM client developers
 
   <p class="copyright">
     
-      © Copyright 2021-2025, IQM Finland Oy, Release 22.16.
+      © Copyright 2021-2025, IQM Finland Oy, Release 23.8.
       <br/>
     
   </p>
