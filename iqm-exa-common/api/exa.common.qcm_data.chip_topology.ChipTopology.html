@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ChipTopology &#8212; exa-common 26.14 documentation</title>
+    <title>ChipTopology &#8212; exa-common 26.15 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=8cab1c4c"></script>
+    <script src="../_static/documentation_options.js?v=ef168c17"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="exa.common.qcm_data.chip_topology.sort_couplers" href="exa.common.qcm_data.chip_topology.sort_couplers.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.14" />
-    <meta name="docbuild:last-update" content="2025-04-29"/>
+  <meta name="docsearch:version" content="26.15" />
+    <meta name="docbuild:last-update" content="2025-04-30"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.14 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.14 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.15 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.15 documentation - Home"/>
   
   
 </a></div>
@@ -315,6 +315,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_coupler_for"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_coupler_for()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_locus_components"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_neighbor_locus_components()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_probe_lines"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_connected_probe_lines()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_coupler_map"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_connected_coupler_map()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.limit_values"><code class="docutils literal notranslate"><span class="pre">ChipTopology.limit_values()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_qubit"><code class="docutils literal notranslate"><span class="pre">ChipTopology.is_qubit()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_coupler"><code class="docutils literal notranslate"><span class="pre">ChipTopology.is_coupler()</span></code></a></li>
@@ -414,46 +415,49 @@
 <tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_common_computational_resonator" title="exa.common.qcm_data.chip_topology.ChipTopology.get_common_computational_resonator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_common_computational_resonator</span></code></a></p></td>
 <td><p>Convenience method for getting the name of a computational resonator which is connected to both specified qubit components via tunable couplers.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_probe_lines" title="exa.common.qcm_data.chip_topology.ChipTopology.get_connected_probe_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_connected_probe_lines</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_coupler_map" title="exa.common.qcm_data.chip_topology.ChipTopology.get_connected_coupler_map"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_connected_coupler_map</span></code></a></p></td>
+<td><p>Returns a <cite>ComponentMap</cite>, including only the couplers between components that both are in the given subset.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_probe_lines" title="exa.common.qcm_data.chip_topology.ChipTopology.get_connected_probe_lines"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_connected_probe_lines</span></code></a></p></td>
 <td><p>Get probelines that are connected to any of the given components.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connecting_couplers" title="exa.common.qcm_data.chip_topology.ChipTopology.get_connecting_couplers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_connecting_couplers</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connecting_couplers" title="exa.common.qcm_data.chip_topology.ChipTopology.get_connecting_couplers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_connecting_couplers</span></code></a></p></td>
 <td><p>Couplers that only connect to the given chip components, and connect at least two of them.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_coupler_for" title="exa.common.qcm_data.chip_topology.ChipTopology.get_coupler_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coupler_for</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_coupler_for" title="exa.common.qcm_data.chip_topology.ChipTopology.get_coupler_for"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_coupler_for</span></code></a></p></td>
 <td><p>Common coupler for the given chip components (e.g. qubit or computational resonator).</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_loci" title="exa.common.qcm_data.chip_topology.ChipTopology.get_loci"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_loci</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_loci" title="exa.common.qcm_data.chip_topology.ChipTopology.get_loci"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_loci</span></code></a></p></td>
 <td><p>Gives all the loci of a given gate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_couplers" title="exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_couplers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neighbor_couplers</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_couplers" title="exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_couplers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neighbor_couplers</span></code></a></p></td>
 <td><p>Couplers that connect to at least one of the given chip components.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_locus_components" title="exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_locus_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neighbor_locus_components</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_locus_components" title="exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_locus_components"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_neighbor_locus_components</span></code></a></p></td>
 <td><p>Chip components that are connected to the given components by a coupler, but not included in them.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_computational_resonator" title="exa.common.qcm_data.chip_topology.ChipTopology.is_computational_resonator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_computational_resonator</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_computational_resonator" title="exa.common.qcm_data.chip_topology.ChipTopology.is_computational_resonator"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_computational_resonator</span></code></a></p></td>
 <td><p>True iff the given component is a computational resonator.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_coupler" title="exa.common.qcm_data.chip_topology.ChipTopology.is_coupler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_coupler</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_coupler" title="exa.common.qcm_data.chip_topology.ChipTopology.is_coupler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_coupler</span></code></a></p></td>
 <td><p>True iff the given component is a coupler.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_probe_line" title="exa.common.qcm_data.chip_topology.ChipTopology.is_probe_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_probe_line</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_probe_line" title="exa.common.qcm_data.chip_topology.ChipTopology.is_probe_line"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_probe_line</span></code></a></p></td>
 <td><p>True iff the given component is a probe line.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_qubit" title="exa.common.qcm_data.chip_topology.ChipTopology.is_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_qubit</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_qubit" title="exa.common.qcm_data.chip_topology.ChipTopology.is_qubit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">is_qubit</span></code></a></p></td>
 <td><p>True iff the given component is a qubit.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.limit_values" title="exa.common.qcm_data.chip_topology.ChipTopology.limit_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_values</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.limit_values" title="exa.common.qcm_data.chip_topology.ChipTopology.limit_values"><code class="xref py py-obj docutils literal notranslate"><span class="pre">limit_values</span></code></a></p></td>
 <td><p>Prunes the given dictionary (e.g. a coupler-to-qubits map) to a subset of values.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.map_locus" title="exa.common.qcm_data.chip_topology.ChipTopology.map_locus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_locus</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.map_locus" title="exa.common.qcm_data.chip_topology.ChipTopology.map_locus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_locus</span></code></a></p></td>
 <td><p>Returns the mapped components for the given locus and the given gate.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.map_to_locus" title="exa.common.qcm_data.chip_topology.ChipTopology.map_to_locus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_to_locus</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.map_to_locus" title="exa.common.qcm_data.chip_topology.ChipTopology.map_to_locus"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_to_locus</span></code></a></p></td>
 <td><p>Returns the locus that is mapped to the given components.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.set_locus_mapping" title="exa.common.qcm_data.chip_topology.ChipTopology.set_locus_mapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_locus_mapping</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.qcm_data.chip_topology.ChipTopology.set_locus_mapping" title="exa.common.qcm_data.chip_topology.ChipTopology.set_locus_mapping"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_locus_mapping</span></code></a></p></td>
 <td><p>Add a custom mapping from a gate locus to a set of components required for the gate operation.</p></td>
 </tr>
 </tbody>
@@ -647,6 +651,23 @@ subgraph of the coupling topology.</p>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
 <dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#set" title="(in Python v3.11)"><em>set</em></a>[<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="exa.common.qcm_data.chip_topology.ChipTopology.get_connected_coupler_map">
+<span class="sig-name descname"><span class="pre">get_connected_coupler_map</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">components</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_coupler_map" title="Link to this definition">#</a></dt>
+<dd><p>Returns a <cite>ComponentMap</cite>, including only the couplers between components that both are in the given subset.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>components</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/collections.abc.html#collections.abc.Collection" title="(in Python v3.11)"><em>Collection</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>]</em>) – Collection of coupled components to restrict the returned couplers.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>A <cite>ComponentMap</cite>, a dict mapping coupler names to the names of the coupled components.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>ComponentMap</em></p>
 </dd>
 </dl>
 </dd></dl>
@@ -954,6 +975,7 @@ qubit components via tunable couplers.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_coupler_for"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_coupler_for()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_neighbor_locus_components"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_neighbor_locus_components()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_probe_lines"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_connected_probe_lines()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.get_connected_coupler_map"><code class="docutils literal notranslate"><span class="pre">ChipTopology.get_connected_coupler_map()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.limit_values"><code class="docutils literal notranslate"><span class="pre">ChipTopology.limit_values()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_qubit"><code class="docutils literal notranslate"><span class="pre">ChipTopology.is_qubit()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.qcm_data.chip_topology.ChipTopology.is_coupler"><code class="docutils literal notranslate"><span class="pre">ChipTopology.is_coupler()</span></code></a></li>
@@ -988,7 +1010,7 @@ qubit components via tunable couplers.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.14.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.15.
       <br/>
     
   </p>
@@ -997,7 +1019,7 @@ qubit components via tunable couplers.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-04-29.
+  Last updated on 2025-04-30.
   <br/>
 </p>
   </div>
