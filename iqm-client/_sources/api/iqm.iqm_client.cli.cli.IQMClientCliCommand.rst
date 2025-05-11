@@ -16,10 +16,10 @@ iqm.iqm\_client.cli.cli.IQMClientCliCommand
       ~IQMClientCliCommand.default_config_path
       ~IQMClientCliCommand.default_tokens_path
       ~IQMClientCliCommand.commands
-      ~IQMClientCliCommand.callback
-      ~IQMClientCliCommand.params
       ~IQMClientCliCommand.name
       ~IQMClientCliCommand.context_settings
+      ~IQMClientCliCommand.callback
+      ~IQMClientCliCommand.params
    
    
 
