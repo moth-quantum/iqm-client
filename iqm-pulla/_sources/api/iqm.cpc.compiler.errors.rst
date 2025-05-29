@@ -28,6 +28,7 @@ iqm.cpc.compiler.errors
       CompilationPassError
       InsufficientContextError
       SettingsConventionError
+      UnknownCircuitExecutionOptionError
       UnknownHardwareComponentError
       UnknownLogicalQubitError
    

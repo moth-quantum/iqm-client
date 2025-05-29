@@ -32,6 +32,13 @@ iqm.cpc.compiler.dd
 
    
    
+   .. rubric:: Exceptions
+
+   .. autosummary::
+      :toctree:
+   
+      DDError
+   
    
 
 
