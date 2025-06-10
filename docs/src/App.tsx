@@ -64,6 +64,7 @@ function App() {
     { href: "./iqm-station-control-client", title: "IQM Station Control Client", description: "Python client for remote access to quantum computers for pulse-level access." },
     { href: "./iqm-exa-common", title: "IQM EXA Common", description: "Abstract interfaces, helpers, utility classes, etc." },
     { href: "./iqm-data-definitions", title: "IQM Data Definitions", description: "A common place for data definitions shared inside IQM." },
+    { href: "https://resonance.meetiqm.com/docs/api-reference", title: "IQM Resonance API", description: "Submit jobs via the API (Login required)." },
   ];
 
   return (
