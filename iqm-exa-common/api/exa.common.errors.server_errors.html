@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>server_errors &#8212; exa-common 26.20.0 documentation</title>
+    <title>server_errors &#8212; exa-common 26.21.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=c6d77cad"></script>
+    <script src="../_static/documentation_options.js?v=6f9708cb"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -49,12 +49,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="exa.common.errors.server_errors.BadRequestError" href="exa.common.errors.server_errors.BadRequestError.html" />
+    <link rel="next" title="exa.common.errors.server_errors.map_from_error_to_status_code" href="exa.common.errors.server_errors.map_from_error_to_status_code.html" />
     <link rel="prev" title="exa.common.errors.exa_error.UnknownSettingError" href="exa.common.errors.exa_error.UnknownSettingError.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.20.0" />
-    <meta name="docbuild:last-update" content="2025-06-10"/>
+  <meta name="docsearch:version" content="26.21.0" />
+    <meta name="docbuild:last-update" content="2025-06-11"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.20.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.20.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.21.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.21.0 documentation - Home"/>
   
   
 </a></div>
@@ -302,6 +302,18 @@
 <span id="server-errors"></span><h1>server_errors<a class="headerlink" href="#module-exa.common.errors.server_errors" title="Link to this heading">#</a></h1>
 <p>Errors used in the client-server communication.</p>
 <p>Full path: exa.common.errors.server_errors</p>
+<p class="rubric">Functions</p>
+<div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="exa.common.errors.server_errors.map_from_error_to_status_code.html#exa.common.errors.server_errors.map_from_error_to_status_code" title="exa.common.errors.server_errors.map_from_error_to_status_code"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_from_error_to_status_code</span></code></a>(error)</p></td>
+<td><p>Map a StationControlError to an HTTPStatus code.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="exa.common.errors.server_errors.map_from_status_code_to_error.html#exa.common.errors.server_errors.map_from_status_code_to_error" title="exa.common.errors.server_errors.map_from_status_code_to_error"><code class="xref py py-obj docutils literal notranslate"><span class="pre">map_from_status_code_to_error</span></code></a>(status_code)</p></td>
+<td><p>Map an HTTPStatus code to a StationControlError.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
 <p class="rubric">Exceptions</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
@@ -358,11 +370,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="exa.common.errors.server_errors.BadRequestError.html"
+       href="exa.common.errors.server_errors.map_from_error_to_status_code.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">exa.common.errors.server_errors.BadRequestError</p>
+        <p class="prev-next-title">exa.common.errors.server_errors.map_from_error_to_status_code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -388,7 +400,7 @@
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.20.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.21.0.
       <br/>
     
   </p>
@@ -397,7 +409,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-06-10.
+  Last updated on 2025-06-11.
   <br/>
 </p>
   </div>
