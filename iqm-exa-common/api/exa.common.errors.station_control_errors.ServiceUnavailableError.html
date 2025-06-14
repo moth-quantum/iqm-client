@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>exa.common.errors.server_errors.ForbiddenError &#8212; exa-common 26.21.0 documentation</title>
+    <title>exa.common.errors.station_control_errors.ServiceUnavailableError &#8212; exa-common 26.22.0 documentation</title>
   
   
   
@@ -41,20 +41,20 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=6f9708cb"></script>
+    <script src="../_static/documentation_options.js?v=4f269220"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/exa.common.errors.server_errors.ForbiddenError';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/exa.common.errors.station_control_errors.ServiceUnavailableError';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="exa.common.errors.server_errors.InternalServerError" href="exa.common.errors.server_errors.InternalServerError.html" />
-    <link rel="prev" title="exa.common.errors.server_errors.ConflictError" href="exa.common.errors.server_errors.ConflictError.html" />
+    <link rel="next" title="exa.common.errors.station_control_errors.StationControlError" href="exa.common.errors.station_control_errors.StationControlError.html" />
+    <link rel="prev" title="exa.common.errors.station_control_errors.NotFoundError" href="exa.common.errors.station_control_errors.NotFoundError.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.21.0" />
-    <meta name="docbuild:last-update" content="2025-06-13"/>
+  <meta name="docsearch:version" content="26.22.0" />
+    <meta name="docbuild:last-update" content="2025-06-14"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.21.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.21.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.22.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.22.0 documentation - Home"/>
   
   
 </a></div>
@@ -164,7 +164,7 @@
 </details></li>
 <li class="toctree-l3 current active has-children"><a class="reference internal" href="exa.common.errors.html">errors</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="exa.common.errors.exa_error.html">exa_error</a></li>
-<li class="toctree-l4 current active"><a class="reference internal" href="exa.common.errors.server_errors.html">server_errors</a></li>
+<li class="toctree-l4 current active"><a class="reference internal" href="exa.common.errors.station_control_errors.html">station_control_errors</a></li>
 </ul>
 </details></li>
 <li class="toctree-l3 has-children"><a class="reference internal" href="exa.common.helpers.html">helpers</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -286,7 +286,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>exa.common.errors.server_errors.ForbiddenError</h1>
+    <h1>exa.common.errors.station_control_errors.ServiceUnavailableError</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -296,7 +296,7 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.server_errors.ForbiddenError"><code class="docutils literal notranslate"><span class="pre">ForbiddenError</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.station_control_errors.ServiceUnavailableError"><code class="docutils literal notranslate"><span class="pre">ServiceUnavailableError</span></code></a></li>
 </ul>
             </nav>
         </div>
@@ -308,12 +308,12 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="exa-common-errors-server-errors-forbiddenerror">
-<h1>exa.common.errors.server_errors.ForbiddenError<a class="headerlink" href="#exa-common-errors-server-errors-forbiddenerror" title="Link to this heading">#</a></h1>
+  <section id="exa-common-errors-station-control-errors-serviceunavailableerror">
+<h1>exa.common.errors.station_control_errors.ServiceUnavailableError<a class="headerlink" href="#exa-common-errors-station-control-errors-serviceunavailableerror" title="Link to this heading">#</a></h1>
 <dl class="py exception">
-<dt class="sig sig-object py" id="exa.common.errors.server_errors.ForbiddenError">
-<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ForbiddenError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.errors.server_errors.ForbiddenError" title="Link to this definition">#</a></dt>
-<dd><p>Error raised when the operation is forbidden for the user.</p>
+<dt class="sig sig-object py" id="exa.common.errors.station_control_errors.ServiceUnavailableError">
+<em class="property"><span class="pre">exception</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ServiceUnavailableError</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">message</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.errors.station_control_errors.ServiceUnavailableError" title="Link to this definition">#</a></dt>
+<dd><p>Error raised when the service is unavailable.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>message</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – </p>
@@ -335,20 +335,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="exa.common.errors.server_errors.ConflictError.html"
+       href="exa.common.errors.station_control_errors.NotFoundError.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">exa.common.errors.server_errors.ConflictError</p>
+        <p class="prev-next-title">exa.common.errors.station_control_errors.NotFoundError</p>
       </div>
     </a>
     <a class="right-next"
-       href="exa.common.errors.server_errors.InternalServerError.html"
+       href="exa.common.errors.station_control_errors.StationControlError.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">exa.common.errors.server_errors.InternalServerError</p>
+        <p class="prev-next-title">exa.common.errors.station_control_errors.StationControlError</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -369,7 +369,7 @@
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.server_errors.ForbiddenError"><code class="docutils literal notranslate"><span class="pre">ForbiddenError</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.errors.station_control_errors.ServiceUnavailableError"><code class="docutils literal notranslate"><span class="pre">ServiceUnavailableError</span></code></a></li>
 </ul>
   </nav></div>
 
@@ -390,7 +390,7 @@
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.21.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.22.0.
       <br/>
     
   </p>
@@ -399,7 +399,7 @@
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-06-13.
+  Last updated on 2025-06-14.
   <br/>
 </p>
   </div>
