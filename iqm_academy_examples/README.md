@@ -1,4 +1,3 @@
-*
 # IQM Academy Examples
 
 This repository contains example notebooks demonstrating how to run quantum algorithms on IQM hardware using various access methods:
