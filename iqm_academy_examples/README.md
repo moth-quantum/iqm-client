@@ -25,9 +25,7 @@ These examples require the following packages:
 ## Getting Started
 
 1. Browse the examples relevant to your preferred access method and framework
-
 2. Install the required packages for each notebook, they are typically in the first cell.
-
 3. Run the notebooks to see how to implement quantum algorithms on IQM hardware
 
 ## Contributing
