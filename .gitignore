@@ -5,3 +5,4 @@ dist
 docs/public
 docs/temp
 docs/search.json
+.venv
