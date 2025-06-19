@@ -9,21 +9,21 @@ EXCLUDED_FILE_NAMES = ["genindex.html", "license.html", "search.html", "changelo
 
 try:
     PACKAGE_DIRS = os.getenv("PACKAGES").split()
-except: 
+except:
     # Default package directories
-    PACKAGE_DIRS= ["iqm-exa-common", "iqm-pulla", "iqm-pulse", "iqm-station-control-client"]
+    PACKAGE_DIRS= ["iqm-exa-common", "iqm-pulla", "iqm-pulse", "iqm-station-control-client", "iqm-qaoa", "iqm-data-definitions", "iqm-benchmarks", "iqm-client"]
 
 
 def extract_text_from_html(file_path):
     """Extracts text from <p> elements in an HTML file."""
     with open(file_path, "r", encoding="utf-8") as f:
         soup = BeautifulSoup(f, "html.parser")
-        
+
         # Extract text from headers and paragraphs
         content = " ".join(
             tag.get_text(" ", strip=True) for tag in soup.find_all(["p"])
         )
-        
+
         title_tag = soup.find("h1")
         title = title_tag.get_text(" ", strip=True) if title_tag else "Untitled"
 
@@ -54,13 +54,13 @@ def build_search_index():
                         "package": package,
                         "title": title,
                         "url": f"/{relative_url}",
-                        "description": content[:200] + "...",  
-                        "content": content  
+                        "description": content[:200] + "...",
+                        "content": content
                     })
-    
+
     with open(SEARCH_INDEX_FILE, "w", encoding="utf-8") as f:
         json.dump(search_index, f, indent=2)
-    
+
     print(f"✅ Search index generated at {SEARCH_INDEX_FILE}")
 
 if __name__ == "__main__":
