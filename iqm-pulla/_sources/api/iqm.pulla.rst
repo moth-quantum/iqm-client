@@ -31,6 +31,7 @@
    ~iqm.pulla.calibration
    ~iqm.pulla.interface
    ~iqm.pulla.pulla
+   ~iqm.pulla.quantum_architecture
    ~iqm.pulla.utils
    ~iqm.pulla.utils_cirq
    ~iqm.pulla.utils_dd
