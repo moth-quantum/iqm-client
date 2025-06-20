@@ -54,7 +54,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="9.15.0" />
-    <meta name="docbuild:last-update" content="2025-06-19"/>
+    <meta name="docbuild:last-update" content="2025-06-20"/>
   </head>
   
   
@@ -304,16 +304,16 @@ or it can be atomic, in which case it contains a single <strong>Schedule</strong
 <img alt="_images/playlist_breakdown.svg" src="_images/playlist_breakdown.svg" /></section>
 <section id="instructions">
 <h2>Instructions<a class="headerlink" href="#instructions" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.Instruction.html#iqm.pulse.playlist.instructions.Instruction" title="(in iqm.pulse v9.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Hardware</span> <span class="pre">instructions</span></code></a>
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">Hardware</span> <span class="pre">instructions</span></code>
 are the lowest-level construct visible on the client side.
 Instructions are a set of atomic, real-time execution commands for the control hardware supported by IQM.
 They work in a time scale where the quantum information of the QPU can be assumed to be preserved.
 Examples of Instructions are
-<a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse" title="(in iqm.pulse v9.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code></a> to play a microwave pulse on a channel,
-<a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.VirtualRZ.html#iqm.pulse.playlist.instructions.VirtualRZ" title="(in iqm.pulse v9.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualRZ</span></code></a> to adjust the modulation phase,
-<a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.ReadoutTrigger.html#iqm.pulse.playlist.instructions.ReadoutTrigger" title="(in iqm.pulse v9.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">ReadoutTrigger</span></code></a> to acquire measurement data,
-and <a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.Wait.html#iqm.pulse.playlist.instructions.Wait" title="(in iqm.pulse v9.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wait</span></code></a> to delay the next Instruction for a given time.
-See <a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.html#module-iqm.pulse.playlist.instructions" title="(in iqm.pulse v9.15.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.playlist.instructions</span></code></a> for the complete list.</p>
+<code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code> to play a microwave pulse on a channel,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">VirtualRZ</span></code> to adjust the modulation phase,
+<code class="xref py py-class docutils literal notranslate"><span class="pre">ReadoutTrigger</span></code> to acquire measurement data,
+and <code class="xref py py-class docutils literal notranslate"><span class="pre">Wait</span></code> to delay the next Instruction for a given time.
+See <code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.playlist.instructions</span></code> for the complete list.</p>
 <p>During execution, each hardware control channel executes its own sequence of Instructions.
 Each Instruction blocks the next until it is completed.
 Instructions are as explicit as possible, so that there is no ambiguity on what will be executed when.
@@ -329,7 +329,7 @@ The philosophy is that Station Control, which is inaccessible to the user, does 
 Instead, the magic happens on the client side so that it is transparent to the user.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>For technical reasons, IQM Pulse mostly uses classes from <a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.instructions.html#module-iqm.pulse.playlist.instructions" title="(in iqm.pulse v9.15.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.playlist.instructions</span></code></a>, but when
+<p>For technical reasons, IQM Pulse mostly uses classes from <code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.playlist.instructions</span></code>, but when
 finalizing the output, the instructions are converted to <code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.models.playlist.instructions</span></code>.
 These two class families are semantically equivalent, apart from a few exceptions like <code class="xref py py-class docutils literal notranslate"><span class="pre">Block</span></code> which
 only exists on the client side to help with scheduling.</p>
@@ -337,7 +337,7 @@ only exists on the client side to help with scheduling.</p>
 </section>
 <section id="schedules">
 <h2>Schedules<a class="headerlink" href="#schedules" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="../iqm-pulse/api/iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule" title="(in iqm.pulse v9.15.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Schedule</span></code></a> contains a number of control channels, each with a lists of Instructions.
+<p><code class="xref py py-class docutils literal notranslate"><span class="pre">Schedule</span></code> contains a number of control channels, each with a lists of Instructions.
 All channels in a Schedule start executing at the same instant, and the timing is defined by the duration of the
 individual Instructions.
 Schedules can be thought of as a fixed block that occupies some interval on a timeline of some channels.</p>
@@ -378,9 +378,9 @@ qubits or computational resonators.</p>
 <p>A QuantumOp has unambiguous definition in terms of its <em>intended</em> effect on the computational subspace of the
 QPU component, but it can be <em>implemented</em> in various ways.
 Each implementation is represented as a GateImplementation.</p>
-<p>The list of available QuantumOps at runtime can be obtained with <a class="reference external" href="../iqm-pulse/api/iqm.pulse.builder.build_quantum_ops.html#iqm.pulse.builder.build_quantum_ops" title="(in iqm.pulse v9.15.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulse.builder.build_quantum_ops()</span></code></a>.
+<p>The list of available QuantumOps at runtime can be obtained with <code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulse.builder.build_quantum_ops()</span></code>.
 A new QuantumOp can be registered at runtime, together with an implementation, with
-<a class="reference external" href="../iqm-pulse/api/iqm.pulse.gates.register_implementation.html#iqm.pulse.gates.register_implementation" title="(in iqm.pulse v9.15.0)"><code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulse.gates.register_implementation()</span></code></a>.</p>
+<code class="xref py py-func docutils literal notranslate"><span class="pre">iqm.pulse.gates.register_implementation()</span></code>.</p>
 </section>
 <section id="gateimplementations">
 <h2>GateImplementations<a class="headerlink" href="#gateimplementations" title="Link to this heading">#</a></h2>
@@ -389,7 +389,7 @@ When a user requests a QuantumOp from <code class="xref py py-class docutils lit
 chosen GateImplementation (usually the default) for the operation is used to produce a TimeBox.
 This TimeBox, usually atomic, contains a Schedule on the appropriate control channels.
 The Instructions within are constructed following the calibration values from the ScheduleBuilder.</p>
-<p>All gate implementations are listed in <a class="reference external" href="../iqm-pulse/api/iqm.pulse.gates.html#module-iqm.pulse.gates" title="(in iqm.pulse v9.15.0)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.gates</span></code></a>.
+<p>All gate implementations are listed in <code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.gates</span></code>.
 Section <a class="reference internal" href="custom_gates.html"><span class="doc">Custom gate implementations</span></a> explains how to add more implementations.</p>
 </section>
 <section id="playlists">
@@ -497,7 +497,7 @@ timeline.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-06-19.
+  Last updated on 2025-06-20.
   <br/>
 </p>
   </div>
