@@ -4,6 +4,7 @@ import { Search, X } from 'lucide-react';
 import AppSwitcher from './AppSwitcher';
 import docs from "../search.json";
 import Features from './Features';
+import QrispLogo from './img/qrisp_logo.png'
 
 interface Doc {
   title: string;
@@ -65,6 +66,10 @@ function App() {
     { href: "./iqm-station-control-client", title: "IQM Station Control Client", description: "Python client for remote access to quantum computers for pulse-level access." },
     { href: "./iqm-exa-common", title: "IQM EXA Common", description: "Abstract interfaces, helpers, utility classes, etc." },
     { href: "./iqm-data-definitions", title: "IQM Data Definitions", description: "A common place for data definitions shared inside IQM." },
+    { href: "https://qrisp.eu/reference/index.html", 
+      title: "Qrisp", 
+      description: "Use Eclipse Qrisp to run your circuits on IQM hardware.",
+    image: QrispLogo },
   ];
 
   return (
@@ -109,10 +114,17 @@ function App() {
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
                 {docLinks.map((doc, index) => (
-                  <a key={index} href={doc.href} target='_blank' className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                    <h2 className="text-lg font-semibold text-gray-900">{doc.title}</h2>
+                    <a key={index} href={doc.href} target='_blank' className="p-6 bg-white border border-gray-200 rounded-lg shadow-sm hover:shadow-md transition-shadow relative">
+                    {doc.image ? (
+                      <img 
+                      src={doc.image} 
+                      className="h-7" 
+                      alt={doc.title + " logo"} 
+                      />
+                    ) :
+                    <h2 className="text-lg font-semibold text-gray-900 pr-10">{doc.title}</h2>}
                     <p className="mt-2 text-sm text-gray-600">{doc.description}</p>
-                  </a>
+                    </a>
                 ))}
               </div>
             </>
