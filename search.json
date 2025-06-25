@@ -738,78 +738,78 @@
     "package": "iqm-station-control-client",
     "title": "API documentation: station-control-client",
     "url": "/iqm-station-control-client/index.html",
-    "description": "9.1.0 2025-06-25 This is the documentation of the IQM station-control client library. Index Module Index Search Page next API Reference \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updat...",
-    "content": "9.1.0 2025-06-25 This is the documentation of the IQM station-control client library. Index Module Index Search Page next API Reference \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "description": "9.2.0 2025-06-25 This is the documentation of the IQM station-control client library. Index Module Index Search Page next API Reference \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updat...",
+    "content": "9.2.0 2025-06-25 This is the documentation of the IQM station-control client library. Index Module Index Search Page next API Reference \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "API Reference",
     "url": "/iqm-station-control-client/API.html",
     "description": "iqm.station_control.client Station control client implementation. iqm.station_control.interface Station control interface. previous API documentation: station-control-client next client \u00a9 Copyright 20...",
-    "content": "iqm.station_control.client Station control client implementation. iqm.station_control.interface Station control interface. previous API documentation: station-control-client next client \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "iqm.station_control.client Station control client implementation. iqm.station_control.interface Station control interface. previous API documentation: station-control-client next client \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "testing",
     "url": "/iqm-station-control-client/api/iqm.station_control.client.iqm_server.testing.html",
-    "description": "Full path: iqm.station_control.client.iqm_server.testing Subpackages and modules previous iqm_server next interface \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25....",
-    "content": "Full path: iqm.station_control.client.iqm_server.testing Subpackages and modules previous iqm_server next interface \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "description": "Full path: iqm.station_control.client.iqm_server.testing Subpackages and modules previous iqm_server next interface \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25....",
+    "content": "Full path: iqm.station_control.client.iqm_server.testing Subpackages and modules previous iqm_server next interface \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "list_with_meta",
     "url": "/iqm-station-control-client/api/iqm.station_control.interface.list_with_meta.html",
     "description": "Models to extend standard list with metadata. Full path: iqm.station_control.interface.list_with_meta Classes ListWithMeta Standard list extension holding optional metadata as well. Meta Class holding...",
-    "content": "Models to extend standard list with metadata. Full path: iqm.station_control.interface.list_with_meta Classes ListWithMeta Standard list extension holding optional metadata as well. Meta Class holding metadata for list return values, like pagination related data. Inheritance previous interface next ListWithMeta \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Models to extend standard list with metadata. Full path: iqm.station_control.interface.list_with_meta Classes ListWithMeta Standard list extension holding optional metadata as well. Meta Class holding metadata for list return values, like pagination related data. Inheritance previous interface next ListWithMeta \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "pydantic_base",
     "url": "/iqm-station-control-client/api/iqm.station_control.interface.pydantic_base.html",
     "description": "Pydantic related models and types. Full path: iqm.station_control.interface.pydantic_base Classes PydanticBase Pydantic base model to change the behaviour of pydantic globally. Inheritance previous Me...",
-    "content": "Pydantic related models and types. Full path: iqm.station_control.interface.pydantic_base Classes PydanticBase Pydantic base model to change the behaviour of pydantic globally. Inheritance previous Meta next PydanticBase \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Pydantic related models and types. Full path: iqm.station_control.interface.pydantic_base Classes PydanticBase Pydantic base model to change the behaviour of pydantic globally. Inheritance previous Meta next PydanticBase \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "iqm_server",
     "url": "/iqm-station-control-client/api/iqm.station_control.client.iqm_server.html",
     "description": "StationControlClient implementation for IQM Server Full path: iqm.station_control.client.iqm_server Subpackages and modules testing  previous client next testing \u00a9 Copyright 2019-2025, IQM Finland Oy,...",
-    "content": "StationControlClient implementation for IQM Server Full path: iqm.station_control.client.iqm_server Subpackages and modules testing  previous client next testing \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "StationControlClient implementation for IQM Server Full path: iqm.station_control.client.iqm_server Subpackages and modules testing  previous client next testing \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "interface",
     "url": "/iqm-station-control-client/api/iqm.station_control.interface.html",
     "description": "Station control interface. A StationControlInterface administers a set of control and measurement instruments\nattached to a quantum device, and connects to the database and related external services. ...",
-    "content": "Station control interface. A StationControlInterface administers a set of control and measurement instruments\nattached to a quantum device, and connects to the database and related external services. Full path: iqm.station_control.interface Subpackages and modules list_with_meta Models to extend standard list with metadata. pydantic_base Pydantic related models and types. previous testing next list_with_meta \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Station control interface. A StationControlInterface administers a set of control and measurement instruments\nattached to a quantum device, and connects to the database and related external services. Full path: iqm.station_control.interface Subpackages and modules list_with_meta Models to extend standard list with metadata. pydantic_base Pydantic related models and types. previous testing next list_with_meta \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "PydanticBase",
     "url": "/iqm-station-control-client/api/iqm.station_control.interface.pydantic_base.PydanticBase.html",
     "description": "Bases: BaseModel Pydantic base model to change the behaviour of pydantic globally.\nNote that setting model_config in child classes will merge the configs rather than override this one. https://docs.py...",
-    "content": "Bases: BaseModel Pydantic base model to change the behaviour of pydantic globally.\nNote that setting model_config in child classes will merge the configs rather than override this one. https://docs.pydantic.dev/latest/concepts/config/#change-behaviour-globally Create a new model by parsing and validating input data from keyword arguments. Raises [ ValidationError ][pydantic_core.ValidationError] if the input data cannot be\nvalidated to form a valid model. self is explicitly positional-only to allow self as a field name. Module: iqm.station_control.interface.pydantic_base Attributes model_config Configuration for the model, should be a dictionary conforming to [ ConfigDict ][pydantic.config.ConfigDict]. Methods Configuration for the model, should be a dictionary conforming to [ ConfigDict ][pydantic.config.ConfigDict]. previous pydantic_base next Changelog \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Bases: BaseModel Pydantic base model to change the behaviour of pydantic globally.\nNote that setting model_config in child classes will merge the configs rather than override this one. https://docs.pydantic.dev/latest/concepts/config/#change-behaviour-globally Create a new model by parsing and validating input data from keyword arguments. Raises [ ValidationError ][pydantic_core.ValidationError] if the input data cannot be\nvalidated to form a valid model. self is explicitly positional-only to allow self as a field name. Module: iqm.station_control.interface.pydantic_base Attributes model_config Configuration for the model, should be a dictionary conforming to [ ConfigDict ][pydantic.config.ConfigDict]. Methods Configuration for the model, should be a dictionary conforming to [ ConfigDict ][pydantic.config.ConfigDict]. previous pydantic_base next Changelog \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "ListWithMeta",
     "url": "/iqm-station-control-client/api/iqm.station_control.interface.list_with_meta.ListWithMeta.html",
     "description": "Bases: list Standard list extension holding optional metadata as well. Module: iqm.station_control.interface.list_with_meta Methods items ( Iterable ) \u2013 meta ( Meta ) \u2013 previous list_with_meta next Me...",
-    "content": "Bases: list Standard list extension holding optional metadata as well. Module: iqm.station_control.interface.list_with_meta Methods items ( Iterable ) \u2013 meta ( Meta ) \u2013 previous list_with_meta next Meta \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Bases: list Standard list extension holding optional metadata as well. Module: iqm.station_control.interface.list_with_meta Methods items ( Iterable ) \u2013 meta ( Meta ) \u2013 previous list_with_meta next Meta \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "client",
     "url": "/iqm-station-control-client/api/iqm.station_control.client.html",
     "description": "Station control client implementation. Full path: iqm.station_control.client Subpackages and modules iqm_server StationControlClient implementation for IQM Server previous API Reference next iqm_serve...",
-    "content": "Station control client implementation. Full path: iqm.station_control.client Subpackages and modules iqm_server StationControlClient implementation for IQM Server previous API Reference next iqm_server \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Station control client implementation. Full path: iqm.station_control.client Subpackages and modules iqm_server StationControlClient implementation for IQM Server previous API Reference next iqm_server \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-station-control-client",
     "title": "Meta",
     "url": "/iqm-station-control-client/api/iqm.station_control.interface.list_with_meta.Meta.html",
     "description": "Bases: object Class holding metadata for list return values, like pagination related data. Module: iqm.station_control.interface.list_with_meta Attributes count  errors  limit  offset  order_by  Metho...",
-    "content": "Bases: object Class holding metadata for list return values, like pagination related data. Module: iqm.station_control.interface.list_with_meta Attributes count  errors  limit  offset  order_by  Methods count ( int | None ) \u2013 order_by ( str | None ) \u2013 limit ( int | None ) \u2013 offset ( int | None ) \u2013 errors ( list [ str ] | None ) \u2013 previous ListWithMeta next pydantic_base \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.1.0. Last updated on 2025-06-25."
+    "content": "Bases: object Class holding metadata for list return values, like pagination related data. Module: iqm.station_control.interface.list_with_meta Attributes count  errors  limit  offset  order_by  Methods count ( int | None ) \u2013 order_by ( str | None ) \u2013 limit ( int | None ) \u2013 offset ( int | None ) \u2013 errors ( list [ str ] | None ) \u2013 previous ListWithMeta next pydantic_base \u00a9 Copyright 2019-2025, IQM Finland Oy, Release 9.2.0. Last updated on 2025-06-25."
   },
   {
     "package": "iqm-qaoa",
