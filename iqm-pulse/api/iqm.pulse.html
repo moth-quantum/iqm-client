@@ -49,7 +49,7 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Changelog" href="../changelog.html" />
+    <link rel="next" title="base_utils" href="iqm.pulse.base_utils.html" />
     <link rel="prev" title="API Reference" href="../API.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -153,7 +153,120 @@
 <li class="toctree-l1"><a class="reference internal" href="../custom_gates.html">Custom gate implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="../API.html">API Reference</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">pulse</a></li>
+<li class="toctree-l2 current active has-children"><a class="current reference internal" href="#">pulse</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.base_utils.html">base_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.base_utils.merge_dicts.html">iqm.pulse.base_utils.merge_dicts</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.validate_quantum_circuit.html">iqm.pulse.builder.validate_quantum_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.CircuitOperation.html">CircuitOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.builder.ScheduleBuilder.html">ScheduleBuilder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.circuit_operations.html">circuit_operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.get_unitary_from_circuit.html">iqm.pulse.circuit_operations.get_unitary_from_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.get_unitary_from_op.html">iqm.pulse.circuit_operations.get_unitary_from_op</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.reorder.html">iqm.pulse.circuit_operations.reorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.reshape_unitary.html">iqm.pulse.circuit_operations.reshape_unitary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.circuit_operations.CircuitOperationList.html">CircuitOperationList</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.gate_implementation.html">gate_implementation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.Locus.html">iqm.pulse.gate_implementation.Locus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.OILCalibrationData.html">iqm.pulse.gate_implementation.OILCalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.OICalibrationData.html">iqm.pulse.gate_implementation.OICalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.OCalibrationData.html">iqm.pulse.gate_implementation.OCalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.OpCalibrationDataTree.html">iqm.pulse.gate_implementation.OpCalibrationDataTree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.NestedParams.html">iqm.pulse.gate_implementation.NestedParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_DRIVE_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_DRIVE_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_READOUT_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_READOUT_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.get_waveform_parameters.html">iqm.pulse.gate_implementation.get_waveform_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.CompositeCache.html">CompositeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.CompositeGate.html">CompositeGate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.CustomIQWaveforms.html">CustomIQWaveforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.GateImplementation.html">GateImplementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gate_implementation.SinglePulseGate.html">SinglePulseGate</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.gates.html">gates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.expose_implementation.html">iqm.pulse.gates.expose_implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.get_implementation_class.html">iqm.pulse.gates.get_implementation_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.register_implementation.html">iqm.pulse.gates.register_implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.barrier.html">barrier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.conditional.html">conditional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.default_gates.html">default_gates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.delay.html">delay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.enums.html">enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.measure.html">measure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.move.html">move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.prx.html">prx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.reset.html">reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.rz.html">rz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.sx.html">sx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.gates.u.html">u</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.playlist.html">playlist</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.channel.html">channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.fast_drag.html">fast_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.hd_drag.html">hd_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.instructions.html">instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.playlist.html">playlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.schedule.html">schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.visualisation.html">visualisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.playlist.waveforms.html">waveforms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.quantum_ops.html">quantum_ops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.quantum_ops.QuantumOpTable.html">iqm.pulse.quantum_ops.QuantumOpTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.quantum_ops.validate_locus_calibration.html">iqm.pulse.quantum_ops.validate_locus_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.quantum_ops.validate_op_calibration.html">iqm.pulse.quantum_ops.validate_op_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.quantum_ops.QuantumOp.html">QuantumOp</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.scheduler.html">scheduler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.NONSOLID.html">iqm.pulse.scheduler.NONSOLID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.BLOCKING.html">iqm.pulse.scheduler.BLOCKING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.extend_hard_boundary.html">iqm.pulse.scheduler.extend_hard_boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.extend_hard_boundary_in_seconds.html">iqm.pulse.scheduler.extend_hard_boundary_in_seconds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.extend_schedule.html">iqm.pulse.scheduler.extend_schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.extend_schedule_new.html">iqm.pulse.scheduler.extend_schedule_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.scheduler.SegmentPointer.html">SegmentPointer</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.timebox.html">timebox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.timebox.MultiplexedProbeTimeBox.html">MultiplexedProbeTimeBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.timebox.SchedulingAlgorithm.html">SchedulingAlgorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.timebox.SchedulingStrategy.html">SchedulingStrategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.timebox.TimeBox.html">TimeBox</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.utils.html">utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.map_waveform_param_types.html">iqm.pulse.utils.map_waveform_param_types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.normalize_angle.html">iqm.pulse.utils.normalize_angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.utils.phase_transformation.html">iqm.pulse.utils.phase_transformation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="iqm.pulse.validation.html">validation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.validate_awg_and_schedule_compatibility.html">iqm.pulse.validation.validate_awg_and_schedule_compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.validate_channel.html">iqm.pulse.validation.validate_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.validate_instruction_and_wf_length.html">iqm.pulse.validation.validate_instruction_and_wf_length</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.validate_playlist_compatibility.html">iqm.pulse.validation.validate_playlist_compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.AWGScheduleValidationData.html">AWGScheduleValidationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.AWGScheduleValidationError.html">iqm.pulse.validation.AWGScheduleValidationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.InvalidInstructionError.html">iqm.pulse.validation.InvalidInstructionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="iqm.pulse.validation.PlaylistValidationError.html">iqm.pulse.validation.PlaylistValidationError</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -267,6 +380,39 @@
 <p class="rubric">Subpackages and modules</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.base_utils.html#module-iqm.pulse.base_utils" title="iqm.pulse.base_utils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">base_utils</span></code></a></p></td>
+<td><p>Base utility functions with no dependencies on other iqm.pulse modules.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.builder.html#module-iqm.pulse.builder" title="iqm.pulse.builder"><code class="xref py py-obj docutils literal notranslate"><span class="pre">builder</span></code></a></p></td>
+<td><p>Tools for building instruction schedules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.circuit_operations.html#module-iqm.pulse.circuit_operations" title="iqm.pulse.circuit_operations"><code class="xref py py-obj docutils literal notranslate"><span class="pre">circuit_operations</span></code></a></p></td>
+<td><p>Representing quantum circuits as lists of CircuitOperations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.gate_implementation.html#module-iqm.pulse.gate_implementation" title="iqm.pulse.gate_implementation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gate_implementation</span></code></a></p></td>
+<td><p>Implementing abstract quantum operations as instruction schedules.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.gates.html#module-iqm.pulse.gates" title="iqm.pulse.gates"><code class="xref py py-obj docutils literal notranslate"><span class="pre">gates</span></code></a></p></td>
+<td><p>Implementations of quantum gates.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.playlist.html#module-iqm.pulse.playlist" title="iqm.pulse.playlist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">playlist</span></code></a></p></td>
+<td><p>Control pulses and instruction schedules for quantum computers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.quantum_ops.html#module-iqm.pulse.quantum_ops" title="iqm.pulse.quantum_ops"><code class="xref py py-obj docutils literal notranslate"><span class="pre">quantum_ops</span></code></a></p></td>
+<td><p>Quantum operations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.scheduler.html#module-iqm.pulse.scheduler" title="iqm.pulse.scheduler"><code class="xref py py-obj docutils literal notranslate"><span class="pre">scheduler</span></code></a></p></td>
+<td><p>Tools for composing instruction schedules in time.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.timebox.html#module-iqm.pulse.timebox" title="iqm.pulse.timebox"><code class="xref py py-obj docutils literal notranslate"><span class="pre">timebox</span></code></a></p></td>
+<td><p>Reserving QPU resources in instruction scheduling.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="iqm.pulse.utils.html#module-iqm.pulse.utils" title="iqm.pulse.utils"><code class="xref py py-obj docutils literal notranslate"><span class="pre">utils</span></code></a></p></td>
+<td><p>Utility functions.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="iqm.pulse.validation.html#module-iqm.pulse.validation" title="iqm.pulse.validation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">validation</span></code></a></p></td>
+<td><p>Validation of playlists and instructions schedules.</p></td>
+</tr>
 </tbody>
 </table>
 </div>
@@ -293,11 +439,11 @@
       </div>
     </a>
     <a class="right-next"
-       href="../changelog.html"
+       href="iqm.pulse.base_utils.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Changelog</p>
+        <p class="prev-next-title">base_utils</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

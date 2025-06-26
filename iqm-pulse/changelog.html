@@ -52,7 +52,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="References" href="references.html" />
-    <link rel="prev" title="pulse" href="api/iqm.pulse.html" />
+    <link rel="prev" title="iqm.pulse.validation.PlaylistValidationError" href="api/iqm.pulse.validation.PlaylistValidationError.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="9.15.0" />
@@ -155,7 +155,120 @@
 <li class="toctree-l1"><a class="reference internal" href="custom_gates.html">Custom gate implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="API.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/iqm.pulse.html">pulse</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.pulse.html">pulse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.base_utils.html">base_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.base_utils.merge_dicts.html">iqm.pulse.base_utils.merge_dicts</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.validate_quantum_circuit.html">iqm.pulse.builder.validate_quantum_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.CircuitOperation.html">CircuitOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html">ScheduleBuilder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.circuit_operations.html">circuit_operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.get_unitary_from_circuit.html">iqm.pulse.circuit_operations.get_unitary_from_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.get_unitary_from_op.html">iqm.pulse.circuit_operations.get_unitary_from_op</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.reorder.html">iqm.pulse.circuit_operations.reorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.reshape_unitary.html">iqm.pulse.circuit_operations.reshape_unitary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.CircuitOperationList.html">CircuitOperationList</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.gate_implementation.html">gate_implementation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.Locus.html">iqm.pulse.gate_implementation.Locus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OILCalibrationData.html">iqm.pulse.gate_implementation.OILCalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OICalibrationData.html">iqm.pulse.gate_implementation.OICalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OCalibrationData.html">iqm.pulse.gate_implementation.OCalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OpCalibrationDataTree.html">iqm.pulse.gate_implementation.OpCalibrationDataTree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.NestedParams.html">iqm.pulse.gate_implementation.NestedParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_DRIVE_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_DRIVE_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_READOUT_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_READOUT_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.get_waveform_parameters.html">iqm.pulse.gate_implementation.get_waveform_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeCache.html">CompositeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html">CompositeGate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CustomIQWaveforms.html">CustomIQWaveforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html">GateImplementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SinglePulseGate.html">SinglePulseGate</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.gates.html">gates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.expose_implementation.html">iqm.pulse.gates.expose_implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.get_implementation_class.html">iqm.pulse.gates.get_implementation_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.register_implementation.html">iqm.pulse.gates.register_implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.barrier.html">barrier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.conditional.html">conditional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.default_gates.html">default_gates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.delay.html">delay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.enums.html">enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.measure.html">measure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.move.html">move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.prx.html">prx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.reset.html">reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.rz.html">rz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.sx.html">sx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.u.html">u</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.playlist.html">playlist</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.channel.html">channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.fast_drag.html">fast_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.hd_drag.html">hd_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.instructions.html">instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.playlist.html">playlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.schedule.html">schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.visualisation.html">visualisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.waveforms.html">waveforms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.quantum_ops.html">quantum_ops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOpTable.html">iqm.pulse.quantum_ops.QuantumOpTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.validate_locus_calibration.html">iqm.pulse.quantum_ops.validate_locus_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.validate_op_calibration.html">iqm.pulse.quantum_ops.validate_op_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html">QuantumOp</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.scheduler.html">scheduler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.NONSOLID.html">iqm.pulse.scheduler.NONSOLID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.BLOCKING.html">iqm.pulse.scheduler.BLOCKING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_hard_boundary.html">iqm.pulse.scheduler.extend_hard_boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_hard_boundary_in_seconds.html">iqm.pulse.scheduler.extend_hard_boundary_in_seconds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_schedule.html">iqm.pulse.scheduler.extend_schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_schedule_new.html">iqm.pulse.scheduler.extend_schedule_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.SegmentPointer.html">SegmentPointer</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.timebox.html">timebox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.MultiplexedProbeTimeBox.html">MultiplexedProbeTimeBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.SchedulingAlgorithm.html">SchedulingAlgorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.SchedulingStrategy.html">SchedulingStrategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.TimeBox.html">TimeBox</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.utils.html">utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.map_waveform_param_types.html">iqm.pulse.utils.map_waveform_param_types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.normalize_angle.html">iqm.pulse.utils.normalize_angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.phase_transformation.html">iqm.pulse.utils.phase_transformation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.validation.html">validation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_awg_and_schedule_compatibility.html">iqm.pulse.validation.validate_awg_and_schedule_compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_channel.html">iqm.pulse.validation.validate_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_instruction_and_wf_length.html">iqm.pulse.validation.validate_instruction_and_wf_length</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_playlist_compatibility.html">iqm.pulse.validation.validate_playlist_compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.AWGScheduleValidationData.html">AWGScheduleValidationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.AWGScheduleValidationError.html">iqm.pulse.validation.AWGScheduleValidationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.InvalidInstructionError.html">iqm.pulse.validation.InvalidInstructionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.PlaylistValidationError.html">iqm.pulse.validation.PlaylistValidationError</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -899,7 +1012,7 @@ PRX gates: RZ(theta) = RY(pi/2) - RX(theta) - RY(-pi/2).</p></li>
 <section id="id28">
 <h3>Features<a class="headerlink" href="#id28" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">CouplerFluxPulseQubitACStarkPulseGate</span></code> also now supports off-locus RZ corrections.</p></li>
+<li><p><a class="reference internal" href="api/iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate.html#iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate" title="iqm.pulse.gates.cz.CouplerFluxPulseQubitACStarkPulseGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">CouplerFluxPulseQubitACStarkPulseGate</span></code></a> also now supports off-locus RZ corrections.</p></li>
 </ul>
 </section>
 </section>
@@ -1000,7 +1113,7 @@ provided, the previous unitary is retained.</p></li>
 <section id="id39">
 <h3>Features<a class="headerlink" href="#id39" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Adds the delay operation <code class="xref py py-class docutils literal notranslate"><span class="pre">Delay</span></code>. <a href="#id40"><span class="problematic" id="id41">:issue:`SW-685`</span></a></p></li>
+<li><p>Adds the delay operation <a class="reference internal" href="api/iqm.pulse.gates.delay.Delay.html#iqm.pulse.gates.delay.Delay" title="iqm.pulse.gates.delay.Delay"><code class="xref py py-class docutils literal notranslate"><span class="pre">Delay</span></code></a>. <a href="#id40"><span class="problematic" id="id41">:issue:`SW-685`</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -1029,13 +1142,13 @@ separately considered and two X90 pulses with phase increments were used even th
 <section id="id46">
 <h3>Features<a class="headerlink" href="#id46" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Speed up the calculation of unitaries in <code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperationList</span></code> by caching the reshaping function.</p></li>
+<li><p>Speed up the calculation of unitaries in <a class="reference internal" href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList" title="iqm.pulse.circuit_operations.CircuitOperationList"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperationList</span></code></a> by caching the reshaping function.</p></li>
 <li><p>The method <code class="xref py py-meth docutils literal notranslate"><span class="pre">map_loci()</span></code> gets an optional argument <code class="docutils literal notranslate"><span class="pre">make_circuit</span></code>, by default True, which if False will cause the
-output to be a list of <code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code> instead of <code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperationList</span></code>. This is faster and often
-the circuit with mapped locus is immediately appended to another circuit or converted to <code class="xref py py-class docutils literal notranslate"><span class="pre">TimeBox</span></code>, neither
+output to be a list of <a class="reference internal" href="api/iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> instead of <a class="reference internal" href="api/iqm.pulse.circuit_operations.CircuitOperationList.html#iqm.pulse.circuit_operations.CircuitOperationList" title="iqm.pulse.circuit_operations.CircuitOperationList"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperationList</span></code></a>. This is faster and often
+the circuit with mapped locus is immediately appended to another circuit or converted to <a class="reference internal" href="api/iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox" title="iqm.pulse.timebox.TimeBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimeBox</span></code></a>, neither
 of which requires the class structure.</p></li>
-<li><p>The method <code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder.circuit_to_timebox()</span></code> has an optional argument <code class="docutils literal notranslate"><span class="pre">locus_mapping</span></code>, defaulting to an
-empty dict. If any of the components in the locus of any <code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code> is a key in that dict, it is
+<li><p>The method <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.circuit_to_timebox" title="iqm.pulse.builder.ScheduleBuilder.circuit_to_timebox"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder.circuit_to_timebox()</span></code></a> has an optional argument <code class="docutils literal notranslate"><span class="pre">locus_mapping</span></code>, defaulting to an
+empty dict. If any of the components in the locus of any <a class="reference internal" href="api/iqm.pulse.builder.CircuitOperation.html#iqm.pulse.builder.CircuitOperation" title="iqm.pulse.builder.CircuitOperation"><code class="xref py py-class docutils literal notranslate"><span class="pre">CircuitOperation</span></code></a> is a key in that dict, it is
 replaced with the value at that key. This speeds up scheduling of identical circuits which only differ by locus.</p></li>
 </ul>
 </section>
@@ -1073,9 +1186,9 @@ speedup.</p></li>
 <section id="id52">
 <h3>Features<a class="headerlink" href="#id52" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add two implementations of the classically conditioned prx gate, both subclasses of the existing <code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code>,
-which fix the <code class="docutils literal notranslate"><span class="pre">prx</span></code> implementation. <code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite_DRAGCosineRiseFall</span></code> fixes it to <code class="docutils literal notranslate"><span class="pre">drag_crf</span></code> and
-<code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite_DRAGGaussian</span></code> fixes it to <code class="docutils literal notranslate"><span class="pre">drag_gaussian</span></code>.</p></li>
+<li><p>Add two implementations of the classically conditioned prx gate, both subclasses of the existing <a class="reference internal" href="api/iqm.pulse.gates.conditional.CCPRX_Composite.html#iqm.pulse.gates.conditional.CCPRX_Composite" title="iqm.pulse.gates.conditional.CCPRX_Composite"><code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code></a>,
+which fix the <code class="docutils literal notranslate"><span class="pre">prx</span></code> implementation. <a class="reference internal" href="api/iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall.html#iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall" title="iqm.pulse.gates.conditional.CCPRX_Composite_DRAGCosineRiseFall"><code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite_DRAGCosineRiseFall</span></code></a> fixes it to <code class="docutils literal notranslate"><span class="pre">drag_crf</span></code> and
+<a class="reference internal" href="api/iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian.html#iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian" title="iqm.pulse.gates.conditional.CCPRX_Composite_DRAGGaussian"><code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite_DRAGGaussian</span></code></a> fixes it to <code class="docutils literal notranslate"><span class="pre">drag_gaussian</span></code>.</p></li>
 </ul>
 </section>
 <section id="id53">
@@ -1083,7 +1196,7 @@ which fix the <code class="docutils literal notranslate"><span class="pre">prx</
 <ul class="simple">
 <li><p>The calibration validation only compares the calibration data relating to the gate itself, and not any of its
 registered_gates - those are validated separately anyway whenever they are built. This enables
-<code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeGate</span></code> s,  which both have their own calibration and registered gates to pass validation.</p></li>
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate" title="iqm.pulse.gate_implementation.CompositeGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeGate</span></code></a> s,  which both have their own calibration and registered gates to pass validation.</p></li>
 </ul>
 </section>
 </section>
@@ -1237,16 +1350,16 @@ so it can be used without the full builder, just using a <code class="xref py py
 <section id="id87">
 <h3>Breaking changes<a class="headerlink" href="#id87" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>The function <code class="xref py py-func docutils literal notranslate"><span class="pre">apply_move_gate_phase_corrections()</span></code> no longer uses a calibration set, because the value of the detuning
+<li><p>The function <a class="reference internal" href="api/iqm.pulse.gates.move.apply_move_gate_phase_corrections.html#iqm.pulse.gates.move.apply_move_gate_phase_corrections" title="iqm.pulse.gates.move.apply_move_gate_phase_corrections"><code class="xref py py-func docutils literal notranslate"><span class="pre">apply_move_gate_phase_corrections()</span></code></a> no longer uses a calibration set, because the value of the detuning
 needed for phase tracking of MOVE sandwiches is now a part of the MOVE gate calibration data proper.</p></li>
 </ul>
 </section>
 <section id="id88">
 <h3>Features<a class="headerlink" href="#id88" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add a parameter <code class="docutils literal notranslate"><span class="pre">detuning</span></code> to parent class of all MOVE implementations, <code class="xref py py-class docutils literal notranslate"><span class="pre">MOVE_CustomWaveforms</span></code>. This
+<li><p>Add a parameter <code class="docutils literal notranslate"><span class="pre">detuning</span></code> to parent class of all MOVE implementations, <a class="reference internal" href="api/iqm.pulse.gates.move.MOVE_CustomWaveforms.html#iqm.pulse.gates.move.MOVE_CustomWaveforms" title="iqm.pulse.gates.move.MOVE_CustomWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">MOVE_CustomWaveforms</span></code></a>. This
 parameter only affects the frame tracking, and must be set to the difference of the qubit and resonator frequencies.</p></li>
-<li><p>Add this parameter to the <code class="xref py py-class docutils literal notranslate"><span class="pre">MoveMarker</span></code> instruction.</p></li>
+<li><p>Add this parameter to the <a class="reference internal" href="api/iqm.pulse.gates.move.MoveMarker.html#iqm.pulse.gates.move.MoveMarker" title="iqm.pulse.gates.move.MoveMarker"><code class="xref py py-class docutils literal notranslate"><span class="pre">MoveMarker</span></code></a> instruction.</p></li>
 </ul>
 </section>
 <section id="id89">
@@ -1271,8 +1384,8 @@ in case the RY is realized with two or more phased SX pulses instead of one.</p>
 <section id="id91">
 <h3>Features<a class="headerlink" href="#id91" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> and <code class="docutils literal notranslate"><span class="pre">reset_wait</span></code> operations now use explicit <code class="xref py py-class docutils literal notranslate"><span class="pre">Block</span></code> instructions instead of
-<code class="xref py py-class docutils literal notranslate"><span class="pre">Wait</span></code> s inserted by the scheduling algorithm to idle the qubits, since the former is more
+<li><p><code class="docutils literal notranslate"><span class="pre">measure</span></code> and <code class="docutils literal notranslate"><span class="pre">reset_wait</span></code> operations now use explicit <a class="reference internal" href="api/iqm.pulse.playlist.instructions.Block.html#iqm.pulse.playlist.instructions.Block" title="iqm.pulse.playlist.instructions.Block"><code class="xref py py-class docutils literal notranslate"><span class="pre">Block</span></code></a> instructions instead of
+<a class="reference internal" href="api/iqm.pulse.playlist.instructions.Wait.html#iqm.pulse.playlist.instructions.Wait" title="iqm.pulse.playlist.instructions.Wait"><code class="xref py py-class docutils literal notranslate"><span class="pre">Wait</span></code></a> s inserted by the scheduling algorithm to idle the qubits, since the former is more
 correct semantically, and will not be disturbed by dynamical decoupling.</p></li>
 </ul>
 </section>
@@ -1318,7 +1431,7 @@ correct semantically, and will not be disturbed by dynamical decoupling.</p></li
 <section id="id98">
 <h3>Features<a class="headerlink" href="#id98" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>New quantum operation <code class="docutils literal notranslate"><span class="pre">reset_wait</span></code> and its implementation <code class="xref py py-class docutils literal notranslate"><span class="pre">Reset_Wait</span></code> which is used for resetting qubits
+<li><p>New quantum operation <code class="docutils literal notranslate"><span class="pre">reset_wait</span></code> and its implementation <a class="reference internal" href="api/iqm.pulse.gates.reset.Reset_Wait.html#iqm.pulse.gates.reset.Reset_Wait" title="iqm.pulse.gates.reset.Reset_Wait"><code class="xref py py-class docutils literal notranslate"><span class="pre">Reset_Wait</span></code></a> which is used for resetting qubits
 by waiting a time comparable to the relaxation time.</p></li>
 <li><p>All reset implementations now block the common couplers of their locus components.</p></li>
 <li><dl class="simple">
@@ -1388,7 +1501,7 @@ are adjusted)</p></li>
 <section id="id109">
 <h3>Features<a class="headerlink" href="#id109" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add implementation <code class="xref py py-class docutils literal notranslate"><span class="pre">MOVE_CRF_CRF</span></code> for implementing a move operation using cosine rise fall waveform for coupler
+<li><p>Add implementation <a class="reference internal" href="api/iqm.pulse.gates.move.MOVE_CRF_CRF.html#iqm.pulse.gates.move.MOVE_CRF_CRF" title="iqm.pulse.gates.move.MOVE_CRF_CRF"><code class="xref py py-class docutils literal notranslate"><span class="pre">MOVE_CRF_CRF</span></code></a> for implementing a move operation using cosine rise fall waveform for coupler
 and qubit.</p></li>
 <li><p>Add <code class="docutils literal notranslate"><span class="pre">crf_crf</span></code> implementation to the default operations both for cz and move.</p></li>
 </ul>
@@ -1432,7 +1545,7 @@ default implementation info</p></li>
 <section id="id112">
 <h3>Features<a class="headerlink" href="#id112" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Some cleanup of fast-feedback internals in e.g. <code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code>, including a fix for the scheduling of
+<li><p>Some cleanup of fast-feedback internals in e.g. <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a>, including a fix for the scheduling of
 the edge-case of many qubits listening to a single feedback bit in parallel.</p></li>
 </ul>
 </section>
@@ -1477,7 +1590,7 @@ This enables optimizing calibration for QNDness and will improve experiments whi
 <ul class="simple">
 <li><p>The virtual channels used in fast feedback scheduling no longer block the entire component, allowing more optimal
 schedules.</p></li>
-<li><p>The conditional gate <code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code> now schedules correctly when listening to fast feedback from another
+<li><p>The conditional gate <a class="reference internal" href="api/iqm.pulse.gates.conditional.CCPRX_Composite.html#iqm.pulse.gates.conditional.CCPRX_Composite" title="iqm.pulse.gates.conditional.CCPRX_Composite"><code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code></a> now schedules correctly when listening to fast feedback from another
 component to what the conditional flip acts on-</p></li>
 </ul>
 </section>
@@ -1494,7 +1607,7 @@ component to what the conditional flip acts on-</p></li>
 <section id="version-5-2-2024-10-11">
 <h2>Version 5.2 (2024-10-11)<a class="headerlink" href="#version-5-2-2024-10-11" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Add docs for the <code class="xref py py-func docutils literal notranslate"><span class="pre">phase_transformation()</span></code> function.</p></li>
+<li><p>Add docs for the <a class="reference internal" href="api/iqm.pulse.utils.phase_transformation.html#iqm.pulse.utils.phase_transformation" title="iqm.pulse.utils.phase_transformation"><code class="xref py py-func docutils literal notranslate"><span class="pre">phase_transformation()</span></code></a> function.</p></li>
 </ul>
 <section id="id118">
 <h3>Bug fixes<a class="headerlink" href="#id118" title="Link to this heading">#</a></h3>
@@ -1515,9 +1628,9 @@ component to what the conditional flip acts on-</p></li>
 <section id="id119">
 <h3>Breaking changes<a class="headerlink" href="#id119" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>A new gate implementation base class <code class="xref py py-class docutils literal notranslate"><span class="pre">SinglePulseGate</span></code> added, and <code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_CustomWaveforms</span></code> now inherits
+<li><p>A new gate implementation base class <a class="reference internal" href="api/iqm.pulse.gate_implementation.SinglePulseGate.html#iqm.pulse.gate_implementation.SinglePulseGate" title="iqm.pulse.gate_implementation.SinglePulseGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">SinglePulseGate</span></code></a> added, and <a class="reference internal" href="api/iqm.pulse.gates.prx.PRX_CustomWaveforms.html#iqm.pulse.gates.prx.PRX_CustomWaveforms" title="iqm.pulse.gates.prx.PRX_CustomWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_CustomWaveforms</span></code></a> now inherits
 from this class, which means the <code class="docutils literal notranslate"><span class="pre">_single_iq_pulse</span></code> method is renamed to <code class="docutils literal notranslate"><span class="pre">_get_pulse</span></code> (this must be done in all
-<code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_CustomWaveforms</span></code> classes). Otherwise the functionality of the method is the same.</p></li>
+<a class="reference internal" href="api/iqm.pulse.gates.prx.PRX_CustomWaveforms.html#iqm.pulse.gates.prx.PRX_CustomWaveforms" title="iqm.pulse.gates.prx.PRX_CustomWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_CustomWaveforms</span></code></a> classes). Otherwise the functionality of the method is the same.</p></li>
 <li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">GateImplementation.construct()</span></code> removed, and the :meth:<code class="xref py py-meth docutils literal notranslate"><span class="pre">GateImplementation.__init__()</span></code> now fulfills the
 same purpose <code class="docutils literal notranslate"><span class="pre">construct</span></code> had before (all inits must have the same signature).</p></li>
 </ul>
@@ -1527,7 +1640,7 @@ same purpose <code class="docutils literal notranslate"><span class="pre">constr
 <ul class="simple">
 <li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">GateImplementation.__call__()</span></code> now handles <code class="docutils literal notranslate"><span class="pre">TimeBox</span></code> caching and the users do not have to
 implement it in every gate implementation separately. Instead you can now just override
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">GateImplementation._call()</span></code> if you are satisfied with caching based on the call arguments.</p></li>
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation._call" title="iqm.pulse.gate_implementation.GateImplementation._call"><code class="xref py py-meth docutils literal notranslate"><span class="pre">GateImplementation._call()</span></code></a> if you are satisfied with caching based on the call arguments.</p></li>
 </ul>
 </section>
 </section>
@@ -1536,7 +1649,7 @@ implement it in every gate implementation separately. Instead you can now just o
 <section id="id121">
 <h3>Breaking changes<a class="headerlink" href="#id121" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConditionalPRX</span></code> renamed to <code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code> which now requires calibration for signal delays.</p></li>
+<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ConditionalPRX</span></code> renamed to <a class="reference internal" href="api/iqm.pulse.gates.conditional.CCPRX_Composite.html#iqm.pulse.gates.conditional.CCPRX_Composite" title="iqm.pulse.gates.conditional.CCPRX_Composite"><code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code></a> which now requires calibration for signal delays.</p></li>
 </ul>
 </section>
 <section id="id122">
@@ -1544,7 +1657,7 @@ implement it in every gate implementation separately. Instead you can now just o
 <ul class="simple">
 <li><p>a GateImplementation can now return an list of timeboxes, to be used in cases where the relative timing of
 instructions is less strict.</p></li>
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Measure_Constant</span></code> now accepts an empty array for the integration weights, signifying constant weigths.
+<li><p><a class="reference internal" href="api/iqm.pulse.gates.measure.Measure_Constant.html#iqm.pulse.gates.measure.Measure_Constant" title="iqm.pulse.gates.measure.Measure_Constant"><code class="xref py py-class docutils literal notranslate"><span class="pre">Measure_Constant</span></code></a> now accepts an empty array for the integration weights, signifying constant weigths.
 Use empty array instead of None.</p></li>
 <li><p>Canonical waveforms are no longer defined via inheritable class property, but instead by a static whitelist.
 Now you can inherit from a canonical waveform without issues. <a href="#id123"><span class="problematic" id="id124">:issue:`EXA-2112`</span></a></p></li>
@@ -1638,7 +1751,7 @@ and implementation name <cite>prx_sx</cite>.</p></li>
 <section id="id137">
 <h3>Features<a class="headerlink" href="#id137" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add the waveforms <code class="xref py py-class docutils literal notranslate"><span class="pre">Chirp</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">ChirpImag</span></code>.</p></li>
+<li><p>Add the waveforms <a class="reference internal" href="api/iqm.pulse.playlist.waveforms.Chirp.html#iqm.pulse.playlist.waveforms.Chirp" title="iqm.pulse.playlist.waveforms.Chirp"><code class="xref py py-class docutils literal notranslate"><span class="pre">Chirp</span></code></a> and <a class="reference internal" href="api/iqm.pulse.playlist.waveforms.ChirpImag.html#iqm.pulse.playlist.waveforms.ChirpImag" title="iqm.pulse.playlist.waveforms.ChirpImag"><code class="xref py py-class docutils literal notranslate"><span class="pre">ChirpImag</span></code></a>.</p></li>
 </ul>
 </section>
 </section>
@@ -1721,13 +1834,13 @@ defined priorities, <a href="#id145"><span class="problematic" id="id146">:issue
 <section id="id147">
 <h3>Features<a class="headerlink" href="#id147" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder.validate_quantum_circuit()</span></code> now accepts mid-circuit measurements</p></li>
+<li><p><a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.validate_quantum_circuit" title="iqm.pulse.builder.ScheduleBuilder.validate_quantum_circuit"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder.validate_quantum_circuit()</span></code></a> now accepts mid-circuit measurements</p></li>
 </ul>
 </section>
 <section id="id148">
 <h3>Bug fixes<a class="headerlink" href="#id148" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p><code class="xref py py-class docutils literal notranslate"><span class="pre">ProbePulse_CustomWaveforms</span></code> call produces valid integration result labels that have <code class="docutils literal notranslate"><span class="pre">&quot;__&quot;</span></code> in them.</p></li>
+<li><p><a class="reference internal" href="api/iqm.pulse.gates.measure.ProbePulse_CustomWaveforms.html#iqm.pulse.gates.measure.ProbePulse_CustomWaveforms" title="iqm.pulse.gates.measure.ProbePulse_CustomWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">ProbePulse_CustomWaveforms</span></code></a> call produces valid integration result labels that have <code class="docutils literal notranslate"><span class="pre">&quot;__&quot;</span></code> in them.</p></li>
 </ul>
 </section>
 </section>
@@ -1743,7 +1856,7 @@ defined priorities, <a href="#id145"><span class="problematic" id="id146">:issue
 <h3>Features<a class="headerlink" href="#id149" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p><cite>feedback_signal_label</cite> can be set when getting a TimeBox for a <code class="docutils literal notranslate"><span class="pre">measure</span></code> gate.</p></li>
-<li><p>Add composite GateImplementation <code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code>, usable with programmable readout. <a href="#id150"><span class="problematic" id="id151">:issue:`EXA-1925`</span></a></p></li>
+<li><p>Add composite GateImplementation <a class="reference internal" href="api/iqm.pulse.gates.conditional.CCPRX_Composite.html#iqm.pulse.gates.conditional.CCPRX_Composite" title="iqm.pulse.gates.conditional.CCPRX_Composite"><code class="xref py py-class docutils literal notranslate"><span class="pre">CCPRX_Composite</span></code></a>, usable with programmable readout. <a href="#id150"><span class="problematic" id="id151">:issue:`EXA-1925`</span></a></p></li>
 </ul>
 </section>
 </section>
@@ -1752,8 +1865,8 @@ defined priorities, <a href="#id145"><span class="problematic" id="id146">:issue
 <section id="id152">
 <h3>Features<a class="headerlink" href="#id152" title="Link to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Add <code class="xref py py-meth docutils literal notranslate"><span class="pre">TimeBox.print()</span></code> as a crude way of visualizing TimeBox contents.</p></li>
-<li><p>Add <code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder.resolve_timebox()</span></code>.</p></li>
+<li><p>Add <a class="reference internal" href="api/iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox.print" title="iqm.pulse.timebox.TimeBox.print"><code class="xref py py-meth docutils literal notranslate"><span class="pre">TimeBox.print()</span></code></a> as a crude way of visualizing TimeBox contents.</p></li>
+<li><p>Add <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.resolve_timebox" title="iqm.pulse.builder.ScheduleBuilder.resolve_timebox"><code class="xref py py-meth docutils literal notranslate"><span class="pre">ScheduleBuilder.resolve_timebox()</span></code></a>.</p></li>
 </ul>
 </section>
 <section id="id153">
@@ -1829,12 +1942,12 @@ defined priorities, <a href="#id145"><span class="problematic" id="id146">:issue
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="api/iqm.pulse.html"
+       href="api/iqm.pulse.validation.PlaylistValidationError.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">pulse</p>
+        <p class="prev-next-title">iqm.pulse.validation.PlaylistValidationError</p>
       </div>
     </a>
     <a class="right-next"

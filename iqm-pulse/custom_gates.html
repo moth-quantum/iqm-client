@@ -153,7 +153,120 @@
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Custom gate implementations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pulse_timing.html">Pulse timing</a></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="API.html">API Reference</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="api/iqm.pulse.html">pulse</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="api/iqm.pulse.html">pulse</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.base_utils.html">base_utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.base_utils.merge_dicts.html">iqm.pulse.base_utils.merge_dicts</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.builder.html">builder</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.build_quantum_ops.html">iqm.pulse.builder.build_quantum_ops</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.load_config.html">iqm.pulse.builder.load_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.validate_quantum_circuit.html">iqm.pulse.builder.validate_quantum_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.CircuitOperation.html">CircuitOperation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html">ScheduleBuilder</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.circuit_operations.html">circuit_operations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.get_unitary_from_circuit.html">iqm.pulse.circuit_operations.get_unitary_from_circuit</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.get_unitary_from_op.html">iqm.pulse.circuit_operations.get_unitary_from_op</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.reorder.html">iqm.pulse.circuit_operations.reorder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.reshape_unitary.html">iqm.pulse.circuit_operations.reshape_unitary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.circuit_operations.CircuitOperationList.html">CircuitOperationList</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.gate_implementation.html">gate_implementation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.Locus.html">iqm.pulse.gate_implementation.Locus</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OILCalibrationData.html">iqm.pulse.gate_implementation.OILCalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OICalibrationData.html">iqm.pulse.gate_implementation.OICalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OCalibrationData.html">iqm.pulse.gate_implementation.OCalibrationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.OpCalibrationDataTree.html">iqm.pulse.gate_implementation.OpCalibrationDataTree</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.NestedParams.html">iqm.pulse.gate_implementation.NestedParams</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_DRIVE_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_DRIVE_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_READOUT_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_READOUT_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.SINGLE_COMPONENTS_WITH_FLUX_AWG_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING.html">iqm.pulse.gate_implementation.PROBE_LINES_LOCUS_MAPPING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.get_waveform_parameters.html">iqm.pulse.gate_implementation.get_waveform_parameters</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeCache.html">CompositeCache</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html">CompositeGate</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.CustomIQWaveforms.html">CustomIQWaveforms</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html">GateImplementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gate_implementation.SinglePulseGate.html">SinglePulseGate</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.gates.html">gates</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.expose_implementation.html">iqm.pulse.gates.expose_implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.get_implementation_class.html">iqm.pulse.gates.get_implementation_class</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.register_implementation.html">iqm.pulse.gates.register_implementation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.barrier.html">barrier</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.conditional.html">conditional</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.cz.html">cz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.default_gates.html">default_gates</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.delay.html">delay</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.enums.html">enums</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.flux_multiplexer.html">flux_multiplexer</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.measure.html">measure</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.move.html">move</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.prx.html">prx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.reset.html">reset</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.rz.html">rz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.sx.html">sx</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.gates.u.html">u</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.playlist.html">playlist</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.channel.html">channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.fast_drag.html">fast_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.hd_drag.html">hd_drag</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.instructions.html">instructions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.playlist.html">playlist</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.schedule.html">schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.visualisation.html">visualisation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.playlist.waveforms.html">waveforms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.quantum_ops.html">quantum_ops</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOpTable.html">iqm.pulse.quantum_ops.QuantumOpTable</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.validate_locus_calibration.html">iqm.pulse.quantum_ops.validate_locus_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.validate_op_calibration.html">iqm.pulse.quantum_ops.validate_op_calibration</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html">QuantumOp</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.scheduler.html">scheduler</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.NONSOLID.html">iqm.pulse.scheduler.NONSOLID</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.BLOCKING.html">iqm.pulse.scheduler.BLOCKING</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_hard_boundary.html">iqm.pulse.scheduler.extend_hard_boundary</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_hard_boundary_in_seconds.html">iqm.pulse.scheduler.extend_hard_boundary_in_seconds</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_schedule.html">iqm.pulse.scheduler.extend_schedule</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.extend_schedule_new.html">iqm.pulse.scheduler.extend_schedule_new</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.scheduler.SegmentPointer.html">SegmentPointer</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.timebox.html">timebox</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.MultiplexedProbeTimeBox.html">MultiplexedProbeTimeBox</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.SchedulingAlgorithm.html">SchedulingAlgorithm</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.SchedulingStrategy.html">SchedulingStrategy</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.timebox.TimeBox.html">TimeBox</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.utils.html">utils</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.map_waveform_param_types.html">iqm.pulse.utils.map_waveform_param_types</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.normalize_angle.html">iqm.pulse.utils.normalize_angle</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.utils.phase_transformation.html">iqm.pulse.utils.phase_transformation</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="api/iqm.pulse.validation.html">validation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_awg_and_schedule_compatibility.html">iqm.pulse.validation.validate_awg_and_schedule_compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_channel.html">iqm.pulse.validation.validate_channel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_instruction_and_wf_length.html">iqm.pulse.validation.validate_instruction_and_wf_length</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.validate_playlist_compatibility.html">iqm.pulse.validation.validate_playlist_compatibility</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.AWGScheduleValidationData.html">AWGScheduleValidationData</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.AWGScheduleValidationError.html">iqm.pulse.validation.AWGScheduleValidationError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.InvalidInstructionError.html">iqm.pulse.validation.InvalidInstructionError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="api/iqm.pulse.validation.PlaylistValidationError.html">iqm.pulse.validation.PlaylistValidationError</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
 </ul>
 </details></li>
 </ul>
@@ -281,51 +394,51 @@
 <h1>Custom gate implementations<a class="headerlink" href="#custom-gate-implementations" title="Link to this heading">#</a></h1>
 <section id="quantumop">
 <h2>QuantumOp<a class="headerlink" href="#quantumop" title="Link to this heading">#</a></h2>
-<p>Quantum gates are represented by <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code> data classes, containing the required
-metadata to define the gate. A QuantumOp is identified by its <code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code>, and
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">arity</span></code> defines number of locus components the operation acts on. For example,
+<p>Quantum gates are represented by <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp" title="iqm.pulse.quantum_ops.QuantumOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code></a> data classes, containing the required
+metadata to define the gate. A QuantumOp is identified by its <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.name" title="iqm.pulse.quantum_ops.QuantumOp.name"><code class="xref py py-attr docutils literal notranslate"><span class="pre">name</span></code></a>, and
+<a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.arity" title="iqm.pulse.quantum_ops.QuantumOp.arity"><code class="xref py py-attr docutils literal notranslate"><span class="pre">arity</span></code></a> defines number of locus components the operation acts on. For example,
 the PRX operation (Phased X Rotation) is a single-qubit operation, so its arity is 1, whereas the CZ (Controlled-Z) gate
 acts on two qubits, having arity 2. Arity 0 has a special meaning that the operation in question can act on any number
-of components (for example <code class="xref py py-class docutils literal notranslate"><span class="pre">Barrier</span></code>).</p>
-<p>The attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">symmetric</span></code> defines whether the effect of the quantum operation
+of components (for example <a class="reference internal" href="api/iqm.pulse.gates.barrier.Barrier.html#iqm.pulse.gates.barrier.Barrier" title="iqm.pulse.gates.barrier.Barrier"><code class="xref py py-class docutils literal notranslate"><span class="pre">Barrier</span></code></a>).</p>
+<p>The attribute <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.symmetric" title="iqm.pulse.quantum_ops.QuantumOp.symmetric"><code class="xref py py-attr docutils literal notranslate"><span class="pre">symmetric</span></code></a> defines whether the effect of the quantum operation
 is symmetric with respect to changing the order of its locus components. As an example, the CZ gate is a symmetric
 two-qubit gate, whereas CNOT (Controlled-NOT) is not symmetric.</p>
 <p>Some quantum operations are defined as “functions”, taking one or more parameters to define the effect. These
-arguments are stored in the attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code>. As an example, the PRX gate
+arguments are stored in the attribute <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.params" title="iqm.pulse.quantum_ops.QuantumOp.params"><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></a>. As an example, the PRX gate
 takes two arguments, <code class="docutils literal notranslate"><span class="pre">angle</span></code> (the rotation angle with respect to the z-axis of the Bloch sphere), and <code class="docutils literal notranslate"><span class="pre">phase</span></code>
 (the rotation phase in the rotating frame). On the other hand, many operations do not require any parameters, in
 which case this field is an empty tuple (e.g. the CZ gate).</p>
 <p>A QuantumOp has unambiguous definition in terms of its <em>intended</em> effect on the computational subspace of the
 QPU component, but it can be <em>implemented</em> in various ways. Each implementation is represented as a
-<code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code> subclass. A QuantumOp stores its known implementations in the
-field <code class="xref py py-attr docutils literal notranslate"><span class="pre">implementations</span></code>. Note that even though
-<code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code> is a frozen data class, the implementations dictionary can be modified, e.g.
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" title="iqm.pulse.gate_implementation.GateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code></a> subclass. A QuantumOp stores its known implementations in the
+field <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.implementations" title="iqm.pulse.quantum_ops.QuantumOp.implementations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">implementations</span></code></a>. Note that even though
+<a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp" title="iqm.pulse.quantum_ops.QuantumOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code></a> is a frozen data class, the implementations dictionary can be modified, e.g.
 to add new implementations or to change their order (usually programmatically by some client procedure, but nothing as
 such prevents the user from manipulating the contents manually). The default implementation is how the user prefers
 to implement the operation unless otherwise specified (in effect, this is what will get called in most cases the
 operation is invoked). In the implementations dict, the default implementation is defined as the first entry.
 QuantumOp contains helpful methods that allow setting and returning the default implementation for specific cases:
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">set_default_implementation()</span></code>,
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">get_default_implementation_for_locus()</span></code>, and
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">set_default_implementation_for_locus()</span></code>.</p>
-<p>The attribute <code class="xref py py-attr docutils literal notranslate"><span class="pre">unitary</span></code> stores a function that can be used to get the unitary
+<a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.set_default_implementation" title="iqm.pulse.quantum_ops.QuantumOp.set_default_implementation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_default_implementation()</span></code></a>,
+<a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.get_default_implementation_for_locus" title="iqm.pulse.quantum_ops.QuantumOp.get_default_implementation_for_locus"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_default_implementation_for_locus()</span></code></a>, and
+<a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.set_default_implementation_for_locus" title="iqm.pulse.quantum_ops.QuantumOp.set_default_implementation_for_locus"><code class="xref py py-meth docutils literal notranslate"><span class="pre">set_default_implementation_for_locus()</span></code></a>.</p>
+<p>The attribute <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.unitary" title="iqm.pulse.quantum_ops.QuantumOp.unitary"><code class="xref py py-attr docutils literal notranslate"><span class="pre">unitary</span></code></a> stores a function that can be used to get the unitary
 matrix representing the quantum operation in question. The unitary function must have the same arguments
-as defined in <code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code>, such that for each collection of these parameters it
+as defined in <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.params" title="iqm.pulse.quantum_ops.QuantumOp.params"><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></a>, such that for each collection of these parameters it
 gives the associated unitary matrix. Note that not all QuantumOps necessarily even represent a unitary gate (e.g.
 the measure operation is not one), or the exact form of the unitary matrix might not be known. In these cases, the
 field can be left <code class="docutils literal notranslate"><span class="pre">None</span></code>. The unitary does not need to be defined for most of the basic usage of a QuantumOp, but certain
 algorithmic methods (e.g. some implementations of Randomized Benchmarking) may require the unitary matrices to be known,
 and such operations that do not define the getter function cannot then be used in these contexts.</p>
-<p>For more information, see the API docs of <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code> for the full list of fields needed
+<p>For more information, see the API docs of <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp" title="iqm.pulse.quantum_ops.QuantumOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code></a> for the full list of fields needed
 to define a quantum operation and the available class methods.</p>
 </section>
 <section id="id1">
 <h2>Custom gate implementations<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
 <section id="gateimplementation-class">
 <h3>GateImplementation class<a class="headerlink" href="#gateimplementation-class" title="Link to this heading">#</a></h3>
-<p>While <code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code> represents an abstract quantum operation, its <em>implementations</em>  contain
+<p>While <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp" title="iqm.pulse.quantum_ops.QuantumOp"><code class="xref py py-class docutils literal notranslate"><span class="pre">QuantumOp</span></code></a> represents an abstract quantum operation, its <em>implementations</em>  contain
 the concrete logic of how to make that operation happen using QC hardware. Gate implementations are subclasses of
-<code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code>. In this section, the main features of that class are
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" title="iqm.pulse.gate_implementation.GateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code></a>. In this section, the main features of that class are
 introduced (for a full list of class methods see the API docs), with the emphasis being on how to create your own
 gate implementations.</p>
 <p>Starting with <code class="xref py py-meth docutils literal notranslate"><span class="pre">__init__()</span></code>, it is important to note that the init
@@ -341,20 +454,20 @@ methods of all gate implementations must have the exact same signature:</p>
 </pre></div>
 </div>
 <p>Here, <code class="docutils literal notranslate"><span class="pre">parent</span></code> is the <code class="docutils literal notranslate"><span class="pre">QuantumOp</span></code> this gate implementation implements, and <code class="docutils literal notranslate"><span class="pre">name</span></code> is the implementation’s name in
-the dictionary <code class="xref py py-attr docutils literal notranslate"><span class="pre">implementations</span></code>. <code class="docutils literal notranslate"><span class="pre">locus</span></code> is the set of (usually logical) components
+the dictionary <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.implementations" title="iqm.pulse.quantum_ops.QuantumOp.implementations"><code class="xref py py-attr docutils literal notranslate"><span class="pre">implementations</span></code></a>. <code class="docutils literal notranslate"><span class="pre">locus</span></code> is the set of (usually logical) components
 the QuantumOp acts on (the size of the locus must be consistent with the <code class="docutils literal notranslate"><span class="pre">parent</span></code>’s
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">arity</span></code>), while <code class="docutils literal notranslate"><span class="pre">calibration_data</span></code> gives the required calibration data values
+<a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.arity" title="iqm.pulse.quantum_ops.QuantumOp.arity"><code class="xref py py-attr docutils literal notranslate"><span class="pre">arity</span></code></a>), while <code class="docutils literal notranslate"><span class="pre">calibration_data</span></code> gives the required calibration data values
 for this implementation and <code class="docutils literal notranslate"><span class="pre">locus</span></code> (can be empty in case the implementation needs no calibration data). Finally,
-The implementations store a reference to the <code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code> that created it. This is
+The implementations store a reference to the <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a> that created it. This is
 because GateImplementations are practically never created manually by calling the init method itself. Instead, one
-needs a builder and uses <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_implementation()</span></code>.</p>
+needs a builder and uses <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder.get_implementation" title="iqm.pulse.builder.ScheduleBuilder.get_implementation"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_implementation()</span></code></a>.</p>
 <p>The responsibility of the init method is to (at least) store the <code class="docutils literal notranslate"><span class="pre">calibration_data</span></code> provided from the builder for
 further use, but in many cases, one might want to create some intermediate objects like pulses or instructions <strong>from</strong>
 that calibration data already at this point. Note that ScheduleBuilder caches its GateImplementations per each locus and
 <code class="docutils literal notranslate"><span class="pre">calibration_data</span></code>, so as long as the calibration is not changed, the code in init will be called just once per locus.</p>
 <p>GateImplementations are Callables, i.e. they implement the <cite>__call__</cite> method. It should take as its arguments at least
-the QuantumOpt parameters defined for the <code class="docutils literal notranslate"><span class="pre">parent</span></code> in <code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code>, but in
-addition it may have optional extra arguments. The call method should return a <code class="xref py py-class docutils literal notranslate"><span class="pre">TimeBox</span></code> object
+the QuantumOpt parameters defined for the <code class="docutils literal notranslate"><span class="pre">parent</span></code> in <a class="reference internal" href="api/iqm.pulse.quantum_ops.QuantumOp.html#iqm.pulse.quantum_ops.QuantumOp.params" title="iqm.pulse.quantum_ops.QuantumOp.params"><code class="xref py py-attr docutils literal notranslate"><span class="pre">params</span></code></a>, but in
+addition it may have optional extra arguments. The call method should return a <a class="reference internal" href="api/iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox" title="iqm.pulse.timebox.TimeBox"><code class="xref py py-class docutils literal notranslate"><span class="pre">TimeBox</span></code></a> object
 that contains the pulses, instructions and other logic required to implement the quantum operation in question. The
 typical usage of gate implementations then looks like this (See <a class="reference internal" href="using_builder.html"><span class="doc">Using ScheduleBuilder</span></a> and <a class="reference internal" href="pulse_timing.html"><span class="doc">Pulse timing</span></a> for more
 info on scheduling and the ScheduleBuilder):</p>
@@ -396,7 +509,7 @@ use this exact call method, as this is a simplified example for educational purp
     <span class="p">)</span>
 </pre></div>
 </div>
-<p>Here, we first create an <code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code> object which is a low-level Instruction. IQPulse
+<p>Here, we first create an <a class="reference internal" href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse" title="iqm.pulse.playlist.instructions.IQPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code></a> object which is a low-level Instruction. IQPulse
 means a “complex pulse” which has two orthogonal components i and q – this what drive pulses look like in general. In
 this simplified example, we have hardcoded the pulse waveforms into <code class="xref py py-class docutils literal notranslate"><span class="pre">TruncatedGaussian</span></code> and
 <code class="xref py py-class docutils literal notranslate"><span class="pre">TruncatedGaussianDerivative</span></code> for the i and q components, respectively (this is a DRAG implementation, so the
@@ -420,8 +533,8 @@ implementation that tries to correct for crosstalk could map the non-locus compo
 The values of the dict can be left empty or just replicate the key components in case such extra information is not
 needed.</p>
 <p>GateImplementations can define their locus mappings via
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">get_custom_locus_mapping()</span></code> or if a client application already
-adds the mapping, we can just return its name via <code class="xref py py-meth docutils literal notranslate"><span class="pre">get_locus_mapping_name()</span></code>.
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation.get_custom_locus_mapping" title="iqm.pulse.gate_implementation.GateImplementation.get_custom_locus_mapping"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_custom_locus_mapping()</span></code></a> or if a client application already
+adds the mapping, we can just return its name via <a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation.get_locus_mapping_name" title="iqm.pulse.gate_implementation.GateImplementation.get_locus_mapping_name"><code class="xref py py-meth docutils literal notranslate"><span class="pre">get_locus_mapping_name()</span></code></a>.
 If neither of these methods are overridden in a GateImplementation class, the default behaviour will be such that an
 <code class="docutils literal notranslate"><span class="pre">arity==1</span></code> loci will be assumed to use the mapping where all single qubits are the keys, and <code class="docutils literal notranslate"><span class="pre">arity==2</span></code> loci the
 (symmetric) mapping where the keys are all pairs of connected qubits. For other arities there is no default behaviour,
@@ -432,7 +545,7 @@ so it is then mandatory to define the mapping explicitly using the aforementione
 <p>In order to implement most QuantumOps, one has to physically alter the state of the QPU. This is typically done by playing
 specified and correctly calibrated pulses via the control electronics (this applies to all typical logical gates such as
 e.g. PRX or CZ – non-physcial metaoperations such as Barrier are an exception). In defining these pulses, there are two
-levels of abstractions: <code class="xref py py-class docutils literal notranslate"><span class="pre">Waveform</span></code> and <code class="xref py py-class docutils literal notranslate"><span class="pre">Instruction</span></code>.</p>
+levels of abstractions: <code class="xref py py-class docutils literal notranslate"><span class="pre">Waveform</span></code> and <a class="reference internal" href="api/iqm.pulse.playlist.instructions.Instruction.html#iqm.pulse.playlist.instructions.Instruction" title="iqm.pulse.playlist.instructions.Instruction"><code class="xref py py-class docutils literal notranslate"><span class="pre">Instruction</span></code></a>.</p>
 <p>Waveform represents the physical form of the control pulse, typically normalized to the interval <code class="docutils literal notranslate"><span class="pre">[-1.0,</span> <span class="pre">1.0]</span></code>. The
 Each <code class="xref py py-class docutils literal notranslate"><span class="pre">Waveform</span></code> subclass can define any number of waveform parameters as class
 attributes, which can be used to programmatically define the waveform. For example, a Gaussian could be defined in terms
@@ -450,8 +563,8 @@ for <code class="docutils literal notranslate"><span class="pre">Gaussian</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="n">offset_coords</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">sigma</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 </div>
-<p>The Instructions <code class="xref py py-class docutils literal notranslate"><span class="pre">RealPulse</span></code> and
-<code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code> allow handling the amplitudes (via the attribute <code class="docutils literal notranslate"><span class="pre">scale</span></code>) without
+<p>The Instructions <a class="reference internal" href="api/iqm.pulse.playlist.instructions.RealPulse.html#iqm.pulse.playlist.instructions.RealPulse" title="iqm.pulse.playlist.instructions.RealPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">RealPulse</span></code></a> and
+<a class="reference internal" href="api/iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse" title="iqm.pulse.playlist.instructions.IQPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code></a> allow handling the amplitudes (via the attribute <code class="docutils literal notranslate"><span class="pre">scale</span></code>) without
 having to resample the waveform for every different amplitude value. However, one can always choose to include
 the amplitude into the sampling and then use <code class="docutils literal notranslate"><span class="pre">scale=1</span></code>.</p>
 <p>The waveform parameters (like <code class="docutils literal notranslate"><span class="pre">sigma</span></code> in the above Gaussian) typically require calibration when the Waveform is used
@@ -485,8 +598,8 @@ with the method <code class="xref py py-meth docutils literal notranslate"><span
 <section id="more-base-classes">
 <h3>More base classes<a class="headerlink" href="#more-base-classes" title="Link to this heading">#</a></h3>
 <p>To make creating new GateImplementations more comfortable, there are additional base classes on top of
-<code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code> itself.</p>
-<p><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeGate</span></code> allows quick implementation of gates in terms of other gates,
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" title="iqm.pulse.gate_implementation.GateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code></a> itself.</p>
+<p><a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate" title="iqm.pulse.gate_implementation.CompositeGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">CompositeGate</span></code></a> allows quick implementation of gates in terms of other gates,
 using a similar syntax as with creating/scheduling several TimeBoxes together (see <a class="reference internal" href="using_builder.html"><span class="doc">Using ScheduleBuilder</span></a>). At it
 simplest, a ComposteGate is just the <cite>_call</cite> method:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">CompositeHadamard</span><span class="p">(</span><span class="n">CompositeGate</span><span class="p">):</span>
@@ -500,14 +613,14 @@ simplest, a ComposteGate is just the <cite>_call</cite> method:</p>
 </pre></div>
 </div>
 <p>Here, one could use also <code class="docutils literal notranslate"><span class="pre">builder.get_implementation</span></code> instead of
-<code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code>, but the latter allows calibrating the member gates
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate.build" title="iqm.pulse.gate_implementation.CompositeGate.build"><code class="xref py py-meth docutils literal notranslate"><span class="pre">build()</span></code></a>, but the latter allows calibrating the member gates
 case specifically for this composite if they are first registered via
-<code class="xref py py-attr docutils literal notranslate"><span class="pre">registered_gates</span></code> (in this case, there is
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.CompositeGate.html#iqm.pulse.gate_implementation.CompositeGate.registered_gates" title="iqm.pulse.gate_implementation.CompositeGate.registered_gates"><code class="xref py py-attr docutils literal notranslate"><span class="pre">registered_gates</span></code></a> (in this case, there is
 just one member, PRX).</p>
 <p>Creating new implementations for the PRX, CZ and Measure gates often means just coming up with new waveforms for the
 control pulses. If this is the case, there are helpful base classes that make those implementations into oneliners
-(outside of defining the Waveforms themselves): <code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_CustomWaveforms</span></code>,
-<code class="xref py py-class docutils literal notranslate"><span class="pre">FluxPulseGate</span></code>, and <code class="xref py py-class docutils literal notranslate"><span class="pre">Measure_CustomWaveforms</span></code>. Using these
+(outside of defining the Waveforms themselves): <a class="reference internal" href="api/iqm.pulse.gates.prx.PRX_CustomWaveforms.html#iqm.pulse.gates.prx.PRX_CustomWaveforms" title="iqm.pulse.gates.prx.PRX_CustomWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_CustomWaveforms</span></code></a>,
+<a class="reference internal" href="api/iqm.pulse.gates.cz.FluxPulseGate.html#iqm.pulse.gates.cz.FluxPulseGate" title="iqm.pulse.gates.cz.FluxPulseGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">FluxPulseGate</span></code></a>, and <a class="reference internal" href="api/iqm.pulse.gates.measure.Measure_CustomWaveforms.html#iqm.pulse.gates.measure.Measure_CustomWaveforms" title="iqm.pulse.gates.measure.Measure_CustomWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">Measure_CustomWaveforms</span></code></a>. Using these
 base classes at its simplest looks like this:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PRX_MyCoolWaveforms</span><span class="p">(</span><span class="n">PRX_CustomWaveForms</span><span class="p">,</span> <span class="n">wave_i</span><span class="o">=</span><span class="n">CoolWaveformI</span><span class="p">,</span> <span class="n">wave_q</span><span class="o">=</span><span class="n">CoolWaveformQ</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;PRX with my cool custom waveforms for the i and q drive pulse components&quot;&quot;&quot;</span>
@@ -522,16 +635,16 @@ base classes at its simplest looks like this:</p>
 <p>All of these classes automatically include the associated Waveform parameters into the calibration parameters of
 the implementation itself. There is also a general base class for any gate that implements a single <code class="docutils literal notranslate"><span class="pre">IQPulse</span></code>
 (both PRX_CustomWaveForms and Measure_MyCoolWaveforms actually inherit from it), regardless of the context:
-<code class="xref py py-class docutils literal notranslate"><span class="pre">CustomIQWaveforms</span></code>.</p>
+<a class="reference internal" href="api/iqm.pulse.gate_implementation.CustomIQWaveforms.html#iqm.pulse.gate_implementation.CustomIQWaveforms" title="iqm.pulse.gate_implementation.CustomIQWaveforms"><code class="xref py py-class docutils literal notranslate"><span class="pre">CustomIQWaveforms</span></code></a>.</p>
 </section>
 </section>
 <section id="registering-gates-and-implementations">
 <h2>Registering gates and implementations<a class="headerlink" href="#registering-gates-and-implementations" title="Link to this heading">#</a></h2>
-<p>Gate definitions (i.e. QuantumOps) are stored in <code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code>’s attribute
+<p>Gate definitions (i.e. QuantumOps) are stored in <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a>’s attribute
 <code class="docutils literal notranslate"><span class="pre">op_table</span></code>. When the builder is created, the <code class="docutils literal notranslate"><span class="pre">op_table</span></code> comes preloaded with the all the basic QuantumOps needed for
 typical circuit execution and their default implementations. These include e.g. the PRX gate, the CZ gate, the measure
 operation, the conditional prx operation, the reset operation, and the barrier operation.</p>
-<p>In order to add custom operations, there is a helpful function <code class="xref py py-func docutils literal notranslate"><span class="pre">register_implementation()</span></code> that
+<p>In order to add custom operations, there is a helpful function <a class="reference internal" href="api/iqm.pulse.gates.register_implementation.html#iqm.pulse.gates.register_implementation" title="iqm.pulse.gates.register_implementation"><code class="xref py py-func docutils literal notranslate"><span class="pre">register_implementation()</span></code></a> that
 in addition to adding new implementations allows one to add altogether new quantum operations.</p>
 <p>As an example here is a snippet that adds the CNOT gate, and its implementation, into an existing builder:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">cnot_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>  <span class="c1"># the unitary is not strictly necessary for basic use, but since</span>
@@ -553,7 +666,7 @@ in addition to adding new implementations allows one to add altogether new quant
 implementation).</p>
 <p><strong>Note:</strong> The end user cannot modify the canonical mapping (defined in iqm-pulse) between <code class="docutils literal notranslate"><span class="pre">implementation_name</span></code> and
 <code class="docutils literal notranslate"><span class="pre">implementation_class</span></code>.</p>
-<p>Note that often <code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code> is created and operated by some client application, and the same application usually
+<p>Note that often <a class="reference internal" href="api/iqm.pulse.builder.ScheduleBuilder.html#iqm.pulse.builder.ScheduleBuilder" title="iqm.pulse.builder.ScheduleBuilder"><code class="xref py py-class docutils literal notranslate"><span class="pre">ScheduleBuilder</span></code></a> is created and operated by some client application, and the same application usually
 has its own interface for adding/manipulating QuantumOps. However, if the user has access to the builder object, the
 above method will always work.</p>
 </section>
