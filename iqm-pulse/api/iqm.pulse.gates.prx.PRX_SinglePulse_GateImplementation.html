@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PRX_SinglePulse_GateImplementation &#8212; iqm.pulse 9.15.0 documentation</title>
+    <title>PRX_SinglePulse_GateImplementation &#8212; iqm.pulse 9.17.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=149b9f8f"></script>
+    <script src="../_static/documentation_options.js?v=9d6a7102"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -51,12 +51,12 @@
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="reset" href="iqm.pulse.gates.reset.html" />
+    <link rel="next" title="PrxGateImplementation" href="iqm.pulse.gates.prx.PrxGateImplementation.html" />
     <link rel="prev" title="PRX_ModulatedDRAGCosineRiseFall" href="iqm.pulse.gates.prx.PRX_ModulatedDRAGCosineRiseFall.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="9.15.0" />
-    <meta name="docbuild:last-update" content="2025-07-01"/>
+  <meta name="docsearch:version" content="9.17.0" />
+    <meta name="docbuild:last-update" content="2025-07-02"/>
   </head>
   
   
@@ -135,8 +135,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 9.15.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 9.15.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 9.17.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 9.17.0 documentation - Home"/>
   
   
 </a></div>
@@ -394,8 +394,8 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.pulse.gates.prx.</span></span><span class="sig-name descname"><span class="pre">PRX_SinglePulse_GateImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation" title="Link to this definition">#</a></dt>
-<dd><p>Bases: <a class="reference internal" href="iqm.pulse.gate_implementation.SinglePulseGate.html#iqm.pulse.gate_implementation.SinglePulseGate" title="iqm.pulse.gate_implementation.SinglePulseGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">SinglePulseGate</span></code></a>, <a class="reference internal" href="iqm.pulse.gates.prx.PRX_GateImplementation.html#iqm.pulse.gates.prx.PRX_GateImplementation" title="iqm.pulse.gates.prx.PRX_GateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">PRX_GateImplementation</span></code></a></p>
-<p>ABC for PRX gates implemented using a single IQ pulse.</p>
+<dd><p>Bases: <a class="reference internal" href="iqm.pulse.gate_implementation.SinglePulseGate.html#iqm.pulse.gate_implementation.SinglePulseGate" title="iqm.pulse.gate_implementation.SinglePulseGate"><code class="xref py py-class docutils literal notranslate"><span class="pre">SinglePulseGate</span></code></a>, <a class="reference internal" href="iqm.pulse.gates.prx.PrxGateImplementation.html#iqm.pulse.gates.prx.PrxGateImplementation" title="iqm.pulse.gates.prx.PrxGateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">PrxGateImplementation</span></code></a></p>
+<p>Base class for PRX gates implemented using a single IQ pulse.</p>
 <p>This class implements phased x rotation gates on a specific qubit using an <a class="reference internal" href="iqm.pulse.playlist.instructions.IQPulse.html#iqm.pulse.playlist.instructions.IQPulse" title="iqm.pulse.playlist.instructions.IQPulse"><code class="xref py py-class docutils literal notranslate"><span class="pre">IQPulse</span></code></a>
 instance, derived from the pulse calibration data provided at construction by
 the static method <code class="xref py py-meth docutils literal notranslate"><span class="pre">_single_iq_pulse()</span></code>.
@@ -439,16 +439,16 @@ duration being zero, the gate implementation will apply a <code class="docutils 
 <dl class="py method">
 <dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation._call">
 <span class="sig-name descname"><span class="pre">_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation._call" title="Link to this definition">#</a></dt>
-<dd><p>Phased x rotation gate.</p>
+<dd><p>Phased X rotation gate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – rotation angle (in radians)</p></li>
-<li><p><strong>phase</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – phase angle (in radians)</p></li>
+<li><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Rotation angle in radians.</p></li>
+<li><p><strong>phase</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Phase angle in radians.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boxed instruction schedule implementing the phased x rotation gate</p>
+<dd class="field-even"><p>Boxed instruction schedule implementing the phased X rotation gate.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox" title="iqm.pulse.timebox.TimeBox"><em>TimeBox</em></a></p>
@@ -487,11 +487,11 @@ duration being zero, the gate implementation will apply a <code class="docutils 
       </div>
     </a>
     <a class="right-next"
-       href="iqm.pulse.gates.reset.html"
+       href="iqm.pulse.gates.prx.PrxGateImplementation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">reset</p>
+        <p class="prev-next-title">PrxGateImplementation</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -537,7 +537,7 @@ duration being zero, the gate implementation will apply a <code class="docutils 
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 9.15.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 9.17.0.
       <br/>
     
   </p>
@@ -546,7 +546,7 @@ duration being zero, the gate implementation will apply a <code class="docutils 
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-07-01.
+  Last updated on 2025-07-02.
   <br/>
 </p>
   </div>

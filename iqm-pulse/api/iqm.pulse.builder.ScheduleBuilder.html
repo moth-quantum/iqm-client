@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>ScheduleBuilder &#8212; iqm.pulse 9.15.0 documentation</title>
+    <title>ScheduleBuilder &#8212; iqm.pulse 9.17.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=149b9f8f"></script>
+    <script src="../_static/documentation_options.js?v=9d6a7102"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="CircuitOperation" href="iqm.pulse.builder.CircuitOperation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="9.15.0" />
-    <meta name="docbuild:last-update" content="2025-07-01"/>
+  <meta name="docsearch:version" content="9.17.0" />
+    <meta name="docbuild:last-update" content="2025-07-02"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 9.15.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 9.15.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 9.17.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 9.17.0 documentation - Home"/>
   
   
 </a></div>
@@ -1065,14 +1065,9 @@ of a longer instruction schedule and thus more decoherence.</p></li>
 <span class="sig-name descname"><span class="pre">_finish_schedule</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">schedule</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.builder.ScheduleBuilder._finish_schedule" title="Link to this definition">#</a></dt>
 <dd><p>Finishes the instruction schedule.</p>
 <ul class="simple">
-<li><p>filters out zero-duration Blocks and Waits</p></li>
-<li><p>converts all spacer instructions used during scheduling to Waits</p></li>
-<li><p>merges consequent Waits</p></li>
 <li><p>removes channels that only have Waits in them</p></li>
+<li><p>fuses long-distance Rz corrections to the correct drive pulses</p></li>
 </ul>
-<p>This should be the final step of the schedule building process, after this the
-resulting Schedule can no longer be consistently extended with another (since
-all the spacer instructions are gone).</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>schedule</strong> (<a class="reference internal" href="iqm.pulse.playlist.schedule.Schedule.html#iqm.pulse.playlist.schedule.Schedule" title="iqm.pulse.playlist.schedule.Schedule"><em>Schedule</em></a>) – schedule to finish</p>
@@ -1382,7 +1377,7 @@ a warning is raised.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 9.15.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 9.17.0.
       <br/>
     
   </p>
@@ -1391,7 +1386,7 @@ a warning is raised.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-07-01.
+  Last updated on 2025-07-02.
   <br/>
 </p>
   </div>

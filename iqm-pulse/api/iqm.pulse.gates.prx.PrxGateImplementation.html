@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>PRX_GateImplementation &#8212; iqm.pulse 9.15.0 documentation</title>
+    <title>PrxGateImplementation &#8212; iqm.pulse 9.17.0 documentation</title>
   
   
   
@@ -41,20 +41,20 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=149b9f8f"></script>
+    <script src="../_static/documentation_options.js?v=9d6a7102"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/iqm.pulse.gates.prx.PRX_GateImplementation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'api/iqm.pulse.gates.prx.PrxGateImplementation';</script>
     <link rel="icon" href="../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PRX_HdDrag" href="iqm.pulse.gates.prx.PRX_HdDrag.html" />
-    <link rel="prev" title="PRX_FastDragSX" href="iqm.pulse.gates.prx.PRX_FastDragSX.html" />
+    <link rel="next" title="reset" href="iqm.pulse.gates.reset.html" />
+    <link rel="prev" title="PRX_SinglePulse_GateImplementation" href="iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="9.15.0" />
-    <meta name="docbuild:last-update" content="2025-07-01"/>
+  <meta name="docsearch:version" content="9.17.0" />
+    <meta name="docbuild:last-update" content="2025-07-02"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 9.15.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 9.15.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="iqm.pulse 9.17.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="iqm.pulse 9.17.0 documentation - Home"/>
   
   
 </a></div>
@@ -361,7 +361,7 @@
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>PRX_GateImplementation</h1>
+    <h1>PrxGateImplementation</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -371,12 +371,12 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation._call"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation._call()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.rx"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.rx()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.ry"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.ry()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.clifford"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.clifford()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.get_locus_mapping_name"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.get_locus_mapping_name()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation._call"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation._call()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.rx"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.rx()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.ry"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.ry()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.clifford"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.clifford()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.get_locus_mapping_name"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.get_locus_mapping_name()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -390,11 +390,11 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="prx-gateimplementation">
-<h1>PRX_GateImplementation<a class="headerlink" href="#prx-gateimplementation" title="Link to this heading">#</a></h1>
+  <section id="prxgateimplementation">
+<h1>PrxGateImplementation<a class="headerlink" href="#prxgateimplementation" title="Link to this heading">#</a></h1>
 <dl class="py class">
-<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_GateImplementation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.pulse.gates.prx.</span></span><span class="sig-name descname"><span class="pre">PRX_GateImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_GateImplementation" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PrxGateImplementation">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">iqm.pulse.gates.prx.</span></span><span class="sig-name descname"><span class="pre">PrxGateImplementation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parent</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">locus</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibration_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">builder</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PrxGateImplementation" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="iqm.pulse.gate_implementation.GateImplementation.html#iqm.pulse.gate_implementation.GateImplementation" title="iqm.pulse.gate_implementation.GateImplementation"><code class="xref py py-class docutils literal notranslate"><span class="pre">GateImplementation</span></code></a></p>
 <p>ABC for different implementations of the PRX gate.</p>
 <p>Module: <a class="reference internal" href="iqm.pulse.gates.prx.html#module-iqm.pulse.gates.prx" title="iqm.pulse.gates.prx"><code class="xref py py-mod docutils literal notranslate"><span class="pre">iqm.pulse.gates.prx</span></code></a></p>
@@ -407,16 +407,16 @@
 <p class="rubric">Methods</p>
 <div class="pst-scrollable-table-container"><table class="autosummary longtable table autosummary">
 <tbody>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PRX_GateImplementation.clifford" title="iqm.pulse.gates.prx.PRX_GateImplementation.clifford"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clifford</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PrxGateImplementation.clifford" title="iqm.pulse.gates.prx.PrxGateImplementation.clifford"><code class="xref py py-obj docutils literal notranslate"><span class="pre">clifford</span></code></a></p></td>
 <td><p>One-qubit XY Clifford gates.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PRX_GateImplementation.get_locus_mapping_name" title="iqm.pulse.gates.prx.PRX_GateImplementation.get_locus_mapping_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_locus_mapping_name</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PrxGateImplementation.get_locus_mapping_name" title="iqm.pulse.gates.prx.PrxGateImplementation.get_locus_mapping_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_locus_mapping_name</span></code></a></p></td>
 <td><p>Get the name of the locus mapping stored in <code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.ChipTopology</span></code> for this implementation.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PRX_GateImplementation.rx" title="iqm.pulse.gates.prx.PRX_GateImplementation.rx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rx</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PrxGateImplementation.rx" title="iqm.pulse.gates.prx.PrxGateImplementation.rx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rx</span></code></a></p></td>
 <td><p>X rotation gate.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PRX_GateImplementation.ry" title="iqm.pulse.gates.prx.PRX_GateImplementation.ry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ry</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#iqm.pulse.gates.prx.PrxGateImplementation.ry" title="iqm.pulse.gates.prx.PrxGateImplementation.ry"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ry</span></code></a></p></td>
 <td><p>Y rotation gate.</p></td>
 </tr>
 </tbody>
@@ -434,18 +434,18 @@
 </dd>
 </dl>
 <dl class="py method">
-<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_GateImplementation._call">
-<span class="sig-name descname"><span class="pre">_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_GateImplementation._call" title="Link to this definition">#</a></dt>
-<dd><p>Phased x rotation gate.</p>
+<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PrxGateImplementation._call">
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">_call</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phase</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PrxGateImplementation._call" title="Link to this definition">#</a></dt>
+<dd><p>Phased X rotation gate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
-<li><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – rotation angle (in radians)</p></li>
-<li><p><strong>phase</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – phase angle (in radians)</p></li>
+<li><p><strong>angle</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Rotation angle in radians.</p></li>
+<li><p><strong>phase</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a>) – Phase angle in radians.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>boxed instruction schedule implementing the phased x rotation gate</p>
+<dd class="field-even"><p>Boxed instruction schedule implementing the phased X rotation gate.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="iqm.pulse.timebox.TimeBox.html#iqm.pulse.timebox.TimeBox" title="iqm.pulse.timebox.TimeBox"><em>TimeBox</em></a></p>
@@ -454,8 +454,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_GateImplementation.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_GateImplementation.rx" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PrxGateImplementation.rx">
+<span class="sig-name descname"><span class="pre">rx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PrxGateImplementation.rx" title="Link to this definition">#</a></dt>
 <dd><p>X rotation gate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -471,8 +471,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_GateImplementation.ry">
-<span class="sig-name descname"><span class="pre">ry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_GateImplementation.ry" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PrxGateImplementation.ry">
+<span class="sig-name descname"><span class="pre">ry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">angle</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PrxGateImplementation.ry" title="Link to this definition">#</a></dt>
 <dd><p>Y rotation gate.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -488,8 +488,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_GateImplementation.clifford">
-<span class="sig-name descname"><span class="pre">clifford</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xy_gate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_GateImplementation.clifford" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PrxGateImplementation.clifford">
+<span class="sig-name descname"><span class="pre">clifford</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xy_gate</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PrxGateImplementation.clifford" title="Link to this definition">#</a></dt>
 <dd><p>One-qubit XY Clifford gates.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -505,8 +505,8 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PRX_GateImplementation.get_locus_mapping_name">
-<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_locus_mapping_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operation_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implementation_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PRX_GateImplementation.get_locus_mapping_name" title="Link to this definition">#</a></dt>
+<dt class="sig sig-object py" id="iqm.pulse.gates.prx.PrxGateImplementation.get_locus_mapping_name">
+<em class="property"><span class="pre">classmethod</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_locus_mapping_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">operation_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">implementation_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#iqm.pulse.gates.prx.PrxGateImplementation.get_locus_mapping_name" title="Link to this definition">#</a></dt>
 <dd><p>Get the name of the locus mapping stored in <code class="docutils literal notranslate"><span class="pre">ScheduleBuilder.ChipTopology</span></code> for this implementation.</p>
 <p>By default, it is <code class="docutils literal notranslate"><span class="pre">&quot;&lt;operation_name&gt;.&lt;implementation_name&gt;&quot;</span></code>. Inheriting classes may
 override this for different behaviour.</p>
@@ -542,20 +542,20 @@ override this for different behaviour.</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="iqm.pulse.gates.prx.PRX_FastDragSX.html"
+       href="iqm.pulse.gates.prx.PRX_SinglePulse_GateImplementation.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">PRX_FastDragSX</p>
+        <p class="prev-next-title">PRX_SinglePulse_GateImplementation</p>
       </div>
     </a>
     <a class="right-next"
-       href="iqm.pulse.gates.prx.PRX_HdDrag.html"
+       href="iqm.pulse.gates.reset.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">PRX_HdDrag</p>
+        <p class="prev-next-title">reset</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -576,12 +576,12 @@ override this for different behaviour.</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation</span></code></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation._call"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation._call()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.rx"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.rx()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.ry"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.ry()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.clifford"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.clifford()</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PRX_GateImplementation.get_locus_mapping_name"><code class="docutils literal notranslate"><span class="pre">PRX_GateImplementation.get_locus_mapping_name()</span></code></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation._call"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation._call()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.rx"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.rx()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.ry"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.ry()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.clifford"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.clifford()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#iqm.pulse.gates.prx.PrxGateImplementation.get_locus_mapping_name"><code class="docutils literal notranslate"><span class="pre">PrxGateImplementation.get_locus_mapping_name()</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -604,7 +604,7 @@ override this for different behaviour.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 9.15.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 9.17.0.
       <br/>
     
   </p>
@@ -613,7 +613,7 @@ override this for different behaviour.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-07-01.
+  Last updated on 2025-07-02.
   <br/>
 </p>
   </div>
