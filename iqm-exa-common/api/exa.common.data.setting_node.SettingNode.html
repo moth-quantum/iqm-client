@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>SettingNode &#8212; exa-common 26.26.0 documentation</title>
+    <title>SettingNode &#8212; exa-common 26.27.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=87b4497b"></script>
+    <script src="../_static/documentation_options.js?v=2ef43d1d"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="setting_node" href="exa.common.data.setting_node.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.26.0" />
-    <meta name="docbuild:last-update" content="2025-07-04"/>
+  <meta name="docsearch:version" content="26.27.0" />
+    <meta name="docbuild:last-update" content="2025-07-05"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.26.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.26.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.27.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.27.0 documentation - Home"/>
   
   
 </a></div>
@@ -322,6 +322,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.get_gate_node_for_locus"><code class="docutils literal notranslate"><span class="pre">SettingNode.get_gate_node_for_locus()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.get_locus_node_paths_for"><code class="docutils literal notranslate"><span class="pre">SettingNode.get_locus_node_paths_for()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.get_gate_properties_for_locus"><code class="docutils literal notranslate"><span class="pre">SettingNode.get_gate_properties_for_locus()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.set_source"><code class="docutils literal notranslate"><span class="pre">SettingNode.set_source()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.model_config"><code class="docutils literal notranslate"><span class="pre">SettingNode.model_config</span></code></a></li>
 </ul>
 </li>
@@ -473,13 +474,16 @@ validated to form a valid model.</p>
 <tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.set_from_dict" title="exa.common.data.setting_node.SettingNode.set_from_dict"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_from_dict</span></code></a></p></td>
 <td><p>Recursively set values to Settings, taking values from a dictionary that has similar tree structure.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.setting_with_path_name" title="exa.common.data.setting_node.SettingNode.setting_with_path_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setting_with_path_name</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.set_source" title="exa.common.data.setting_node.SettingNode.set_source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">set_source</span></code></a></p></td>
+<td><p>Set source recursively to all Settings in <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.setting_with_path_name" title="exa.common.data.setting_node.SettingNode.setting_with_path_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">setting_with_path_name</span></code></a></p></td>
 <td><p>Get a copy of a setting with its name replaced with the path name.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.transform_node_types" title="exa.common.data.setting_node.SettingNode.transform_node_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_node_types</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.transform_node_types" title="exa.common.data.setting_node.SettingNode.transform_node_types"><code class="xref py py-obj docutils literal notranslate"><span class="pre">transform_node_types</span></code></a></p></td>
 <td><p>Reduce any subclass of SettingNode and it's contents into instances of <cite>cls</cite>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.update_setting" title="exa.common.data.setting_node.SettingNode.update_setting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_setting</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.setting_node.SettingNode.update_setting" title="exa.common.data.setting_node.SettingNode.update_setting"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update_setting</span></code></a></p></td>
 <td><p>Update an existing <cite>Setting</cite> in this tree.</p></td>
 </tr>
 </tbody>
@@ -693,18 +697,19 @@ will be replaced.</p></li>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="exa.common.data.setting_node.SettingNode.set_from_dict">
-<span class="sig-name descname"><span class="pre">set_from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.setting_node.SettingNode.set_from_dict" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">set_from_dict</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dct</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">strict</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.setting_node.SettingNode.set_from_dict" title="Link to this definition">#</a></dt>
 <dd><p>Recursively set values to Settings, taking values from a dictionary that has similar tree structure.
-Keys that are not found in self are ignored, unless <cite>strict</cite> is True.</p>
+Keys that are not found in self are ignored, unless <code class="docutils literal notranslate"><span class="pre">strict</span></code> is True.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>dct</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>]</em>) – Dictionary containing the new values to use.</p></li>
-<li><p><strong>strict</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If True, will raise error if <cite>dct</cite> contains a setting that is not found in <cite>self</cite>.</p></li>
+<li><p><strong>strict</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If True, will raise error if <code class="docutils literal notranslate"><span class="pre">dct</span></code> contains a setting that is not found in <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></li>
+<li><p><strong>source</strong> (<em>None</em><em> | </em><a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><em>BaseModel</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>]</em>) – Source for the settings (this same source is applied to all settings from the dict).</p></li>
 </ul>
 </dd>
 <dt class="field-even">Raises<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="exa.common.errors.exa_error.UnknownSettingError.html#exa.common.errors.exa_error.UnknownSettingError" title="exa.common.errors.exa_error.UnknownSettingError"><strong>UnknownSettingError</strong></a> – If the condition of <cite>strict</cite> happens.</p>
+<dd class="field-even"><p><a class="reference internal" href="exa.common.errors.exa_error.UnknownSettingError.html#exa.common.errors.exa_error.UnknownSettingError" title="exa.common.errors.exa_error.UnknownSettingError"><strong>UnknownSettingError</strong></a> – If the condition of <code class="docutils literal notranslate"><span class="pre">strict</span></code> happens.</p>
 </dd>
 <dt class="field-odd">Return type<span class="colon">:</span></dt>
 <dd class="field-odd"><p><em>None</em></p>
@@ -778,7 +783,7 @@ one specific difference. The diff is non-symmetric.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="exa.common.data.setting_node.SettingNode.add_for_path">
-<span class="sig-name descname"><span class="pre">add_for_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.setting_node.SettingNode.add_for_path" title="Link to this definition">#</a></dt>
+<span class="sig-name descname"><span class="pre">add_for_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nodes</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override_values</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">override_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.setting_node.SettingNode.add_for_path" title="Link to this definition">#</a></dt>
 <dd><p>Add nodes to <code class="docutils literal notranslate"><span class="pre">self</span></code> while creating the missing nodes in-between.</p>
 <p>Whether the names and paths are aligned is determined by the attribute <code class="docutils literal notranslate"><span class="pre">align_name</span></code> of the current node
 (<code class="docutils literal notranslate"><span class="pre">self</span></code>). All the created missing nodes will use this same <code class="docutils literal notranslate"><span class="pre">align_name</span></code> value,
@@ -793,6 +798,8 @@ the node name can differ, but otherwise the names will be replaced by the path a
 found in self, the associated nodes will be created automatically.</p></li>
 <li><p><strong>override_values</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>] </em><em>| </em><em>None</em>) – Optionally override the values for the <cite>Settings</cite> corresponding to <code class="docutils literal notranslate"><span class="pre">nodes</span></code>. This dict
 should have the same structure as <code class="docutils literal notranslate"><span class="pre">nodes</span></code>, including matching names.</p></li>
+<li><p><strong>override_source</strong> (<em>None</em><em> | </em><a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><em>BaseModel</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>]</em>) – Optionally override the source for the <code class="docutils literal notranslate"><span class="pre">Settings</span></code> corresponding to <code class="docutils literal notranslate"><span class="pre">nodes</span></code>. All the
+settings will then have this same source.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Return type<span class="colon">:</span></dt>
@@ -889,6 +896,23 @@ the symmetry properties of the gate.</p>
 </dl>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="exa.common.data.setting_node.SettingNode.set_source">
+<span class="sig-name descname"><span class="pre">set_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">source</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ignore_nones</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.setting_node.SettingNode.set_source" title="Link to this definition">#</a></dt>
+<dd><p>Set source recursively to all Settings in <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>source</strong> (<em>None</em><em> | </em><a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><em>BaseModel</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>]</em>) – The source to set.</p></li>
+<li><p><strong>ignore_nones</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – If <code class="docutils literal notranslate"><span class="pre">True</span></code>, the source will not be set for Settings with <code class="docutils literal notranslate"><span class="pre">None</span></code> value.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
 <dl class="py attribute">
 <dt class="sig sig-object py" id="exa.common.data.setting_node.SettingNode.model_config">
 <span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'ignore',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'ser_json_inf_nan':</span> <span class="pre">'constants',</span> <span class="pre">'validate_assignment':</span> <span class="pre">True,</span> <span class="pre">'validate_default':</span> <span class="pre">True}</span></em><a class="headerlink" href="#exa.common.data.setting_node.SettingNode.model_config" title="Link to this definition">#</a></dt>
@@ -971,6 +995,7 @@ the symmetry properties of the gate.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.get_gate_node_for_locus"><code class="docutils literal notranslate"><span class="pre">SettingNode.get_gate_node_for_locus()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.get_locus_node_paths_for"><code class="docutils literal notranslate"><span class="pre">SettingNode.get_locus_node_paths_for()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.get_gate_properties_for_locus"><code class="docutils literal notranslate"><span class="pre">SettingNode.get_gate_properties_for_locus()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.set_source"><code class="docutils literal notranslate"><span class="pre">SettingNode.set_source()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.setting_node.SettingNode.model_config"><code class="docutils literal notranslate"><span class="pre">SettingNode.model_config</span></code></a></li>
 </ul>
 </li>
@@ -994,7 +1019,7 @@ the symmetry properties of the gate.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.26.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.27.0.
       <br/>
     
   </p>
@@ -1003,7 +1028,7 @@ the symmetry properties of the gate.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-07-04.
+  Last updated on 2025-07-05.
   <br/>
 </p>
   </div>

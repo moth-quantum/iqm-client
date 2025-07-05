@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Setting &#8212; exa-common 26.26.0 documentation</title>
+    <title>Setting &#8212; exa-common 26.27.0 documentation</title>
   
   
   
@@ -41,7 +41,7 @@
   <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
-    <script src="../_static/documentation_options.js?v=87b4497b"></script>
+    <script src="../_static/documentation_options.js?v=2ef43d1d"></script>
     <script src="../_static/doctools.js?v=888ff710"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
@@ -53,8 +53,8 @@
     <link rel="prev" title="Parameter" href="exa.common.data.parameter.Parameter.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-  <meta name="docsearch:version" content="26.26.0" />
-    <meta name="docbuild:last-update" content="2025-07-04"/>
+  <meta name="docsearch:version" content="26.27.0" />
+    <meta name="docbuild:last-update" content="2025-07-05"/>
   </head>
   
   
@@ -133,8 +133,8 @@
       
     
     
-    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.26.0 documentation - Home"/>
-    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.26.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-light" alt="exa-common 26.27.0 documentation - Home"/>
+    <img src="../_static/logo.png" class="logo__image only-dark pst-js-only" alt="exa-common 26.27.0 documentation - Home"/>
   
   
 </a></div>
@@ -301,14 +301,17 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.value"><code class="docutils literal notranslate"><span class="pre">Setting.value</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.read_only"><code class="docutils literal notranslate"><span class="pre">Setting.read_only</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.path"><code class="docutils literal notranslate"><span class="pre">Setting.path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting._source"><code class="docutils literal notranslate"><span class="pre">Setting._source</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.update"><code class="docutils literal notranslate"><span class="pre">Setting.update()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.name"><code class="docutils literal notranslate"><span class="pre">Setting.name</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.parent_name"><code class="docutils literal notranslate"><span class="pre">Setting.parent_name</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.label"><code class="docutils literal notranslate"><span class="pre">Setting.label</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.parent_label"><code class="docutils literal notranslate"><span class="pre">Setting.parent_label</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.model_config"><code class="docutils literal notranslate"><span class="pre">Setting.model_config</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.model_post_init"><code class="docutils literal notranslate"><span class="pre">Setting.model_post_init()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.parent_label"><code class="docutils literal notranslate"><span class="pre">Setting.parent_label</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.unit"><code class="docutils literal notranslate"><span class="pre">Setting.unit</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.element_indices"><code class="docutils literal notranslate"><span class="pre">Setting.element_indices</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.source"><code class="docutils literal notranslate"><span class="pre">Setting.source</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.diff_sets"><code class="docutils literal notranslate"><span class="pre">Setting.diff_sets()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.create_element_parameter_for"><code class="docutils literal notranslate"><span class="pre">Setting.create_element_parameter_for()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.with_path_name"><code class="docutils literal notranslate"><span class="pre">Setting.with_path_name()</span></code></a></li>
@@ -329,7 +332,7 @@
 <h1>Setting<a class="headerlink" href="#setting" title="Link to this heading">#</a></h1>
 <dl class="py class">
 <dt class="sig sig-object py" id="exa.common.data.parameter.Setting">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Setting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.parameter.Setting" title="Link to this definition">#</a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Setting</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">parameter</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">value</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">read_only</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.parameter.Setting" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><code class="xref py py-class docutils literal notranslate"><span class="pre">BaseModel</span></code></a></p>
 <p>Physical quantity represented as a Parameter attached to a numerical value.</p>
 <p>Create a new model by parsing and validating input data from keyword arguments.</p>
@@ -358,19 +361,22 @@ validated to form a valid model.</p>
 <tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.parent_name" title="exa.common.data.parameter.Setting.parent_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parent_name</span></code></a></p></td>
 <td><p>Parent name of the parameter of <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.unit" title="exa.common.data.parameter.Setting.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.source" title="exa.common.data.parameter.Setting.source"><code class="xref py py-obj docutils literal notranslate"><span class="pre">source</span></code></a></p></td>
+<td><p>Return the source for this Setting's value.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.unit" title="exa.common.data.parameter.Setting.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a></p></td>
 <td><p>SI unit of the <a class="reference internal" href="#exa.common.data.parameter.Setting.value" title="exa.common.data.parameter.Setting.value"><code class="xref py py-attr docutils literal notranslate"><span class="pre">value</span></code></a>, if applicable, same as unit of <a class="reference internal" href="#exa.common.data.parameter.Setting.parameter" title="exa.common.data.parameter.Setting.parameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></a>.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.parameter" title="exa.common.data.parameter.Setting.parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameter</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.parameter" title="exa.common.data.parameter.Setting.parameter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">parameter</span></code></a></p></td>
 <td><p>The parameter this Setting represents.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.value" title="exa.common.data.parameter.Setting.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.value" title="exa.common.data.parameter.Setting.value"><code class="xref py py-obj docutils literal notranslate"><span class="pre">value</span></code></a></p></td>
 <td><p>Data value attached to the parameter.</p></td>
 </tr>
-<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.read_only" title="exa.common.data.parameter.Setting.read_only"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_only</span></code></a></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.read_only" title="exa.common.data.parameter.Setting.read_only"><code class="xref py py-obj docutils literal notranslate"><span class="pre">read_only</span></code></a></p></td>
 <td><p>Indicates if the attribute is read-only.</p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.path" title="exa.common.data.parameter.Setting.path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.path" title="exa.common.data.parameter.Setting.path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">path</span></code></a></p></td>
 <td><p>Path in the settings tree (starting from the root <code class="docutils literal notranslate"><span class="pre">SettingNode</span></code>) for this setting.</p></td>
 </tr>
 </tbody>
@@ -391,19 +397,22 @@ validated to form a valid model.</p>
 <tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">merge</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_by_name</span></code></p></td>
+<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.model_post_init" title="exa.common.data.parameter.Setting.model_post_init"><code class="xref py py-obj docutils literal notranslate"><span class="pre">model_post_init</span></code></a></p></td>
+<td><p>This function is meant to behave like a BaseModel method to initialise private attributes.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">remove_by_name</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">replace</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">replace</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.update" title="exa.common.data.parameter.Setting.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a></p></td>
-<td><p>Create a new setting object with updated <cite>value</cite>.</p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.update" title="exa.common.data.parameter.Setting.update"><code class="xref py py-obj docutils literal notranslate"><span class="pre">update</span></code></a></p></td>
+<td><p>Create a new setting object with updated value and source.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_parameter_value_after</span></code></p></td>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">validate_parameter_value_after</span></code></p></td>
 <td><p></p></td>
 </tr>
-<tr class="row-odd"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.with_path_name" title="exa.common.data.parameter.Setting.with_path_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">with_path_name</span></code></a></p></td>
+<tr class="row-even"><td><p><a class="reference internal" href="#exa.common.data.parameter.Setting.with_path_name" title="exa.common.data.parameter.Setting.with_path_name"><code class="xref py py-obj docutils literal notranslate"><span class="pre">with_path_name</span></code></a></p></td>
 <td><p>Copy of self with the parameter name replaced by the path name.</p></td>
 </tr>
 </tbody>
@@ -416,6 +425,7 @@ validated to form a valid model.</p>
 <li><p><strong>value</strong> (<em>ObservationValue</em><em> | </em><em>None</em>) – </p></li>
 <li><p><strong>read_only</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a>) – </p></li>
 <li><p><strong>path</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a>) – </p></li>
+<li><p><strong>source</strong> (<em>SourceType</em>) – </p></li>
 </ul>
 </dd>
 </dl>
@@ -443,16 +453,31 @@ validated to form a valid model.</p>
 <dd><p>Path in the settings tree (starting from the root <code class="docutils literal notranslate"><span class="pre">SettingNode</span></code>) for this setting.</p>
 </dd></dl>
 
+<dl class="py attribute">
+<dt class="sig sig-object py" id="exa.common.data.parameter.Setting._source">
+<span class="sig-name descname"><span class="pre">_source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">SourceType</span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">ModelPrivateAttr()</span></em><a class="headerlink" href="#exa.common.data.parameter.Setting._source" title="Link to this definition">#</a></dt>
+<dd><p>The source for this Setting value. May contain an observation (ObservationDefinition or ObservationData)
+or a source-dict (e.g. <code class="docutils literal notranslate"><span class="pre">{&quot;type&quot;:</span> <span class="pre">&quot;configuration_source&quot;,</span> <span class="pre">&quot;configurator&quot;:</span> <span class="pre">&quot;defaults_from_yml&quot;}</span></code>). By default,
+<code class="docutils literal notranslate"><span class="pre">None</span></code>, which denotes the source not being specified (e.g. hardcoded defaults). The source is stored in a private
+attribute and thus is never serialized (the source field can contain non-serializable data such as Callables).</p>
+</dd></dl>
+
 <dl class="py method">
 <dt class="sig sig-object py" id="exa.common.data.parameter.Setting.update">
-<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.parameter.Setting.update" title="Link to this definition">#</a></dt>
-<dd><p>Create a new setting object with updated <cite>value</cite>.</p>
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.parameter.Setting.update" title="Link to this definition">#</a></dt>
+<dd><p>Create a new setting object with updated value and source.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)"><em>complex</em></a><em> | </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><em>ndarray</em></a>) – </p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> (<a class="reference external" href="https://docs.python.org/3.11/library/functions.html#bool" title="(in Python v3.11)"><em>bool</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><em>int</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#float" title="(in Python v3.11)"><em>float</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#complex" title="(in Python v3.11)"><em>complex</em></a><em> | </em><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v2.3)"><em>ndarray</em></a>) – New value for the setting.</p></li>
+<li><p><strong>source</strong> (<em>None</em><em> | </em><a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><em>BaseModel</em></a><em> | </em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><em>dict</em></a><em>[</em><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><em>str</em></a><em>, </em><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><em>Any</em></a><em>]</em>) – New source for the setting.</p></li>
+</ul>
 </dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><a class="reference internal" href="#exa.common.data.parameter.Setting" title="exa.common.data.parameter.Setting"><em>Setting</em></a></p>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Copy of <code class="docutils literal notranslate"><span class="pre">self</span></code> with modified properties.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference internal" href="#exa.common.data.parameter.Setting" title="exa.common.data.parameter.Setting"><em>Setting</em></a></p>
 </dd>
 </dl>
 </dd></dl>
@@ -475,16 +500,34 @@ validated to form a valid model.</p>
 <dd><p>Label used as pretty identifier for display purposes, same as label of <a class="reference internal" href="#exa.common.data.parameter.Setting.parameter" title="exa.common.data.parameter.Setting.parameter"><code class="xref py py-attr docutils literal notranslate"><span class="pre">parameter</span></code></a>.</p>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="exa.common.data.parameter.Setting.parent_label">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent_label</span></span><a class="headerlink" href="#exa.common.data.parameter.Setting.parent_label" title="Link to this definition">#</a></dt>
-<dd><p>Parent label of the parameter of <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
-</dd></dl>
-
 <dl class="py attribute">
 <dt class="sig sig-object py" id="exa.common.data.parameter.Setting.model_config">
 <span class="sig-name descname"><span class="pre">model_config</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">ClassVar</span><span class="p"><span class="pre">[</span></span><span class="pre">ConfigDict</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'extra':</span> <span class="pre">'ignore',</span> <span class="pre">'frozen':</span> <span class="pre">True,</span> <span class="pre">'ser_json_inf_nan':</span> <span class="pre">'constants',</span> <span class="pre">'validate_assignment':</span> <span class="pre">True,</span> <span class="pre">'validate_default':</span> <span class="pre">True}</span></em><a class="headerlink" href="#exa.common.data.parameter.Setting.model_config" title="Link to this definition">#</a></dt>
 <dd><p>Configuration for the model, should be a dictionary conforming to [<cite>ConfigDict</cite>][pydantic.config.ConfigDict].</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="exa.common.data.parameter.Setting.model_post_init">
+<span class="sig-name descname"><span class="pre">model_post_init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">context</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">/</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#exa.common.data.parameter.Setting.model_post_init" title="Link to this definition">#</a></dt>
+<dd><p>This function is meant to behave like a BaseModel method to initialise private attributes.</p>
+<p>It takes context as an argument since that’s what pydantic-core passes when calling it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>self</strong> (<a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><em>BaseModel</em></a>) – The BaseModel instance.</p></li>
+<li><p><strong>context</strong> (<em>Any</em>) – The context.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>None</em></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="exa.common.data.parameter.Setting.parent_label">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parent_label</span></span><a class="headerlink" href="#exa.common.data.parameter.Setting.parent_label" title="Link to this definition">#</a></dt>
+<dd><p>Parent label of the parameter of <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -497,6 +540,12 @@ validated to form a valid model.</p>
 <dt class="sig sig-object py" id="exa.common.data.parameter.Setting.element_indices">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">element_indices</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#list" title="(in Python v3.11)"><span class="pre">list</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/functions.html#int" title="(in Python v3.11)"><span class="pre">int</span></a><span class="p"><span class="pre">]</span></span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a></em><a class="headerlink" href="#exa.common.data.parameter.Setting.element_indices" title="Link to this definition">#</a></dt>
 <dd><p>Element-wise indices of the parameter in <code class="docutils literal notranslate"><span class="pre">self</span></code>.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="exa.common.data.parameter.Setting.source">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">source</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/constants.html#None" title="(in Python v3.11)"><span class="pre">None</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference internal" href="exa.common.data.base_model.BaseModel.html#exa.common.data.base_model.BaseModel" title="exa.common.data.base_model.BaseModel"><span class="pre">BaseModel</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#dict" title="(in Python v3.11)"><span class="pre">dict</span></a><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.11/library/stdtypes.html#str" title="(in Python v3.11)"><span class="pre">str</span></a><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3.11/library/typing.html#typing.Any" title="(in Python v3.11)"><span class="pre">Any</span></a><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#exa.common.data.parameter.Setting.source" title="Link to this definition">#</a></dt>
+<dd><p>Return the source for this Setting’s value.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -606,14 +655,17 @@ values differ from their counterparts in <cite>second</cite>.</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.value"><code class="docutils literal notranslate"><span class="pre">Setting.value</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.read_only"><code class="docutils literal notranslate"><span class="pre">Setting.read_only</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.path"><code class="docutils literal notranslate"><span class="pre">Setting.path</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting._source"><code class="docutils literal notranslate"><span class="pre">Setting._source</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.update"><code class="docutils literal notranslate"><span class="pre">Setting.update()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.name"><code class="docutils literal notranslate"><span class="pre">Setting.name</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.parent_name"><code class="docutils literal notranslate"><span class="pre">Setting.parent_name</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.label"><code class="docutils literal notranslate"><span class="pre">Setting.label</span></code></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.parent_label"><code class="docutils literal notranslate"><span class="pre">Setting.parent_label</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.model_config"><code class="docutils literal notranslate"><span class="pre">Setting.model_config</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.model_post_init"><code class="docutils literal notranslate"><span class="pre">Setting.model_post_init()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.parent_label"><code class="docutils literal notranslate"><span class="pre">Setting.parent_label</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.unit"><code class="docutils literal notranslate"><span class="pre">Setting.unit</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.element_indices"><code class="docutils literal notranslate"><span class="pre">Setting.element_indices</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.source"><code class="docutils literal notranslate"><span class="pre">Setting.source</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.diff_sets"><code class="docutils literal notranslate"><span class="pre">Setting.diff_sets()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.create_element_parameter_for"><code class="docutils literal notranslate"><span class="pre">Setting.create_element_parameter_for()</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exa.common.data.parameter.Setting.with_path_name"><code class="docutils literal notranslate"><span class="pre">Setting.with_path_name()</span></code></a></li>
@@ -639,7 +691,7 @@ values differ from their counterparts in <cite>second</cite>.</p>
 
   <p class="copyright">
     
-      © Copyright 2019-2025, IQM Finland Oy, Release 26.26.0.
+      © Copyright 2019-2025, IQM Finland Oy, Release 26.27.0.
       <br/>
     
   </p>
@@ -648,7 +700,7 @@ values differ from their counterparts in <cite>second</cite>.</p>
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2025-07-04.
+  Last updated on 2025-07-05.
   <br/>
 </p>
   </div>
