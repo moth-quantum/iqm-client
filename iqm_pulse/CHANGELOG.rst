@@ -2,6 +2,30 @@
 Changelog
 =========
 
+Version 9.18.0 (2025-07-02)
+===========================
+
+Features
+--------
+
+- Add new MOVE implementation :class:`MOVE_SLEPIAN_CRF`.
+
+Version 9.17.0 (2025-07-01)
+===========================
+
+Features
+--------
+
+- Faster playlist creation in ScheduleBuilder
+
+Version 9.16.0 (2025-07-01)
+===========================
+
+Bug fixes
+---------
+
+- Fix type errors raised by mypy.
+
 Version 9.15.0 (2025-06-17)
 ===========================
 

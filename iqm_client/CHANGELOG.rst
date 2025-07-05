@@ -2,6 +2,30 @@
 Changelog
 =========
 
+Version 29.3.0 (2025-07-02)
+===========================
+
+Bug fixes
+---------
+
+- Fix type errors raised by mypy.
+
+Version 29.2.0 (2025-06-30)
+===========================
+
+Features
+--------
+
+- Bugfix: Fixed case where the transpiler would sometimes replace Parameters in the circuit with another Parameter.
+
+Version 29.1.0 (2025-06-30)
+===========================
+
+Bug fixes
+---------
+
+- Add job id to APITimeoutError
+
 Version 29.0.0 (2025-06-13)
 ===========================
 
