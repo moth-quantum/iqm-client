@@ -1,7 +1,7 @@
 iqm-exa-common<27,>=26
 iqm-data-definitions<3.0,>=2.13
-opentelemetry-exporter-otlp<2.0,>=1.25.0
-protobuf<5.0,>=4.25.3
+opentelemetry-exporter-otlp<2.0.0,>=1.25.0
+protobuf<6.0,>=5.29.5
 grpcio<2.0,>=1.65.4
 pydantic<3.0,>=2.10.4
 PyYAML<7.0,>=6.0

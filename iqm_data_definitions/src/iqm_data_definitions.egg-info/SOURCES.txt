@@ -1,7 +1,9 @@
 LICENSE.txt
 MANIFEST.in
+PKG-INFO
 README.md
 pyproject.toml
+setup.cfg
 setup.py
 docs/API.rst
 docs/changelog.rst

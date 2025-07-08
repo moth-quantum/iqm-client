@@ -6,9 +6,11 @@ CHANGELOG_qiskit-iqm.rst
 INTEGRATION_GUIDE.rst
 LICENSE.txt
 MANIFEST.in
+PKG-INFO
 README.rst
 docbuild
 pyproject.toml
+setup.cfg
 setup.py
 test
 version.txt
