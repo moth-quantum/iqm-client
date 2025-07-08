@@ -215,7 +215,7 @@ Description-Content-Type: text/x-rst
 License-File: LICENSE.txt
 Requires-Dist: iqm-exa-common<27,>=26
 Requires-Dist: iqm-data-definitions<3.0,>=2.13
-Requires-Dist: opentelemetry-exporter-otlp==1.25.0
+Requires-Dist: opentelemetry-exporter-otlp<2.0,>=1.25.0
 Requires-Dist: protobuf<5.0,>=4.25.3
 Requires-Dist: grpcio<2.0,>=1.65.4
 Requires-Dist: pydantic<3.0,>=2.10.4
