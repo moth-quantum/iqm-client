@@ -1,4 +1,4 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.4
 Name: iqm-station-control-client
 Version: 9.5.0
 Summary: Python client for communicating with Station Control Service
@@ -215,13 +215,14 @@ Description-Content-Type: text/x-rst
 License-File: LICENSE.txt
 Requires-Dist: iqm-exa-common<27,>=26
 Requires-Dist: iqm-data-definitions<3.0,>=2.13
-Requires-Dist: opentelemetry-exporter-otlp<2.0,>=1.25.0
-Requires-Dist: protobuf<5.0,>=4.25.3
+Requires-Dist: opentelemetry-exporter-otlp<2.0.0,>=1.25.0
+Requires-Dist: protobuf<6.0,>=5.29.5
 Requires-Dist: grpcio<2.0,>=1.65.4
 Requires-Dist: pydantic<3.0,>=2.10.4
-Requires-Dist: PyYAML==6.0
+Requires-Dist: PyYAML<7.0,>=6.0
 Requires-Dist: requests==2.32.3
 Requires-Dist: tqdm>=4.59.0
+Dynamic: license-file
 
 Station control client library
 ==============================

@@ -1,0 +1,121 @@
+name: Publish IQM Python Packages
+
+on:
+  push:
+    branches:
+      [ "main", "dev"]
+  workflow_dispatch:
+    inputs:
+      release_version:
+        description: 'Version to release (optional)'
+        required: false
+
+permissions:
+  contents: write     # Required for creating tags and releases
+  packages: write     # Required for GitHub Packages
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        package:
+          - iqm_client
+          - iqm_data_definitions
+          - iqm_exa_common
+          - iqm_pulla
+          - iqm_pulse
+          - iqm_qaoa
+          - iqm_station_control_client
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: astral-sh/setup-uv@v5
+        with:
+          python-version: '3.12'
+
+      - name: Configure Git
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+      
+      - name: Install build dependencies
+        run: |
+          uv pip install setuptools wheel build
+
+
+      # Build package
+      - name: Build package
+        working-directory: ./${{ matrix.package }}
+        run: |
+          uv pip install -e .
+          python -m build
+          
+      # Publish package to GitHub Packages
+      - name: Publish to GitHub Packages
+        uses: pypa/gh-action-pypi-publish@v1
+        with:
+          repository-url: https://github.com/moth-quantum/iqm-client/packages/pypi
+          packages-dir: ./${{ matrix.package }}/dist/
+          password: ${{ secrets.GITHUB_TOKEN }}
+          skip-existing: true
+          
+      # Upload as artifact to be used by the release job
+      - name: Upload package as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ matrix.package }}-dist
+          path: ./${{ matrix.package }}/dist/*
+          retention-days: 1  # Short retention since we'll create a release
+
+  # Fan-in job to create a GitHub release with all packages
+  create-release:
+    needs: build-and-publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get all package artifacts
+        uses: actions/download-artifact@v4
+        with:
+          path: ./all-packages
+          
+      - name: List all downloaded artifacts
+        run: |
+          find ./all-packages -type f | sort
+      
+      - name: Get version info
+        id: get-version
+        run: |
+          # Use provided version if available, otherwise read from version.txt
+          if [[ -n "${{ github.event.inputs.release_version }}" ]]; then
+              VERSION="${{ github.event.inputs.release_version }}"
+            else
+              # TODO: Develop a less flaky fallback based on git tags + hash
+              VERSION=$(cat version.txt 2>/dev/null || echo "0.1.0")
+              # Apply PEP 440 prerelease suffix for dev branch
+              if [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+                # Get short commit hash
+                SHORT_HASH=$(git rev-parse --short HEAD)
+                # Format as PEP 440 dev version: X.Y.Z.devN+HASH
+                VERSION="${VERSION}.dev$(date +%Y%m%d)+${SHORT_HASH}"
+                echo "Using prerelease version for dev branch"
+              fi
+            fi
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
+            echo "Using version: $VERSION"
+                  
+      - name: Create Release
+        id: create_release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: IQM Client Release v${{ steps.get-version.outputs.version }}
+          tag_name: v${{ steps.get-version.outputs.version }}
+          draft: false
+          prerelease: ${{ github.ref == 'refs/heads/dev' }}
+          files: ./all-packages/**/*
+          fail_on_unmatched_files: true
+          generate_release_notes: true
