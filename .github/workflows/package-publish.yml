@@ -28,8 +28,6 @@ jobs:
           - iqm_pulse
           - iqm_qaoa
           - iqm_station_control_client
-    outputs:
-      release_version: ${{ steps.get-version.outputs.version }}
 
     steps:
       - uses: actions/checkout@v4
@@ -50,21 +48,7 @@ jobs:
         run: |
           uv pip install setuptools wheel build
 
-      # Get version info - only do this in the first matrix job
-      - name: Get version info
-        id: get-version
-        if: ${{ matrix.package == 'iqm_client' }}
-        run: |
-          # Use provided version if available, otherwise read from version.txt
-          if [[ -n "${{ github.event.inputs.release_version }}" ]]; then
-            VERSION="${{ github.event.inputs.release_version }}"
-          else
-            # TODO: Develop a less flaky fallback based on git tags + hash
-            VERSION=$(cat version.txt 2>/dev/null || echo "0.1.0")
-          fi
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Using version: $VERSION"
-          
+
       # Build package
       - name: Build package
         working-directory: ./${{ matrix.package }}
@@ -103,14 +87,35 @@ jobs:
         run: |
           find ./all-packages -type f | sort
       
+      - name: Get version info
+        id: get-version
+        run: |
+          # Use provided version if available, otherwise read from version.txt
+          if [[ -n "${{ github.event.inputs.release_version }}" ]]; then
+              VERSION="${{ github.event.inputs.release_version }}"
+            else
+              # TODO: Develop a less flaky fallback based on git tags + hash
+              VERSION=$(cat version.txt 2>/dev/null || echo "0.1.0")
+              # Apply PEP 440 prerelease suffix for dev branch
+              if [[ "${{ github.ref }}" == "refs/heads/dev" ]]; then
+                # Get short commit hash
+                SHORT_HASH=$(git rev-parse --short HEAD)
+                # Format as PEP 440 dev version: X.Y.Z.devN+HASH
+                VERSION="${VERSION}.dev$(date +%Y%m%d)+${SHORT_HASH}"
+                echo "Using prerelease version for dev branch"
+              fi
+            fi
+            echo "version=$VERSION" >> $GITHUB_OUTPUT
+            echo "Using version: $VERSION"
+                  
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v2
         with:
-          name: IQM Client Release v${{ needs.build-and-publish.outputs.release_version }}
-          tag_name: v${{ needs.build-and-publish.outputs.release_version }}
+          name: IQM Client Release v${{ steps.get-version.outputs.version }}
+          tag_name: v${{ steps.get-version.outputs.version }}
           draft: false
-          prerelease: false
+          prerelease: ${{ github.ref == 'refs/heads/dev' }}
           files: ./all-packages/**/*
           fail_on_unmatched_files: true
           generate_release_notes: true
