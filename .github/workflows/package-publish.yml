@@ -48,14 +48,7 @@ jobs:
       
       - name: Install build dependencies
         run: |
-          uv pip install setuptools wheel build twine
-
-      # Setup GitHub Packages Python registry
-      - name: Set up GitHub Packages
-        run: |
-          echo "[github]" > ~/.pypirc
-          echo "username=${{ github.actor }}" >> ~/.pypirc
-          echo "password=${{ secrets.GITHUB_TOKEN }}" >> ~/.pypirc
+          uv pip install setuptools wheel build
 
       # Get version info - only do this in the first matrix job
       - name: Get version info
@@ -81,9 +74,12 @@ jobs:
           
       # Publish package to GitHub Packages
       - name: Publish to GitHub Packages
-        working-directory: ./${{ matrix.package }}
-        run: |
-          python -m twine upload --repository-url https://github.com/moth-quantum/iqm-client/packages/pypi dist/*
+        uses: pypa/gh-action-pypi-publish@v1
+        with:
+          repository-url: https://github.com/moth-quantum/iqm-client/packages/pypi
+          packages-dir: ./${{ matrix.package }}/dist/
+          password: ${{ secrets.GITHUB_TOKEN }}
+          skip-existing: true
           
       # Upload as artifact to be used by the release job
       - name: Upload package as artifact
